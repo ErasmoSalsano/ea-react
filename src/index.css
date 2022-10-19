@@ -1,0 +1,297 @@
+/* == Layouts == */
+/* Griglia giochi */
+/* Giochi e Hover giochi */
+/* Griglia articoli */
+/* Articoli e hover articoli */
+/* === Reset === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* === Global body === */
+  body {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .header-wrap,
+  .footer-wrap {
+    flex: 0 0 fit-content;
+  }
+  
+  .main-wrap {
+    flex: 1;
+  }
+  
+  /* == Colors == */ /* == Tipography == */ /* == Header == */
+  .user-space { /* Contenitore zona utente */
+    height: 2.5rem;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #101010;
+  }
+  .user-space > :nth-child(-n+3) { /* Dimensiona e distanzia i bottoni */
+    height: 2.5rem;
+    width: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1.25rem;
+  }
+  
+  .user-account-icon svg,
+  .user-help-icon svg {
+    height: 1.125rem;
+    width: 1.125rem;
+    fill: #b1b1b1;
+    pointer-events: none;
+  }
+  .user-account-icon:hover svg,
+  .user-help-icon:hover svg {
+    fill: #f3f3f3;
+  }
+  
+  .ea-logo {
+    margin-right: 2rem;
+  }
+  .ea-logo svg {
+    height: 2rem;
+    width: 2rem;
+    fill: #797979;
+    pointer-events: none;
+  }
+  .ea-logo:hover svg {
+    fill: #a3a3a3;
+  }
+  
+  @keyframes open-user { /* animazione apertura user board */
+    0% {
+      height: 0;
+      padding: 0;
+    }
+    100% {
+      height: 25rem;
+    }
+  }
+  .user-account-icon:hover ~ .user-board,
+  .user-help-icon:hover ~ .user-board,
+  .user-board:hover { /* Condizioni apertura user board (temporanee) */
+    display: flex;
+    animation: open-user 0.25s ease-in;
+  }
+  
+  .user-board {
+    position: relative;
+    flex: 0 0 100vw;
+    display: none;
+    height: 25rem;
+    justify-content: center;
+    align-items: center;
+    background-color: #101010;
+    padding: 3.5rem 0;
+    justify-content: center;
+    z-index: 2;
+  }
+  
+  .user-board-close { /* bottone chiusura user board */
+    fill: #fff;
+    position: absolute;
+    top: 2.5rem;
+    right: 2rem;
+    height: 0.813rem;
+    width: 0.813rem;
+  }
+  .user-board-close svg {
+    transform: rotate(45deg);
+  }
+  
+  @keyframes slide-in-left {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  header {
+    min-width: 320px;
+    height: 3.313rem;
+    background-color: #fff;
+  }
+  header ul {
+    list-style: none;
+  }
+  header a {
+    text-decoration: none;
+    color: currentColor;
+  }
+  
+  .upper-header {
+    height: inherit;
+    display: flex;
+    align-items: center;
+    /* & :nth-child(-n + 2){
+        margin-left: .875rem;
+    } */
+  }
+  
+  .header-menu-icon-wrap {
+    width: 3rem;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .header-menu-icon {
+    width: 20px;
+  }
+  
+  .header-logo-esteso-piccolo {
+    width: 5.625rem;
+  }
+  
+  .header-logo-esteso-nav {
+    width: 9.063rem;
+  }
+  
+  .popup-close-icon {
+    height: 2.25rem;
+  }
+  
+  .popup-menu-wrap {
+    /* display: none; */
+    height: calc(100vh - 2.5rem);
+    width: max(320px, 100vw);
+    background-color: rgba(32, 32, 32, 0.8); /* Deve diventare un'animazione */
+    position: absolute;
+    top: 2.5rem;
+  }
+  
+  .popup-navbar-wrap {
+    width: 320px;
+    height: inherit;
+    background-color: #fff;
+    transform: translateX(-100%);
+    animation-name: slide-in-left;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .popup-navbar-wrap .chevron {
+    height: 1rem;
+    width: 3.25rem;
+    fill: currentColor;
+  }
+  .popup-navbar-wrap .cross {
+    height: 1.563rem;
+    width: 3.25rem;
+    fill: currentColor;
+  }
+  
+  .top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0.875rem;
+    height: 3.313rem;
+    background-color: #f3f3f3;
+  }
+  
+  .popup-nav {
+    background-color: #fff;
+    padding: 0 1.75rem;
+  }
+  .popup-nav summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.813rem 0;
+  }
+  .popup-nav > ul > li:first-of-type .inner-ul > li {
+    padding: 0;
+  }
+  .popup-nav > ul > li:first-of-type .inner-ul > li:nth-child(1) .details-2 {
+    border-bottom: 1px solid currentColor;
+  }
+  .popup-nav .details-1 {
+    border-bottom: 1px solid currentColor;
+    /* li:nth-last-of-type(n + 2){
+        border-bottom: 1px solid currentColor;
+    } */
+  }
+  .popup-nav .details-1 summary .chevron {
+    transform: scaleY(1);
+    transition: 0.5s;
+  }
+  .popup-nav .details-1[open] {
+    border-color: #fc4846;
+  }
+  .popup-nav .details-1[open] > summary {
+    color: #fc4846;
+    border-bottom: 1px solid currentColor;
+  }
+  .popup-nav .details-1[open] .chevron {
+    transform: scaleY(-1);
+    transition: 0.5s;
+  }
+  .popup-nav .details-2 summary {
+    padding: 0.875rem 0 0.813rem 0.875rem;
+  }
+  .popup-nav .details-2 .cross {
+    height: 0.77rem;
+    transform: rotate(0deg);
+    transition: 0.5s;
+  }
+  .popup-nav .details-2[open] {
+    color: #000;
+    border-color: #000;
+  }
+  .popup-nav .details-2[open] summary svg.cross {
+    transform: rotate(45deg);
+    transition: 0.5s;
+  }
+  .popup-nav .details-2 .end-ul li {
+    padding: 0 2.37rem;
+  }
+  .popup-nav .details-2 .end-ul li a {
+    display: inline-block;
+    padding: 0.438rem 0;
+  }
+  .popup-nav .details-2 .end-ul li:last-of-type a {
+    padding-bottom: 1.25rem;
+  }
+  .popup-nav .inner-ul > li,
+  .popup-nav .inner-ul > a > li {
+    color: #a3a3a3;
+    padding: 0.875rem 0 0.813rem 0.875rem;
+  }
+  .popup-nav li:nth-child(n+2) .inner-ul > a:nth-last-of-type(n + 2) > li {
+    border-bottom: 1px solid currentColor;
+  }
+  
+  /* .popup-games-wrap{
+  
+  } */
+  @media screen and (min-width: 321px) {
+    .popup-navbar-wrap {
+      width: min(86.5%, 23.438rem);
+    }
+  }
+  /* *[class*=popup],
+  *[class*=popup] *{
+      display: none;
+  } */
+  /* == Footer == */
+  /* == Page == */
+  
+  /*# sourceMappingURL=index.css.map */
+   *//*  *//*  *//*  *//*  *//*  *//* 
