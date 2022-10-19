@@ -1,0 +1,1 @@
+le dimensioni dei video sono, xs,sm,l e xl, sono in due formati mebm e mp4.
