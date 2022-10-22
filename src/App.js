@@ -6,7 +6,7 @@ import { GameGrid } from "./components/GamesGrid";
 function App() {
   return (
     <div className="App">
-      <GameGrid />
+        <GameGrid />
     </div>
   );
 }
