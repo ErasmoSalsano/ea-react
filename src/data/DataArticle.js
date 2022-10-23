@@ -164,7 +164,7 @@ export const articleCards = [
     {
         id: 19,
         image: `assets/images/article/Notizie EA/ea-notizie-immagine 1.jpg`,
-        category: `Eletronics Arts Inc.`,
+        category: `Eletronics Arts`,
         date: `15-lug-2022`,
         title: `Orientamento sessuale in The Sims 4`,
         desc: `Il nuovo aggiornamento integra l'orientamento sessuale in "Crea un Sim"`,
@@ -173,7 +173,7 @@ export const articleCards = [
     {
         id: 20,
         image: `assets/images/article/Notizie EA/ea-notizie-immagine 2.png`,
-        category: `Eletronics Arts Inc.`,
+        category: `Eletronics Arts`,
         date: `30-giu-2022`,
         title: `Visita guidata a Vita da Liceali Expansion Pack (EP12)`,
         desc: `La lezione è iniziata in The Sims™ 4 Vita da Liceali Expansion Pack Vivete l'esperienza adolescenziale suprema a modo vostro`,
@@ -182,7 +182,7 @@ export const articleCards = [
     {
         id: 21,
         image: `assets/images/article/Notizie EA/ea-notizie-immagine 3.png`,
-        category: `Eletronics Arts Inc.`,
+        category: `Eletronics Arts`,
         date: `24-giu-2022`,
         title: `La salute dei dipendenti prima di tutto`,
         desc: `Vogliamo ribadire il nostro incrollabile sostegno ai nostri dipendenti. La loro salute e il loro benessere sono la nostra priorità.`,
@@ -191,7 +191,7 @@ export const articleCards = [
     {
         id: 22,
         image: `assets/images/article/Notizie EA/ea-notizie-immagine 4.png`,
-        category: `Eletronics Arts Inc.`,
+        category: `Eletronics Arts`,
         date: `3-giu-2022`,
         title: `Sosteniamo senza alcuna riserva dipendenti, utenti e comunità LGBTQ+.`,
         desc: `Per la nostra azienda i diritti delle persone trans sono diritti umani. Sosteniamo senza alcuna riserva i nostri dipendenti, i nostri giocatori e le nostre comunità LGBTQ+.`,
@@ -200,7 +200,7 @@ export const articleCards = [
     {
         id: 23,
         image: `assets/images/article/Notizie EA/ea-notizie-immagine 5.png`,
-        category: `Eletronics Arts Inc.`,
+        category: `Eletronics Arts`,
         date: `24-mag-2022`,
         title: `Pronomi personalizzabili ora disponibili in The Sims 4`,
         desc: `Lancio dapprima in inglese - Ecco come personalizzare i pronomi dei Sims in "Crea un Sim"`,
@@ -209,7 +209,7 @@ export const articleCards = [
     {
         id: 24,
         image: `assets/images/article/Notizie EA/ea-notizie-immagine 6.jpg`,
-        category: `Eletronics Arts Inc.`,
+        category: `Eletronics Arts`,
         date: `19-lug-2022`,
         title: `EA Studios candidati come miglior ambiente di lavoro negli Stati Uniti`,
         desc: `Respawn Entertainment, Maxis e Industrial Toys ottengono riconoscimenti da GamesIndustry.biz`,
@@ -528,6 +528,24 @@ export const articleCards = [
         date: `13-gen-2022`,
         title: `Firemonkeys Studio di EA festeggia i 10 anni di The Sims FreePlay`,
         desc: `Tutto è cominciato realizzando The Sims per dispositivi mobili: da allora è diventato uno dei titoli preferiti della serie`,
+        link: ``,
+    },
+    {
+        id: 60,
+        image: `assets/images/article/The Sims 4/ea-thesims-immagine 5.png`,
+        category: `The Sims 4`,
+        date: `13-gen-2022`,
+        title: `Visita guidata a Vita da Liceali Expansion Pack (EP12)`,
+        desc: `La lezione è iniziata in The Sims™ 4 Vita da Liceali Expansion Pack Vivete l'esperienza adolescenziale suprema a modo vostro`,
+        link: ``,
+    },
+    {
+        id: 61,
+        image: `assets/images/article/Notizie EA/ea-notizie-immagine 1.jpg`,
+        category: `The Sims 4`,
+        date: `15-lug-2022`,
+        title: `Orientamento sessuale in The Sims 4`,
+        desc: `Il nuovo aggiornamento integra l'orientamento sessuale in "Crea un Sim"`,
         link: ``,
     },
 ];
