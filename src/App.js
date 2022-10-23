@@ -1,14 +1,11 @@
-// import logo from './logo.svg';
-// import './App.css';
-
 import { GameGrid } from "./components/GamesGrid";
+import { NavTab } from "./components/NavTab";
 
-function App() {
+export function App() {
   return (
     <div className="App">
         <GameGrid />
+        <NavTab gestion='home'/>
     </div>
   );
 }
-
-export default App;

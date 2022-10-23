@@ -1,4 +1,8 @@
+import { useEffect } from "react"
+
 export function ArticleCard({ article }) {
+
+    useEffect(() => {}, [article])
     return (
         <a href="sitooriginale.it" className="article-card">
             <img src={article.image} alt={article.imageDesc} />
