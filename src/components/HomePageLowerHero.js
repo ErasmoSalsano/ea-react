@@ -1,4 +1,6 @@
-export function HomePageLowerHero({ spanText, textColor, className }) {
+import { Button } from "./Button"
+
+export function HomePageLowerHero({ spanText, textColor, className, }) {
 
     const lowerHeroSpanStyle = {
         color: textColor
@@ -12,12 +14,8 @@ export function HomePageLowerHero({ spanText, textColor, className }) {
                 <div className={className}>
                     <div className="main-content-wrap ">
                         <span style={lowerHeroSpanStyle}>{spanText}</span>
-                        <div className="content-details hero2-button_discover">
-                            <div className="details hero2-button_discover_content" >
-                                <p>Scopri di più
-                                </p>
-                            </div>
-                        </div>
+                        <Button buttonText="Scopri di più" color='black'/>
+                       
                     </div>
                 </div>
             </div>

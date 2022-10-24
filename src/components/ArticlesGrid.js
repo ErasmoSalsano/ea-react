@@ -1,5 +1,6 @@
 import { ArticleCard } from "./ArticleCard";
 import { useEffect } from "react";
+import { Button } from "./Button";
 
 export function ArticlesGrid(props) {
     let myNewData = data(props.request, props.total, props.argument)
@@ -18,7 +19,10 @@ export function ArticlesGrid(props) {
         <div className="main-wrap">
             <div className="main-content-wrap tabContent articles-standard" style={style}>
                 {myNewData}
+                <Button buttonText="Più dettagli" color='black'/> 
             </div>
+       
+        
         </div>
     )
 }

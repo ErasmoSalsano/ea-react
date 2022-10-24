@@ -1,3 +1,5 @@
+import { Button } from "./Button"
+
 export function HomePageUpperHero({mobile,tablet768,tablet1024,desktop,spanText,logoSvg}) {
 
     return (
@@ -23,11 +25,9 @@ export function HomePageUpperHero({mobile,tablet768,tablet1024,desktop,spanText,
                         <img className="upper-hero2-logo"
                             src={logoSvg} alt="ea play logo" />
                         <span>{spanText} </span>
-                        <div class="content-details hero2-button_subscribe">
-                            <div className="details hero2-button_subscribe_content" >
-                                <p>Iscriviti subito</p>
-                            </div>
-                        </div>
+                      <div>
+                        <Button buttonText='Iscriviti subito' color='white'/>
+                      </div>
                     </div>
                 </div>
             </div>
