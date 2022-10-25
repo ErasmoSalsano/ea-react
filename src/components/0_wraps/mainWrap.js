@@ -1,5 +1,12 @@
-export function MainWrap({children, extendClass}){
-    return <div className={'main-wrap ' + extendClass}>{children}</div>
+export function MainWrap({ children, extendClass }) {
+    return (
+        <div
+            className={extendClass
+                ? 'main-wrap ' + extendClass
+                : 'main-wrap'}>
+            {children}
+        </div>
+    )
 }
 
 // actual extend classes:

@@ -1,6 +1,7 @@
 import { ArticleCard } from "./ArticleCard";
 import { useEffect } from "react";
 import { MainWrap } from "./0_wraps/mainWrap";
+import { MainContentWrap } from "./0_wraps/mainContentWrap";
 
 export function ArticlesGrid(props) {
     let myNewData = data(props.request, props.total, props.argument)
@@ -14,12 +15,11 @@ export function ArticlesGrid(props) {
         .map((item, index) => <ArticleCard key={item.id + index} article={item} />)
     }
 
-    const style = {'paddingTop': 60}
     return (
         <MainWrap>
-            <div className="main-content-wrap tabContent articles-standard" style={style}>
+            <MainContentWrap extendClass={"tabContent articles-standard"} pt>
                 {myNewData}
-            </div>
+            </MainContentWrap>
         </MainWrap>
     )
 }

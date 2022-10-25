@@ -4,6 +4,7 @@ import { TabButtons } from "../../data/DummyData";
 import { articleCards } from "../../data/DataArticle";
 import { ButtonNavTab } from "./ButtonNavTab";
 import { MainWrap } from "../0_wraps/mainWrap";
+import { MainContentWrap } from "../0_wraps/mainContentWrap";
 
 export function NavTab({gestion}) {
     const [active, setActive] = useState({
@@ -20,33 +21,32 @@ export function NavTab({gestion}) {
         showArgument()
     }, [active, showArgument])
 
-
-    const padding = { padding: 0 }
     const display = { 'display': 'flex' }
 
     return (
         <>
             <MainWrap extendClass={'navTab'}>
-                <div className="main-content-wrap" style={padding}>
+                <MainContentWrap p>
                     <button className="left-btn buttons" id="left-Btn" ><i className="material-icons">arrow_back_ios</i></button>
                     <div className="navTabArticles">
 
-                        <>
+                        
                         {TabButtons[gestion].map((item, index) =>
                             <div key={index} style={display}>
                                 <ButtonNavTab 
                                 onClick={showArgument(item)}
-                                className={active.id === index +1 ? 'linkTab active' : 'linkTab'}
+                                className={active.id === index +1 
+                                    ? 'linkTab active' 
+                                    : 'linkTab'}
                                 divClassName={'content'}
                                 buttonName={item.nome}
                                 effectClass={'animation'}/>
                             </div>
                         )}
-                        </>
                         
                     </div>
                     <button className="right-btn buttons" id="right-Btn"><i className="material-icons">arrow_forward_ios</i></button>
-                </div>
+                </MainContentWrap>
             </MainWrap>
             {active && <ArticlesGrid key={active.id +1} total={6} request={active.categoria} argument={articleCards}/>}
         </>
