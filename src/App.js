@@ -1,6 +1,6 @@
 import { GameGrid } from "./components/GamesGrid";
 import { Header } from "./components/Header";
-import { NavTab } from "./components/NavTab";
+import { NavTab } from "./components/NavTab/NavTab";
 
 export function App() {
   return (
