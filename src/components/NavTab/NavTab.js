@@ -3,6 +3,7 @@ import { ArticlesGrid } from "../ArticlesGrid"
 import { TabButtons } from "../../data/DummyData";
 import { articleCards } from "../../data/DataArticle";
 import { ButtonNavTab } from "./ButtonNavTab";
+import { MainWrap } from "../0_wraps/mainWrap";
 
 export function NavTab({gestion}) {
     const [active, setActive] = useState({
@@ -25,7 +26,7 @@ export function NavTab({gestion}) {
 
     return (
         <>
-            <div className="main-wrap navTab">
+            <MainWrap extendClass={'navTab'}>
                 <div className="main-content-wrap" style={padding}>
                     <button className="left-btn buttons" id="left-Btn" ><i className="material-icons">arrow_back_ios</i></button>
                     <div className="navTabArticles">
@@ -46,7 +47,7 @@ export function NavTab({gestion}) {
                     </div>
                     <button className="right-btn buttons" id="right-Btn"><i className="material-icons">arrow_forward_ios</i></button>
                 </div>
-            </div>
+            </MainWrap>
             {active && <ArticlesGrid key={active.id +1} total={6} request={active.categoria} argument={articleCards}/>}
         </>
     )
