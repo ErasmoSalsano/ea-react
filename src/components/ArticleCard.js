@@ -12,5 +12,6 @@ export function ArticleCard({ article }) {
                 <p>{article.desc}</p>
             </div>
         </a>
+        
     )
 }
