@@ -1,11 +1,13 @@
 import { GameGrid } from "./components/GamesGrid";
 import { HomePageUpperHero } from "./components/HomePageUpperHero";
 import { HomePageLowerHero } from "./components/HomePageLowerHero";
-import { NavTab } from "./components/NavTab";
+import { Header } from "./components/Header";
+import { NavTab } from "./components/NavTab/NavTab";
 
 export function App() {
   return (
     <div className="App">
+        <Header />
         <GameGrid />
         <NavTab gestion='home'/>
         <HomePageUpperHero 
