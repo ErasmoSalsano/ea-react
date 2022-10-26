@@ -1,0 +1,250 @@
+@use "../../basic-layout";
+@use "../../tipography";
+@use "../../colors";
+
+/* .main-wrap{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0px calc((100vw - 1120px)/2);
+} */
+
+body{
+    min-width: 320px;
+
+    background-color: var(--color-login-bg);
+    color: var(--color-white);
+    font-family: var(--font-family-text-regular);
+    
+    padding: 3.5rem 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.bold{
+    font-family: var(--font-family-text-bold);
+}
+
+.main-container{
+    width: min(100%, 25rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo{
+    margin-bottom: 1.5rem;
+}
+
+h1{
+    /* font-family: var(--font-family-text-bold); */
+    font-size: 1.47rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    letter-spacing: .06em;
+}
+
+.description{
+    text-align: center;
+    margin-bottom: 1rem;
+    letter-spacing: .04em;
+    line-height: 1.618;
+}
+
+.icons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: .5rem;
+
+    .icon{
+            width: 3rem;
+            padding: .75rem;
+            border-radius: .5rem;
+
+            &.google{
+                background-color: var(--color-white);
+            }
+            &.facebook{
+                background-color: var(--color-facebook-blue);
+            }
+            &.apple{
+                background-color: var(--color-white);
+            }
+            &.steam{
+                background-color: var(--color-black);
+            }
+            &.x-box{
+                background-color: var(--color-xbox-green);
+            }
+            &.playstation{
+                background-color: var(--color-playstation-blue);
+            }
+
+            &:hover{
+                scale: .95;
+            }
+    }
+}
+
+.separator{
+    position: relative;
+    width: 100%;
+    height: .5rem;
+
+    margin: 2rem 0;
+
+    hr{
+        border: 1px solid var(--color-hr-account);
+    }
+    
+    .layer{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    span{
+        background-color: var(--color-login-bg);
+        padding: 0 .625rem;
+        line-height: .5rem;
+        font-family: var(--font-family-text-regular);
+        color: var(--color-gray-border-hover);
+    }
+}
+
+form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    label{
+        &:not(:last-of-type){
+            font-family: var(--font-family-text-bold);
+            font-size: .75rem;
+            letter-spacing: .15em;
+            margin-bottom: .5rem;
+        }
+
+        &.wrapping-label{
+            margin-top: .5rem;
+            height: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: .75rem;
+        }
+    }
+
+    input{
+        margin-bottom: 1rem;
+        background-color: var(--color-account-import-bg);
+        border: 2px solid var(--color-gray-border);
+        padding: .7rem;
+        color: var(--color-white);
+        font-family: var(--font-family-text-regular);
+        font-size: 1rem;
+
+        &::placeholder{
+            color: #52525c;
+            font-family: var(--font-family-text-regular);
+            font-size: 1rem;
+            letter-spacing: .05em;
+        }
+
+        &[type=checkbox]{
+            width: 1.5rem;
+            height: 1.5rem;
+            padding: 0;
+            appearance: none;
+            border-radius: .3rem;
+            /* pointer-events: all; */
+
+            &:checked{
+                background-color: var(--color-account-checkbox-bg);
+                border-color: var(--color-account-checkbox-border);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                &::after{
+                    content: "\2713";
+                }
+            }
+        }
+
+        &.nested-input{
+            margin: 0;
+        }
+
+        &:hover{
+
+            box-shadow: 0 0 1.875rem rgba(var(--color-rgb-black), .3);
+
+            &:not(.nested-input){
+                border-color: var(--color-gray-border-hover);
+            }
+        }
+
+        &:focus,
+        &:not(.nested-input):focus{
+            outline: 0;
+            border-color: var(--color-white);
+            box-shadow: 0 0 .3rem  .3rem rgba(var(--color-rgb-white), .08);
+        }
+
+        &:active{
+
+        }
+    }
+
+    button{
+        margin: 2rem 0;
+        background-color: var(--color-account-button-blue);
+        border: 0;
+    }
+}
+
+button,
+.anchor-button{
+    font-family: var(--font-family-text-bold);
+    color: var(--color-white);
+    font-size: 1rem;
+    letter-spacing: .15rem;
+    transition-duration: .15s;
+
+    &:hover{
+        scale: .96;
+        box-shadow: 0 0 1.875rem rgba(39, 106, 252, .2);
+    }
+}
+
+input:not([type=checkbox]),
+button,
+.anchor-button{
+    width: 100%;
+    height: 3rem;
+    border-radius: .5rem;
+}
+
+.anchor-psw-recovery,
+.anchor-psw-recovery:hover{
+    color: var(--color-light-blue);
+    letter-spacing: .05em;
+}
+
+.anchor-psw-recovery:hover{
+    text-decoration: underline;
+    text-underline-offset: .25rem;
+}
+
+.anchor-button{
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-account-import-bg);
+    border: 2px solid var(--color-account-anchor-button-border);
+}
