@@ -1,0 +1,302 @@
+@use '../../layouts';
+@use '../../basic-layout';
+@use '../../colors';
+@use '../../tipography';
+@use '../../header';
+@use '../../footer';
+@use '../../hero';
+
+
+.upperContainerRedeem{
+    background-image: url(/assets/images/pages/redeem/section-background-1920.png.adapt.1920w.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    width: 100%;
+    height: 35vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+   
+}
+
+.h3Redeem{
+    color: white;
+    margin: 30px 0;
+    font-size: 40px;
+}
+.pRedeem{
+    color: white;
+    font-size: 18px;
+}
+.UppermainContRedeem{
+    width: 1000px ;
+    height: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-end;
+   padding-bottom: 50px;
+   
+   font-family: 'ElectronicsArtsText',Verdana,Helvetica, Arial,sans-serif;
+   
+  
+}
+.buttonRedeem{
+    margin: 20px 0;
+    width: 160px;
+    height: 60px;
+    color: white;
+    border-color: white;
+    border-style: solid;
+    border-radius: 3px;
+    background-color: transparent;
+    font-size: 17px;
+    
+}
+.buttonRedeem:hover{
+    transform: scale(1.05);
+    transition: transform 0.10s;
+}
+ 
+.lowerUpper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.aRedeem{
+   margin-left: 30px;
+   
+    color: red;
+   
+    font-size: 17px;
+    border-bottom: 2px solid #000;
+    padding-bottom: 3px;
+   
+    
+  
+ 
+}
+.aRedeem:hover{
+     color: red;
+     border-bottom: 2px solid red;
+}
+
+.consoleRedeem{
+    width:15px;
+    height: 15px;
+}
+.midContainerRedeem{
+    width: 100%;
+    height: 17vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 5vh 0;
+   
+}
+.midMainContainerRedeem{
+    width: 1000px;
+    height: 100%;
+    
+  
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-end;
+   
+  
+   font-family: 'ElectronicsArtsText',Verdana,Helvetica, Arial,sans-serif;
+   
+}
+.h3Redeemes{
+    color: black;
+    margin: 30px 0;
+    font-size: 20px;
+}
+.pRedeemes{
+    color: black;
+    font-size: 17px;
+}
+.buttonRedeemes{
+    background-color: transparent;
+    margin: 20px 0;
+    width: 170px;
+    height: 60px;
+    color: black;
+    border-color: black;
+    border-style: solid;
+    border-radius: 3px;
+    font-size: 20px;
+    margin-right: 50px;
+    
+}
+.buttonRedeemes:hover{
+        transform: scale(1.05);
+        transition: transform 0.10s;
+}
+.buttonRedeemes2:hover{
+    transform: scale(1.05);
+    transition: transform 0.10s;
+}
+
+.buttonRedeemes2{
+    background-color: transparent;
+    margin: 20px 0;
+    width: 220px;
+    height: 60px;
+    color: black;
+    border-color: black;
+    border-style: solid;
+    border-radius: 3px;
+    font-size: 20px;
+}
+@media screen and (max-width:640px)and(min-width:360px) {
+    .UppermainContRedeem{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        margin-left:0;
+        padding-left: 0;
+       
+        
+    }
+    .h3Redeem{
+        font-size: 27px;
+    }
+    .pRedeem{
+        
+        font-size: 12px;
+    }
+    .lowerUpper{
+        display: flex;
+        flex-direction: column;
+    }
+    .buttonRedeem{
+        margin: 20px 0;
+        width: 95%;
+        height: 40px;
+        color: white;
+        border-color: white;
+        border-style: solid;
+        border-radius: 3px;
+        background-color: transparent;
+        font-size: 17px;
+        
+    }
+   
+    .aRedeem{
+        width: 120px;
+        
+         color: red;
+        
+        
+         font-size: 15px;
+         border-bottom: 2px solid #000;
+         padding-bottom: 3px;
+       text-align:center;
+       margin:0
+        
+     }
+     .aRedeem:hover{
+          color: red;
+          border-bottom: 2px solid red;
+     }
+     .needHelp{
+        width: 100%;
+        display: flex;
+       justify-content: center;
+        align-items: center;
+     }
+     .midMainContainerRedeem{
+        width: 90%;
+     
+        display: flex;
+        flex-direction: column;
+        
+       
+        
+    }
+    .midContainerRedeem{
+        width: 100%;
+        height: 25vh;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin: 5vh 0;
+    }
+     .buttonRedeemes{
+        margin-bottom: 5px;
+        width: 95%;
+        height: 40px;
+        color: black;
+        border-color: black;
+        border-style: solid;
+        border-radius: 3px;
+        background-color: transparent;
+        font-size: 17px;
+        
+    }
+        .buttonRedeemes2{
+            margin-bottom: 5px;
+            width: 95%;
+            height: 40px;
+            color: black;
+            border-color: black;
+            border-style: solid;
+            border-radius: 3px;
+            background-color: transparent;
+            font-size: 17px;
+            
+        }
+        .h3Redeemes{
+             font-size: 16px;
+        }
+        .pRedeemes{
+            font-size: 15px;
+
+        }
+}
+@media screen and (max-width:1455px)and(min-width:1024px) {
+    .UppermainContRedeem{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        margin-left:0;
+        padding-left: 0;
+}
+.h3Redeem{
+    font-size: 32px;
+}
+.midMainContainerRedeem{
+    width: 90%;
+ 
+    display: flex;
+    flex-direction: column;
+}
+}
+@media screen and (max-width:1023px)and(min-width:640px) {
+    .UppermainContRedeem{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        margin-left:0;
+        padding-left: 0;
+}
+.h3Redeem{
+    font-size: 32px;
+}
+.midMainContainerRedeem{
+    width: 90%;
+ 
+    display: flex;
+    flex-direction: column;
+}
+}
+@media screen and (max-width:762px)and(min-width:641px) {
+    .midContainerRedeem{
+        width: 100%;
+        height: 25vh;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        
+    }
+}

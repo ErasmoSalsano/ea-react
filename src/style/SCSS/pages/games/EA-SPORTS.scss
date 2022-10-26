@@ -1,0 +1,843 @@
+@use '../../layouts';
+@use '../../basic-layout';
+@use '../../colors';
+@use '../../tipography';
+@use '../../header';
+@use '../../footer';
+@use '../../hero';
+
+
+
+body,
+html {
+
+    background-color: #f3f3f3;
+
+}
+
+.EASPORTS-big-wrap {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+
+
+
+
+.EASPORTS-blackground {
+    z-index: 1;
+    position: absolute;
+    display: none;
+
+
+}
+
+
+// css della prima sezione (griglia cards con video in background)
+
+
+
+.EASPORTS-firstwrap {
+
+    background-color: black;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0px calc((100vw - 1120px)/2);
+
+
+
+    .content-wrap {
+        // section-wrapper
+
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        width: 90vw;
+        flex-direction: column;
+        margin-top: 20%;
+        row-gap: 1rem;
+        padding: 10px;
+
+        .main-content-wrap {
+            width: auto;
+            padding: 0;
+
+            .content-details {
+
+                .details {
+
+                    border-color: #f3f3f3;
+                    color: #f3f3f3;
+
+                }
+
+            }
+        }
+    }
+
+
+}
+
+.EASPORTS-video {
+    position: absolute;
+    top: 0;
+    max-height: 160vh;
+    max-width: 100%;
+    display: none;
+
+}
+
+
+
+.title-game {
+    @extend %flexcenter;
+    flex-direction: column;
+    position: relative;
+
+    span {
+        color: #ff4747
+    }
+}
+
+
+h3 {
+    //titolo della sezione
+    @extend %flexcenter;
+    color: rgb(243 243 243);
+    font-family: var(--font-family-display-bold);
+    font-size: 54px;
+    // padding: 50px;
+    text-align: center
+}
+
+h4 {
+    color: rgb(243 243 243);
+    font-family: var(--font-family-text-bold);
+    font-size: 24px;
+    text-align: center;
+    // padding: 30px;
+
+}
+
+
+
+
+
+
+.image_overlay>* {
+    transition: transform 0.40s;
+}
+
+
+.image_overlay::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: none;
+    z-index: 1;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.image_overlay:hover::before {
+    opacity: 0.9;
+}
+
+
+.content-details {
+
+    .details {
+
+        border-color: #f3f3f3;
+        color: #f3f3f3;
+
+    }
+
+}
+
+//css della prima inserzione "EA PLAY"
+
+
+
+.EASPORTS-insertion {
+
+
+    background-image: url(/assets/images/EASPORTSpage/ea-play-product-conversion-gradient-jpg-mobile.768w.jpg);
+    background-size: cover;
+
+    position: relative;
+    z-index: 1;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+
+
+
+    .insertion-text {
+
+
+
+        h4 {
+
+            font-family: var(--font-family-display-bold);
+            // font-size: 3.5vh;
+            width: 500px;
+            max-width: 90vw;
+            padding: 5vh 0 5vh 0;
+
+        }
+    }
+
+    .insertion-logo {
+
+        @extend %flexcenter;
+        flex-direction: column;
+        margin-bottom: 30px;
+        height: 20%;
+
+    }
+
+    .insertion-svg {
+        height: 40px;
+        cursor: pointer;
+        transition: transform 0.20s;
+
+        &:hover {
+            transform: scale(1.1);
+
+        }
+
+
+
+    }
+
+    .content-details {
+
+        .details {
+
+            border-color: #f3f3f3;
+            color: #f3f3f3;
+
+        }
+    }
+
+
+
+
+
+
+}
+
+//seconda sezione, seconda griglia cards più grandi
+
+.EASPORTS-secondwrap {
+
+    background-color: white;
+
+    .content-wrap {
+        width: 90vw;
+    }
+
+    @extend %flexcenter;
+    text-align: center;
+    flex-direction: column;
+
+
+    z-index: 1;
+
+
+    .title-game {
+        h3 {
+
+
+            font-size: var(--font-size-section-title);
+            color: black;
+
+
+            width: 90vw;
+            padding: 5vh 0 5vh 0;
+
+
+        }
+    }
+
+}
+
+
+.secondwrap-grid-games {
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    font-size: var(--font-size-span);
+    font-family: var(--font-family-display-regular);
+    letter-spacing: 0.5px;
+
+    .game-box {
+        // card 
+        width: 100%;
+        position: relative;
+        cursor: pointer;
+
+    }
+
+    .game-image {
+        height: 100%;
+        width: 100%;
+        filter: brightness(65%);
+    }
+
+}
+
+
+
+// terza sezione, griglia articles e navbar
+
+
+
+.EASPORTS-thirdwrap {
+    @extend %flexcenter;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+
+
+
+    .EASPORTS-thirdwrap-title {
+        background-color: white;
+        width: 100%;
+
+        h3 {
+            font-size: var(--font-size-section-title);
+            color: black;
+            padding: 50px 0 30px 0;
+        }
+    }
+
+
+
+    .main-wrap {
+        height: 100%;
+
+    }
+
+
+    .navTab .navTabArticles {
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+    }
+
+
+    .main-wrap {
+
+        .main-content-wrap {
+            .buttons {
+                width: 2em;
+                color: rgba(56, 44, 229, 0.9);
+                border: none;
+                background-color: transparent;
+                padding: 0;
+                cursor: pointer;
+
+
+
+            }
+
+            .left-btn {
+                display: none;
+            }
+
+        }
+
+    }
+
+    @media all and(min-width: 900px) {
+        .main-wrap {
+            .main-content-wrap {
+                .buttons i {
+                    display: none;
+                }
+            }
+        }
+    }
+
+
+}
+
+// inserzione finale per lavorare con EA
+
+
+
+.EASPORTS-insertion2 {
+    height: 30vh;
+    padding-bottom: 20px;
+    @extend %flexcenter;
+    flex-direction: column;
+
+    background-color: white;
+
+    h3 {
+        height: 20px;
+        color: #161616;
+        font-size: 26px;
+        padding: 90px 0 20px 0;
+        width: 87vw;
+    }
+
+
+    .main-content-wrap {
+        .content-details {
+            // height: 50px;
+
+            .details {
+                color: #f3f3f3;
+                background-color: #ff4747;
+                border-color: #ff4747;
+
+            }
+
+        }
+    }
+
+
+}
+
+
+.article-text {
+
+    h3 {
+        padding: 0;
+        text-align: left;
+
+    }
+}
+
+
+
+@media all and (min-width:768px) {
+
+
+
+
+    .EASPORTS-blackground {
+        width: 100%;
+        display: unset;
+    }
+
+    .EASPORTS-video {
+        display: unset;
+
+    }
+
+    .content-wrap {
+        width: 82vw;
+
+        .grid-games {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.55rem;
+        }
+    }
+
+
+
+    .EASPORTS-insertion {
+
+        background-image: url(/assets/images/EASPORTSpage/ea-play-product-conversion-gradient-jpg-tablet.1024w.jpg);
+
+        justify-content: center;
+        height: 10%;
+
+        .insertion-text {
+            justify-content: center;
+
+            text-align: center;
+
+
+            h4 {
+                font-size: 24px;
+                width: 100vw;
+                letter-spacing: normal;
+            }
+        }
+
+        .content-details {
+            width: 200px;
+
+        }
+
+
+
+
+
+        .insertion-logo {
+            width: 100px;
+            height: 80px;
+
+            flex-direction: row;
+
+        }
+
+
+    }
+
+    .secondwrap-grid-games {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.25rem;
+    }
+
+
+
+    .EASPORTS-insertion2 {
+
+        height: 20%;
+        padding-bottom: 0;
+
+        background-image: url(/assets/images/EASPORTSpage/ea-sports-pc-join-us-xl.png.tablet.1024w.png);
+        background-size: cover;
+
+        h3 {
+            width: auto;
+            padding: 0;
+            margin-top: 50px;
+            font-size: 26px;
+        }
+
+        .main-content-wrap {
+            margin-bottom: 20px;
+            width: 350px;
+        }
+
+    }
+
+}
+
+@media all and (min-width:1024px) {
+
+
+    .content-wrap {
+        width: 85vw;
+
+        .grid-games {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 1.75rem;
+        }
+
+        .secondwrap-grid-games {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.75rem;
+        }
+    }
+
+
+
+
+
+    .EASPORTS-insertion {
+        width: 100%;
+        display: flex;
+
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+
+
+        .insertion-text {
+
+
+
+
+            h4 {
+                font-family: var(--font-family-display-bold);
+                font-size: 26px;
+                width: 40vw;
+                text-align: left;
+                padding-left: calc((100vw - 1120px)/2);
+                margin-left: 30px;
+
+
+            }
+        }
+
+        .insertion-logo {
+            margin-bottom: 0;
+            margin-right: 170px;
+
+            padding-right: calc((100vw - 1120px)/2);
+            gap: 20px;
+
+        }
+
+        .insertion-svg {
+            height: 50px;
+            cursor: pointer;
+            transition: transform 0.20s;
+
+            &:hover {
+                transform: scale(1.1);
+
+            }
+
+
+        }
+
+        .content-details {
+            width: 200px;
+        }
+
+    }
+
+    .EASPORTS-insertion2 {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+
+
+        background-image: url(/assets/images/EASPORTSpage/ea-sports-pc-join-us-xl.png.tablet.1024w.png);
+        background-size: cover;
+
+
+
+        h3 {
+
+            padding: 0;
+            margin: 0;
+            margin-left: 15vw;
+            color: #161616;
+            font-size: 26px;
+        }
+
+        .main-content-wrap {
+            margin-bottom: 0;
+            margin-right: 10vw;
+
+        }
+
+
+    }
+    .EASPORTS-secondwrap {
+
+        .content-wrap {
+            width: 70vw;
+        }
+    }
+
+  
+}
+
+
+
+
+@media all and (min-width: 1456px) {
+
+    .EASPORTS-insertion {
+        display: flex;
+        background-image: url(/assets/images/EASPORTSpage/ea-play-product-conversion-gradient-jpg-2020-xl.jpg.adapt.1920w.jpg);
+        flex-direction: row;
+        justify-content: space-between;
+
+        .insertion-text {
+            // margin-left: 13rem;
+
+
+
+            h4 {
+                font-family: var(--font-family-display-bold);
+                font-size: 26px;
+                width: 45vw;
+                text-align: left;
+                margin-left: 0;
+
+                padding-left: calc((100vw - 1120px)/2);
+
+
+            }
+        }
+
+        .insertion-logo {
+
+
+            padding-right: calc((100vw - 1120px)/2);
+            gap: 20px;
+        }
+
+        .main-content-wrap {
+            width: 550px;
+            display: unset;
+
+        }
+
+        .content-details {
+            width: 200px;
+        }
+
+
+
+
+
+
+    }
+
+    .EASPORTS-secondwrap {
+
+        .content-wrap {
+            width: 60vw;
+        }
+    }
+
+    .EASPORTS-insertion2 {
+        padding: 10px;
+        background-image: url(/assets/images/EASPORTSpage/ea-sports-pc-join-us-xl.png.adapt.1920w.png);
+
+        flex-direction: row;
+        // background-position: 90% 17%;
+
+
+        h3 {
+            margin: 0;
+            margin-left: 23vw;
+        }
+
+        .main-content-wrap {
+            margin-right: 16vw;
+            width: 550px;
+        }
+
+    }
+
+
+
+}
+
+
+//SCSS ARTICLES
+
+.navTab {
+    @extend %bottom-line;
+}
+
+.article-card {
+    @include layouts.article-card(100%);
+    flex: 1 auto;
+    @extend %shadow-start;
+
+    &:hover {
+        @extend %shadow-hover;
+    }
+
+    img {
+        display: none;
+    }
+
+    .article-text {
+        text-align: center;
+        @include layouts.article-text(center, none);
+    }
+}
+
+.content-details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 111px;
+
+    .details {
+        display: flex;
+        justify-content: center;
+        border: 2px solid #161616;
+        line-height: 27px;
+        border-radius: 3px;
+        color: #161616;
+        font-size: var(--font-size-span);
+
+        p {
+            margin: 0 6px;
+            font-family: var(--font-family-display-regular);
+        }
+
+        @extend %start-scale-padding;
+
+        &:hover {
+            @extend %scale-padding;
+        }
+    }
+}
+
+@media screen and(max-width:639px) {
+    .content-details {
+        width: 100%;
+
+        .details {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (min-width:769px) {
+    .article-card {
+        width: 40%;
+
+        img {
+            display: block;
+        }
+
+        .article-text {
+            text-align: left;
+            justify-content: flex-start;
+
+            div {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+
+                span {
+                    line-height: 27px;
+                }
+            }
+
+            h3 {
+                line-height: 32.4px;
+            }
+
+            p {
+                display: block;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:1025px) {
+    .article-card {
+        width: 30%;
+    }
+}
+
+@media screen and (min-width:1457px) {
+
+    .main-wrap {
+        width: 100vw;
+        height: 100vh;
+
+    }
+
+    .article-card {
+        width: 30%;
+    }
+}

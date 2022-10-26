@@ -1,0 +1,430 @@
+@use '../../layouts';
+@use '../../basic-layout';
+@use '../../colors';
+@use '../../tipography';
+@use '../../header';
+@use '../../footer';
+@use '../../hero';
+
+/* == Page == */
+body,
+html {
+    width: 100%;
+    background-color: #f3f3f3;
+}
+
+// INIZIO -->   CSS DELL'HERO
+
+.hero-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+
+
+
+
+
+    &>img {
+        width: 100%;
+    }
+
+    &>picture {
+
+        width: 100%;
+
+        source {
+
+            width: 100%;
+        }
+
+        img {
+
+            width: 100%;
+        }
+    }
+
+    video {
+
+
+
+
+        width: 100%;
+        display: none;
+    }
+
+    .hero-wrapper {
+        position: absolute;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+
+        .hero-content {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            z-index: 2;
+            bottom: 2rem;
+            right: 2rem;
+            display: none;
+
+            .pegi {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .hero-container {
+
+
+
+        .hero-wrapper {
+            .hero-content {
+                display: unset;
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 1024px) {
+    .hero-container {
+
+
+        &>img {
+            display: none;
+        }
+
+
+
+        &>picture {
+            display: none;
+        }
+
+        video {
+            display: block;
+        }
+    }
+}
+
+@media screen and (min-width: 1456px) {
+    .hero-container {
+
+        padding-top: 25%;
+        height: 0;
+        overflow: hidden;
+
+        .hero-wrapper {
+            .hero-content {
+                bottom: 58%;
+                right: 2rem;
+
+
+            }
+        }
+
+
+
+    }
+}
+
+
+
+//FINE CSS HERO
+
+
+//CSS ARROWS DELLA NAVBAR
+
+.navTab .navTabArticles {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+
+
+.main-wrap {
+
+    .main-content-wrap {
+        .buttons {
+            width: 2em;
+            color: rgba(56, 44, 229, 0.9);
+            border: none;
+            background-color: transparent;
+            padding: 0;
+            cursor: pointer;
+          
+
+            
+        }
+        .left-btn {
+                display: none;
+            }
+
+    }
+
+}
+
+@media all and(min-width: 900px){
+    .main-wrap{
+        .main-content-wrap{
+            .buttons i{
+                display:none;
+            }
+        }
+    }  
+}
+
+
+
+
+
+//INIZIO CSS CARD GAMES
+
+
+
+.content-wrap {
+    // section-wrapper
+    display: flex;
+    justify-content: center;
+    width: 90vw;
+    flex-direction: column;
+    margin: 2rem 0;
+    row-gap: 1rem;
+    padding: 10px;
+
+    .title-game {
+        h3 {
+            //titolo della sezione
+            @extend %flexcenter;
+            font-family: var(--font-family-display-bold);
+            font-size: var(--font-size-section-title);
+            padding: 10px;
+            text-align: center;
+
+        }
+    }
+
+    .game-box {
+
+
+        .image_overlay {
+
+
+            .block {
+                display: flex;
+                flex-direction: column;
+
+                .span_games {
+                    justify-content: center;
+                    opacity: 0;
+                    transition: 0.5s;
+                    transform: translateY(0px);
+                    display: flex;
+                    color: #a3a3a3;
+                    text-align: center;
+
+
+                    &:hover {
+                        color: white;
+                    }
+                }
+            }
+
+
+
+        }
+
+        .image_overlay:hover .span_games {
+            z-index: 1;
+            display: unset;
+            transition: 0.4s;
+            opacity: 1;
+        }
+
+        .image_overlay:hover .second {
+            transform: translateY(20px);
+            transition: 0.5s;
+            opacity: 1;
+        }
+
+        .image_overlay:hover .third {
+            transform: translateY(40px);
+            transition: 0.5s;
+            opacity: 1;
+        }
+
+
+
+        .image_overlay:hover .spangames {
+
+            z-index: 1;
+            display: unset;
+
+            opacity: 1;
+
+
+
+
+
+
+
+
+            .image_overlay:hover .second {
+                transform: translateY(40px);
+
+                opacity: 1;
+            }
+
+            .image_overlay:hover .third {
+                transform: translateY(60px);
+
+                opacity: 1;
+            }
+
+
+        }
+    }
+
+}
+
+
+.image_overlay::before {
+
+    background: linear-gradient(0deg, rgb(11, 5, 52, 0.7), rgba(11, 5, 52, 0.7));
+
+}
+
+
+
+
+
+
+
+
+a:not(:last-child) {
+    border-bottom: 1px solid rgba(255, 255, 255, .2);
+}
+
+
+.block {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    color: #a3a3a3;
+
+    :hover {
+        color: white;
+    }
+
+    a {
+        height: 30px;
+    }
+}
+
+
+
+//CSS DEL BUTTON
+
+.content-details {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 111px;
+
+    .details {
+
+        display: flex;
+        justify-content: center;
+        border: 2px solid #161616;
+        line-height: 27px;
+        border-radius: 3px;
+        color: #161616;
+        font-size: var(--font-size-span);
+
+        p {
+            margin: 0 6px;
+            font-family: var(--font-family-display-regular);
+        }
+
+        @extend %start-scale-padding;
+
+        &:hover {
+            @extend %scale-padding;
+        }
+    }
+}
+
+
+@media screen and(max-width:639px) {
+    .content-details {
+        width: 100%;
+
+        .details {
+            width: 100%;
+        }
+    }
+}
+
+.navTab {
+    @extend %bottom-line;
+
+    .navTabArticles {
+
+        .linkTab {
+            .content {
+                letter-spacing: 0px;
+            }
+        }
+    }
+}
+
+
+
+@media all and (min-width:768px) {
+    .content-wrap {
+        width: 82vw;
+
+        .grid-games {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.55rem;
+        }
+    }
+
+
+}
+
+
+
+
+@media all and (min-width:1024px) {
+    .content-wrap {
+        width: 85vw;
+
+        .grid-games {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 1.75rem;
+        }
+    }
+
+}
+
+@media all and (min-width: 1456px) {
+    .content-wrap {
+        width: 75vw;
+    }
+}

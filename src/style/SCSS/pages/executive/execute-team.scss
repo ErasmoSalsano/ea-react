@@ -1,0 +1,102 @@
+@use '../../layouts';
+@use '../../basic-layout';
+@use '../../colors';
+@use '../../tipography';
+@use '../../header';
+@use '../../footer';
+@use '../../hero';
+
+
+.headerExecutive{
+    background-image: url(/assets/images/pages/executive/header-ea-hero-executives-m.png.adapt.crop7x2.1920w.png); 
+    
+    width: 100%;
+    height: 29vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.teamMember{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+   
+}
+.singleMember{
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+   align-items: center;
+   font-family: 'ElectronicsArtsText',Verdana,Helvetica, Arial,sans-serif;
+   margin: 40px 10px;
+   margin-bottom: 100px;
+   width: 350px;
+   height: 350px
+
+
+}
+.sectionMembers{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    margin: 50px 0px;
+}
+.nameMember{
+    margin: 40px 0;
+}
+
+
+.imagesExecutive{
+    height: 90%;
+    width: 90%;
+}
+
+@media screen and (max-width:1455px)and(min-width:1024px) {
+    .headerExecutive{
+    height: 40vw;
+    }
+    .singleMember{
+    
+        width: 30%;
+        height: 30%;
+        margin-bottom: 50px;
+  
+}
+}
+@media screen and (max-width:1023px)and(min-width:768px) {
+    .headerExecutive{
+        height: 50vw;
+        }
+        .singleMember{
+    
+            width: 37%;
+            height: 30%;
+            margin-bottom: 30px;
+      
+        
+            
+        }
+       
+}
+    @media screen and (max-width:767px)and(min-width:360px) {
+        .headerExecutive{
+        height: 167vw;
+            }
+            .singleMember{
+                font-size: 16px;
+                width: 90%;
+                height: 45%;
+                margin-bottom: 5px;
+            
+                
+            }
+           
+        }
+
+
+    
+
+ 
+
