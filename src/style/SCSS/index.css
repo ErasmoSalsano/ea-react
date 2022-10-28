@@ -15,7 +15,7 @@
   transition: 0.1s;
 }
 
-.hero_wrap .upper-hero1 .hero1-buttons, .hero_wrap .lower-hero1, .hero_wrap .second-hero_wrap .upper-hero2, .hero_wrap .second-hero_wrap .upper-hero2 .hero2-buttons, .hero_wrap .second-hero_wrap .lower-hero2, .content-wrap h3 {
+.hero_wrap .second-hero_wrap .upper-hero, .hero_wrap .second-hero_wrap .lower-hero, .content-wrap h3 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1913,328 +1913,99 @@ header content {
   justify-content: center;
   flex-direction: column;
 }
-.hero_wrap .upper-hero1 {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: end;
-  flex-direction: column;
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-}
-.hero_wrap .upper-hero1 picture {
-  -o-object-fit: contain;
-     object-fit: contain;
-  margin-bottom: -7px;
-  width: 100%;
-}
-.hero_wrap .upper-hero1 picture source {
-  -o-object-fit: contain;
-     object-fit: contain;
-  width: 100%;
-}
-.hero_wrap .upper-hero1 picture img {
-  -o-object-fit: contain;
-     object-fit: contain;
-  height: 100%;
-  width: 100%;
-}
-.hero_wrap .upper-hero1 .hero1-buttons {
-  height: 50%;
-  width: 90vw;
-  position: absolute;
-  flex-direction: column;
-}
-.hero_wrap .upper-hero1 .hero1-buttons span {
-  font-family: var(--font-family-display-regular);
-  font-size: var(--font-size-span);
-  width: 90vw;
-  color: white;
-  padding: 20px;
-  text-align: center;
-}
-.hero_wrap .upper-hero1 .hero1-buttons .hero-buttons_wrap {
-  width: 100%;
-}
-.hero_wrap .upper-hero1 .hero1-buttons .upper-hero1-logo {
-  max-width: 80vw;
-}
-.hero_wrap .upper-hero1 .hero1-buttons .hero1-button_playNow {
-  height: 50px;
-}
-.hero_wrap .upper-hero1 .hero1-buttons .hero1-button_playNow .hero1-button_playNow_content {
-  border-color: white;
-  background-color: white;
-}
-.hero_wrap .upper-hero1 .hero1-buttons .hero1-button_trailer .hero1-button_trailer_content {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  border-color: white;
-}
-.hero_wrap .upper-hero1 .hero1-buttons .hero1-button_trailer .hero1-button_trailer_content p {
-  margin-left: -4px;
-}
-.hero_wrap .upper-hero1 .hero1-buttons .hero1-button_trailer .hero1-button_trailer_content p .fa-solid {
-  padding-left: 10px;
-}
-.hero_wrap .lower-hero1 {
-  background-image: url(/public/assets/images/hero/home/hero1/nhl23-mobile-section-bg-buy-now-product-conversion-xl.jpg.adapt.768w.jpg);
-  background-size: cover;
-  position: relative;
-  overflow: hidden;
-}
-.hero_wrap .lower-hero1 .main-content-wrap {
-  flex-direction: column;
-}
-.hero_wrap .lower-hero1 .main-content-wrap span {
-  padding-top: 20px;
-  font-family: var(--font-family-display-bold);
-  font-size: var(--font-size-hero-title);
-  text-align: center;
-  color: #f3f3f3;
-}
-.hero_wrap .lower-hero1 .main-content-wrap .hero1-button_trailer .hero1-button_trailer_content {
-  background-color: white;
-  border-color: white;
-}
-.hero_wrap .lower-hero1 .main-content-wrap .lower-hero1_image {
-  width: 100%;
-}
 .hero_wrap .second-hero_wrap {
   width: 100%;
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
-.hero_wrap .second-hero_wrap .upper-hero2 {
-  position: relative;
-  flex-direction: column;
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-}
-.hero_wrap .second-hero_wrap .upper-hero2 picture {
+.hero_wrap .second-hero_wrap picture {
   margin-bottom: -5px;
   width: 100%;
 }
-.hero_wrap .second-hero_wrap .upper-hero2 picture source {
+.hero_wrap .second-hero_wrap picture source {
   width: 100%;
 }
-.hero_wrap .second-hero_wrap .upper-hero2 picture img {
+.hero_wrap .second-hero_wrap picture img {
   width: 100%;
 }
-.hero_wrap .second-hero_wrap .upper-hero2 span {
+.hero_wrap .second-hero_wrap .upper-hero {
+  position: absolute;
+  flex-direction: column;
+  width: 100%;
+}
+.hero_wrap .second-hero_wrap .upper-hero span {
   font-family: var(--font-family-display-regular);
   font-size: var(--font-size-span);
-  width: 79vw;
+  width: 80vw;
   color: white;
   text-align: left;
 }
-.hero_wrap .second-hero_wrap .upper-hero2 .hero2-buttons {
-  width: 90vw;
-  position: absolute;
+.hero_wrap .second-hero_wrap .upper-hero .main-wrap {
+  padding: 0px calc((80vw - 1120px) / 2);
+}
+.hero_wrap .second-hero_wrap .upper-hero .upper-hero_content {
+  display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: left;
   flex-direction: column;
+  width: 80vw;
 }
-.hero_wrap .second-hero_wrap .upper-hero2 .hero2-buttons .upper-hero2-logo {
+.hero_wrap .second-hero_wrap .upper-hero .upper-hero_content .upper-hero_logo {
   width: 250px;
-  max-width: 80vw;
 }
-.hero_wrap .second-hero_wrap .upper-hero2 .hero2-buttons .hero2-button_subscribe .hero2-button_subscribe_content {
-  border-color: white;
-  color: white;
-}
-.hero_wrap .second-hero_wrap .lower-hero2 {
+.hero_wrap .second-hero_wrap .lower-hero {
   background-image: url(/public/assets/images/hero/home/hero2/ea-section-sfondo\ blu-bg-esrb-parents-blue-xl.jpg.adapt.1920w.jpg);
   background-size: cover;
   position: relative;
   overflow: hidden;
 }
-.hero_wrap .second-hero_wrap .lower-hero2 .main-content-wrap {
+.hero_wrap .second-hero_wrap .lower-hero .main-content-wrap {
   width: 90vw;
   flex-direction: column;
 }
-.hero_wrap .second-hero_wrap .lower-hero2 .main-content-wrap span {
+.hero_wrap .second-hero_wrap .lower-hero .main-content-wrap span {
   padding-top: 20px;
   font-family: var(--font-family-display-bold);
   font-size: var(--font-size-hero-title);
   text-align: center;
 }
 
-@media screen and (max-width: 360px) and (max-height: 915px) {
-  .hero_wrap .upper-hero1 .hero1-buttons {
-    margin-bottom: 10px;
-    height: 100%;
-  }
-  .hero_wrap .upper-hero1 .hero1-buttons span {
-    font-size: 15px;
-    padding: 15px;
-    margin-bottom: -5px;
-    margin-top: -25px;
-  }
-  .hero_wrap .upper-hero1 .hero1-buttons .hero1-button_playNow {
-    margin-top: -10px;
-    height: 30px;
-    padding-bottom: 15px;
-  }
-  .hero_wrap .upper-hero1 .hero1-buttons .hero1-button_playNow .hero1-button_playNow_content {
-    height: 30px;
-    justify-content: center;
-    align-items: center;
-  }
-  .hero_wrap .upper-hero1 .hero1-buttons .hero1-button_trailer {
-    height: 30px;
-  }
-  .hero_wrap .upper-hero1 .hero1-buttons .hero1-button_trailer .hero1-button_trailer_content {
-    height: 30px;
-    justify-content: center;
-    align-items: center;
-  }
-}
-@media screen and (max-width: 540px) and (max-height: 915px) {
-  .hero_wrap .upper-hero1 .hero1-buttons {
-    height: 55%;
-  }
-  .hero_wrap .upper-hero1 .hero1-buttons span {
-    margin-bottom: 5px;
-    margin-top: -25px;
-  }
-  .hero_wrap .upper-hero1 .hero1-buttons .hero1-button_playNow {
-    height: 30px;
-  }
-  .hero_wrap .upper-hero1 .hero1-buttons .hero1-button_trailer {
-    margin-bottom: -20px;
-  }
-}
-@media screen and (min-width: 639px) {
-  .hero_wrap .second-hero_wrap .upper-hero2 .hero2-buttons .hero2-button_subscribe {
-    width: 180px;
-    margin-left: -12px;
-    justify-content: center;
-  }
-}
 @media all and (min-width: 768px) {
-  .hero_wrap .upper-hero1 picture img {
-    height: 100%;
-  }
-  .hero_wrap .upper-hero1 .hero1-buttons {
-    height: 100%;
-    width: 100%;
-    top: 0;
-    right: 25vw;
-  }
-  .hero_wrap .upper-hero1 .hero1-buttons span {
-    width: 40vw;
-  }
-  .hero_wrap .upper-hero1 .hero1-buttons .upper-hero1-logo {
-    width: 300px;
-  }
-  .hero_wrap .second-hero_wrap .upper-hero2 span {
+  .hero_wrap .second-hero_wrap .upper-hero span {
     width: 33vw;
   }
-  .hero_wrap .second-hero_wrap .upper-hero2 .hero2-buttons {
-    margin-left: 2vw;
+  .hero_wrap .second-hero_wrap .lower-hero span {
+    width: 90vw;
+  }
+  .hero_wrap .second-hero_wrap .lower-hero .content-details {
+    width: unset;
   }
 }
 @media all and (min-width: 1024px) {
-  .hero_wrap .upper-hero1 .hero1-buttons {
-    right: 22vw;
-    width: 100vw;
+  .hero_wrap .second-hero_wrap picture img {
+    height: 50vh;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
-  .hero_wrap .upper-hero1 .hero1-buttons .hero-buttons_wrap {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .hero_wrap .upper-hero1 .hero1-buttons .hero-buttons_wrap .hero1-button_playNow {
-    width: 180px;
-  }
-  .hero_wrap .upper-hero1 .hero1-buttons .hero-buttons_wrap .hero1-button_trailer {
-    width: 300px;
-  }
-  .hero_wrap .upper-hero1 .hero1-buttons .upper-hero1-logo {
-    width: 420px;
-  }
-  .hero_wrap .lower-hero1 {
-    background-image: url(/public/assets/images/hero/home/hero1/nhl23-tabletsection-bg-buy-now-product-conversion-xl.jpg.adapt.1024w.jpg);
-  }
-  .hero_wrap .lower-hero1 .main-content-wrap {
+  .hero_wrap .second-hero_wrap .lower-hero .main-content-wrap {
+    width: 80vw;
+    padding: 0;
     flex-direction: row;
     justify-content: space-between;
   }
-  .hero_wrap .lower-hero1 .main-content-wrap span {
-    width: 40vw;
+  .hero_wrap .second-hero_wrap .lower-hero .main-content-wrap span {
     text-align: left;
-    margin-left: 20px;
-  }
-  .hero_wrap .lower-hero1 .main-content-wrap .hero1-button_trailer {
-    width: 200px;
-  }
-  .hero_wrap .second-hero_wrap .upper-hero2 .hero2-buttons {
-    margin-left: 0;
-    width: 85vw;
-  }
-  .hero_wrap .second-hero_wrap .upper-hero2 picture {
-    height: 60vh;
-  }
-  .hero_wrap .second-hero_wrap .lower-hero2 .main-content-wrap {
-    width: 85vw;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  .hero_wrap .second-hero_wrap .lower-hero2 .main-content-wrap span {
-    padding-top: 0;
-    left: 6vh;
-    width: 40vw;
-    text-align: left;
-  }
-  .hero_wrap .second-hero_wrap .lower-hero2 .main-content-wrap .hero2-button_discover {
-    width: 200px;
+    width: 36vw;
   }
 }
 @media all and (min-width: 1456px) {
-  .hero_wrap .upper-hero1 .hero1-buttons {
-    right: 16vw;
-  }
-  .hero_wrap .upper-hero1 .hero1-buttons .upper-hero1-logo {
-    width: 500px;
-  }
-  .hero_wrap .upper-hero1 span {
-    max-width: 27.7vw;
-  }
-  .hero_wrap .upper-hero1 picture {
-    margin-bottom: 0;
+  .hero_wrap .second-hero_wrap picture img {
     height: 60vh;
   }
-  .hero_wrap .upper-hero1 picture img {
-    -o-object-fit: cover;
-       object-fit: cover;
-    width: 100%;
-  }
-  .hero_wrap .lower-hero1 {
-    background-image: url(/public/assets/images/hero/home/hero1/nhl23-desktop-section-bg-buy-now-product-conversion-xl.jpg.adapt.1456w.jpg);
-  }
-  .hero_wrap .lower-hero1 .main-content-wrap span {
-    width: 25vw;
-  }
-  .hero_wrap .second-hero_wrap .upper-hero2 .hero2-buttons {
-    width: 80vw;
-    left: 10vw;
-  }
-  .hero_wrap .second-hero_wrap .upper-hero2 picture {
-    height: 50vh;
-  }
-  .hero_wrap .second-hero_wrap .lower-hero2 .main-content-wrap {
+  .hero_wrap .second-hero_wrap .lower-hero .main-content-wrap {
     width: 80vw;
     align-items: center;
-  }
-  .hero_wrap .second-hero_wrap .lower-hero2 .main-content-wrap span {
-    width: 35vw;
   }
 }
 body,

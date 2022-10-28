@@ -1,15 +1,13 @@
-import { GameGrid } from "./components/GamesGrid";
+import {GamesGrid} from './components/GamesGrid'
 import { HomePageUpperHero } from "./components/HomePageUpperHero";
 import { HomePageLowerHero } from "./components/HomePageLowerHero";
-import { Header } from "./components/Header";
-import { NavTab } from "./components/NavTab/NavTab";
+
 
 export function App() {
   return (
     <div className="App">
-        <Header />
-        <GameGrid />
-        <NavTab gestion='home'/>
+      <GamesGrid />
+    
         <HomePageUpperHero 
         logoSvg="./assets/images/hero/home/hero2/ea-play-logo-coral-hero-logo-small.svg"
         mobile="/assets/images/hero/home/hero2/hero-767-medium-console-7x2-xl.jpg.adapt.crop3x5.767w.jpg"
@@ -20,7 +18,7 @@ export function App() {
         membri e una libreria dei migliori titoli."
         />
         <HomePageLowerHero 
-        className="lower-hero2"
+        className="lower-hero"
         textColor='black'
         spanText='Genitori: il controllo dei videogiochi è nelle vostre mani.'
         />
