@@ -1,6 +1,6 @@
 import { Button } from "./Button"
 
-export function HomePageUpperHero({ mobile, tablet768, tablet1024, desktop, spanText, logoSvg }) {
+export function HomePageUpperHero({ mobile, tablet768, tablet1024, desktop, spanText, logoSvg,buttonSpan,buttonPosition,content }) {
 
     return (
         <div className="hero_wrap">
@@ -20,16 +20,16 @@ export function HomePageUpperHero({ mobile, tablet768, tablet1024, desktop, span
                         alt="hero_image" />
                 </picture>
 
-                <div className="upper-hero ">
+                <div className={'upper-hero ' + content}>
 
 
 
                     
-                    <div className="upper-hero_content main-wrap">
+                    <div className={'upper-hero_content main-wrap ' + content}>
                         <img className="upper-hero_logo"
                             src={logoSvg} alt="ea play logo" />
-                        <span>{spanText} </span>
-                        <Button buttonText='Iscriviti subito' color='white' justifyContent={'left'} />
+                        <span className={content}>{spanText} </span>
+                        <Button buttonText={buttonSpan} color='white' justifyContent={buttonPosition} />
 
                     </div>
                 </div>

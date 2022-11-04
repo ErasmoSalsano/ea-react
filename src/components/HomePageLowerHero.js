@@ -1,22 +1,31 @@
 import { Button } from "./Button"
 
-export function HomePageLowerHero({ spanText, textColor, className, }) {
+export function HomePageLowerHero({ spanText, textColor, className, bgImage, buttonSpan, buttonTextColor, eaSvg,imageClass }) {
 
     const lowerHeroSpanStyle = {
         color: textColor,
         // textAlign:'left'
     }
 
+    // const eaSvg = 'assets\images\hero\home\hero1\play-logo.svg'
+
 
 
     return (
         <div className="hero_wrap ">
             <div className="second-hero_wrap ">
+                <picture>
+                    <img className={imageClass} src={process.env.PUBLIC_URL + bgImage} alt='' />
+                </picture>
                 <div className={className + ' main-wrap'}>
+
                     <div className="main-content-wrap ">
                         <span style={lowerHeroSpanStyle}>{spanText}</span>
-                        <Button buttonText="Scopri di più" color='black' justifyContent={'center'}/>
-                       
+                        <div className='buttons-wrap'>
+                           {eaSvg && <img className='eaplay-logo' src={process.env.PUBLIC_URL + eaSvg} alt='ea play logo' /> }
+                            <Button buttonText={buttonSpan} color={buttonTextColor} justifyContent={'center'} />
+                        </div>
+
                     </div>
                 </div>
             </div>
