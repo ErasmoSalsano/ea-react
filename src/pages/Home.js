@@ -1,22 +1,18 @@
 import { HomePageUpperHero } from "../components/HomePageUpperHero";
 import { HomePageLowerHero } from "../components/HomePageLowerHero";
-<<<<<<< HEAD
 // import { Header } from "../components/Header";
 // import { NavTab } from "../components/NavTab/NavTab";
 import { GamesGrid } from "../components/GamesGrid"
-=======
 import { Header } from "../components/Header";
 import { NavTab } from "../components/NavTab/NavTab";
 import {GameGrid} from "../components/GamesGrid"
 import { MainWrap } from "../components/0_wraps/mainWrap";
 import { MainContentWrap } from "../components/0_wraps/mainContentWrap";
 import { Title } from "../components/Title";
->>>>>>> devUpdated
 
 export function Home() {
   return (
     <div>
-<<<<<<< HEAD
        <HomePageUpperHero
         logoSvg="assets\images\hero\home\hero1\eacom-apex-eclipse-adaptive-logo-xl.png.adapt.crop2x1.1023w.png"
         mobile="assets\images\hero\home\hero1\apex-hero-medium-eclipse-eacom-7x2-xl.jpg.adapt.crop16x9.767w.jpg"
@@ -43,9 +39,8 @@ export function Home() {
       <GamesGrid />
       {/* <NavTab gestion='home'/> */}
       {/* Dichiarare una basepath da usare per accorciare */}
-      <HomePageUpperHero
-=======
-        <GameGrid/>
+ 
+   
         <MainWrap>
             <MainContentWrap p>
                 <Title className="title">
@@ -56,7 +51,6 @@ export function Home() {
         <NavTab gestion='home'/>
         {/* Dichiarare una basepath da usare per accorciare */}
         <HomePageUpperHero 
->>>>>>> devUpdated
         logoSvg="/assets/images/hero/home/hero2/ea-play-logo-coral-hero-logo-small.svg"
         mobile="/assets/images/hero/home/hero2/hero-767-medium-console-7x2-xl.jpg.adapt.crop3x5.767w.jpg"
         tablet768="/assets/images/hero/home/hero2/hero-1023-medium-console-7x2-xl.jpg.adapt.crop2x1.1023w.jpg"

@@ -1,11 +1,11 @@
 import { Outlet } from 'react-router-dom'
-// import {Header} from './Header'
+import {Header} from './Header'
 
 
 function MainFrame(){
     return(
         <div>
-            {/* <Header/> */}
+            <Header/>
             <Outlet />
             {/* <Footer /> */}
         </div>
