@@ -1,0 +1,104 @@
+/* == Tipography == */
+
+// i font-display vengono generalmente usati nei titoli (HERO,section,etc)
+
+@font-face {
+    font-family: "ea-sports-display-bold";
+    src: url(../../public/assets/fonts/display/ElectronicArtsDisplay-Bold.woff2);
+}
+
+@font-face {
+    font-family: "ea-sports-display-regular";
+    src: url(../../public/assets/fonts/display/ElectronicArtsDisplay-Regular.woff2);
+}
+
+// i font-text vengono generalmente usati nelle card e nei paragrafi delle HERO 
+
+@font-face {
+    font-family: "ea-sports-text-light";
+    src: url(../../public/assets/fonts/text/ElectronicArtsText-Light.woff2);
+}
+
+@font-face {
+    font-family: "ea-sports-text-bold";
+    src: url(../../public/assets/fonts/text/ElectronicArtsText-Bold.woff2);
+}
+
+@font-face {
+    font-family: "ea-sports-text-regular";
+    src: url(../../public/assets/fonts/text/ElectronicArtsText-Regular.woff2);
+}
+
+@font-face{
+    font-family: "oswald";
+    src: url(../../public/assets/fonts/oswald/Oswald-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: "open-sans";
+    src: url(../../public/assets/fonts/open-sans/OpenSans-VariableFont_wdth-wght.ttf);
+}
+
+:root {
+
+//font-family
+
+    --font-family-display-bold:"ea-sports-display-bold",Arial, Helvetica, sans-serif;
+    --font-family-display-regular:"ea-sports-display-regular",Arial, Helvetica, sans-serif;
+    --font-family-text-light:"ea-sports-text-light",Arial, Helvetica, sans-serif;
+    --font-family-text-bold:"ea-sports-text-bold",Arial, Helvetica, sans-serif;
+    --font-family-text-regular:"ea-sports-text-regular",Arial, Helvetica, sans-serif;
+
+    --font-family-user-board: 'open-sans', 'Helvetica', 'Arial', sans-serif;
+    --font-family-user-board-title: 'oswald', 'Helvetica', 'Arial', sans-serif;
+
+    
+//font size
+
+    --font-size-linksonfooter: 1rem; // link sul footer
+    --font-size-upfooter:1rem; //footer superiore
+    --font-size-span: 1rem; // bottoni, testo dell'hero EA SPORTS sul footer, link sul footer,
+    --font-size-hero-title: 1.5rem; // scritta in grassetto nell'hero sul footer
+    --font-size-section-title: 2rem; // titoli delle sezioni
+    --font-size-cards-title: 1.25rem; // titoli delle card
+    --font-size-summary-navbar: 1.125rem; //summary navbar nell'header
+    --font-size-header-popup-end-ul: .875rem; //ultimo livello di lista nella nav popup
+    --font-size-h6: 0.87rem; // occhiello sul titolo delle card,footer inferiore,titolo dei link ai social(footer)
+    --font-size-cards-text: 0rem; // testo delle card -- nullo su mobile
+}
+
+
+
+@media screen and (min-width: 768px) {
+
+    :root {
+        --font-size-hero-title: 1.5rem;
+        --font-size-cards-text: 1rem; 
+    }
+
+
+
+}
+
+@media screen and (min-width: 1024px) {
+    
+    :root {
+        --font-size-span: 1.12rem; 
+        --font-size-hero-title: 1.5rem; 
+        --font-size-section-title: 2.5rem; 
+        --font-size-cards-title: 1.5rem;
+        --font-size-cards-text: 1.12rem; 
+
+    }
+
+}
+
+@media screen and (min-width: 1456px) {
+    
+    :root {
+        --font-size-upfooter: 1.12rem;
+        --font-size-hero-title: 1.62rem; 
+        --font-size-section-title: 2.75rem;
+        --font-size-h6: 1rem;
+    }
+}

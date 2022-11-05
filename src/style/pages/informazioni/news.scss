@@ -1,0 +1,77 @@
+@use '../../layouts';
+@use '../../basic-layout';
+@use '../../colors';
+@use '../../tipography';
+@use '../../header';
+@use '../../footer';
+@use '../../hero';
+.main-wrap-hero{
+    width: 100%;
+    .main-wrap-hero-content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .main-wrap-hero-text{
+            position: absolute;
+            z-index: 1;
+            color: white;
+        }
+        picture{
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
+.article-card{
+    @include layouts.article-card(100%);
+    flex: 1 auto;
+    @extend %shadow-start;
+        &:hover{
+            @extend %shadow-hover;
+    }
+    img{
+        display: none;
+    }
+    .article-text{
+        text-align: center;
+        @include layouts.article-text(center, none);
+    }
+}
+
+@media screen and (min-width:769px){
+    .article-card{
+        width: 40%;
+        img{
+            display: block;
+        }
+        .article-text{
+            text-align: left;
+            justify-content: flex-start;
+            div{
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                span{
+                    line-height: 27px;
+                }
+            }
+            h3{
+                line-height: 32.4px;
+            }
+            p{
+                display: block;
+            }
+        }
+    }
+}
+@media screen and (min-width:1025px){
+    .article-card{
+        width: 30%;
+    }
+}
+@media screen and (min-width:1457px){
+    .article-card{
+        width: 30%;
+    }
+}

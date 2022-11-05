@@ -1,13 +1,20 @@
-import { GameGrid } from "./components/GamesGrid";
-import { Header } from "./components/Header";
-import { NavTab } from "./components/NavTab";
+import { Routes, Route } from "react-router-dom";
+import MainFrame from "./components/MainFrame";
+import { Home } from "./pages/Home";
+
+
 
 export function App() {
   return (
     <div className="App">
-        <Header />
-        <GameGrid />
-        <NavTab gestion='home'/>
+      <Routes>
+        <Route path="/" element={<MainFrame/>}>
+          <Route index element={<Home/>} />
+          {/* <Route path="path" element={element} /> */}
+        </Route>
+        {/* <Route path='/shop' element={<Shop/>}/> */}
+      </Routes>
+       
     </div>
   );
 }

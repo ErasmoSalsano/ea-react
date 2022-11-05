@@ -1,0 +1,33 @@
+/* == Colors == */
+:root{
+    --color-white: #fff;
+    --color-rgb-white: 255, 255, 255;
+    --color-black: #000;
+    --color-rgb-black: 0, 0, 0;
+    --color-light-gray: #f3f3f3; /* background grigio, fill user icons */
+    --color-light-gray-opacity: rgba(0, 0, 0, 0.08);
+    --color-login-bg: #1d2033; /* background login and create account pages */
+    --color-gray: #dedede; /* games/articles navbar buttons */
+    --color-ea-orange: #ff4747;
+    --color-gradient-orange: #fc2442;
+    --color-gradient-blue: #0d1042;
+    --color-ea-dark: #101010;
+    --color-ea-dark-2: #161616;  /* background user-board */
+    --color-ea-logo-gray: #a3a3a3;  /* fill user-space ea logo */
+    --color-facebook-blue: #1877f2;
+    --color-xbox-green: #107c10;
+    --color-playstation-blue: #0049a0;
+    --color-light-blue: #5288fd; /* link in account pages */
+    --color-gray-border: #62626f; /* borders in account pages' form */
+    --color-gray-border-hover: #908e97; /* borders in account pages' form with hover */
+    --color-hr-account: #908e9740; /* tag hr in login page */
+    --color-account-import-bg: #141724; /* background degli import di login ecc */
+    --color-account-button-blue: #1f59c6; /* background button accedi */
+    --color-account-anchor-button-border: #235fe3;
+    --color-account-checkbox-bg: #1b4ab0;
+    --color-account-checkbox-border: #276afc;
+    --color-footer-icon-gray: #282828;
+    --color-footer-button-title-gray: #5a5a58;
+    --color-footer-button-border: #c2c2c2;
+    --color-create-button-gray: #343646;
+}
