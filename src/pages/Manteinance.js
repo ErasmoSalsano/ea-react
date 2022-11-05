@@ -2,6 +2,7 @@ import { MainContentWrap } from "../components/0_wraps/mainContentWrap";
 import { MainWrap } from "../components/0_wraps/mainWrap";
 import { ArticleCard } from "../components/ArticleCard";
 import { Header } from "../components/Header";
+import { Title } from "../components/Title";
 import { pages } from "../data/DummyData";
 import './../style/pages/manteinance/manteinance.scss'
 
@@ -15,10 +16,10 @@ export function Manteinance() {
                 <div className={"void"}></div>
                 <MainWrap>
                     <MainContentWrap p extendClass='sorry'>
-                        <div className="title">
+                        <Title className="title">
                             <h1>Sorry</h1>
                             <h3>Website under maintenaince</h3>
-                        </div>
+                        </Title>
                         <h1>Redirect to</h1>
                     </MainContentWrap>
                 </MainWrap>
