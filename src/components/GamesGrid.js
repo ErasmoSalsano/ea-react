@@ -1,7 +1,7 @@
 import { GameCard } from "./GameCard"
 import { Button } from "./Button"
 
-export function GameGrid(props) {
+export function GamesGrid(props) {
   const cards = [
     {
       nameUrl: 'Sito Ufficiale',
@@ -43,5 +43,6 @@ export function GameGrid(props) {
     </div>
   )
 }
+
 
 

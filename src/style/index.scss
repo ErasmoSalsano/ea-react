@@ -8,269 +8,163 @@
 
 /* == Page == */
 
-//CSS PRIMA HERO HOMEPAGE
+//CSS  HERO HOMEPAGE
 
 .hero_wrap {
 
     width: 100%;
     display: flex;
     justify-content: center;
-
     flex-direction: column;
 
-    .upper-hero1 {
-        position: relative;
-        // @extend %flexcenter;
-        display: flex;
-        align-items: center;
-        justify-content: end;
-        flex-direction: column;
-        height: 100%;
-        width: 100%;
-        overflow: hidden;
-
-        picture {
-            object-fit: contain;
-            margin-bottom: -7px;
-            width: 100%;
-
-            source {
-
-                object-fit: contain;
-                width: 100%;
-            }
-
-            img {
-                object-fit: contain;
-                height: 100%;
-                width: 100%;
-
-            }
-        }
-
-
-
-        .hero1-buttons {
-            height: 50%;
-            width: 90vw;
-            position: absolute;
-            @extend %flexcenter;
-            flex-direction: column;
-
-
-
-            span {
-                font-family: var(--font-family-display-regular);
-                font-size: var(--font-size-span);
-                width: 90vw;
-                color: white;
-                padding: 20px;
-                text-align: center;
-            }
-
-
-            .hero-buttons_wrap {
-                width: 100%;
-            }
-
-            .upper-hero1-logo {
-
-
-
-                max-width: 80vw;
-
-            }
-
-            .hero1-button_playNow {
-
-
-                height: 50px;
-
-                .hero1-button_playNow_content {
-
-
-                    border-color: white;
-                    background-color: white;
-                }
-            }
-
-
-
-            .hero1-button_trailer {
-
-                .hero1-button_trailer_content {
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: center;
-                    align-items: center;
-                    color: white;
-                    border-color: white;
-
-
-                    p {
-                        margin-left: -4px;
-
-                        .fa-solid {
-
-
-                            padding-left: 10px;
-                        }
-                    }
-
-
-                }
-            }
-        }
-
+    .content1 {
+        justify-content: flex-end;
     }
 
-
-    .lower-hero1 {
-
-        // background-image: url(/assets/images/hero/home/hero1/nhl23-mobile-section-bg-buy-now-product-conversion-xl.jpg.adapt.768w.jpg);
-        background-size: cover;
-        position: relative;
-        @extend %flexcenter;
-
-        // width: 100%;
-        overflow: hidden;
-
-
-        .main-content-wrap {
-            flex-direction: column;
-
-            span {
-                padding-top: 20px;
-                font-family: var(--font-family-display-bold);
-                font-size: var(--font-size-hero-title);
-                text-align: center;
-                color: #f3f3f3;
-            }
-
-            .hero1-button_trailer {
-
-                .hero1-button_trailer_content {
-                    background-color: white;
-
-                    border-color: white;
-                }
-            }
-
-
-
-
-            .lower-hero1_image {
-
-                width: 100%;
-            }
-        }
-
+    .content2 {
+        justify-content: center;
     }
 
-
-    //CSS SECONDA HERO HOMEPAGE
-
+    .second-lower-hero_wrap {
+        justify-content: center;
+    }
 
     .second-hero_wrap {
         width: 100%;
         display: flex;
-        justify-content: center;
+
+
+        // align-items: flex-start;
+
 
         flex-direction: column;
 
-        .upper-hero2 {
-            position: relative;
+        .background-picture {
+           
+            height: 800px;
+            overflow-y: hidden;
+            
+           
+
+
+
+
+        }
+
+        picture {
+            margin-bottom: -5px;
+            width: 100%;
+
+            source {
+                width: 100%;
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .upper-hero {
+
+            position: absolute;
             @extend %flexcenter;
             flex-direction: column;
-            height: 100%;
             width: 100%;
-            overflow: hidden;
 
-            picture {
-                margin-bottom: -5px;
-                width: 100%;
+            .content1 {
+                align-items: center;
+                margin-bottom: calc((10vh - 12%));
 
-                source {
-                    width: 100%;
-                }
+                span {
 
-                img {
-                    width: 100%;
+                    text-align: center;
                 }
             }
 
+            .content2 {
+                align-items: left;
 
-            span {
-                font-family: var(--font-family-display-regular);
-                font-size: var(--font-size-span);
-                width: 79vw;
-                color: white;
-                // padding: 20px;
-                text-align: left;
+                span {
+
+                    text-align: left;
+                }
+            }
+
+            .main-wrap {
+                padding: 0px calc((80vw - 1120px)/2);
             }
 
 
-            .hero2-buttons {
-                width: 90vw;
-                position: absolute;
-                // top: 30%;
-                @extend %flexcenter;
+
+
+            .upper-hero_content {
+                background-color: unset;
+                display: flex;
+                // @extend %flexcenter;
                 justify-content: center;
-                align-items: flex-start;
+
                 flex-direction: column;
+                width: 80vw;
 
+                .upper-hero_logo {
 
-
-                .upper-hero2-logo {
-
-
-
-                    width: 250px;
-                    max-width: 80vw;
-
+                    width: 200px
                 }
 
-                .hero2-button_subscribe {
+                span {
+                    font-family: var(--font-family-display-regular);
+                    font-size: var(--font-size-span);
+                    width: 80vw;
+                    color: white;
 
-
-                    // width: 200px;
-
-
-                    .hero2-button_subscribe_content {
-
-
-                        border-color: white;
-                        color: white;
-                    }
                 }
-
-
             }
 
         }
 
-
-        .lower-hero2 {
-
-            // background-image: url(/assets/images/hero/home/hero2/ea-section-sfondo\ blu-bg-esrb-parents-blue-xl.jpg.adapt.1920w.jpg);
-            background-size: cover;
+        .lower-hero_image1 {
             position: relative;
+            height: 35vh;
+        }
+
+        .lower-hero_image2 {
+            position: relative;
+            height: 30vh;
+        }
+
+
+
+        .lower-hero {
+            background-color: unset;
+            position: absolute;
             @extend %flexcenter;
 
-            // width: 100%;
-            overflow: hidden;
 
 
             .main-content-wrap {
                 width: 90vw;
+                justify-content: center;
+                align-items: center;
                 flex-direction: column;
 
-                span {
+                .buttons-wrap {
+                    @extend %flexcenter;
+                    flex-direction: column;
                     padding-top: 20px;
+
+
+                    .eaplay-logo {
+                        width: 150px;
+                    }
+
+                }
+
+                span {
+                    // padding-top: 20px;
                     font-family: var(--font-family-display-bold);
                     font-size: var(--font-size-hero-title);
                     text-align: center;
-                    // color: black;
+
                 }
 
             }
@@ -278,167 +172,93 @@
         }
 
     }
+
 
 }
 
 //INIZIO --> MQ HERO HOMEPAGE
 
-
-@media screen and (max-width:360px) and (max-height:915px) {
-
-    .hero_wrap {
-        .upper-hero1 {
-
-
-            .hero1-buttons {
-            margin-bottom: 10px;
-                height: 100%;
-
-
-
-                span {
-                    font-size: 15px;
-                    padding: 15px;
-                    margin-bottom: -5px;
-                    margin-top: -25px;
-                }
-
-                .hero1-button_playNow {
-                    margin-top: -10px;
-                    height: 30px;
-                     padding-bottom:15px;
-                    .hero1-button_playNow_content {
-                    height: 30px;
-                    justify-content: center;
-                    align-items: center;
-                    }
-                }
-
-                .hero1-button_trailer {
-                    height: 30px;
-                   
-                    // margin-bottom: 50px;
-                    // display: none;
-                    .hero1-button_trailer_content{
-                        height: 30px;
-                        justify-content: center;
-                        align-items: center;
-                    
-                    }
-                }
-
-            }
-        }
-    }
-
-
-}
-
-@media screen and (max-width:540px) and (max-height:915px) {
-
-    .hero_wrap {
-        .upper-hero1 {
-
-
-            .hero1-buttons {
-                height: 55%;
-
-
-
-                span {
-                    // padding: 15px;
-                    margin-bottom: 5px;
-                    margin-top: -25px;
-                }
-
-                .hero1-button_playNow {
-                    height: 30px;
-                }
-
-                .hero1-button_trailer {
-                    margin-bottom: -20px;
-                }
-
-            }
-        }
-    }
-
-
-}
-
-
-@media screen and (min-width:639px) {
-
-    .hero_wrap {
-        .second-hero_wrap {
-            .upper-hero2 {
-                .hero2-buttons {
-                    .hero2-button_subscribe {
-                        width: 180px;
-                        margin-left: -12px;
-                        justify-content: center;
-
-
-                    }
-                }
-            }
-        }
-    }
-}
-
-
 @media all and (min-width: 768px) {
     .hero_wrap {
-        .upper-hero1 {
+        .content1 {
+            justify-content: center;
+            overflow-y: hidden;
+           
 
-            picture {
-                img {
-                    height: 100%;
-                }
-            }
-
-
-            .hero1-buttons {
-                span {
-                    width: 40vw;
-
-                }
-
-
-                height: 100%;
-                width: 100%;
-                // align-items: flex-start;
-                top: 0;
-                right: 25vw;
-
-                .content-details {}
-
-
-                .upper-hero1-logo {
-
-
-
-                    width: 300px;
-
-                }
-            }
         }
 
-
         .second-hero_wrap {
-            .upper-hero2 {
 
 
+            .background-picture {
+                height: 100%;
+
+
+
+
+            }
+
+
+            .upper-hero {
                 span {
-
-                    width: 33vw;
-
+                    max-width: 40vw;
                 }
 
-                .hero2-buttons {
 
-                    margin-left: 2vw;
 
+
+                .content1 {
+                    // justify-content: right;
+                    align-items: center;
+                    margin-bottom: 0;
+                   
+
+
+                    span {
+
+                        width: 33vw;
+                        margin: 0;
+
+                    }
+                }
+
+
+            }
+
+            .content1 {
+                align-items: flex-end;
+                margin-right: -20%;
+                overflow-x: hidden;
+             
+
+            }
+
+            .lower-hero_image1 {
+                height: 25vh;
+            }
+
+            .lower-hero_image2 {
+                height: 20vh;
+            }
+
+
+            .lower-hero {
+
+                .main-content-wrap {
+                    .buttons-wrap {
+
+                        flex-direction: row;
+                        gap: 30px;
+                        padding-top: 0;
+                    }
+                }
+
+                span {
+                    width: 90vw;
+                }
+
+                .content-details {
+                    width: unset;
                 }
             }
         }
@@ -450,199 +270,70 @@
 
     .hero_wrap {
 
-        .upper-hero1 {
-
-            .hero1-buttons {
-                right: 22vw;
-                width: 100vw;
-
-                .hero-buttons_wrap {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-
-                    .hero1-button_playNow {
-
-                        width: 180px;
-
-                        .hero1-button_playNow_content {}
-
-                    }
-
-                    .hero1-button_trailer {
-
-                        width: 300px;
-
-                        .hero1-button_trailer_content {}
-                    }
-
-                }
-
-                .upper-hero1-logo {
-
-                    width: 420px;
-
-                }
-
-            }
-
-        }
-
-
-        .lower-hero1 {
-
-            // background-image: url(/assets/images/hero/home/hero1/nhl23-tabletsection-bg-buy-now-product-conversion-xl.jpg.adapt.1024w.jpg);
-
-            .main-content-wrap {
-
-                flex-direction: row;
-                justify-content: space-between;
-
-                span {
-                    width: 40vw;
-                    text-align: left;
-                    margin-left: 20px;
-
-
-                }
-
-                .hero1-button_trailer {
-                    width: 200px;
-
-
-                    .hero1-button_trailer_content {}
-
-                }
-
-
-            }
-
-
-        }
 
 
         .second-hero_wrap {
-            .upper-hero2 {
 
-                .hero2-buttons {
-                    margin-left: 0;
-                    width: 85vw;
 
-                }
+            picture {
 
-                picture {
+                img {
                     height: 60vh;
+                    // object-fit: cover;
+
+
                 }
             }
 
-            .lower-hero2 {
+            .lower-hero_image1 {
+                height: 15vh;
+            }
 
+            .lower-hero_image2 {
+                height: 15vh;
+            }
 
+            .lower-hero {
                 .main-content-wrap {
-                    width: 85vw;
-
+                    width: 80vw;
+                    padding: 0;
                     flex-direction: row;
                     justify-content: space-between;
 
                     span {
-                        padding-top: 0;
-                        left: 6vh;
-                        width: 40vw;
                         text-align: left;
-                        // margin-left: 20px;
-
-
+                        width: 30rem;
                     }
-
-                    .hero2-button_discover {
-                        width: 200px;
-
-                    }
-
                 }
 
             }
         }
     }
-
 }
 
 @media all and (min-width: 1456px) {
 
     .hero_wrap {
-        .upper-hero1 {
 
-            .hero1-buttons {
-                right: 16vw;
-
-                .upper-hero1-logo {
-                    width: 500px;
-                }
-
-            }
-
-
-            span {
-                // width: 30vw;
-                max-width: 27.7vw;
-
-
-            }
-
-            picture {
-                margin-bottom: 0;
-                height: 60vh;
-
-                img {
-                    object-fit:cover;
-                    width: 100%;
-
-                }
-
-            }
-        }
-
-
-        .lower-hero1 {
-
-            // background-image: url(/assets/images/hero/home/hero1/nhl23-desktop-section-bg-buy-now-product-conversion-xl.jpg.adapt.1456w.jpg);
-
-            .main-content-wrap {
-
-                span {
-                    width: 25vw;
-
-                }
-
-            }
-        }
 
         .second-hero_wrap {
-            .upper-hero2 {
+            picture {
 
-                .hero2-buttons {
-                    width: 80vw;
-                    left: 10vw;
+                img {
+                    height: 70vh;
 
-                }
 
-                picture {
-                    height: 50vh;
+
                 }
             }
 
-            .lower-hero2 {
+
+
+            .lower-hero {
                 .main-content-wrap {
                     width: 80vw;
 
                     align-items: center;
-
-
-
-                    span {
-
-                        width: 35vw;
-                    }
                 }
             }
         }

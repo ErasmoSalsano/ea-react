@@ -330,31 +330,31 @@ body {
 /* == Tipography == */
 @font-face {
   font-family: "ea-sports-display-bold";
-  src: url(/public/assets/fonts/display/ElectronicArtsDisplay-Bold.woff2);
+  src: url(../../public/assets/fonts/display/ElectronicArtsDisplay-Bold.woff2);
 }
 @font-face {
   font-family: "ea-sports-display-regular";
-  src: url(/public/assets/fonts/display/ElectronicArtsDisplay-Regular.woff2);
+  src: url(../../public/assets/fonts/display/ElectronicArtsDisplay-Regular.woff2);
 }
 @font-face {
   font-family: "ea-sports-text-light";
-  src: url(/public/assets/fonts/text/ElectronicArtsText-Light.woff2);
+  src: url(../../public/assets/fonts/text/ElectronicArtsText-Light.woff2);
 }
 @font-face {
   font-family: "ea-sports-text-bold";
-  src: url(/public/assets/fonts/text/ElectronicArtsText-Bold.woff2);
+  src: url(../../public/assets/fonts/text/ElectronicArtsText-Bold.woff2);
 }
 @font-face {
   font-family: "ea-sports-text-regular";
-  src: url(/public/assets/fonts/text/ElectronicArtsText-Regular.woff2);
+  src: url(../../public/assets/fonts/text/ElectronicArtsText-Regular.woff2);
 }
 @font-face {
   font-family: "oswald";
-  src: url(/public/assets/fonts/oswald/Oswald-VariableFont_wght.ttf);
+  src: url(../../public/assets/fonts/oswald/Oswald-VariableFont_wght.ttf);
 }
 @font-face {
   font-family: "open-sans";
-  src: url(/public/assets/fonts/open-sans/OpenSans-VariableFont_wdth\,wght.ttf);
+  src: url(../../public/assets/fonts/open-sans/OpenSans-VariableFont_wdth-wght.ttf);
 }
 :root {
   --font-family-display-bold:"ea-sports-display-bold",Arial, Helvetica, sans-serif;
@@ -1324,7 +1324,6 @@ header content {
   margin-bottom: 0.5rem;
 }
 .lowerFooter .lowerFooterContainer .lowerFooterBlock .lowerFooterGroup1 .lowerFooterSelectors .dropup .dropbtn .dropup-value.lang:before {
-  content: url(/public/assets/images/footer/flags/italy.png);
   margin-right: 0.5rem;
 }
 .lowerFooter .lowerFooterContainer .lowerFooterBlock .lowerFooterGroup1 .lowerFooterSelectors .dropup .dropbtn .button-icon {
