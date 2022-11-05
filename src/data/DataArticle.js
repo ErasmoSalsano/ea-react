@@ -163,7 +163,7 @@ export const articleCards = [
     },
     {
         id: 19,
-        image: `assets/images/article/Notizie EA/ea-notizie-immagine 1.jpg`,
+        image: `/assets/images/article/Notizie EA/ea-notizie-immagine 1.jpg`,
         category: `Eletronics Arts`,
         date: `15-lug-2022`,
         title: `Orientamento sessuale in The Sims 4`,
@@ -172,7 +172,7 @@ export const articleCards = [
     },
     {
         id: 20,
-        image: `assets/images/article/Notizie EA/ea-notizie-immagine 2.png`,
+        image: `/assets/images/article/Notizie EA/ea-notizie-immagine 2.png`,
         category: `Eletronics Arts`,
         date: `30-giu-2022`,
         title: `Visita guidata a Vita da Liceali Expansion Pack (EP12)`,
@@ -181,7 +181,7 @@ export const articleCards = [
     },
     {
         id: 21,
-        image: `assets/images/article/Notizie EA/ea-notizie-immagine 3.png`,
+        image: `/assets/images/article/Notizie EA/ea-notizie-immagine 3.png`,
         category: `Eletronics Arts`,
         date: `24-giu-2022`,
         title: `La salute dei dipendenti prima di tutto`,
@@ -190,7 +190,7 @@ export const articleCards = [
     },
     {
         id: 22,
-        image: `assets/images/article/Notizie EA/ea-notizie-immagine 4.png`,
+        image: `/assets/images/article/Notizie EA/ea-notizie-immagine 4.png`,
         category: `Eletronics Arts`,
         date: `3-giu-2022`,
         title: `Sosteniamo senza alcuna riserva dipendenti, utenti e comunità LGBTQ+.`,
@@ -199,7 +199,7 @@ export const articleCards = [
     },
     {
         id: 23,
-        image: `assets/images/article/Notizie EA/ea-notizie-immagine 5.png`,
+        image: `/assets/images/article/Notizie EA/ea-notizie-immagine 5.png`,
         category: `Eletronics Arts`,
         date: `24-mag-2022`,
         title: `Pronomi personalizzabili ora disponibili in The Sims 4`,
@@ -208,7 +208,7 @@ export const articleCards = [
     },
     {
         id: 24,
-        image: `assets/images/article/Notizie EA/ea-notizie-immagine 6.jpg`,
+        image: `/assets/images/article/Notizie EA/ea-notizie-immagine 6.jpg`,
         category: `Eletronics Arts`,
         date: `19-lug-2022`,
         title: `EA Studios candidati come miglior ambiente di lavoro negli Stati Uniti`,
@@ -217,7 +217,7 @@ export const articleCards = [
     },
     {
         id: 25,
-        image: `assets/images/article/EA Play/ea-play-immagine-2.png`,
+        image: `/assets/images/article/EA Play/ea-play-immagine-2.png`,
         category: `Eletronics Arts Inc.`,
         date: `3-mag-2021`,
         title: `Ottieni di più da FIFA 21 con EA Play - Sito ufficiale EA SPORTS`,
@@ -226,7 +226,7 @@ export const articleCards = [
     },
     {
         id: 26,
-        image: `assets/images/article/EA Play/ea-play-immagine-1.jpg`,
+        image: `/assets/images/article/EA Play/ea-play-immagine-1.jpg`,
         category: `Eletronics Arts Inc.`,
         date: `1-apr-2021`,
         title: `In evidenza su EA Play - Aprile 2021`,
@@ -235,7 +235,7 @@ export const articleCards = [
     },
     {
         id: 27,
-        image: `assets/images/article/EA Play/ea-play-immagine-3.jpg`,
+        image: `/assets/images/article/EA Play/ea-play-immagine-3.jpg`,
         category: `Eletronics Arts Inc.`,
         date: `18-mar-2021`,
         title: `EA Play è ora disponibile su Xbox Game Pass per PC tramite EA app`,
@@ -244,7 +244,7 @@ export const articleCards = [
     },
     {
         id: 28,
-        image: `assets/images/article/EA Play/ea-play-immagine-1.jpg`,
+        image: `/assets/images/article/EA Play/ea-play-immagine-1.jpg`,
         category: `Eletronics Arts Inc.`,
         date: `1-mar-2021`,
         title: `In evidenza su EA Play - Marzo 2021`,
@@ -253,7 +253,7 @@ export const articleCards = [
     },
     {
         id: 29,
-        image: `assets/images/article/FIFA/ea-fifa-immagine 1.png`,
+        image: `/assets/images/article/FIFA/ea-fifa-immagine 1.png`,
         category: `FIFA`,
         date: `25-lug-2022`,
         title: `Juventus ed Electronic Arts - Annuncio partnership ufficiale`,
@@ -262,7 +262,7 @@ export const articleCards = [
     },
     {
         id: 30,
-        image: `assets/images/article/FIFA/ea-fifa-immagine 2.jpg`,
+        image: `/assets/images/article/FIFA/ea-fifa-immagine 2.jpg`,
         category: `FIFA`,
         date: `20-lug-2022`,
         title: `Date d'uscita di EA SPORTS™ FIFA 23 - Sito ufficiale`,
@@ -271,7 +271,7 @@ export const articleCards = [
     },
     {
         id: 31,
-        image: `assets/images/article/FIFA/ea-fifa-immagine 3-5.jpg`,
+        image: `/assets/images/article/FIFA/ea-fifa-immagine 3-5.jpg`,
         category: `FIFA`,
         date: `20-lug-2022`,
         title: `UN'OCCHIATA DA VICINO AL CROSS-PLAY IN FIFA 23 - EA SPORTS`,
@@ -280,7 +280,7 @@ export const articleCards = [
     },
     {
         id: 32,
-        image: `assets/images/article/FIFA/ea-fifa-immagine 4.431p_`,
+        image: `/assets/images/article/FIFA/ea-fifa-immagine 4.431p_`,
         category: `FIFA`,
         date: `15-lug-2022`,
         title: `FUTTIES - FIFA 22 Ultimate Team - Sito ufficiale EA SPORTS`,
@@ -289,7 +289,7 @@ export const articleCards = [
     },
     {
         id: 33,
-        image: `assets/images/article/FIFA/ea-fifa-immagine 3-5.jpg`,
+        image: `/assets/images/article/FIFA/ea-fifa-immagine 3-5.jpg`,
         category: `FIFA`,
         date: `6-lug-2022`,
         title: `FIFA 22 | Note degli sviluppatori - Aggiornamento #14 - EA SPORTS`,
@@ -298,7 +298,7 @@ export const articleCards = [
     },
     {
         id: 34,
-        image: `assets/images/article/FIFA/ea-fifa-immagine 6.png`,
+        image: `/assets/images/article/FIFA/ea-fifa-immagine 6.png`,
         category: `FIFA`,
         date: `23-giu-2022`,
         title: `Ottieni il massimo da FIFA 22 con EA Play - Sito ufficiale EA SPORTS`,
@@ -307,7 +307,7 @@ export const articleCards = [
     },
     {
         id: 35,
-        image: `assets/images/article/F1/ea-f1-immagine 1.jpg`,
+        image: `/assets/images/article/F1/ea-f1-immagine 1.jpg`,
         category: `F1® 22`,
         date: `25-lug-2022`,
         title: `Approfondimento sul modello di guida e sul force feedback`,
@@ -316,7 +316,7 @@ export const articleCards = [
     },
     {
         id: 36,
-        image: `assets/images/article/F1/ea-f1-immagine 2.png`,
+        image: `/assets/images/article/F1/ea-f1-immagine 2.png`,
         category: `F1® 22`,
         date: `25-lug-2022`,
         title: `F1® 22 - Note sulla patch 1.06`,
@@ -325,7 +325,7 @@ export const articleCards = [
     },
     {
         id: 37,
-        image: `assets/images/article/F1/ea-f1-immagine 3.png`,
+        image: `/assets/images/article/F1/ea-f1-immagine 3.png`,
         category: `F1® 22`,
         date: `7-lug-2022`,
         title: `F1® 22 - Note sulla patch 1.05`,
@@ -334,7 +334,7 @@ export const articleCards = [
     },
     {
         id: 38,
-        image: `assets/images/article/F1/ea-f1-immagine 4.png`,
+        image: `/assets/images/article/F1/ea-f1-immagine 4.png`,
         category: `F1® 22`,
         date: `1-lug-2022`,
         title: `Approfondimento sulle valutazioni dei piloti nel database di F1® 22`,
@@ -343,7 +343,7 @@ export const articleCards = [
     },
     {
         id: 39,
-        image: `assets/images/article/F1/ea-f1-immagine 5.png`,
+        image: `/assets/images/article/F1/ea-f1-immagine 5.png`,
         category: `F1® 22`,
         date: `28-giu-2022`,
         title: `Mettiti al volante: F1® 22 Champions Edition arriva oggi`,
@@ -352,7 +352,7 @@ export const articleCards = [
     },
     {
         id: 40,
-        image: `assets/images/article/F1/ea-f1-immagine 6.png`,
+        image: `/assets/images/article/F1/ea-f1-immagine 6.png`,
         category: `F1® 22`,
         date: `27-lug-2022`,
         title: `Vivi F1® 22 in realtà virtuale`,
@@ -361,7 +361,7 @@ export const articleCards = [
     },
     {
         id: 41,
-        image: `assets/images/article/Apex Legends/ea-apexLegends-immagine 1.jpg`,
+        image: `/assets/images/article/Apex Legends/ea-apexLegends-immagine 1.jpg`,
         category: `Apex Legends`,
         date: `21-lug-2022`,
         title: `Mostra a tutti il tuo sangue blu con il nuovo bundle di Wraith, Reale.`,
@@ -370,25 +370,25 @@ export const articleCards = [
     },
     {
         id: 42,
-        image: `assets/images/article/Apex Legends/ea-apexLegends-immagine 2.jpg`,
+        image: `/assets/images/article/Apex Legends/ea-apexLegends-immagine 2.jpg`,
         category: `Apex Legends`,
         date: `15-lug-2022`,
         title: `Festeggia l'evento Gaiden con gli avatar VTuber di Apex Legends™`,
         desc: `Unisciti al divertimento scaricando gli avatar VTuber di Octane, Bangalore e Mirage!`,
         link: ``,
     },
-    {
-        id: 43,
-        image: `assets/images/article/Apex Legends/ea-apexLegends-immagine 3.jpg`,
-        category: `Apex Legends`,
-        date: `10-lug-2022`,
-        title: `Inizia una nuova epica avventura nell'evento Gaiden`,
-        desc: `Il 19 luglio, evoca l'eroe che è in te con 40 avventurosi oggetti cosmetici in esclusiva con l'evento e il ritorno di Armati e pericolosi.`,
-        link: ``,
-    },
+    // {
+    //     id: 43,
+    //     image: `/assets/images/article/Apex Legends/ea-apexLegends-immagine 3.jpg`,
+    //     category: `Apex Legends`,
+    //     date: `10-lug-2022`,
+    //     title: `Inizia una nuova epica avventura nell'evento Gaiden`,
+    //     desc: `Il 19 luglio, evoca l'eroe che è in te con 40 avventurosi oggetti cosmetici in esclusiva con l'evento e il ritorno di Armati e pericolosi.`,
+    //     link: ``,
+    // },
     {
         id: 44,
-        image: `assets/images/article/Apex Legends/ea-apexLegends-immagine 4.png`,
+        image: `/assets/images/article/Apex Legends/ea-apexLegends-immagine 4.png`,
         category: `Apex Legends`,
         date: `5-lug-2022`,
         title: `TI DIAMO IL BENVENUTO ALLA SECONDA EDIZIONE DELL'ALGS CHAMPIONSHIP, 7-10 LU…`,
@@ -397,7 +397,7 @@ export const articleCards = [
     },
     {
         id: 45,
-        image: `assets/images/article/Apex Legends/ea-apexLegends-immagine 5.jpg`,
+        image: `/assets/images/article/Apex Legends/ea-apexLegends-immagine 5.jpg`,
         category: `Apex Legends`,
         date: `16-giu-2022`,
         title: `Inizia l'estate con questo bundle di Gibraltar per Prime Gaming`,
@@ -406,7 +406,7 @@ export const articleCards = [
     },
     {
         id: 46,
-        image: `assets/images/article/Apex Legends/ea-apexLegends-immagine 6.jpg`,
+        image: `/assets/images/article/Apex Legends/ea-apexLegends-immagine 6.jpg`,
         category: `Apex Legends`,
         date: `16-giu-2022`,
         title: `Scegli la tua fazione, mech o mostri, nell'evento collezione Risveglio`,
@@ -415,7 +415,7 @@ export const articleCards = [
     },
     {
         id: 47,
-        image: `assets/images/article/The Sims 4/ea-thesims-immagine 1.jpg`,
+        image: `/assets/images/article/The Sims 4/ea-thesims-immagine 1.jpg`,
         category: `The Sims 4`,
         date: `26-lug-2022`,
         title: `Aggiornamento: 26/07/2022`,
@@ -424,7 +424,7 @@ export const articleCards = [
     },
     {
         id: 48,
-        image: `assets/images/article/The Sims 4/ea-thesims-immagine 2.png`,
+        image: `/assets/images/article/The Sims 4/ea-thesims-immagine 2.png`,
         category: `The Sims 4`,
         date: `19-lug-2022`,
         title: `Cose da fare - 19 luglio 2022`,
@@ -433,7 +433,7 @@ export const articleCards = [
     },
     {
         id: 49,
-        image: `assets/images/article/The Sims 4/ea-thesims-immagine 4.png`,
+        image: `/assets/images/article/The Sims 4/ea-thesims-immagine 4.png`,
         category: `The Sims 4`,
         date: `1-lug-2022`,
         title: `Siete voi a creare The Sims - Intervista su Vita da Liceali con i creatori …`,
@@ -442,7 +442,7 @@ export const articleCards = [
     },
     {
         id: 50,
-        image: `assets/images/article/The Sims 4/ea-thesims-immagine 6.png`,
+        image: `/assets/images/article/The Sims 4/ea-thesims-immagine 6.png`,
         category: `The Sims 4`,
         date: `23-giu-2022`,
         title: `Consegne Express dei Sims`,
@@ -451,7 +451,7 @@ export const articleCards = [
     },
     {
         id: 51,
-        image: `assets/images/article/Battlefield/ea-battlefield-immagine 1.431p_`,
+        image: `/assets/images/article/Battlefield/ea-battlefield-immagine 1.431p_`,
         category: `Battlefield 2042`,
         date: `5-lug-2022`,
         title: `AGGIORNAMENTO 1.1 DI BATTLEFIELD 2042`,
@@ -460,7 +460,7 @@ export const articleCards = [
     },
     {
         id: 52,
-        image: `assets/images/article/Battlefield/ea-battlefield-immagine 2.431p_`,
+        image: `/assets/images/article/Battlefield/ea-battlefield-immagine 2.431p_`,
         category: `Battlefield 2042`,
         date: `10-giu-2022`,
         title: `Briefing su Battlefield - Benvenuti all'Ora zero`,
@@ -469,7 +469,7 @@ export const articleCards = [
     },
     {
         id: 53,
-        image: `assets/images/article/Battlefield/ea-battlefield-immagine 3.png`,
+        image: `/assets/images/article/Battlefield/ea-battlefield-immagine 3.png`,
         category: `Battlefield 2042`,
         date: `6-giu-2022`,
         title: `AGGIORNAMENTO 1.0 DI BATTLEFIELD 2042`,
@@ -478,7 +478,7 @@ export const articleCards = [
     },
     {
         id: 54,
-        image: `assets/images/article/Battlefield/ea-battlefield-immagine 4.431p_`,
+        image: `/assets/images/article/Battlefield/ea-battlefield-immagine 4.431p_`,
         category: `Battlefield 2042`,
         date: `24-mag-2022`,
         title: `Briefing Battlefield -- Aggiornamento sullo sviluppo, maggio 2022`,
@@ -487,7 +487,7 @@ export const articleCards = [
     },
     {
         id: 55,
-        image: `assets/images/article/Battlefield/ea-battlefield-immagine 5.png`,
+        image: `/assets/images/article/Battlefield/ea-battlefield-immagine 5.png`,
         category: `Battlefield 2042`,
         date: `18-mag-2022`,
         title: `AGGIORNAMENTO 4.1 DI BATTLEFIELD 2042`,
@@ -496,7 +496,7 @@ export const articleCards = [
     },
     {
         id: 56,
-        image: `assets/images/article/Battlefield/ea-battlefield-immagine 6.png`,
+        image: `/assets/images/article/Battlefield/ea-battlefield-immagine 6.png`,
         category: `Battlefield 2042`,
         date: `18-apr-2022`,
         title: `AGGIORNAMENTO 4.0 DI BATTLEFIELD 2042`,
@@ -505,7 +505,7 @@ export const articleCards = [
     },
     {
         id: 57,
-        image: `assets/images/article/Inside EA/ea-inside-immagine 1.jpg`,
+        image: `/assets/images/article/Inside EA/ea-inside-immagine 1.jpg`,
         category: `Inside EA`,
         date: `1-apr-2022`,
         title: `La salute dei dipendenti prima di tutto`,
@@ -514,7 +514,7 @@ export const articleCards = [
     },
     {
         id: 58,
-        image: `assets/images/article/Inside EA/ea-inside-immagine 2.png`,
+        image: `/assets/images/article/Inside EA/ea-inside-immagine 2.png`,
         category: `Inside EA`,
         date: `31-mar-2022`,
         title: `Lasciare un segno positivo all'interno e all'esterno dei nostri giochi`,
@@ -523,7 +523,7 @@ export const articleCards = [
     },
     {
         id: 59,
-        image: `assets/images/article/Inside EA/ea-inside-immagine 3.jpg`,
+        image: `/assets/images/article/Inside EA/ea-inside-immagine 3.jpg`,
         category: `Inside EA`,
         date: `13-gen-2022`,
         title: `Firemonkeys Studio di EA festeggia i 10 anni di The Sims FreePlay`,
@@ -532,7 +532,7 @@ export const articleCards = [
     },
     {
         id: 60,
-        image: `assets/images/article/The Sims 4/ea-thesims-immagine 5.png`,
+        image: `/assets/images/article/The Sims 4/ea-thesims-immagine 5.png`,
         category: `The Sims 4`,
         date: `13-gen-2022`,
         title: `Visita guidata a Vita da Liceali Expansion Pack (EP12)`,
@@ -541,7 +541,7 @@ export const articleCards = [
     },
     {
         id: 61,
-        image: `assets/images/article/Notizie EA/ea-notizie-immagine 1.jpg`,
+        image: `/assets/images/article/Notizie EA/ea-notizie-immagine 1.jpg`,
         category: `The Sims 4`,
         date: `15-lug-2022`,
         title: `Orientamento sessuale in The Sims 4`,
@@ -550,7 +550,7 @@ export const articleCards = [
     },
     {
         id: 62,
-        image: `assets/images/article/Apex Legends/ea-apexLegends-immagine 1.jpg`,
+        image: `/assets/images/article/Apex Legends/ea-apexLegends-immagine 1.jpg`,
         category: `Storie`,
         date: `21-lug-2022`,
         title: `Mostra a tutti il tuo sangue blu con il nuovo bundle di Wraith, Reale.`,
@@ -559,7 +559,7 @@ export const articleCards = [
     },
     {
         id: 63,
-        image: `assets/images/article/Apex Legends/ea-apexLegends-immagine 2.jpg`,
+        image: `/assets/images/article/Apex Legends/ea-apexLegends-immagine 2.jpg`,
         category: `Storie`,
         date: `15-lug-2022`,
         title: `Festeggia l'evento Gaiden con gli avatar VTuber di Apex Legends™`,
@@ -568,7 +568,7 @@ export const articleCards = [
     },
     {
         id: 64,
-        image: `assets/images/article/Apex Legends/ea-apexLegends-immagine 3.jpg`,
+        image: `/assets/images/article/Apex Legends/ea-apexLegends-immagine 3.jpg`,
         category: `Storie`,
         date: `10-lug-2022`,
         title: `Inizia una nuova epica avventura nell'evento Gaiden`,
@@ -577,7 +577,7 @@ export const articleCards = [
     },
     {
         id: 65,
-        image: `assets/images/article/Apex Legends/ea-apexLegends-immagine 4.png`,
+        image: `/assets/images/article/Apex Legends/ea-apexLegends-immagine 4.png`,
         category: `Storie`,
         date: `5-lug-2022`,
         title: `TI DIAMO IL BENVENUTO ALLA SECONDA EDIZIONE DELL'ALGS CHAMPIONSHIP, 7-10 LU…`,
@@ -586,7 +586,7 @@ export const articleCards = [
     },
     {
         id: 66,
-        image: `assets/images/article/Apex Legends/ea-apexLegends-immagine 5.jpg`,
+        image: `/assets/images/article/Apex Legends/ea-apexLegends-immagine 5.jpg`,
         category: `Storie`,
         date: `16-giu-2022`,
         title: `Inizia l'estate con questo bundle di Gibraltar per Prime Gaming`,
@@ -595,7 +595,7 @@ export const articleCards = [
     },
     {
         id: 67,
-        image: `assets/images/article/Apex Legends/ea-apexLegends-immagine 6.jpg`,
+        image: `/assets/images/article/Apex Legends/ea-apexLegends-immagine 6.jpg`,
         category: `Storie`,
         date: `16-giu-2022`,
         title: `Scegli la tua fazione, mech o mostri, nell'evento collezione Risveglio`,
@@ -604,7 +604,7 @@ export const articleCards = [
     },
     {
         id: 68,
-        image: `assets/images/article/The Sims 4/ea-thesims-immagine 1.jpg`,
+        image: `/assets/images/article/The Sims 4/ea-thesims-immagine 1.jpg`,
         category: `Diversità`,
         date: `26-lug-2022`,
         title: `Aggiornamento: 26/07/2022`,
@@ -613,7 +613,7 @@ export const articleCards = [
     },
     {
         id: 69,
-        image: `assets/images/article/The Sims 4/ea-thesims-immagine 2.png`,
+        image: `/assets/images/article/The Sims 4/ea-thesims-immagine 2.png`,
         category: `Diversità`,
         date: `19-lug-2022`,
         title: `Cose da fare - 19 luglio 2022`,
@@ -622,7 +622,7 @@ export const articleCards = [
     },
     {
         id: 70,
-        image: `assets/images/article/The Sims 4/ea-thesims-immagine 3.jpg`,
+        image: `/assets/images/article/The Sims 4/ea-thesims-immagine 3.jpg`,
         category: `Diversità`,
         date: `15-lug-2022`,
         title: `Orientamento sessuale in The Sims 4`,
@@ -631,7 +631,7 @@ export const articleCards = [
     },
     {
         id: 71,
-        image: `assets/images/article/The Sims 4/ea-thesims-immagine 4.png`,
+        image: `/assets/images/article/The Sims 4/ea-thesims-immagine 4.png`,
         category: `Diversità`,
         date: `1-lug-2022`,
         title: `Siete voi a creare The Sims - Intervista su Vita da Liceali con i creatori …`,
@@ -640,7 +640,7 @@ export const articleCards = [
     },
     {
         id: 72,
-        image: `assets/images/article/The Sims 4/ea-thesims-immagine 5.png`,
+        image: `/assets/images/article/The Sims 4/ea-thesims-immagine 5.png`,
         category: `Diversità`,
         date: `30-giu-2022`,
         title: `Visita guidata a Vita da Liceali Expansion Pack (EP12)`,
@@ -649,7 +649,7 @@ export const articleCards = [
     },
     {
         id: 73,
-        image: `assets/images/article/The Sims 4/ea-thesims-immagine 6.png`,
+        image: `/assets/images/article/The Sims 4/ea-thesims-immagine 6.png`,
         category: `Diversità`,
         date: `23-giu-2022`,
         title: `Consegne Express dei Sims`,
@@ -658,7 +658,7 @@ export const articleCards = [
     },
     {
         id: 74,
-        image: `assets/images/article/Battlefield/ea-battlefield-immagine 1.431p_`,
+        image: `/assets/images/article/Battlefield/ea-battlefield-immagine 1.431p_`,
         category: `Cultura`,
         date: `5-lug-2022`,
         title: `AGGIORNAMENTO 1.1 DI BATTLEFIELD 2042`,
@@ -667,7 +667,7 @@ export const articleCards = [
     },
     {
         id: 75,
-        image: `assets/images/article/Battlefield/ea-battlefield-immagine 2.431p_`,
+        image: `/assets/images/article/Battlefield/ea-battlefield-immagine 2.431p_`,
         category: `Cultura`,
         date: `10-giu-2022`,
         title: `Briefing su Battlefield - Benvenuti all'Ora zero`,
@@ -676,7 +676,7 @@ export const articleCards = [
     },
     {
         id: 76,
-        image: `assets/images/article/Battlefield/ea-battlefield-immagine 3.png`,
+        image: `/assets/images/article/Battlefield/ea-battlefield-immagine 3.png`,
         category: `Cultura`,
         date: `6-giu-2022`,
         title: `AGGIORNAMENTO 1.0 DI BATTLEFIELD 2042`,
@@ -685,7 +685,7 @@ export const articleCards = [
     },
     {
         id: 77,
-        image: `assets/images/article/Battlefield/ea-battlefield-immagine 4.431p_`,
+        image: `/assets/images/article/Battlefield/ea-battlefield-immagine 4.431p_`,
         category: `Cultura`,
         date: `24-mag-2022`,
         title: `Briefing Battlefield -- Aggiornamento sullo sviluppo, maggio 2022`,
@@ -694,7 +694,7 @@ export const articleCards = [
     },
     {
         id: 78,
-        image: `assets/images/article/Battlefield/ea-battlefield-immagine 5.png`,
+        image: `/assets/images/article/Battlefield/ea-battlefield-immagine 5.png`,
         category: `Cultura`,
         date: `18-mag-2022`,
         title: `AGGIORNAMENTO 4.1 DI BATTLEFIELD 2042`,
@@ -703,7 +703,7 @@ export const articleCards = [
     },
     {
         id: 79,
-        image: `assets/images/article/Battlefield/ea-battlefield-immagine 6.png`,
+        image: `/assets/images/article/Battlefield/ea-battlefield-immagine 6.png`,
         category: `Cultura`,
         date: `18-apr-2022`,
         title: `AGGIORNAMENTO 4.0 DI BATTLEFIELD 2042`,
@@ -712,7 +712,7 @@ export const articleCards = [
     },
     {
         id: 80,
-        image: `assets/images/article/Inside EA/ea-inside-immagine 1.jpg`,
+        image: `/assets/images/article/Inside EA/ea-inside-immagine 1.jpg`,
         category: `Comunità`,
         date: `1-apr-2022`,
         title: `La salute dei dipendenti prima di tutto`,
@@ -721,7 +721,7 @@ export const articleCards = [
     },
     {
         id: 81,
-        image: `assets/images/article/Inside EA/ea-inside-immagine 2.png`,
+        image: `/assets/images/article/Inside EA/ea-inside-immagine 2.png`,
         category: `Comunità`,
         date: `31-mar-2022`,
         title: `Lasciare un segno positivo all'interno e all'esterno dei nostri giochi`,
@@ -730,7 +730,7 @@ export const articleCards = [
     },
     {
         id: 82,
-        image: `assets/images/article/Inside EA/ea-inside-immagine 3.jpg`,
+        image: `/assets/images/article/Inside EA/ea-inside-immagine 3.jpg`,
         category: `Comunità`,
         date: `13-gen-2022`,
         title: `Firemonkeys Studio di EA festeggia i 10 anni di The Sims FreePlay`,
@@ -739,7 +739,7 @@ export const articleCards = [
     },
     {
         id: 83,
-        image: `assets/images/article/Inside EA/ea-inside-immagine 4.png`,
+        image: `/assets/images/article/Inside EA/ea-inside-immagine 4.png`,
         category: `Comunità`,
         date: `16-dic-2021`,
         title: `Dentro Full Circle – Melvin Teo, produttore di skate.`,
@@ -748,7 +748,7 @@ export const articleCards = [
     },
     {
         id: 84,
-        image: `assets/images/article/Inside EA/ea-inside-immagine 5.jpg`,
+        image: `/assets/images/article/Inside EA/ea-inside-immagine 5.jpg`,
         category: `Comunità`,
         date: `2-nov-2021`,
         title: `ABLE festeggia il mese nazionale di sensibilizzazione sull'occupazione per …`,
@@ -757,7 +757,7 @@ export const articleCards = [
     },
     {
         id: 85,
-        image: `assets/images/article/Inside EA/ea-inside-immagine 6.png`,
+        image: `/assets/images/article/Inside EA/ea-inside-immagine 6.png`,
         category: `Comunità`,
         date: `27-ott-2021`,
         title: `Rafforzare il nostro impegno in materia di accessibilità e inclusione`,
@@ -766,7 +766,7 @@ export const articleCards = [
     },
     {
         id: 86,
-        image: `assets/images/EASPORTSpage/ufc4-featured-image-primeicons-16x9.png.adapt.crop16x9.431p.png`,
+        image: `/assets/images/EASPORTSpage/ufc4-featured-image-primeicons-16x9.png.adapt.crop16x9.431p.png`,
         category: `UFC`,
         date: `15-lug-2022`,
         title: `Note della patch di UFC® 4 (4.13.00)`,
@@ -775,7 +775,7 @@ export const articleCards = [
     },
     {
         id: 87,
-        image: `assets/images/EASPORTSpage/ufc4-feature-image-ea-play.jpg.adapt.crop16x9.431p.jpg`,
+        image: `/assets/images/EASPORTSpage/ufc4-feature-image-ea-play.jpg.adapt.crop16x9.431p.jpg`,
         category: `UFC`,
         date: `30-giu-2022`,
         title: `Crea la tua leggenda in UFC 4 con EA Play`,
@@ -784,7 +784,7 @@ export const articleCards = [
     },
     {
         id: 88,
-        image: `assets/images/EASPORTSpage/patch-notes-12-0-16x9.jpg.adapt.crop16x9.431p.jpg`,
+        image: `/assets/images/EASPORTSpage/patch-notes-12-0-16x9.jpg.adapt.crop16x9.431p.jpg`,
         category: `UFC`,
         date: `24-giu-2022`,
         title: `Note della patch di UFC 4 (12.0)`,
@@ -793,7 +793,7 @@ export const articleCards = [
     },
     {
         id: 89,
-        image: `assets/images/EASPORTSpage/patch-notes-11-0-16x9.jpg.adapt.crop16x9.431p.jpg`,
+        image: `/assets/images/EASPORTSpage/patch-notes-11-0-16x9.jpg.adapt.crop16x9.431p.jpg`,
         category: `UFC`,
         date: `3-giu-2022`,
         title: `Note della patch di UFC 4 (11.0)`,
@@ -802,7 +802,7 @@ export const articleCards = [
     },
     {
         id: 90,
-        image: `assets/images/EASPORTSpage/patch-notes-10-0-16x9-1.jpg.adapt.crop16x9.431p.jpg`,
+        image: `/assets/images/EASPORTSpage/patch-notes-10-0-16x9-1.jpg.adapt.crop16x9.431p.jpg`,
         category: `UFC`,
         date: `24-mag-2022`,
         title: `Note della patch di UFC 4 (10.0)`,
@@ -811,7 +811,7 @@ export const articleCards = [
     },
     {
         id: 91,
-        image: `assets/images/EASPORTSpage/patch-notes-9-00-16x9.jpg.adapt.crop16x9.431p.jpg`,
+        image: `/assets/images/EASPORTSpage/patch-notes-9-00-16x9.jpg.adapt.crop16x9.431p.jpg`,
         category: `UFC`,
         date: `19-lug-2022`,
         title: `Note della patch di UFC 4 (9.0)`,
@@ -820,7 +820,7 @@ export const articleCards = [
     },
     {
         id: 92,
-        image: `assets/images/EASPORTSpage/ea-header-small-nbalive19-news-update-hub-16x9-m.jpg.adapt.crop16x9.431p.jpg`,
+        image: `/assets/images/EASPORTSpage/ea-header-small-nbalive19-news-update-hub-16x9-m.jpg.adapt.crop16x9.431p.jpg`,
         category: `NBA LIVE`,
         date: `15-lug-2022`,
         title: `Celebrazione dei fan e dei giocatori latino-americani e ispano-statunitensi`,
@@ -829,7 +829,7 @@ export const articleCards = [
     },
     {
         id: 93,
-        image: `assets/images/EASPORTSpage/nba-tile-19mar06-vault-rewards-16x9.jpg.adapt.crop16x9.431p.jpg`,
+        image: `/assets/images/EASPORTSpage/nba-tile-19mar06-vault-rewards-16x9.jpg.adapt.crop16x9.431p.jpg`,
         category: `NBA LIVE`,
         date: `30-giu-2022`,
         title: `Ora che NBA LIVE 19 entra in The Vault, ottieni Oggetti da collezione dedic…`,
@@ -838,7 +838,7 @@ export const articleCards = [
     },
     {
         id: 94,
-        image: `assets/images/EASPORTSpage/cotw-header-copy.png.adapt.crop16x9.431p.png`,
+        image: `/assets/images/EASPORTSpage/cotw-header-copy.png.adapt.crop16x9.431p.png`,
         category: `NBA LIVE`,
         date: `24-giu-2022`,
         title: `Campi della settimana di NBA LIVE 19, 6 marzo`,
@@ -847,7 +847,7 @@ export const articleCards = [
     },
     {
         id: 95,
-        image: `assets/images/EASPORTSpage/weekly-predictions-header-feb27.png.adapt.crop16x9.431p.png`,
+        image: `/assets/images/EASPORTSpage/weekly-predictions-header-feb27.png.adapt.crop16x9.431p.png`,
         category: `NBA LIVE`,
         date: `3-giu-2022`,
         title: `Sfide di punta e previsioni settimanali, 4 marzo`,
@@ -856,7 +856,7 @@ export const articleCards = [
     },
     {
         id: 96,
-        image: `assets/images/EASPORTSpage/cotw-header-1114.png.adapt.crop16x9.431p.png`,
+        image: `/assets/images/EASPORTSpage/cotw-header-1114.png.adapt.crop16x9.431p.png`,
         category: `NBA LIVE`,
         date: `24-mag-2022`,
         title: `Campi della settimana di NBA LIVE 19, 27 febbraio`,
@@ -865,7 +865,7 @@ export const articleCards = [
     },
     {
         id: 97,
-        image: `assets/images/EASPORTSpage/nba-live-19-weekly-predictions-header-feb26.jpg.adapt.crop16x9.431p.jpg`,
+        image: `/assets/images/EASPORTSpage/nba-live-19-weekly-predictions-header-feb26.jpg.adapt.crop16x9.431p.jpg`,
         category: `NBA LIVE`,
         date: `19-lug-2022`,
         title: `Sfide di punta e previsioni settimanali, 26 febbraio`,
@@ -874,7 +874,7 @@ export const articleCards = [
     },
     {
         id: 98,
-        image: `assets/images/EASPORTSpage/fifa-mobile-featured-image-release-notes.adapt.crop16x9.431p_`,
+        image: `/assets/images/EASPORTSpage/fifa-mobile-featured-image-release-notes.adapt.crop16x9.431p_`,
         category: `FIFA Mobile`,
         date: `15-lug-2022`,
         title: `FIFA Mobile - Note di rilascio - Sito ufficiale EA SPORTS`,
@@ -883,7 +883,7 @@ export const articleCards = [
     },
     {
         id: 99,
-        image: `assets/images/EASPORTSpage/fifa-mobile-featured-image-release-notes.adapt.crop16x9.431p_`,
+        image: `/assets/images/EASPORTSpage/fifa-mobile-featured-image-release-notes.adapt.crop16x9.431p_`,
         category: `FIFA Mobile`,
         date: `30-giu-2022`,
         title: `FIFA Mobile - Nuova versione: un'occhiata da vicino al gameplay - Sito uffi…`,
@@ -892,7 +892,7 @@ export const articleCards = [
     },
     {
         id: 100,
-        image: `assets/images/EASPORTSpage/fifa-mobile-featured-image-release-notes.adapt.crop16x9.431p_`,
+        image: `/assets/images/EASPORTSpage/fifa-mobile-featured-image-release-notes.adapt.crop16x9.431p_`,
         category: `FIFA Mobile`,
         date: `24-giu-2022`,
         title: `FIFA Mobile - Approfondimento sulla modalità Allenatore - Sito ufficiale EA…`,
@@ -901,7 +901,7 @@ export const articleCards = [
     },
     {
         id: 101,
-        image: `assets/images/EASPORTSpage/fifa-mobile-featured-image-release-notes.adapt.crop16x9.431p_`,
+        image: `/assets/images/EASPORTSpage/fifa-mobile-featured-image-release-notes.adapt.crop16x9.431p_`,
         category: `FIFA Mobile`,
         date: `3-giu-2022`,
         title: `FIFA Mobile - Non più disponibile in Vietnam`,
@@ -910,7 +910,7 @@ export const articleCards = [
     },
     {
         id: 102,
-        image: `assets/images/EASPORTSpage/fifa-mobile-featured-image-release-notes.adapt.crop16x9.431p_`,
+        image: `/assets/images/EASPORTSpage/fifa-mobile-featured-image-release-notes.adapt.crop16x9.431p_`,
         category: `FIFA Mobile`,
         date: `24-mag-2022`,
         title: `FIFA Mobile - Nuova stagione: formato - Sito ufficiale EA SPORTS`,
@@ -919,7 +919,7 @@ export const articleCards = [
     },
     {
         id: 103,
-        image: `assets/images/EASPORTSpage/fifa-mobile-featured-image-release-notes.adapt.crop16x9.431p_`,
+        image: `/assets/images/EASPORTSpage/fifa-mobile-featured-image-release-notes.adapt.crop16x9.431p_`,
         category: `FIFA Mobile`,
         date: `19-lug-2022`,
         title: `FIFA Mobile - Nuova stagione: contenuti e mercato - Sito ufficiale`,
@@ -928,7 +928,7 @@ export const articleCards = [
     },
     {
         id: 104,
-        image: `assets/images/EASPORTSpage/nba-live-mobile-feature-image-keyart.png.adapt.crop16x9.431p.png`,
+        image: `/assets/images/EASPORTSpage/nba-live-mobile-feature-image-keyart.png.adapt.crop16x9.431p.png`,
         category: `NBA LIVE Mobile`,
         date: `15-lug-2022`,
         title: `Aggiornamento NBA LIVE Mobile: dettagli Stagione 6`,
@@ -937,7 +937,7 @@ export const articleCards = [
     },
     {
         id: 105,
-        image: `assets/images/EASPORTSpage/nba-live-mobile-feature-image-keyart.png.adapt.crop16x9.431p.png`,
+        image: `/assets/images/EASPORTSpage/nba-live-mobile-feature-image-keyart.png.adapt.crop16x9.431p.png`,
         category: `NBA LIVE Mobile`,
         date: `30-giu-2022`,
         title: `Aggiornamento NBA LIVE Mobile: dettagli Stagione 5`,
@@ -946,7 +946,7 @@ export const articleCards = [
     },
     {
         id: 106,
-        image: `assets/images/EASPORTSpage/nba-live-mobile-feature-image-keyart.png.adapt.crop16x9.431p.png`,
+        image: `/assets/images/EASPORTSpage/nba-live-mobile-feature-image-keyart.png.adapt.crop16x9.431p.png`,
         category: `NBA LIVE Mobile`,
         date: `30-giu-2022`,
         title: `Dai e vai: Nuova dinamica di gioco`,
@@ -955,7 +955,7 @@ export const articleCards = [
     },
     {
         id: 107,
-        image: `assets/images/EASPORTSpage/nba-live-mobile-feature-image-keyart.png.adapt.crop16x9.431p.png`,
+        image: `/assets/images/EASPORTSpage/nba-live-mobile-feature-image-keyart.png.adapt.crop16x9.431p.png`,
         category: `NBA LIVE Mobile`,
         date: `3-giu-2022`,
         title: `Il Dai e vai: Classifiche`,
@@ -964,7 +964,7 @@ export const articleCards = [
     },
     {
         id: 108,
-        image: `assets/images/EASPORTSpage/nba-live-mobile-feature-image-keyart.png.adapt.crop16x9.431p.png`,
+        image: `/assets/images/EASPORTSpage/nba-live-mobile-feature-image-keyart.png.adapt.crop16x9.431p.png`,
         category: `NBA LIVE Mobile`,
         date: `24-mag-2022`,
         title: `Il Dai e vai di NBA LIVE Mobile`,
@@ -973,7 +973,7 @@ export const articleCards = [
     },
     {
         id: 109,
-        image: `assets/images/EASPORTSpage/nba-live-mobile-feature-image-keyart.png.adapt.crop16x9.431p.png`,
+        image: `/assets/images/EASPORTSpage/nba-live-mobile-feature-image-keyart.png.adapt.crop16x9.431p.png`,
         category: `NBA LIVE Mobile`,
         date: `19-lug-2022`,
         title: `Il Dai e vai di NBA LIVE Mobile`,
