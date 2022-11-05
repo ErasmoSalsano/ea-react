@@ -6,7 +6,7 @@ import { ButtonNavTab } from "./ButtonNavTab";
 import { MainWrap } from "../0_wraps/mainWrap";
 import { MainContentWrap } from "../0_wraps/mainContentWrap";
 
-export function NavTab({gestion}) {
+export function NavTab({gestion, btt, value}) {
     const [active, setActive] = useState({
         id: TabButtons[gestion][0].id,
         nome: TabButtons[gestion][0].nome,
@@ -27,7 +27,7 @@ export function NavTab({gestion}) {
         <>
             <MainWrap extendClass={'navTab'}>
                 <MainContentWrap p>
-                    <button className="left-btn buttons" id="left-Btn" ><i className="material-icons">arrow_back_ios</i></button>
+                    {/* <button className="left-btn buttons" id="left-Btn" ><i className="material-icons">arrow_back_ios</i></button> */}
                     <div className="navTabArticles">
 
                         
@@ -45,10 +45,10 @@ export function NavTab({gestion}) {
                         )}
                         
                     </div>
-                    <button className="right-btn buttons" id="right-Btn"><i className="material-icons">arrow_forward_ios</i></button>
+                    {/* <button className="right-btn buttons" id="right-Btn"><i className="material-icons">arrow_forward_ios</i></button> */}
                 </MainContentWrap>
             </MainWrap>
-            {active && <ArticlesGrid key={active.id +1} total={6} request={active.categoria} argument={articleCards} button/>}
+            {active && <ArticlesGrid key={active.id +1} total={6} request={active.categoria} argument={articleCards} button={btt} classA={value}/>}
         </>
     )
 }

@@ -1,6 +1,7 @@
 import { MainContentWrap } from "../components/0_wraps/mainContentWrap";
 import { MainWrap } from "../components/0_wraps/mainWrap";
 import { ArticlesGrid } from "../components/ArticlesGrid";
+import { Title } from "../components/Title";
 import { articleCards } from "../data/DataArticle";
 import './../style/pages/informazioni/news.scss'
 
@@ -10,9 +11,9 @@ export function News(){
             <div className="main-wrap-hero">
                 <div className="main-wrap-hero-content">
                     <div className="main-wrap-hero-text">
-                        <div className="title">
+                        <Title className="title">
                             <h1>Ultime notizie</h1>
-                        </div>
+                        </Title>
                     </div>
                     <picture>
                         <source media="(max-width: 768px)" srcSet="/assets/images/hero/news/h3-1534-696-notizie.jpg"/>
@@ -23,7 +24,7 @@ export function News(){
                     </picture>
                 </div>
             </div>
-            {<ArticlesGrid a request={'all'} total={18} argument={articleCards}/>}
+            {<ArticlesGrid request={'all'} total={18} argument={articleCards} classA/>}
             <div className="void"></div>
             <MainWrap>
                 <MainContentWrap p>
