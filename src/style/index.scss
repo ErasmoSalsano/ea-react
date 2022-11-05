@@ -9,564 +9,476 @@
 /* == Page == */
 
 //CSS  HERO HOMEPAGE
-
-.hero_wrap {
-
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-
-    .content1 {
-        justify-content: flex-end;
-    }
-
-    .content2 {
-        justify-content: center;
-    }
-
-    .second-lower-hero_wrap {
-        justify-content: center;
-    }
-
-    .second-hero_wrap {
+.homepage{
+    .hero_wrap {
         width: 100%;
         display: flex;
-
-
-        // align-items: flex-start;
-
-
+        justify-content: center;
         flex-direction: column;
 
-        .background-picture {
-           
-            height: 800px;
-            overflow-y: hidden;
-            
-           
-
-
-
-
-        }
-
-        picture {
-            margin-bottom: -5px;
-            width: 100%;
-
-            source {
-                width: 100%;
-            }
-
-            img {
-                width: 100%;
-            }
-        }
-
-        .upper-hero {
-
-            position: absolute;
-            @extend %flexcenter;
-            flex-direction: column;
-            width: 100%;
-
-            .content1 {
-                align-items: center;
-                margin-bottom: calc((10vh - 12%));
-
-                span {
-
-                    text-align: center;
-                }
-            }
-
-            .content2 {
-                align-items: left;
-
-                span {
-
-                    text-align: left;
-                }
-            }
-
-            .main-wrap {
-                padding: 0px calc((80vw - 1120px)/2);
-            }
-
-
-
-
-            .upper-hero_content {
-                background-color: unset;
-                display: flex;
-                // @extend %flexcenter;
-                justify-content: center;
-
-                flex-direction: column;
-                width: 80vw;
-
-                .upper-hero_logo {
-
-                    width: 200px
-                }
-
-                span {
-                    font-family: var(--font-family-display-regular);
-                    font-size: var(--font-size-span);
-                    width: 80vw;
-                    color: white;
-
-                }
-            }
-
-        }
-
-        .lower-hero_image1 {
-            position: relative;
-            height: 35vh;
-        }
-
-        .lower-hero_image2 {
-            position: relative;
-            height: 30vh;
-        }
-
-
-
-        .lower-hero {
-            background-color: unset;
-            position: absolute;
-            @extend %flexcenter;
-
-
-
-            .main-content-wrap {
-                width: 90vw;
-                justify-content: center;
-                align-items: center;
-                flex-direction: column;
-
-                .buttons-wrap {
-                    @extend %flexcenter;
-                    flex-direction: column;
-                    padding-top: 20px;
-
-
-                    .eaplay-logo {
-                        width: 150px;
-                    }
-
-                }
-
-                span {
-                    // padding-top: 20px;
-                    font-family: var(--font-family-display-bold);
-                    font-size: var(--font-size-hero-title);
-                    text-align: center;
-
-                }
-
-            }
-
-        }
-
-    }
-
-
-}
-
-//INIZIO --> MQ HERO HOMEPAGE
-
-@media all and (min-width: 768px) {
-    .hero_wrap {
         .content1 {
-            justify-content: center;
-            overflow-y: hidden;
-           
+            justify-content: flex-end;
+        }
 
+        .content2 {
+            justify-content: center;
+        }
+
+        .second-lower-hero_wrap {
+            justify-content: center;
         }
 
         .second-hero_wrap {
+            width: 100%;
+            display: flex;
+            // align-items: flex-start;
+            flex-direction: column;
 
-
-            .background-picture {
-                height: 100%;
-
-
-
-
+            .background-picture { 
+                height: 800px;
+                overflow-y: hidden;
             }
 
+            picture {
+                margin-bottom: -5px;
+                width: 100%;
+
+                source {
+                    width: 100%;
+                }
+
+                img {
+                    width: 100%;
+                }
+            }
 
             .upper-hero {
-                span {
-                    max-width: 40vw;
-                }
-
-
-
+                position: absolute;
+                @extend %flexcenter;
+                flex-direction: column;
+                width: 100%;
 
                 .content1 {
-                    // justify-content: right;
                     align-items: center;
-                    margin-bottom: 0;
-                   
-
-
+                    margin-bottom: calc((10vh - 12%));
                     span {
-
-                        width: 33vw;
-                        margin: 0;
-
+                        text-align: center;
                     }
                 }
-
-
-            }
-
-            .content1 {
-                align-items: flex-end;
-                margin-right: -20%;
-                overflow-x: hidden;
-             
-
-            }
-
-            .lower-hero_image1 {
-                height: 25vh;
-            }
-
-            .lower-hero_image2 {
-                height: 20vh;
-            }
-
-
-            .lower-hero {
-
-                .main-content-wrap {
-                    .buttons-wrap {
-
-                        flex-direction: row;
-                        gap: 30px;
-                        padding-top: 0;
-                    }
-                }
-
-                span {
-                    width: 90vw;
-                }
-
-                .content-details {
-                    width: unset;
-                }
-            }
-        }
-    }
-
-}
-
-@media all and (min-width: 1024px) {
-
-    .hero_wrap {
-
-
-
-        .second-hero_wrap {
-
-
-            picture {
-
-                img {
-                    height: 60vh;
-                    // object-fit: cover;
-
-
-                }
-            }
-
-            .lower-hero_image1 {
-                height: 15vh;
-            }
-
-            .lower-hero_image2 {
-                height: 15vh;
-            }
-
-            .lower-hero {
-                .main-content-wrap {
-                    width: 80vw;
-                    padding: 0;
-                    flex-direction: row;
-                    justify-content: space-between;
-
+                .content2 {
+                    align-items: left;
                     span {
                         text-align: left;
-                        width: 30rem;
+                    }
+                }
+                .main-wrap {
+                    padding: 0px calc((80vw - 1120px)/2);
+                }
+
+                .upper-hero_content {
+                    background-color: unset;
+                    display: flex;
+                    // @extend %flexcenter;
+                    justify-content: center;
+                    flex-direction: column;
+                    width: 80vw;
+
+                    .upper-hero_logo {
+                        width: 200px
+                    }
+
+                    span {
+                        font-family: var(--font-family-display-regular);
+                        font-size: var(--font-size-span);
+                        width: 80vw;
+                        color: white;
+                    }
+                }
+            }
+
+            .lower-hero_image1 {
+                position: relative;
+                height: 35vh;
+            }
+
+            .lower-hero_image2 {
+                position: relative;
+                height: 30vh;
+            }
+
+            .lower-hero {
+                background-color: unset;
+                position: absolute;
+                @extend %flexcenter;
+
+                .main-content-wrap {
+                    width: 90vw;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+
+                    .buttons-wrap {
+                        @extend %flexcenter;
+                        flex-direction: column;
+                        padding-top: 20px;
+
+                        .eaplay-logo {
+                            width: 150px;
+                        }
+                    }
+
+                    span {
+                        // padding-top: 20px;
+                        font-family: var(--font-family-display-bold);
+                        font-size: var(--font-size-hero-title);
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+
+    //INIZIO --> MQ HERO HOMEPAGE
+
+    @media all and (min-width: 768px) {
+        .hero_wrap {
+            .content1 {
+                justify-content: center;
+                overflow-y: hidden;
+            }
+            .second-hero_wrap {
+                .background-picture {
+                    height: 100%;
+                }
+                .upper-hero {
+                    span {
+                        max-width: 40vw;
+                    }
+
+                    .content1 {
+                        // justify-content: right;
+                        align-items: center;
+                        margin-bottom: 0;
+                    
+                        span {
+                            width: 33vw;
+                            margin: 0;
+                        }
                     }
                 }
 
-            }
-        }
-    }
-}
-
-@media all and (min-width: 1456px) {
-
-    .hero_wrap {
-
-
-        .second-hero_wrap {
-            picture {
-
-                img {
-                    height: 70vh;
-
-
+                .content1 {
+                    align-items: flex-end;
+                    margin-right: -20%;
+                    overflow-x: hidden;
+                
 
                 }
-            }
 
+                .lower-hero_image1 {
+                    height: 25vh;
+                }
 
+                .lower-hero_image2 {
+                    height: 20vh;
+                }
 
-            .lower-hero {
-                .main-content-wrap {
-                    width: 80vw;
+                .lower-hero {
+                    .main-content-wrap {
+                        .buttons-wrap {
+                            flex-direction: row;
+                            gap: 30px;
+                            padding-top: 0;
+                        }
+                    }
 
-                    align-items: center;
+                    span {
+                        width: 90vw;
+                    }
+
+                    .content-details {
+                        width: unset;
+                    }
                 }
             }
         }
     }
 
-}
+    @media all and (min-width: 1024px) {
 
+        .hero_wrap {
+            .second-hero_wrap {
+                picture {
+                    img {
+                        height: 60vh;
+                        // object-fit: cover;
+                    }
+                }
 
+                .lower-hero_image1 {
+                    height: 15vh;
+                }
 
-//FINE  --> MQ  HERO HOMEPAGE
+                .lower-hero_image2 {
+                    height: 15vh;
+                }
 
+                .lower-hero {
+                    .main-content-wrap {
+                        width: 80vw;
+                        padding: 0;
+                        flex-direction: row;
+                        justify-content: space-between;
 
-
-// INIZIO -->   Sezione Giochi 
-
-body,
-html {
-    background-color: #f3f3f3;
-}
-
-.content-wrap {
-    // section-wrapper
-    display: flex;
-    justify-content: center;
-    width: 90vw;
-    flex-direction: column;
-    margin: 2rem 0;
-    row-gap: 1rem;
-    padding: 10px;
-
-
-    h3 {
-        //titolo della sezione
-        @extend %flexcenter;
-        font-family: var(--font-family-display-bold);
-        font-size: var(--font-size-section-title);
-        padding: 10px;
-        text-align: center
+                        span {
+                            text-align: left;
+                            width: 30rem;
+                        }
+                    }
+                }
+            }
+        }
     }
 
-    .main-content-wrap {
-        width: auto;
-        padding: 0;
-    }
-}
+    @media all and (min-width: 1456px) {
+        .hero_wrap {
+            .second-hero_wrap {
+                picture {
+                    img {
+                        height: 70vh;
+                    }
+                }
 
-.image_overlay {
-    .span_games {
-        color: white;
-    }
-}
+                .lower-hero {
+                    .main-content-wrap {
+                        width: 80vw;
 
-.image_overlay::before {
-    background-image: linear-gradient(-83deg, #ff4747, #0d1042);
-}
-
-
-@media all and (min-width:768px) {
-    .content-wrap {
-        width: 82vw;
-
-        .grid-games {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1.55rem;
+                        align-items: center;
+                    }
+                }
+            }
         }
     }
 
 
-}
 
-@media all and (min-width:1024px) {
+    //FINE  --> MQ  HERO HOMEPAGE
+
+
+
+    // INIZIO -->   Sezione Giochi 
+
+    body,
+    html {
+        background-color: #f3f3f3;
+    }
+
     .content-wrap {
-        width: 85vw;
-
-        .grid-games {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 1.75rem;
-        }
-    }
-
-
-}
-
-@media all and (min-width: 1456px) {
-    .content-wrap {
-        width: 75vw;
-    }
-}
-
-
-
-// FINE --> Sezione Giochi 
-
-.main-wrap {
-    background-color: rgba(0, 0, 0, 0.08);
-}
-
-.navTab {
-    @extend %bottom-line;
-}
-
-.article-card {
-    @include layouts.article-card(100%);
-    flex: 1 auto;
-    @extend %shadow-start;
-
-    &:hover {
-        @extend %shadow-hover;
-    }
-
-    img {
-        display: none;
-    }
-
-    .article-text {
-        text-align: center;
-        @include layouts.article-text(center, none);
-    }
-}
-
-.content-details {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 111px;
-
-    .details {
+        // section-wrapper
         display: flex;
         justify-content: center;
-        border: 2px solid #161616;
-        line-height: 27px;
-        border-radius: 3px;
-        color: #161616;
-        font-size: var(--font-size-span);
+        width: 90vw;
+        flex-direction: column;
+        margin: 2rem 0;
+        row-gap: 1rem;
+        padding: 10px;
 
-        p {
-            margin: 0 6px;
-            font-family: var(--font-family-display-regular);
+        h3 {
+            //titolo della sezione
+            @extend %flexcenter;
+            font-family: var(--font-family-display-bold);
+            font-size: var(--font-size-section-title);
+            padding: 10px;
+            text-align: center
         }
 
-        @extend %start-scale-padding;
+        .main-content-wrap {
+            width: auto;
+            padding: 0;
+        }
+    }
+
+    .image_overlay {
+        .span_games {
+            color: white;
+        }
+    }
+
+    .image_overlay::before {
+        background-image: linear-gradient(-83deg, #ff4747, #0d1042);
+    }
+
+    @media all and (min-width:768px) {
+        .content-wrap {
+            width: 82vw;
+
+            .grid-games {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 1.55rem;
+            }
+        }
+    }
+
+    @media all and (min-width:1024px) {
+        .content-wrap {
+            width: 85vw;
+
+            .grid-games {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 1.75rem;
+            }
+        }
+    }
+
+    @media all and (min-width: 1456px) {
+        .content-wrap {
+            width: 75vw;
+        }
+    }
+
+    // FINE --> Sezione Giochi 
+
+    .main-wrap {
+        background-color: rgba(0, 0, 0, 0.08);
+    }
+
+    .navTab {
+        @extend %bottom-line;
+    }
+
+    .article-card {
+        @include layouts.article-card(100%);
+        flex: 1 auto;
+        @extend %shadow-start;
 
         &:hover {
-            @extend %scale-padding;
+            @extend %shadow-hover;
         }
-    }
-}
-
-@media screen and (max-width:639px) {
-    .content-details {
-        width: 100%;
-
-        .details {
-            width: 100%;
-        }
-    }
-}
-
-@media screen and (min-width:769px) {
-    .article-card {
-        width: 40%;
 
         img {
-            display: block;
+            display: none;
         }
 
         .article-text {
-            text-align: left;
-            justify-content: flex-start;
+            text-align: center;
+            @include layouts.article-text(center, none);
+        }
+    }
 
-            div {
-                display: flex;
-                flex-direction: row;
-                justify-content: flex-start;
+    .content-details {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 111px;
 
-                span {
-                    line-height: 27px;
-                }
-            }
-
-            h3 {
-                line-height: 32.4px;
-            }
+        .details {
+            display: flex;
+            justify-content: center;
+            border: 2px solid #161616;
+            line-height: 27px;
+            border-radius: 3px;
+            color: #161616;
+            font-size: var(--font-size-span);
 
             p {
-                display: block;
+                margin: 0 6px;
+                font-family: var(--font-family-display-regular);
+            }
+
+            @extend %start-scale-padding;
+
+            &:hover {
+                @extend %scale-padding;
             }
         }
     }
-}
 
-@media screen and (min-width:1025px) {
-    .article-card {
-        width: 30%;
-    }
-}
+    @media screen and (max-width:639px) {
+        .content-details {
+            width: 100%;
 
-@media screen and (min-width:1457px) {
-    .article-card {
-        width: 30%;
-    }
-}
-
-//arrows for scrollbar
-
-.navTab .navTabArticles {
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-}
-
-.main-content-wrap {
-    .buttons {
-        width: 2em;
-        color: rgba(22, 22, 22, 0.5);
-        border: none;
-        background-color: transparent;
-        padding: 0;
-        cursor: pointer;
-
-        .left-btn {
-            display: none;
+            .details {
+                width: 100%;
+            }
         }
     }
-}
 
-@media all and (min-width: 865px) {
-    .main-wrap {
-        .main-content-wrap {
-            .buttons i {
+    @media screen and (min-width:769px) {
+        .article-card {
+            width: 40%;
+
+            img {
+                display: block;
+            }
+
+            .article-text {
+                text-align: left;
+                justify-content: flex-start;
+
+                div {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+
+                    span {
+                        line-height: 27px;
+                    }
+                }
+
+                h3 {
+                    line-height: 32.4px;
+                }
+
+                p {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width:1025px) {
+        .article-card {
+            width: 30%;
+        }
+    }
+
+    @media screen and (min-width:1457px) {
+        .article-card {
+            width: 30%;
+        }
+    }
+
+    //arrows for scrollbar
+
+    .navTab .navTabArticles {
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+    }
+
+    .main-content-wrap {
+        .buttons {
+            width: 2em;
+            color: rgba(22, 22, 22, 0.5);
+            border: none;
+            background-color: transparent;
+            padding: 0;
+            cursor: pointer;
+
+            .left-btn {
                 display: none;
+            }
+        }
+    }
+
+    @media all and (min-width: 865px) {
+        .main-wrap {
+            .main-content-wrap {
+                .buttons i {
+                    display: none;
+                }
             }
         }
     }

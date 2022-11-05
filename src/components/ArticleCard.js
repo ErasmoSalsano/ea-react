@@ -5,7 +5,7 @@ export function ArticleCard({ article }) {
 
     useEffect(() => {}, [article])
     return (
-        <Link to={article.link !== ''?article.link:'/maintenance'} className="article-card">
+        <Link to={article.link !== ''?article.link:'/manteinance'} className="article-card">
             <img src={article.image} alt={article.imageDesc} />
             <div className="article-text">
                 {article.category && article.date && <div><span>{article.category}</span><span className="normal">{article.date}</span></div>}

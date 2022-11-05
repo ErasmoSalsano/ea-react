@@ -89,12 +89,12 @@ export const pages = [
     //     title: `REDEEM`,
     //     link: `/`,
     // },
-    // {
-    //     id: 11,
-    //     image: `/assets/images/article/Apex Legends/ea-apexLegends-immagine 3.jpg`,
-    //     title: `NOTIZIE`,
-    //     link: `/`,
-    // },
+    {
+        id: 11,
+        image: `/assets/images/article/Apex Legends/ea-apexLegends-immagine 3.jpg`,
+        title: `NOTIZIE`,
+        link: `/informazioni/notizie`,
+    },
     // {
     //     id: 12,
     //     image: `/assets/images/article/Inside EA/ea-inside-immagine 3.jpg`,

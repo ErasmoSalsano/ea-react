@@ -1,18 +1,15 @@
 import { HomePageUpperHero } from "../components/HomePageUpperHero";
 import { HomePageLowerHero } from "../components/HomePageLowerHero";
-// import { Header } from "../components/Header";
-// import { NavTab } from "../components/NavTab/NavTab";
 import { GamesGrid } from "../components/GamesGrid"
-import { Header } from "../components/Header";
 import { NavTab } from "../components/NavTab/NavTab";
-import {GameGrid} from "../components/GamesGrid"
 import { MainWrap } from "../components/0_wraps/mainWrap";
 import { MainContentWrap } from "../components/0_wraps/mainContentWrap";
 import { Title } from "../components/Title";
+import './../style/index.scss'
 
 export function Home() {
   return (
-    <div>
+    <div className="homepage">
        <HomePageUpperHero
         logoSvg="assets\images\hero\home\hero1\eacom-apex-eclipse-adaptive-logo-xl.png.adapt.crop2x1.1023w.png"
         mobile="assets\images\hero\home\hero1\apex-hero-medium-eclipse-eacom-7x2-xl.jpg.adapt.crop16x9.767w.jpg"
