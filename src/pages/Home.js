@@ -1,16 +1,23 @@
-
 import { HomePageUpperHero } from "../components/HomePageUpperHero";
 import { HomePageLowerHero } from "../components/HomePageLowerHero";
 import { Header } from "../components/Header";
 import { NavTab } from "../components/NavTab/NavTab";
 import {GameGrid} from "../components/GamesGrid"
+import { MainWrap } from "../components/0_wraps/mainWrap";
+import { MainContentWrap } from "../components/0_wraps/mainContentWrap";
+import { Title } from "../components/Title";
 
 export function Home() {
   return (
     <div>
-
-
         <GameGrid/>
+        <MainWrap>
+            <MainContentWrap p>
+                <Title className="title">
+                    <h1>Ultime Novità</h1>
+                </Title>
+            </MainContentWrap>
+        </MainWrap>
         <NavTab gestion='home'/>
         {/* Dichiarare una basepath da usare per accorciare */}
         <HomePageUpperHero 
