@@ -9,3 +9,4 @@ export function GameCard({game}) {
           </a>
     )
   }
+  
