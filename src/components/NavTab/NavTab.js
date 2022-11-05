@@ -8,9 +8,9 @@ import { MainContentWrap } from "../0_wraps/mainContentWrap";
 
 export function NavTab({gestion}) {
     const [active, setActive] = useState({
-        id:1,
-        nome:'Notizie Ea',
-        categoria:'Eletronics Arts',
+        id: TabButtons[gestion][0].id,
+        nome: TabButtons[gestion][0].nome,
+        categoria: TabButtons[gestion][0].categoria,
     })
     
     const showArgument = useCallback(function showArgument(item){
@@ -48,7 +48,7 @@ export function NavTab({gestion}) {
                     <button className="right-btn buttons" id="right-Btn"><i className="material-icons">arrow_forward_ios</i></button>
                 </MainContentWrap>
             </MainWrap>
-            {active && <ArticlesGrid key={active.id +1} total={6} request={active.categoria} argument={articleCards}/>}
+            {active && <ArticlesGrid key={active.id +1} total={6} request={active.categoria} argument={articleCards} button/>}
         </>
     )
 }
