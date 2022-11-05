@@ -41,12 +41,12 @@ export const pages = [
         title: `EA SPORTS`,
         link: `/`,
     },
-    {
-        id: 3,
-        image: `/assets/images/EASPORTSpage/optimized-pj-f122-por-006-mag-1.jpg.adapt.crop16x9.431p.jpg`,
-        title: `FREE GAMES`,
-        link: `/`,
-    },
+    // {
+    //     id: 3,
+    //     image: `/assets/images/EASPORTSpage/optimized-pj-f122-por-006-mag-1.jpg.adapt.crop16x9.431p.jpg`,
+    //     title: `FREE GAMES`,
+    //     link: `/`,
+    // },
     // {
     //     id: 4,
     //     image: `/assets/images/EASPORTSpage/ufc4-featured-image-primeicons-16x9.png.adapt.crop16x9.431p.png`,
@@ -101,4 +101,10 @@ export const pages = [
     //     title: `ABOUT`,
     //     link: `/`,
     // },
+    {
+        id: 13,
+        image: `/assets/images/article/Inside EA/ea-inside-immagine 3.jpg`,
+        title: `INSIDE EA`,
+        link: `/informazioni/inside-ea`,
+    },
 ]

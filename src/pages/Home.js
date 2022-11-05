@@ -45,7 +45,7 @@ export function Home() {
                 </Title>
             </MainContentWrap>
         </MainWrap>
-        <NavTab gestion='home'/>
+        <NavTab gestion='home' btt={'A'}/>
         {/* Dichiarare una basepath da usare per accorciare */}
         <HomePageUpperHero 
         logoSvg="/assets/images/hero/home/hero2/ea-play-logo-coral-hero-logo-small.svg"
