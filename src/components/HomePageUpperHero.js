@@ -1,12 +1,12 @@
 import { Button } from "./Button"
 
-export function HomePageUpperHero({ mobile, tablet768, tablet1024, desktop, spanText, logoSvg,buttonSpan,buttonPosition,content }) {
+export function HomePageUpperHero({ mobile, tablet768, tablet1024, desktop, spanText, logoSvg, buttonSpan, buttonPosition, content }) {
 
     return (
         <div className="hero_wrap">
-            <div className="second-hero_wrap">
+            <div className={'second-hero_wrap ' + content}>
 
-                <picture>
+                <picture className="background-picture">
                     <source media="(max-width: 766px)"
                         srcset={mobile} />
                     <source media="(min-width: 767px)"
@@ -21,10 +21,6 @@ export function HomePageUpperHero({ mobile, tablet768, tablet1024, desktop, span
                 </picture>
 
                 <div className={'upper-hero ' + content}>
-
-
-
-                    
                     <div className={'upper-hero_content main-wrap ' + content}>
                         <img className="upper-hero_logo"
                             src={logoSvg} alt="ea play logo" />

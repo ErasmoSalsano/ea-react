@@ -17,13 +17,39 @@
     justify-content: center;
     flex-direction: column;
 
+    .content1 {
+        justify-content: flex-end;
+    }
+
+    .content2 {
+        justify-content: center;
+    }
+
+    .second-lower-hero_wrap {
+        justify-content: center;
+    }
+
     .second-hero_wrap {
         width: 100%;
         display: flex;
-        justify-content: center;
+
+
         // align-items: flex-start;
 
+
         flex-direction: column;
+
+        .background-picture {
+           
+            height: 800px;
+            overflow-y: hidden;
+            
+           
+
+
+
+
+        }
 
         picture {
             margin-bottom: -5px;
@@ -47,6 +73,7 @@
 
             .content1 {
                 align-items: center;
+                margin-bottom: calc((10vh - 12%));
 
                 span {
 
@@ -62,12 +89,6 @@
                     text-align: left;
                 }
             }
-
-
-
-
-
-
 
             .main-wrap {
                 padding: 0px calc((80vw - 1120px)/2);
@@ -87,7 +108,7 @@
 
                 .upper-hero_logo {
 
-                    width: 250px
+                    width: 200px
                 }
 
                 span {
@@ -152,27 +173,51 @@
 
     }
 
+
 }
 
 //INIZIO --> MQ HERO HOMEPAGE
 
 @media all and (min-width: 768px) {
     .hero_wrap {
+        .content1 {
+            justify-content: center;
+            overflow-y: hidden;
+           
+
+        }
+
         .second-hero_wrap {
 
 
+            .background-picture {
+                height: 100%;
+
+
+
+
+            }
+
+
             .upper-hero {
-                
+                span {
+                    max-width: 40vw;
+                }
+
 
 
 
                 .content1 {
                     // justify-content: right;
                     align-items: center;
+                    margin-bottom: 0;
+                   
+
 
                     span {
 
                         width: 33vw;
+                        margin: 0;
 
                     }
                 }
@@ -180,8 +225,11 @@
 
             }
 
-            .content1{
+            .content1 {
                 align-items: flex-end;
+                margin-right: -20%;
+                overflow-x: hidden;
+             
 
             }
 
@@ -223,14 +271,15 @@
     .hero_wrap {
 
 
+
         .second-hero_wrap {
 
 
             picture {
 
                 img {
-                    height: 50vh;
-                    object-fit: cover;
+                    height: 60vh;
+                    // object-fit: cover;
 
 
                 }
@@ -271,7 +320,7 @@
             picture {
 
                 img {
-                    height: 60vh;
+                    height: 70vh;
 
 
 

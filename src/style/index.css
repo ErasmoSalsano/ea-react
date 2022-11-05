@@ -1912,11 +1912,23 @@ header content {
   justify-content: center;
   flex-direction: column;
 }
+.hero_wrap .content1 {
+  justify-content: flex-end;
+}
+.hero_wrap .content2 {
+  justify-content: center;
+}
+.hero_wrap .second-lower-hero_wrap {
+  justify-content: center;
+}
 .hero_wrap .second-hero_wrap {
   width: 100%;
   display: flex;
-  justify-content: center;
   flex-direction: column;
+}
+.hero_wrap .second-hero_wrap .background-picture {
+  height: 800px;
+  overflow-y: hidden;
 }
 .hero_wrap .second-hero_wrap picture {
   margin-bottom: -5px;
@@ -1935,6 +1947,7 @@ header content {
 }
 .hero_wrap .second-hero_wrap .upper-hero .content1 {
   align-items: center;
+  margin-bottom: calc(10vh - 12%);
 }
 .hero_wrap .second-hero_wrap .upper-hero .content1 span {
   text-align: center;
@@ -1956,7 +1969,7 @@ header content {
   width: 80vw;
 }
 .hero_wrap .second-hero_wrap .upper-hero .upper-hero_content .upper-hero_logo {
-  width: 250px;
+  width: 200px;
 }
 .hero_wrap .second-hero_wrap .upper-hero .upper-hero_content span {
   font-family: var(--font-family-display-regular);
@@ -1996,14 +2009,28 @@ header content {
 }
 
 @media all and (min-width: 768px) {
+  .hero_wrap .content1 {
+    justify-content: center;
+    overflow-y: hidden;
+  }
+  .hero_wrap .second-hero_wrap .background-picture {
+    height: 100%;
+  }
+  .hero_wrap .second-hero_wrap .upper-hero span {
+    max-width: 40vw;
+  }
   .hero_wrap .second-hero_wrap .upper-hero .content1 {
     align-items: center;
+    margin-bottom: 0;
   }
   .hero_wrap .second-hero_wrap .upper-hero .content1 span {
     width: 33vw;
+    margin: 0;
   }
   .hero_wrap .second-hero_wrap .content1 {
     align-items: flex-end;
+    margin-right: -20%;
+    overflow-x: hidden;
   }
   .hero_wrap .second-hero_wrap .lower-hero_image1 {
     height: 25vh;
@@ -2025,9 +2052,7 @@ header content {
 }
 @media all and (min-width: 1024px) {
   .hero_wrap .second-hero_wrap picture img {
-    height: 50vh;
-    -o-object-fit: cover;
-       object-fit: cover;
+    height: 60vh;
   }
   .hero_wrap .second-hero_wrap .lower-hero_image1 {
     height: 15vh;
@@ -2048,7 +2073,7 @@ header content {
 }
 @media all and (min-width: 1456px) {
   .hero_wrap .second-hero_wrap picture img {
-    height: 60vh;
+    height: 70vh;
   }
   .hero_wrap .second-hero_wrap .lower-hero .main-content-wrap {
     width: 80vw;

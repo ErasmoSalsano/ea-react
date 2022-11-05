@@ -13,7 +13,7 @@ export function HomePageLowerHero({ spanText, textColor, className, bgImage, but
 
     return (
         <div className="hero_wrap ">
-            <div className="second-hero_wrap ">
+            <div className="second-hero_wrap second-lower-hero_wrap">
                 <picture>
                     <img className={imageClass} src={process.env.PUBLIC_URL + bgImage} alt='' />
                 </picture>
