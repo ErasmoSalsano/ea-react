@@ -1,9 +1,20 @@
 import { useState, useEffect} from 'react'
 
+// Custom hook for Header component
+
 export const useHeader = () => {
-  //Scroll check for user board
+  
   const [lastScroll, setLastScroll] = useState(0)
-  const [scrollUp, setScrollUp] = useState(false)
+  const [scrollUp, setScrollUp] = useState(true)
+
+  // Needed to fix the scroll on page mount
+  useEffect(() => {
+    setTimeout(() => {
+      setScrollUp(true)
+    }, 100);
+  }, [])
+
+  //Scroll check for user board
   useEffect(
     () => {
       const handleScroll = () => {

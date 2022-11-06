@@ -9,7 +9,7 @@ export const Header = ()=>{
 
   return(
    <div id='header-wrap'>
-    <div className={`header-container ${scrollUp || 'user-close'}`} >
+    <div className={`header-container ${scrollUp ? '' : 'user-close'}`} >
       <UserSpace />
     <header>
       <div className="upper-header">
