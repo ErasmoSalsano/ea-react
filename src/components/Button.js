@@ -1,13 +1,18 @@
-export function Button({buttonText,color}) {
+export function Button({buttonText,color,justifyContent}) {
 
     const buttonStyle ={
     color: color,
     borderColor: color,
+   
+    }
+
+    const buttonPosition = { 
+        justifyContent: justifyContent
     }
 
     return (
-        <div className="content-details hero2-button_discover">
-            <div style={buttonStyle} className="details hero2-button_discover_content" >
+        <div style={buttonPosition} className="content-details">
+            <div style={buttonStyle} className="details " >
                 <p>{buttonText}
                 </p>
             </div>
