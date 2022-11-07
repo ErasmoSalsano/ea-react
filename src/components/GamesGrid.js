@@ -5,9 +5,21 @@ export function GamesGrid(props) {
   const cards = [
     {
       nameUrl: 'Sito Ufficiale',
+      imageBg: './assets/images/game/the-sims-mobile.jpg',
+      imgDescription: 'descrizione',
+      svgPath: "./assets/images/game/the-sims-mobile-logo.png"
+    },
+    {
+      nameUrl: 'Sito Ufficiale',
+      imageBg: './assets/images/game/nhl-23.jpg',
+      imgDescription: 'descrizione',
+      svgPath: "./assets/images/game/nhl-23-logo.svg",
+    },
+    {
+      nameUrl: 'Sito Ufficiale',
       imageBg: './assets/images/game/crysis-remastered.jpg',
       imgDescription: 'descrizione',
-      svgPath: "./assets/images/game/fifa23-logo-white-stacked (1).svg"
+      svgPath: "./assets/images/game/crysis-remastered-logo.png"
     },
     {
       nameUrl: 'Sito Ufficiale',
