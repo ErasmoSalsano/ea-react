@@ -29,11 +29,11 @@ export const UserSpace = () => {
         <div className='board-account' open={accountBoard} closed={String(!accountBoard)} >
           <div className="board-content-wrap">
             <div className="board-grid">
-              <Link className="board-link" href="/pages/signin/login.html">
+              <Link className="board-link" to="/signin">
                 <img className="board-icon" src="/assets/images/header/iconsignin.svg" alt="" />
                 <span>Accedi</span>
               </Link>
-              <Link className="board-link" href="/pages/signin/create.html">
+              <Link className="board-link" to="/signup">
                 <img className="board-icon" src="/assets/images/header/iconregister.svg" alt="" />
                 <span>Crea account</span>
               </Link>
@@ -46,19 +46,19 @@ export const UserSpace = () => {
               Ti serve aiuto?
             </p>
             <div className="board-grid">
-              <Link className="board-link" href="#">
+              <Link className="board-link" to="/#">
                 <img className="board-icon" src="/assets/images/header/iconorigin.svg" alt="" />
                 <span>Verifica i dati di accesso a Origin</span>
               </Link>
-              <Link className="board-link" href="#">
+              <Link className="board-link" to="/#">
                 <img className="board-icon" src="/assets/images/header/iconlink.svg" alt="" />
                 <span>Collega Origin al mio ID PSN</span>
               </Link>
-              <Link className="board-link" href="#">
+              <Link className="board-link" to="/#">
                 <img className="board-icon" src="/assets/images/header/iconorigincode.svg" alt="" />
                 <span>Come riscattare un codice</span>
               </Link>
-              <Link className="board-link" href="#">
+              <Link className="board-link" to="/#">
                 <img className="board-icon" src="/assets/images/header/iconalert.svg" alt="" />
                 <span>Non riesco a giocare online</span>
               </Link>
@@ -66,10 +66,10 @@ export const UserSpace = () => {
             <div className="board-footer">
               <p>
                 Non hai trovato ciò che cerchi? Vai su
-                <Link className="boardAnchor" href="#">Aiuto EA</Link>,
-                <Link href="#">Answers HQ</Link>
+                <Link className="boardAnchor" to="/#">Aiuto EA</Link>,
+                <Link to="/#">Answers HQ</Link>
                 order or die
-                <Link className="boardAnchor" href="#">Forum EA</Link>.
+                <Link className="boardAnchor" to="/#">Forum EA</Link>.
               </p>
             </div>
           </div>

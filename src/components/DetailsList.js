@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 /* 
 This component is for rendering lists in the navbar and accepts list objets, even with nested listslike this:
 
@@ -61,7 +63,7 @@ export const DetailsList = ({ List, IsSublist = false }) => {
         {List.map((element) => {
           return (
             <li key={element.text}>
-              <a href={element.href ? element.href : 'maintenance'}>{element.text}</a>
+              <Link to={element.href ? element.href : '/maintenance'}>{element.text}</Link>
             </li>
           )
         })}
@@ -83,9 +85,9 @@ export const DetailsList = ({ List, IsSublist = false }) => {
         : <ul className="inner-ul">
           {List.data.map((item) => {
             return (
-              <a key={item.text} href={item.href ? item.href : 'maintenance'}> {/* Questo è da cambiare quando si aggiungerà il routing */}
+              <Link key={item.text} href={item.href ? item.href : '/maintenance'}> {/* Questo è da cambiare quando si aggiungerà il routing */}
                 <li >{item.text}</li>
-              </a>
+              </Link>
             )
           })}
         </ul>
