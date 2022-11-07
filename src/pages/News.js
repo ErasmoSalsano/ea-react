@@ -1,12 +1,13 @@
 import { MainContentWrap } from "../components/0_wraps/mainContentWrap";
 import { MainWrap } from "../components/0_wraps/mainWrap";
 import { ArticlesGrid } from "../components/ArticlesGrid";
+import { Picture } from "../components/Picture";
 import { Title } from "../components/Title";
 import { articleCards } from "../data/DataArticle";
 import './../style/pages/informazioni/news.scss'
 
-export function News(){
-    return(
+export function News() {
+    return (
         <div className="news">
             <div className="main-wrap-hero">
                 <div className="main-wrap-hero-content">
@@ -15,16 +16,17 @@ export function News(){
                             <h1>Ultime notizie</h1>
                         </Title>
                     </div>
-                    <picture>
-                        <source media="(max-width: 768px)" srcSet="/assets/images/hero/news/h3-1534-696-notizie.jpg"/>
-                        <source media="(max-width: 1024px)" srcSet="/assets/images/hero/news/h3-2046-560notizie.jpg.jpg"/>
-                        <source media="(max-width: 1456px)" srcSet="/assets/images/hero/news/h3-2910-600notizie.jpg.jpg"/>
-                        <source media="(max-width: 1920px)" srcSet="/assets/images/hero/news/h3-3840-600-notiziee.jpg"/>
-                        <img className="img-text" src={"/assets/images/hero/news/h3-3840-600-notiziee.jpg"} alt=""/>
-                    </picture>
+                    <Picture
+                        imgClass={'img-text'}
+                        request={'news'} />
                 </div>
             </div>
-            {<ArticlesGrid request={'all'} total={18} argument={articleCards} classA/>}
+            <ArticlesGrid
+                request={'all'}
+                amount={18}
+                argument={articleCards}
+                classA
+                />
             <div className="void"></div>
             <MainWrap>
                 <MainContentWrap p>
