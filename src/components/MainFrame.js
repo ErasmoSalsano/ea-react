@@ -1,5 +1,6 @@
 import { Outlet } from 'react-router-dom'
 import {Header} from './Header'
+import {Footer} from './Footer'
 
 
 function MainFrame(){
@@ -7,7 +8,7 @@ function MainFrame(){
         <div>
             <Header/>
             <Outlet />
-            {/* <Footer /> */}
+            <Footer />
         </div>
     )
 }
