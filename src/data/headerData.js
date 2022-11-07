@@ -16,7 +16,7 @@ export const NavList = [
             data: [
               {
                 text: 'Ultimi giochi',
-                href: '/pages/games/lastgames.html'
+                href: null
               },
               {
                 text: 'Prossimamente',
@@ -24,11 +24,11 @@ export const NavList = [
               },
               {
                 text: 'EA SPORTS',
-                href: '/pages/games/EA-SPORTS.html'
+                href: null
               },
               {
                 text: 'Giochi gratuiti',
-                href: '/pages/games/freegames.html'
+                href: null
               },
               {
                 text: 'Libreria dei giochi',
@@ -43,15 +43,15 @@ export const NavList = [
             data: [
               {
                 text: 'PC',
-                href: '/pages/games/pc.html'
+                href: null
               },
               {
                 text: 'PlayStation®5',
-                href: '/pages/games/ps5.html'
+                href: null
               },
               {
                 text: 'Xbox Series X',
-                href: '/pages/games/xbox.html'
+                href: null
               },
               {
                 text: 'Nintendo Switch™',
@@ -77,7 +77,7 @@ export const NavList = [
         data: [
           {
             text: 'EA play',
-            href: '/pages/informazioni/about.html'
+            href: null
           },
           {
             text: 'l\'EA app',
@@ -105,7 +105,7 @@ export const NavList = [
         data: [
           {
             text: 'Società',
-            href: '/pages/informazioni/about.html'
+            href: null
           },
           {
             text: 'EA Studi',
@@ -121,11 +121,11 @@ export const NavList = [
           },
           {
             text: 'Notizie',
-            href: '/pages/informazioni/news.html'
+            href: '/informazioni/notizie'
           },
           {
             text: 'Inside EA',
-            href: '/pages/informazioni/insideEA.html'
+            href: '/informazioni/inside-ea'
           }
         ]
       }
@@ -141,7 +141,7 @@ export const NavList = [
         data: [
           {
             text: 'I nostri impegni',
-            href: '/pages/commitments/positive-play.html'
+            href: null
           },
           {
             text: 'Gioco positivo',

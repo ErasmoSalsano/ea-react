@@ -46,19 +46,19 @@ export const UserSpace = () => {
               Ti serve aiuto?
             </p>
             <div className="board-grid">
-              <Link className="board-link" to="/#">
+              <Link className="board-link" to="/maintenaince">
                 <img className="board-icon" src="/assets/images/header/iconorigin.svg" alt="" />
                 <span>Verifica i dati di accesso a Origin</span>
               </Link>
-              <Link className="board-link" to="/#">
+              <Link className="board-link" to="/maintenaince">
                 <img className="board-icon" src="/assets/images/header/iconlink.svg" alt="" />
                 <span>Collega Origin al mio ID PSN</span>
               </Link>
-              <Link className="board-link" to="/#">
+              <Link className="board-link" to="/maintenaince">
                 <img className="board-icon" src="/assets/images/header/iconorigincode.svg" alt="" />
                 <span>Come riscattare un codice</span>
               </Link>
-              <Link className="board-link" to="/#">
+              <Link className="board-link" to="/maintenaince">
                 <img className="board-icon" src="/assets/images/header/iconalert.svg" alt="" />
                 <span>Non riesco a giocare online</span>
               </Link>
@@ -66,10 +66,10 @@ export const UserSpace = () => {
             <div className="board-footer">
               <p>
                 Non hai trovato ciò che cerchi? Vai su
-                <Link className="boardAnchor" to="/#">Aiuto EA</Link>,
-                <Link to="/#">Answers HQ</Link>
+                <Link className="boardAnchor" to="/maintenaince">Aiuto EA</Link>,
+                <Link to="/maintenaince">Answers HQ</Link>
                 order or die
-                <Link className="boardAnchor" to="/#">Forum EA</Link>.
+                <Link className="boardAnchor" to="/maintenaince">Forum EA</Link>.
               </p>
             </div>
           </div>

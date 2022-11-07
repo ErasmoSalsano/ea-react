@@ -2,6 +2,7 @@ import { HeaderNavbar } from './HeaderNavbar'
 import { menuIconDots, menuIconHamburger } from "../data/headerData"
 import { UserSpace } from './UserSpace'
 import { useHeader } from '../utils/useHeader'
+import { Link } from 'react-router-dom'
 
 export const Header = ()=>{
 
@@ -18,9 +19,9 @@ export const Header = ()=>{
             { menuIconDots }
           </div>
           
-          <a className="header-logo-esteso" href="/index.html">
+          <Link exact className="header-logo-esteso" to="/">
               <img src="/assets/images/header/ea-wordmark-network-nav-coral-bicolor.svg" alt="Electronics Arts logo" />
-          </a>
+          </Link>
           <HeaderNavbar />
       </div>
     </header>
