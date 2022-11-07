@@ -20,7 +20,6 @@ export function Home() {
         buttonSpan='Gioca ora'
         buttonPosition='center'
         content='content1'
-
       />
       <HomePageLowerHero
       eaSvg='/assets/images/hero/home/hero2/ea-play-logo-coral-hero-logo-small.svg'
@@ -32,12 +31,7 @@ export function Home() {
         textColor='white'
         spanText="Per i nuovi membri è disponibile un'offerta imperdibile sul primo mese†"
       />
-
       <GamesGrid />
-      {/* <NavTab gestion='home'/> */}
-      {/* Dichiarare una basepath da usare per accorciare */}
- 
-   
         <MainWrap>
             <MainContentWrap p>
                 <Title className="title">
@@ -45,7 +39,10 @@ export function Home() {
                 </Title>
             </MainContentWrap>
         </MainWrap>
-        <NavTab gestion='home' btt={'A'}/>
+        <NavTab 
+            gestion='home' 
+            buttonType={'A'}
+            />
         {/* Dichiarare una basepath da usare per accorciare */}
         <HomePageUpperHero 
         logoSvg="/assets/images/hero/home/hero2/ea-play-logo-coral-hero-logo-small.svg"
