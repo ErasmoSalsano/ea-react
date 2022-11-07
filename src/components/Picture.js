@@ -1,3 +1,5 @@
+import { picturesData } from "../data/DummyData"
+
 export function Picture({ className, imgClass, request }) {
     return (
         <picture
