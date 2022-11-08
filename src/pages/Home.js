@@ -57,7 +57,7 @@ export function Home() {
         membri e una libreria dei migliori titoli."
         buttonSpan='Iscriviti subito'
         content='content2'
-        buttonPosition='left'
+        buttonPosition='center'
       />
       <HomePageLowerHero
         buttonSpan='Scopri di più'
