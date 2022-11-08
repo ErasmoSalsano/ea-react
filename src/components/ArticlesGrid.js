@@ -4,7 +4,7 @@ import { MainWrap } from "./0_wraps/mainWrap";
 import { MainContentWrap } from "./0_wraps/mainContentWrap";
 
 export function ArticlesGrid(props) {
-    let myNewData = data(props.request, props.total, props.argument)
+    let myNewData = data(props.request, props.amount, props.argument)
 
     useEffect(()=>{
         data()
@@ -21,8 +21,8 @@ export function ArticlesGrid(props) {
                 {myNewData}
                 {props.button && props.button === 'A'?
                 <MainContentWrap p>
-                    <div class="content-details">
-                        <a class="details" style={{cursor:'pointer'}}>
+                    <div className="content-details">
+                        <a className="details" style={{cursor:'pointer'}}>
                             <p>Più dettagli</p>
                         </a>
                     </div>

@@ -1,6 +1,7 @@
 import { MainContentWrap } from "../components/0_wraps/mainContentWrap";
 import { MainWrap } from "../components/0_wraps/mainWrap";
 import { ArticleCard } from "../components/ArticleCard";
+import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
 import { Title } from "../components/Title";
 import { pages } from "../data/DummyData";
@@ -49,7 +50,7 @@ export function Manteinance() {
                         <button id="2" className="selectPage" >
                             <div className="page-button"></div>
                         </button>
-                        <button id="3" class="selectPage">
+                        <button id="3" className="selectPage">
                             <div className="page-button"></div>
                         </button>
                     </div>
@@ -66,7 +67,7 @@ export function Manteinance() {
                     </button>
                 </div>
             </div>
-            {/* <Footer/> */}
+            <Footer/>
         </div>
     )
 }

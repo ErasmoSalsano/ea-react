@@ -1,6 +1,6 @@
-export const HeaderMenuIcon = () => { return <svg className="header-menu-icon" x="0px" y="0px" viewBox="0 0 20 16" /* style="enable-background:new 0 0 20 16" */><path className="st0" d="M1,2h18c0.6,0,1-0.4,1-1s-0.4-1-1-1H1C0.4,0,0,0.4,0,1S0.4,2,1,2z M19,7H1C0.4,7,0,7.4,0,8s0.4,1,1,1h18 c0.6,0,1-0.4,1-1S19.6,7,19,7z M19,14H1c-0.6,0-1,0.4-1,1s0.4,1,1,1h18c0.6,0,1-0.4,1-1S19.6,14,19,14z"></path></svg> }
-
-export const HeaderMenuIcon2 = () => { return <svg className="header-menu-icon-2" viewBox="0 0 16 16" preserveAspectRatio="xMidYMid meet" focusable="false"><g><circle cx="14.143" cy="8" r="1.857"></circle><circle cx="7.996" cy="8" r="1.857"></circle><circle cx="1.857" cy="8" r="1.857"></circle></g></svg> }
+//the className must be removed from these svg and inserted in the component (still to be done)
+export const menuIconHamburger = <svg className="header-menu-icon" x="0px" y="0px" viewBox="0 0 20 16" /* style="enable-background:new 0 0 20 16" */><path className="st0" d="M1,2h18c0.6,0,1-0.4,1-1s-0.4-1-1-1H1C0.4,0,0,0.4,0,1S0.4,2,1,2z M19,7H1C0.4,7,0,7.4,0,8s0.4,1,1,1h18 c0.6,0,1-0.4,1-1S19.6,7,19,7z M19,14H1c-0.6,0-1,0.4-1,1s0.4,1,1,1h18c0.6,0,1-0.4,1-1S19.6,14,19,14z"></path></svg>
+export const menuIconDots = <svg className="header-menu-icon-2" viewBox="0 0 16 16" preserveAspectRatio="xMidYMid meet" focusable="false"><g><circle cx="14.143" cy="8" r="1.857"></circle><circle cx="7.996" cy="8" r="1.857"></circle><circle cx="1.857" cy="8" r="1.857"></circle></g></svg>
 
 export const NavList = [
   {
@@ -16,7 +16,7 @@ export const NavList = [
             data: [
               {
                 text: 'Ultimi giochi',
-                href: '/pages/games/lastgames.html'
+                href: null
               },
               {
                 text: 'Prossimamente',
@@ -24,11 +24,11 @@ export const NavList = [
               },
               {
                 text: 'EA SPORTS',
-                href: '/pages/games/EA-SPORTS.html'
+                href: null
               },
               {
                 text: 'Giochi gratuiti',
-                href: '/pages/games/freegames.html'
+                href: null
               },
               {
                 text: 'Libreria dei giochi',
@@ -43,15 +43,15 @@ export const NavList = [
             data: [
               {
                 text: 'PC',
-                href: '/pages/games/pc.html'
+                href: null
               },
               {
                 text: 'PlayStation®5',
-                href: '/pages/games/ps5.html'
+                href: null
               },
               {
                 text: 'Xbox Series X',
-                href: '/pages/games/xbox.html'
+                href: null
               },
               {
                 text: 'Nintendo Switch™',
@@ -77,7 +77,7 @@ export const NavList = [
         data: [
           {
             text: 'EA play',
-            href: '/pages/informazioni/about.html'
+            href: null
           },
           {
             text: 'l\'EA app',
@@ -105,7 +105,7 @@ export const NavList = [
         data: [
           {
             text: 'Società',
-            href: '/pages/informazioni/about.html'
+            href: null
           },
           {
             text: 'EA Studi',
@@ -121,11 +121,11 @@ export const NavList = [
           },
           {
             text: 'Notizie',
-            href: '/pages/informazioni/news.html'
+            href: '/informazioni/notizie'
           },
           {
             text: 'Inside EA',
-            href: '/pages/informazioni/insideEA.html'
+            href: '/informazioni/inside-ea'
           }
         ]
       }
@@ -141,7 +141,7 @@ export const NavList = [
         data: [
           {
             text: 'I nostri impegni',
-            href: '/pages/commitments/positive-play.html'
+            href: null
           },
           {
             text: 'Gioco positivo',
