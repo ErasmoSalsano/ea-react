@@ -170,7 +170,7 @@ h4 {
 .EASPORTS-insertion {
 
 
-    background-image: url(/assets/images/EASPORTSpage/ea-play-product-conversion-gradient-jpg-mobile.768w.jpg);
+    // background-image: url(/assets/images/EASPORTSpage/ea-play-product-conversion-gradient-jpg-mobile.768w.jpg);
     background-size: cover;
 
     position: relative;
@@ -363,15 +363,15 @@ h4 {
 
     }
 
-    @media all and(min-width: 900px) {
-        .main-wrap {
-            .main-content-wrap {
-                .buttons i {
-                    display: none;
-                }
-            }
-        }
-    }
+    // @media all and(min-width: 900px) {
+    //     .main-wrap {
+    //         .main-content-wrap {
+    //             .buttons i {
+    //                 display: none;
+    //             }
+    //         }
+    //     }
+    // }
 
 
 }
@@ -455,7 +455,7 @@ h4 {
 
     .EASPORTS-insertion {
 
-        background-image: url(/assets/images/EASPORTSpage/ea-play-product-conversion-gradient-jpg-tablet.1024w.jpg);
+        // background-image: url(/assets/images/EASPORTSpage/ea-play-product-conversion-gradient-jpg-tablet.1024w.jpg);
 
         justify-content: center;
         height: 10%;
@@ -506,7 +506,7 @@ h4 {
         height: 20%;
         padding-bottom: 0;
 
-        background-image: url(/assets/images/EASPORTSpage/ea-sports-pc-join-us-xl.png.tablet.1024w.png);
+        // background-image: url(/assets/images/EASPORTSpage/ea-sports-pc-join-us-xl.png.tablet.1024w.png);
         background-size: cover;
 
         h3 {
@@ -609,7 +609,7 @@ h4 {
         justify-content: space-between;
 
 
-        background-image: url(/assets/images/EASPORTSpage/ea-sports-pc-join-us-xl.png.tablet.1024w.png);
+        // background-image: url(/assets/images/EASPORTSpage/ea-sports-pc-join-us-xl.png.tablet.1024w.png);
         background-size: cover;
 
 
@@ -648,7 +648,7 @@ h4 {
 
     .EASPORTS-insertion {
         display: flex;
-        background-image: url(/assets/images/EASPORTSpage/ea-play-product-conversion-gradient-jpg-2020-xl.jpg.adapt.1920w.jpg);
+        // background-image: url(/assets/images/EASPORTSpage/ea-play-product-conversion-gradient-jpg-2020-xl.jpg.adapt.1920w.jpg);
         flex-direction: row;
         justify-content: space-between;
 
@@ -703,7 +703,7 @@ h4 {
 
     .EASPORTS-insertion2 {
         padding: 10px;
-        background-image: url(/assets/images/EASPORTSpage/ea-sports-pc-join-us-xl.png.adapt.1920w.png);
+        // background-image: url(/assets/images/EASPORTSpage/ea-sports-pc-join-us-xl.png.adapt.1920w.png);
 
         flex-direction: row;
         // background-position: 90% 17%;
@@ -780,15 +780,15 @@ h4 {
     }
 }
 
-@media screen and(max-width:639px) {
-    .content-details {
-        width: 100%;
+// @media screen and(max-width:639px) {
+//     .content-details {
+//         width: 100%;
 
-        .details {
-            width: 100%;
-        }
-    }
-}
+//         .details {
+//             width: 100%;
+//         }
+//     }
+// }
 
 @media screen and (min-width:769px) {
     .article-card {
