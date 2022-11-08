@@ -1915,6 +1915,10 @@ header content {
 .homepage .hero_wrap .content1 {
   justify-content: flex-end;
 }
+.homepage .hero_wrap .content1 .background-picture {
+  height: 50rem;
+  overflow-y: hidden;
+}
 .homepage .hero_wrap .content2 {
   justify-content: center;
 }
@@ -1925,10 +1929,6 @@ header content {
   width: 100%;
   display: flex;
   flex-direction: column;
-}
-.homepage .hero_wrap .second-hero_wrap .background-picture {
-  height: 800px;
-  overflow-y: hidden;
 }
 .homepage .hero_wrap .second-hero_wrap picture {
   margin-bottom: -5px;
@@ -1951,6 +1951,12 @@ header content {
 }
 .homepage .hero_wrap .second-hero_wrap .upper-hero .content1 span {
   text-align: center;
+}
+.homepage .hero_wrap .second-hero_wrap .upper-hero .content1 .content-details .details {
+  background-color: white;
+}
+.homepage .hero_wrap .second-hero_wrap .upper-hero .content1 .content-details .details p {
+  color: black;
 }
 .homepage .hero_wrap .second-hero_wrap .upper-hero .content2 {
   align-items: left;
@@ -1982,11 +1988,11 @@ header content {
 }
 .homepage .hero_wrap .second-hero_wrap .lower-hero_image1 {
   position: relative;
-  height: 35vh;
+  height: 20rem;
 }
 .homepage .hero_wrap .second-hero_wrap .lower-hero_image2 {
   position: relative;
-  height: 30vh;
+  height: 16rem;
 }
 .homepage .hero_wrap .second-hero_wrap .lower-hero {
   background-color: unset;
@@ -2003,6 +2009,7 @@ header content {
   padding-top: 20px;
 }
 .homepage .hero_wrap .second-hero_wrap .lower-hero .main-content-wrap .buttons-wrap .eaplay-logo {
+  margin-top: 10px;
   width: 130px;
 }
 .homepage .hero_wrap .second-hero_wrap .lower-hero .main-content-wrap .buttons-wrap .eaplay-logo:hover {
@@ -2044,10 +2051,10 @@ header content {
     overflow-x: hidden;
   }
   .homepage .hero_wrap .second-hero_wrap .lower-hero_image1 {
-    height: 25vh;
+    height: 15rem;
   }
   .homepage .hero_wrap .second-hero_wrap .lower-hero_image2 {
-    height: 20vh;
+    height: 15rem;
   }
   .homepage .hero_wrap .second-hero_wrap .lower-hero .main-content-wrap {
     margin-top: 20px;
@@ -2069,10 +2076,10 @@ header content {
     height: 60vh;
   }
   .homepage .hero_wrap .second-hero_wrap .lower-hero_image1 {
-    height: 15vh;
+    height: 8rem;
   }
   .homepage .hero_wrap .second-hero_wrap .lower-hero_image2 {
-    height: 15vh;
+    height: 8rem;
   }
   .homepage .hero_wrap .second-hero_wrap .lower-hero .main-content-wrap {
     margin-top: 0;

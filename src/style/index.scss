@@ -18,6 +18,12 @@
 
         .content1 {
             justify-content: flex-end;
+            .background-picture {
+                height: 50rem;
+                overflow-y: hidden;
+            }
+
+
         }
 
         .content2 {
@@ -34,10 +40,7 @@
             // align-items: flex-start;
             flex-direction: column;
 
-            .background-picture {
-                height: 800px;
-                overflow-y: hidden;
-            }
+         
 
             picture {
                 margin-bottom: -5px;
@@ -65,6 +68,22 @@
                     span {
                         text-align: center;
                     }
+
+                   
+
+                        .content-details {
+                            .details {
+                                background-color: white;
+
+
+                                p {
+                                    color: black;
+                                }
+                            }
+                        }
+                    
+
+
                 }
 
                 .content2 {
@@ -90,6 +109,8 @@
                     .content-details {
                         // margin-left: -5px;
                         width: 180px;
+
+
                     }
 
                     .upper-hero_logo {
@@ -107,12 +128,12 @@
 
             .lower-hero_image1 {
                 position: relative;
-                height: 35vh;
+                height: 20rem;
             }
 
             .lower-hero_image2 {
                 position: relative;
-                height: 30vh;
+                height: 16rem;
             }
 
             .lower-hero {
@@ -132,6 +153,7 @@
                         padding-top: 20px;
 
                         .eaplay-logo {
+                            margin-top: 10px;
                             width: 130px;
 
                             &:hover {
@@ -207,11 +229,11 @@
                 }
 
                 .lower-hero_image1 {
-                    height: 25vh;
+                    height: 15rem;
                 }
 
                 .lower-hero_image2 {
-                    height: 20vh;
+                    height: 15rem;
                 }
 
                 .lower-hero {
@@ -250,11 +272,11 @@
                 }
 
                 .lower-hero_image1 {
-                    height: 15vh;
+                    height: 8rem;
                 }
 
                 .lower-hero_image2 {
-                    height: 15vh;
+                    height: 8rem;
                 }
 
                 .lower-hero {
