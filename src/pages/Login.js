@@ -7,9 +7,10 @@ export const Login = () => {
 
   const baseIconUrl = 'https://eaassets-a.akamaihd.net/resource_signin_ea_com/551.0.220805.388.c847323/p/'
 
+  // to be moved to useLogin custom hook
   const [inputData, setInputData] = useState({
-    phoneMail: null,
-    password: null,
+    phoneMail: '',
+    password: '',
     remember: false
   })
 
@@ -19,7 +20,7 @@ export const Login = () => {
   }
 
   const onLogin = () => {
-    console.log()
+    console.log(inputData)
   }
 
   return (
