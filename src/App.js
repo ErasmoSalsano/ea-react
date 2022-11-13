@@ -4,6 +4,7 @@ import { Home } from "./pages/Home";
 import { News } from "./pages/News";
 import { Manteinance } from "./pages/Manteinance";
 import { InsideEa } from "./pages/InsideEa";
+import { Login } from "./pages/Login";
 
 export function App() {
   return (
@@ -15,6 +16,7 @@ export function App() {
           <Route path="/informazioni/inside-ea" element={<InsideEa/>} />
           {/* <Route path="path" element={element} /> */}
         </Route>
+        <Route path="/login" element={<Login />} />
         {/* <Route path='/shop' element={<Shop/>}/> */}
         <Route path="*" element={<Manteinance/>} />
       </Routes>

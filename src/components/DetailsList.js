@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 
 /* 
-This component is for rendering lists in the navbar and accepts list objets, even with nested listslike this:
+This component is for rendering lists in the navbar and accepts list objets, even with nested lists like so:
 
 normal list: {
   hasSublist: false,
