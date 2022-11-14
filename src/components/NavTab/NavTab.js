@@ -6,7 +6,7 @@ import { ButtonNavTab } from "./ButtonNavTab";
 import { MainWrap } from "../0_wraps/mainWrap";
 import { MainContentWrap } from "../0_wraps/mainContentWrap";
 
-export function NavTab({gestion, btt, value}) {
+export function NavTab({gestion, buttonType, value}) {
     const [active, setActive] = useState({
         id: TabButtons[gestion][0].id,
         nome: TabButtons[gestion][0].nome,
@@ -40,7 +40,8 @@ export function NavTab({gestion, btt, value}) {
                                     : 'linkTab'}
                                 divClassName={'content'}
                                 buttonName={item.nome}
-                                effectClass={'animation'}/>
+                                effectClass={'animation'}
+                                />
                             </div>
                         )}
                         
@@ -48,7 +49,16 @@ export function NavTab({gestion, btt, value}) {
                     {/* <button className="right-btn buttons" id="right-Btn"><i className="material-icons">arrow_forward_ios</i></button> */}
                 </MainContentWrap>
             </MainWrap>
-            {active && <ArticlesGrid key={active.id +1} total={6} request={active.categoria} argument={articleCards} button={btt} classA={value}/>}
+            {active && 
+            <ArticlesGrid 
+                key={active.id +1} 
+                amount={6} 
+                request={active.categoria} 
+                argument={articleCards} 
+                button={buttonType} 
+                classA={value}
+                />
+            }
         </>
     )
 }

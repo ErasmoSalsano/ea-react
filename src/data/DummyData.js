@@ -108,3 +108,29 @@ export const pages = [
         link: `/informazioni/inside-ea`,
     },
 ]
+
+//Picture component
+
+//Data media queries & images
+
+export const picturesData = {
+    
+    //page insideEA
+    img_insideEa:'/assets/images/hero/insideEA/eacom-section-header-brand-xl.jpg.adapt.320w.jpg',
+    insideEa:[
+        {mq:'(max-width: 320px)', content:'/assets/images/hero/insideEA/eacom-section-header-brand-xl.jpg.adapt.320w.jpg'},
+        {mq:'(max-width: 767px)', content:'/assets/images/hero/insideEA/eacom-section-header-brand-xl.jpg.adapt.768w.jpg'},
+        {mq:'(max-width: 1023px)', content:'/assets/images/hero/insideEA/eacom-section-header-brand-xl.jpg.adapt.1024w.jpg'},
+        {mq:'(max-width: 1455px)', content:'/assets/images/hero/insideEA/eacom-section-header-brand-xl.jpg.adapt.1456w.jpg'},
+        {mq:'(min-width: 1456px)', content:'/assets/images/hero/insideEA/eacom-section-header-brand-xl.jpg.adapt.1920w.jpg'},
+    ],
+
+    //page news
+    img_news: '/assets/images/hero/news/h3-3840-600-notiziee.jpg',
+    news:[
+        {mq:'(max-width: 768px)', content:'/assets/images/hero/news/h3-1534-696-notizie.jpg'},
+        {mq:'(max-width: 1024px)', content:'/assets/images/hero/news/h3-2046-560notizie.jpg.jpg'},
+        {mq:'(max-width: 1456px)', content:'/assets/images/hero/news/h3-2910-600notizie.jpg.jpg'},
+        {mq:'(max-width: 1920px)', content:'/assets/images/hero/news/h3-3840-600-notiziee.jpg'},
+    ]
+}

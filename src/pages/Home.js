@@ -20,7 +20,6 @@ export function Home() {
         buttonSpan='Gioca ora'
         buttonPosition='center'
         content='content1'
-
       />
       <HomePageLowerHero
       eaSvg='/assets/images/hero/home/hero2/ea-play-logo-coral-hero-logo-small.svg'
@@ -32,12 +31,7 @@ export function Home() {
         textColor='white'
         spanText="Per i nuovi membri è disponibile un'offerta imperdibile sul primo mese†"
       />
-
       <GamesGrid />
-      {/* <NavTab gestion='home'/> */}
-      {/* Dichiarare una basepath da usare per accorciare */}
- 
-   
         <MainWrap>
             <MainContentWrap p>
                 <Title className="title">
@@ -45,19 +39,22 @@ export function Home() {
                 </Title>
             </MainContentWrap>
         </MainWrap>
-        <NavTab gestion='home' btt={'A'}/>
+        <NavTab 
+            gestion='home' 
+            buttonType={'A'}
+            />
         {/* Dichiarare una basepath da usare per accorciare */}
         <HomePageUpperHero 
         logoSvg="/assets/images/hero/home/hero2/ea-play-logo-coral-hero-logo-small.svg"
         mobile="/assets/images/hero/home/hero2/hero-767-medium-console-7x2-xl.jpg.adapt.crop3x5.767w.jpg"
         tablet768="/assets/images/hero/home/hero2/hero-1023-medium-console-7x2-xl.jpg.adapt.crop2x1.1023w.jpg"
         tablet1024="/assets/images/hero/home/hero2/hero-1455-medium-console-7x2-xl.jpg.adapt.crop5x2.1455w.jpg"
-        desktop="/assets/images/hero/home/hero2/hero-1920-medium-console-7x2-xl.jpg.adapt.crop7x2.1920w.jpg"
+        desktop="/assets/images/hero/home/hero2/hero-1455-medium-console-7x2-xl.jpg.adapt.crop5x2.1455w.jpg"
         spanText="Non limitarti al gioco. Gioca al massimo. Sblocca ricompense esclusive, contenuti per i soli
         membri e una libreria dei migliori titoli."
         buttonSpan='Iscriviti subito'
         content='content2'
-        buttonPosition='left'
+        buttonPosition='center'
       />
       <HomePageLowerHero
         buttonSpan='Scopri di più'

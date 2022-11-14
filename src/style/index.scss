@@ -9,7 +9,7 @@
 /* == Page == */
 
 //CSS  HERO HOMEPAGE
-.homepage{
+.homepage {
     .hero_wrap {
         width: 100%;
         display: flex;
@@ -18,6 +18,12 @@
 
         .content1 {
             justify-content: flex-end;
+            .background-picture {
+                height: 50rem;
+                overflow-y: hidden;
+            }
+
+
         }
 
         .content2 {
@@ -34,10 +40,7 @@
             // align-items: flex-start;
             flex-direction: column;
 
-            .background-picture { 
-                height: 800px;
-                overflow-y: hidden;
-            }
+         
 
             picture {
                 margin-bottom: -5px;
@@ -61,16 +64,36 @@
                 .content1 {
                     align-items: center;
                     margin-bottom: calc((10vh - 12%));
+
                     span {
                         text-align: center;
                     }
+
+                   
+
+                        .content-details {
+                            .details {
+                                background-color: white;
+
+
+                                p {
+                                    color: black;
+                                }
+                            }
+                        }
+                    
+
+
                 }
+
                 .content2 {
                     align-items: left;
+
                     span {
                         text-align: left;
                     }
                 }
+
                 .main-wrap {
                     padding: 0px calc((80vw - 1120px)/2);
                 }
@@ -82,6 +105,13 @@
                     justify-content: center;
                     flex-direction: column;
                     width: 80vw;
+
+                    .content-details {
+                        // margin-left: -5px;
+                        width: 180px;
+
+
+                    }
 
                     .upper-hero_logo {
                         width: 200px
@@ -98,12 +128,12 @@
 
             .lower-hero_image1 {
                 position: relative;
-                height: 35vh;
+                height: 20rem;
             }
 
             .lower-hero_image2 {
                 position: relative;
-                height: 30vh;
+                height: 16rem;
             }
 
             .lower-hero {
@@ -123,7 +153,18 @@
                         padding-top: 20px;
 
                         .eaplay-logo {
-                            width: 150px;
+                            margin-top: 10px;
+                            width: 130px;
+
+                            &:hover {
+                                scale: 1.1;
+                            }
+
+
+                        }
+
+                        .content-details {
+                            width: 180px;
                         }
                     }
 
@@ -146,10 +187,12 @@
                 justify-content: center;
                 overflow-y: hidden;
             }
+
             .second-hero_wrap {
                 .background-picture {
                     height: 100%;
                 }
+
                 .upper-hero {
                     span {
                         max-width: 40vw;
@@ -159,10 +202,20 @@
                         // justify-content: right;
                         align-items: center;
                         margin-bottom: 0;
-                    
+
                         span {
                             width: 33vw;
                             margin: 0;
+                        }
+                    }
+
+
+                }
+
+                .content2 {
+                    .upper-hero_content {
+                        .content-details {
+                            margin-left: -10px;
                         }
                     }
                 }
@@ -171,20 +224,23 @@
                     align-items: flex-end;
                     margin-right: -20%;
                     overflow-x: hidden;
-                
+
 
                 }
 
                 .lower-hero_image1 {
-                    height: 25vh;
+                    height: 15rem;
                 }
 
                 .lower-hero_image2 {
-                    height: 20vh;
+                    height: 15rem;
                 }
 
                 .lower-hero {
                     .main-content-wrap {
+
+                        margin-top: 20px;
+
                         .buttons-wrap {
                             flex-direction: row;
                             gap: 30px;
@@ -216,15 +272,16 @@
                 }
 
                 .lower-hero_image1 {
-                    height: 15vh;
+                    height: 8rem;
                 }
 
                 .lower-hero_image2 {
-                    height: 15vh;
+                    height: 8rem;
                 }
 
                 .lower-hero {
                     .main-content-wrap {
+                        margin-top: 0;
                         width: 80vw;
                         padding: 0;
                         flex-direction: row;
@@ -247,6 +304,15 @@
                     img {
                         height: 70vh;
                     }
+                }
+
+                .content2 {
+                    .upper-hero_content {
+                        span {
+                            width: 30rem;
+                        }
+                    }
+
                 }
 
                 .lower-hero {
