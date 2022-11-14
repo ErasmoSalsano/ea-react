@@ -1,7 +1,7 @@
 import { MainContentWrap } from "../components/0_wraps/mainContentWrap";
 import { MainWrap } from "../components/0_wraps/mainWrap";
 import { ArticleCard } from "../components/ArticleCard";
-import { Header } from "../components/Header";
+import { Header } from "../components/header/Header";
 import { Title } from "../components/Title";
 import { pages } from "../data/DummyData";
 import './../style/pages/manteinance/manteinance.scss'
