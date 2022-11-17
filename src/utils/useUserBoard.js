@@ -3,17 +3,23 @@ import { useEffect, useState } from "react"
 // Custom hook for UserSpace component
 
 export const useUserBoard = () => {
+  // Will be moved in custom hook
+  const body = document.querySelector('body')
+  const userBoardElement = document.querySelector('.user-board')
+  
   //It could be changed into an object with three properties
   const [userBoard, setUserBoard] = useState(false)
   const [accountBoard, setAccountBoard] = useState(false)
   const [helpBoard, setHelpBoard] = useState(false)
 
-  // Needed to prevent first render animation. doesn't work as I wnated but it works
+  // Needed to prevent first render animation.
   const [start, setStart] = useState(false)
 
   useEffect(()=>{
     !start && userBoard && setStart(true)
-  }, [userBoard, start])
+    start && (userBoard ? userBoardElement.removeAttribute('closed') : userBoardElement.setAttribute('closed', ''));
+    start && userBoard ? (body.style.overflow ='hidden') : (body.style.overflow = 'auto')
+  }, [start, userBoard])
 
 
   /* 

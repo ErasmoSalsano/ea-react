@@ -1,9 +1,9 @@
-import { Routes, Route } from "react-router-dom";
-import MainFrame from "./components/MainFrame";
-import { Home } from "./pages/Home";
-import { News } from "./pages/News";
-import { Manteinance } from "./pages/Manteinance";
-import { InsideEa } from "./pages/InsideEa";
+// import { Routes, Route } from "react-router-dom";
+// import MainFrame from "./components/MainFrame";
+// import { Home } from "./pages/Home";
+// import { News } from "./pages/News";
+// import { Manteinance } from "./pages/Manteinance";
+// import { InsideEa } from "./pages/InsideEa";
 import { EaSports } from "./pages/EaSports";
 import './style/pages/games/EA-SPORTS.scss'
 import './style/_layouts.scss'

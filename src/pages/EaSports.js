@@ -1,9 +1,17 @@
 import { Button } from "../components/Button"
 import { EaSportsGamesGrid } from "../components/EaSportsGamesGrid"
-import { HomePageLowerHero } from "../components/HomePageLowerHero"
+import { useMediaPredicate } from "react-media-hook";
+import { NavTab } from "../components/NavTab/NavTab"
 import './../style/index.scss'
 
 export function EaSports() {
+
+
+
+
+    const biggerThan768 = useMediaPredicate("(min-width: 768px)");
+
+
     return (
         <div class="EASPORTS-big-wrap">
 
@@ -11,7 +19,7 @@ export function EaSports() {
 
                 <img class="EASPORTS-blackground"
                     src="/assets/images/EASPORTSpage/fr-fr-others-pegi-16xl.png.adapt.1920w.png" alt="" />
-                <video class="EASPORTS-video" src="/assets/images/EASPORTSpage/easports-video-pagebackground.webm" autoplay
+                <video class="EASPORTS-video" src="assets/images/EASPORTSpage/easports-video-pagebackground.webm" autoPlay
                     loop muted> </video>
 
                 <div class="content-wrap">
@@ -28,9 +36,9 @@ export function EaSports() {
                             <span>NHL</span>, e molto altro ancora!
                         </h4>
                     </div>
-                    <div class="grid-games">
-                        <EaSportsGamesGrid />
-                    </div>
+
+                    <EaSportsGamesGrid firstGrid />
+
 
                     <div class="main-content-wrap">
                         <Button buttonText={'Tutti i giochi SPORTIVI'} />
@@ -41,41 +49,55 @@ export function EaSports() {
             </div>
 
 
-            <div class="EASPORTS-insertion">
-                {/* <div class="insertion-text">
+            <div class="EASPORTS-insertion" style={{ backgroundImage: `url(/assets/images/EASPORTSpage/ea-play-product-conversion-gradient-jpg-mobile.768w.jpg)` }}>
+
+
+                <div class="insertion-text">
                     <h4>IL MODO MIGLIORE DI GIOCARE: UNISCITI A EA PLAY!</h4>
                 </div>
 
                 <div class="insertion-logo">
                     <img class="insertion-svg" src="/assets/images/EASPORTSpage/ea-play-logo-coral-cta-type-image.svg"
                         alt="EA PLAY" />
-
-
                     <div class="main-content-wrap">
                         <Button buttonText={'Iscriviti subito'} />
                     </div>
+                </div>
+            </div>
 
-                </div> */}
+            <div class="EASPORTS-secondwrap">
 
-                <HomePageLowerHero
-                    eaSvg='/assets/images/hero/home/hero2/ea-play-logo-coral-hero-logo-small.svg'
-                    buttonSpan='Unisciti ora'
-                    buttonTextColor='white'
-                    bgImage='assets\images\hero\home\hero1\ea-play-product-conversion-gradient-jpg-2020-xl.jpg.adapt.1920w.jpg'
-                    imageClass='lower-hero_image1'
-                    className="lower-hero"
-                    textColor='white'
-                    spanText="Per i nuovi membri è disponibile un'offerta imperdibile sul primo mese†"
+
+                <div class="content-wrap">
+                    <div class="title-game">
+
+                        <h3>GIOCHI SPORTIVI PER DISPOSITIVI MOBILI </h3>
+                    </div>
+                    <EaSportsGamesGrid />
+                </div>
+            </div>
+
+            <div class="EASPORTS-thirdwrap">
+                <div class="EASPORTS-thirdwrap-title">
+                    <h3>Ultime notizie</h3>
+                </div>
+
+                <NavTab
+                    gestion='eaSports'
+                    buttonType={'A'}
                 />
 
+            </div>
+            <div class="EASPORTS-insertion2" style={biggerThan768 ? { backgroundImage: `url('/assets/images/EASPORTSpage/ea-sports-pc-join-us-xl.png.tablet.1024w.png')` } : {}} >
+
+                <h3>insieme cambieremo i giochi</h3>
+
+                <div class="main-content-wrap">
+                    <Button buttonText={'Entra nella nostra squadra'} />
+                </div>
 
 
             </div>
-
         </div>
-
-
-
-
     )
 }

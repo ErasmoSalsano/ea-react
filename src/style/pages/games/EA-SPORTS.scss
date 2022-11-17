@@ -78,6 +78,22 @@ html {
 
             }
         }
+
+        .grid-games {
+
+            padding-top: 10%;
+
+
+            .content-wrap {
+                margin-top: 10%;
+            }
+        }
+
+        .title-game {
+            h3 {
+                padding: 10px
+            }
+        }
     }
 
 
@@ -330,6 +346,7 @@ h4 {
 
     .main-wrap {
         height: 100%;
+        width: 100%;
 
     }
 
@@ -363,15 +380,15 @@ h4 {
 
     }
 
-    // @media all and(min-width: 900px) {
-    //     .main-wrap {
-    //         .main-content-wrap {
-    //             .buttons i {
-    //                 display: none;
-    //             }
-    //         }
-    //     }
-    // }
+    @media all and (min-width: 900px) {
+        .main-wrap {
+            .main-content-wrap {
+                .buttons i {
+                    display: none;
+                }
+            }
+        }
+    }
 
 
 }
@@ -381,14 +398,16 @@ h4 {
 
 
 .EASPORTS-insertion2 {
-    height: 30vh;
-    padding-bottom: 20px;
+    position: relative;
+    height: 15rem;
+    margin-top: 5%;
     @extend %flexcenter;
     flex-direction: column;
 
     background-color: white;
 
     h3 {
+        position: relative;
         height: 20px;
         color: #161616;
         font-size: 26px;
@@ -398,6 +417,8 @@ h4 {
 
 
     .main-content-wrap {
+        position: relative;
+
         .content-details {
             // height: 50px;
 
@@ -408,6 +429,18 @@ h4 {
 
             }
 
+        }
+    }
+
+    picture {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+
+        img {
+            height: 100%;
+            width: 100%;
+           
         }
     }
 
@@ -445,6 +478,7 @@ h4 {
         width: 82vw;
 
         .grid-games {
+
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 1.55rem;
@@ -503,11 +537,10 @@ h4 {
 
     .EASPORTS-insertion2 {
 
-        height: 20%;
-        padding-bottom: 0;
+        height: 10rem;
 
-        // background-image: url(/assets/images/EASPORTSpage/ea-sports-pc-join-us-xl.png.tablet.1024w.png);
-        background-size: cover;
+
+
 
         h3 {
             width: auto;
@@ -526,6 +559,13 @@ h4 {
 }
 
 @media all and (min-width:1024px) {
+
+    .EASPORTS-firstwrap {
+
+        .content-wrap {
+            width: 80vw
+        }
+    }
 
 
     .content-wrap {
@@ -631,6 +671,7 @@ h4 {
 
 
     }
+
     .EASPORTS-secondwrap {
 
         .content-wrap {
@@ -638,13 +679,20 @@ h4 {
         }
     }
 
-  
+
 }
 
 
 
 
 @media all and (min-width: 1456px) {
+
+    .EASPORTS-firstwrap {
+
+        .content-wrap {
+            width: 70vw
+        }
+    }
 
     .EASPORTS-insertion {
         display: flex;
@@ -780,15 +828,20 @@ h4 {
     }
 }
 
-// @media screen and(max-width:639px) {
-//     .content-details {
-//         width: 100%;
 
-//         .details {
-//             width: 100%;
-//         }
-//     }
-// }
+
+@media screen and (max-width:639px) {
+
+    .content-details {
+        width: 100%;
+
+        .details {
+            width: 100%;
+        }
+    }
+}
+
+
 
 @media screen and (min-width:769px) {
     .article-card {

@@ -4,11 +4,8 @@ export function HomePageLowerHero({ spanText, textColor, className, bgImage, but
 
     const lowerHeroSpanStyle = {
         color: textColor,
-        // textAlign:'left'
+      
     }
-
-    // const eaSvg = 'assets\images\hero\home\hero1\play-logo.svg'
-
 
 
     return (

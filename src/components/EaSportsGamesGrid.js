@@ -1,7 +1,7 @@
 import { EaSportsGamesCard } from "./EaSportsGamesCard"
 
-export function EaSportsGamesGrid(props) {
-  const cards = [
+export function EaSportsGamesGrid({firstGrid}) {
+  const firstSection = [
     {
       nameUrl: 'Sito Ufficiale',
       imageBg: './assets/images/game/the-sims-mobile.jpg',
@@ -38,18 +38,49 @@ export function EaSportsGamesGrid(props) {
       imgDescription: 'descrizione',
       svgPath: "./assets/images/game/fifa23-logo-white-stacked (1).svg"
     }]
+  const secondSection = [
+    {
+      nameUrl: 'Sito Ufficiale',
+      imageBg:'/assets/images/game/fifa-mobile.jpg',
+      imgDescription: 'descrizione',
+      svgPath: "/assets/images/game/fifa-mobile-logo.svg"
+    },
+    {
+      nameUrl: 'Sito Ufficiale',
+      imageBg: '/assets/images/game/nba-live-mobile.jpg',
+      imgDescription: 'descrizione',
+      svgPath: "/assets/images/game/nba-live-mobile-logo.png",
+    },
+    {
+      nameUrl: 'Sito Ufficiale',
+      imageBg: '/assets/images/game/madden-22-mobile.jpg',
+      imgDescription: 'descrizione',
+      svgPath: "/assets/images/game/madden-22-mobile-logo.svg"
+    },
+    {
+      nameUrl: 'Sito Ufficiale',
+      imageBg: '/assets/images/game/formula1-mobileracing-gamebox.png.adapt.crop1x1.767w.png',
+      imgDescription: 'descrizione',
+      svgPath: "/assets/images/game/f1-mobileracing-logo.svg"
+    },
+    ]
 
   return (
-    <div className="main-wrap">
-      <div className="content-wrap">
-       
+    
+      <div>
+       {firstGrid ?
         <div className="grid-games">{
-          cards.map((i, index) => { return <EaSportsGamesCard key={i.nameUrl + index} game={i} /> })}
+          firstSection.map((i, index) => { return <EaSportsGamesCard key={i.nameUrl + index} game={i} /> })}
+        </div> :
+        <div className="secondwrap-grid-games">{
+          secondSection.map((i, index) => { return <EaSportsGamesCard key={i.nameUrl + index} game={i} /> })}
         </div>
+        
+        }
 
      
       </div>
-    </div>
+   
   )
 }
 
