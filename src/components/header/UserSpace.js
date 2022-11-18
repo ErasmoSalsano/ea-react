@@ -3,9 +3,9 @@ import { useUserBoard } from '../../utils/useUserBoard'
 
 export const UserSpace = () => {
   const { userBoard, accountBoard, helpBoard, checkBoard, closeBoard } = useUserBoard()
-  
 
-  
+
+
 
   return (
     <div className="user-space"  onClick={e=>e.stopPropagation()} >
@@ -24,12 +24,12 @@ export const UserSpace = () => {
 
       </div>
 
-      {/* Why doesn't it show the closed attribute if put as closed={!userBoard} ? how to make it show it?  */}
-      <div className='user-board' open={userBoard} > {/* this works but not as I intended: closed={start && String(!userBoard)} . these alternatives don't work: closed={start ? !userBoard : false} (and the animation looking for closed attribute)  closed={start ? !userBoard : 'off'} (and the animation looking for false value of closed attribute) */}
+      <div className='user-board' open={userBoard} >
         <div className="user-board-close" onClick={closeBoard}>
           <svg viewBox="0 0 16 16" preserveAspectRatio="xMidYMid meet" focusable="false" pointerEvents="none" display="block" width="100%" height="100%"><g><path d="M15 7H9V1c0-.6-.4-1-1-1S7 .4 7 1v6H1c-.6 0-1 .4-1 1s.4 1 1 1h6v6c0 .6.4 1 1 1s1-.4 1-1V9h6c.6 0 1-.4 1-1s-.4-1-1-1z"></path></g></svg>
         </div>
-        <div className='board-account' open={accountBoard} closed={String(!accountBoard)} >
+        <div className='board-account'  open={accountBoard} closed={String(!accountBoard)}  > {/* Questo dovrebbe essere un punto di partenza per la soluzione {...accountBoard ? 'open' : 'aria-closed'} Custom element con lo spread operator con le props che gli passi */}
+        {/* <div className={`board-account boardAccount${accountBoard}`}  > className={'board-account', accountBoard ? 'open' : 'closed' } */}
           <div className="board-content-wrap">
             <div className="board-grid">
               <Link className="board-link" to="/signin">
