@@ -2,15 +2,15 @@ import { useEffect, useState, useCallback } from "react"
 import { ArticlesGrid } from "../ArticlesGrid"
 import { TabButtons } from "../../data/DummyData";
 import { articleCards } from "../../data/DataArticle";
-import { ButtonNavTab } from "./ButtonNavTab";
+import { ButtonNavTab } from "../Buttons/ButtonNavTab";
 import { MainWrap } from "../0_wraps/mainWrap";
 import { MainContentWrap } from "../0_wraps/mainContentWrap";
 
 export function NavTab({gestion, buttonType, value}) {
     const [active, setActive] = useState({
         id: TabButtons[gestion][0].id,
-        nome: TabButtons[gestion][0].nome,
-        categoria: TabButtons[gestion][0].categoria,
+        nome: TabButtons[gestion][0].name,
+        reqCategory: TabButtons[gestion][0].reqCategory,
     })
     
     const showArgument = useCallback(function showArgument(item){
@@ -39,7 +39,7 @@ export function NavTab({gestion, buttonType, value}) {
                                     ? 'linkTab active' 
                                     : 'linkTab'}
                                 divClassName={'content'}
-                                buttonName={item.nome}
+                                buttonName={item.name}
                                 effectClass={'animation'}
                                 />
                             </div>
@@ -53,7 +53,7 @@ export function NavTab({gestion, buttonType, value}) {
             <ArticlesGrid 
                 key={active.id +1} 
                 amount={6} 
-                request={active.categoria} 
+                request={active.reqCategory} 
                 argument={articleCards} 
                 button={buttonType} 
                 classA={value}

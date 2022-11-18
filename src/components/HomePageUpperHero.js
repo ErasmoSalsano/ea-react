@@ -25,7 +25,7 @@ export function HomePageUpperHero({ mobile, tablet768, tablet1024, desktop, span
                         <img className="upper-hero_logo"
                             src={logoSvg} alt="ea play logo" />
                         <span className={content}>{spanText} </span>
-                        <Button buttonText={buttonSpan} color={buttonColor ? buttonColor : 'white'} justifyContent={buttonPosition} />
+                        <Button buttonText={buttonSpan} color={buttonColor ? buttonColor : 'white'} /*justifyContent={buttonPosition}*/ />
 
                     </div>
                 </div>
