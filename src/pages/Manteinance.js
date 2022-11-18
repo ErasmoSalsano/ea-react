@@ -13,7 +13,10 @@ export function Manteinance() {
         <div className="manteinance">
             <Header />
             <div className={"bg"}>
-                <img className={"img"} src="/assets/images/pages/maintenance/Component 1 – 1.png" alt="background-image" />
+                <img
+                    className={"img"}
+                    src="/assets/images/pages/maintenance/Component 1 – 1.png"
+                    alt="imgBackground" />
                 <div className={"void"}></div>
                 <MainWrap>
                     <MainContentWrap p extendClass='sorry'>
@@ -27,13 +30,15 @@ export function Manteinance() {
                 <div className="page" id="griglia1">
                     <MainWrap>
                         <MainContentWrap pt extendClass='articles-standard'>
-                            {pages.map((item, index) => <ArticleCard key={index + 1} article={item} />)}
+                            {pages.map((item, index) =>
+                                <ArticleCard key={index + 1} article={item} />)
+                            }
                         </MainContentWrap>
                     </MainWrap>
                 </div>
                 <div className="navbar">
                     <button id="back">
-                        <svg viewBox="0 0 40 40" preserveAspectRatio="xMidYMid meet" focusable="false" style={{pointerEvents: 'none', display: 'block', width: '100%', height: '100%'}}>
+                        <svg viewBox="0 0 40 40" preserveAspectRatio="xMidYMid meet" focusable="false" style={{ pointerEvents: 'none', display: 'block', width: '100%', height: '100%' }}>
                             <g>
                                 <g>
                                     <path d="M21.7,20.6l-4.9-4.9c-0.4-0.4-0.4-1,0-1.4l0,0c0.4-0.4,1-0.4,1.4,0l4.9,4.9c0.4,0.4,0.4,1,0,1.4 l0,0C22.8,21,22.1,21,21.7,20.6z"></path>
@@ -55,7 +60,7 @@ export function Manteinance() {
                         </button>
                     </div>
                     <button id="next">
-                        <svg viewBox="0 0 40 40" preserveAspectRatio="xMidYMid meet" focusable="false" style={{pointerEvents: 'none', display: 'block', width: '100%', height: '100%'}}>
+                        <svg viewBox="0 0 40 40" preserveAspectRatio="xMidYMid meet" focusable="false" style={{ pointerEvents: 'none', display: 'block', width: '100%', height: '100%' }}>
                             <g>
                                 <g>
                                     <path d="M21.7,20.6l-4.9-4.9c-0.4-0.4-0.4-1,0-1.4l0,0c0.4-0.4,1-0.4,1.4,0l4.9,4.9c0.4,0.4,0.4,1,0,1.4 l0,0C22.8,21,22.1,21,21.7,20.6z"></path>
@@ -67,7 +72,7 @@ export function Manteinance() {
                     </button>
                 </div>
             </div>
-            <Footer/>
+            <Footer />
         </div>
     )
 }

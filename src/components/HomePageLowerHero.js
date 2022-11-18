@@ -23,7 +23,7 @@ export function HomePageLowerHero({ spanText, textColor, className, bgImage, but
                         <span style={lowerHeroSpanStyle}>{spanText}</span>
                         <div className='buttons-wrap'>
                            {eaSvg && <img className='eaplay-logo' src={process.env.PUBLIC_URL + eaSvg} alt='ea play logo' /> }
-                            <Button buttonText={buttonSpan} color={buttonTextColor} justifyContent={'center'} />
+                            <Button buttonText={buttonSpan} color={buttonTextColor} /*justifyContent={'center'}*/ />
                         </div>
 
                     </div>
