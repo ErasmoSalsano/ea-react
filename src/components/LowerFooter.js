@@ -18,7 +18,6 @@ export function LowerFooter({props}){
                 <div className="eaLogo">
                 <Link  to="https://www.ea.com/it-it" target="_self">
                     <img   src="/assets/images/footer/ea.png" width="64px" alt=""/>
-
                 </Link>
 
                 </div>
@@ -35,7 +34,7 @@ export function LowerFooter({props}){
 
                         </div>
                         <div className="lowerFooterSelectors">
-                            <div style={{position:"relative" }} id="dropup" class="dropup dropdown">
+                            <div style={{position:"relative" }} id="dropup" className="dropup dropdown">
                                 <button onClick="myFunction()" id="button1foot" className="dropbtn ">
                                     <div style={{pointerEvents:"none" }} className="button-title">
                                         Prezzi Regionali
@@ -75,7 +74,7 @@ export function LowerFooter({props}){
                                     <Link className="footerContent footerContents" >Romania</Link>
                                     <Link className="footerContent3 footerContents">Slovenia</Link>
                                     <Link className="footerContent4 footerContent footerContents">Spagna</Link>
-                                    <aLink className="footerContent4 footerContent footerContents">Svezia</aLink>
+                                    <Link className="footerContent4 footerContent footerContents">Svezia</Link>
                                     <Link className="footerContent4 footerContent footerContents">Svizzera</Link>
                                     </div>
                                 </div>
@@ -86,7 +85,7 @@ export function LowerFooter({props}){
                                 <Link className="footerContent5 footerContents"><img src="/assets/images/footer/flags/united-kingdom-uk-svgrepo-com.svg" height="15px" width="15px" className="svgFoot" alt=""/> United Kingdom</Link>
                                 <Link className="footerContent5 footerContents"><img src="/assets/images/footer/flags/australia-svgrepo-com.svg" height="15px" width="15px" className="svgFoot" alt=""/> Australia</Link>
                                 <Link className="footerContent5 footerContents"><img src="/assets/images/footer/flags/flag-for-flag-france-svgrepo-com.svg" height="15px" width="15px" className="svgFoot" alt=""/> France</Link>
-                                <Link class="footerContent5 footerContents"><img src="/assets/images/footer/flags/germany-svgrepo-com.svg" height="15px" width="15px" className="svgFoot" alt=""/> Deutschland</Link>
+                                <Link className="footerContent5 footerContents"><img src="/assets/images/footer/flags/germany-svgrepo-com.svg" height="15px" width="15px" className="svgFoot" alt=""/> Deutschland</Link>
                                 <Link className="footerContent5 footerContents"><img src="/assets/images/footer/flags/italy-svgrepo-com.svg" height="15px" width="15px" className="svgFoot" alt=""/> Italia</Link>
                                 <Link className="footerContent5 footerContents"><img src="/assets/images/footer/flags/japan-svgrepo-com.svg" height="15px" width="15px" className="svgFoot" alt=""/> 日本</Link>
                                 <Link className="footerContent5 footerContents"><img src="/assets/images/footer/flags/republic-of-poland-svgrepo-com.svg" height="15px" width="15px" className="svgFoot" alt=""/> Polska</Link>

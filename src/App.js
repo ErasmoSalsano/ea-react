@@ -11,8 +11,8 @@ export function App() {
       <Routes>
         <Route path="/" element={<MainFrame/>}>
           <Route index element={<Home/>} />
-          <Route path="/informazioni/notizie" element={<News/>} />
-          <Route path="/informazioni/inside-ea" element={<InsideEa/>} />
+          <Route exact path="/informazioni/notizie" element={<News/>} />
+          <Route exact path="/informazioni/inside-ea" element={<InsideEa/>} />
           {/* <Route path="path" element={element} /> */}
         </Route>
         {/* <Route path='/shop' element={<Shop/>}/> */}

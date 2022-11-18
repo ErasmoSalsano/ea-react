@@ -1,4 +1,4 @@
-import { NavList } from "../data/headerData"
+import { NavList } from "../../data/headerData"
 import { Details } from "./Details"
 
 export const HeaderNavbar = ()=>{
