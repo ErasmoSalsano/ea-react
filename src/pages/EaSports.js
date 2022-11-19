@@ -3,6 +3,7 @@ import { EaSportsGamesGrid } from "../components/EaSportsGamesGrid"
 import { useMediaPredicate } from "react-media-hook";
 import { NavTab } from "../components/NavTab/NavTab"
 import './../style/index.scss'
+import '../style/pages/games/EA-SPORTS.scss'
 
 export function EaSports() {
 

@@ -16,9 +16,9 @@ export function EaSportsGamesGrid({firstGrid}) {
     },
     {
       nameUrl: 'Sito Ufficiale',
-      imageBg: './assets/images/game/crysis-remastered.jpg',
+      imageBg: './assets/images/game/ufc4-gin-keyart.png.adapt.crop1x1.767w.png',
       imgDescription: 'descrizione',
-      svgPath: "./assets/images/game/crysis-remastered-logo.png"
+      svgPath: "./assets/images/game/ufc-mobile-logo.png"
     },
     {
       nameUrl: 'Sito Ufficiale',
@@ -37,7 +37,10 @@ export function EaSportsGamesGrid({firstGrid}) {
       imageBg: './assets/images/game/eas-fifa22-gen5-ue-keyart-horz-f23logo-1x1.jpg.adapt.crop1x1.767p.jpg',
       imgDescription: 'descrizione',
       svgPath: "./assets/images/game/fifa23-logo-white-stacked (1).svg"
-    }]
+    },
+  ]
+
+
   const secondSection = [
     {
       nameUrl: 'Sito Ufficiale',
@@ -66,7 +69,7 @@ export function EaSportsGamesGrid({firstGrid}) {
     ]
 
   return (
-    
+
       <div>
        {firstGrid ?
         <div className="grid-games">{
@@ -75,12 +78,12 @@ export function EaSportsGamesGrid({firstGrid}) {
         <div className="secondwrap-grid-games">{
           secondSection.map((i, index) => { return <EaSportsGamesCard key={i.nameUrl + index} game={i} /> })}
         </div>
-        
+
         }
 
-     
+
       </div>
-   
+
   )
 }
 
