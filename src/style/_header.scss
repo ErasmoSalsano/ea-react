@@ -119,7 +119,7 @@
   .user-bar-wrap {
     height: 2.5rem;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: center;
     background-color: inherit;
     position: relative;
@@ -140,7 +140,7 @@
   /* .user-bar{
         height: 2.5rem;
         display: flex;
-        justify-content: end;
+        justify-content: flex-end;
         align-items: center;
         background-color: var(--color-ea-dark);
         z-index: 11;
