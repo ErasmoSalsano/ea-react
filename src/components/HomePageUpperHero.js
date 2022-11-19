@@ -9,9 +9,9 @@ export function HomePageUpperHero({ mobile, tablet768, tablet1024, desktop, span
                 <picture className="background-picture">
                     <source media="(max-width: 766px)"
                         srcSet={mobile} />
-                    <source media="(min-width: 767px)"
+                    <source media="(max-width: 1023px)"
                         srcSet={tablet768} />
-                    <source media="(min-width: 1024px)"
+                    <source media="(max-width: 1455px)"
                         srcSet={tablet1024} />
                     <source media="(min-width: 1456px)"
                         srcSet={desktop} />
