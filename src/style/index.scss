@@ -40,7 +40,7 @@
             // align-items: flex-start;
             flex-direction: column;
 
-         
+
 
             picture {
                 margin-bottom: -5px;
@@ -51,6 +51,7 @@
                 }
 
                 img {
+                    // object-fit: cover;
                     width: 100%;
                 }
             }
@@ -69,7 +70,7 @@
                         text-align: center;
                     }
 
-                   
+
 
                         .content-details {
                             .details {
@@ -81,7 +82,7 @@
                                 }
                             }
                         }
-                    
+
 
 
                 }
@@ -264,12 +265,7 @@
 
         .hero_wrap {
             .second-hero_wrap {
-                picture {
-                    img {
-                        height: 60vh;
-                        // object-fit: cover;
-                    }
-                }
+               
 
                 .lower-hero_image1 {
                     height: 8rem;
@@ -300,11 +296,7 @@
     @media all and (min-width: 1456px) {
         .hero_wrap {
             .second-hero_wrap {
-                picture {
-                    img {
-                        height: 70vh;
-                    }
-                }
+
 
                 .content2 {
                     .upper-hero_content {
@@ -332,7 +324,7 @@
 
 
 
-    // INIZIO -->   Sezione Giochi 
+    // INIZIO -->   Sezione Giochi
 
     body,
     html {
@@ -404,7 +396,7 @@
         }
     }
 
-    // FINE --> Sezione Giochi 
+    // FINE --> Sezione Giochi
 
     .main-wrap {
         background-color: rgba(0, 0, 0, 0.08);
