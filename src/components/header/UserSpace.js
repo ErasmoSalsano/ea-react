@@ -32,12 +32,12 @@ export const UserSpace = () => {
         <div className='board-account' open={accountBoard} closed={String(!accountBoard)} >
           <div className="board-content-wrap">
             <div className="board-grid">
-              <Link className="board-link" to="/signin">
-                <img className="board-icon" src="/assets/images/header/iconsignin.svg" alt="" />
+              <Link className="board-link" to="/login">
+                <img className="board-icon" src="/assets/images/header/iconsignin.svg" alt="accedi" />
                 <span>Accedi</span>
               </Link>
-              <Link className="board-link" to="/signup">
-                <img className="board-icon" src="/assets/images/header/iconregister.svg" alt="" />
+              <Link className="board-link" to="/create">
+                <img className="board-icon" src="/assets/images/header/iconregister.svg" alt="crea account" />
                 <span>Crea account</span>
               </Link>
             </div>
