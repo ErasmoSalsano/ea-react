@@ -9,7 +9,7 @@ export const Login = () => {
 
   // to be moved to useLogin custom hook
   const [inputData, setInputData] = useState({
-    phoneMail: '',
+    mail: '',
     password: '',
     remember: false
   })
@@ -50,9 +50,9 @@ export const Login = () => {
         </div>
 
         <form action="Link#" method="post">
-          <label htmlFor="phoneMail">TELEFONO O E-MAIL</label>
-          <input type="text" name="phoneMail" id="phoneMail" placeholder="Inserisci numero di telefono o e-mail"
-          value={inputData.phoneMail} onChange={onInputChange} />
+          <label htmlFor="mail">E-MAIL</label>
+          <input type="text" name="mail" id="mail" placeholder="Inserisci e-mail"
+          value={inputData.mail} onChange={onInputChange} />
 
           <label htmlFor="password">PASSWORD</label>
           <input type="password" name="password" id="password" placeholder="Inserisci la password"
