@@ -63,7 +63,7 @@ export const DetailsList = ({ List, IsSublist = false }) => {
         {List.map((element) => {
           return (
             <li key={element.text}>
-              <Link exact to={element.href ? element.href : '/maintenaince'}>{element.text}</Link>
+              <Link to={element.href ? element.href : '/maintenaince'}>{element.text}</Link>
             </li>
           )
         })}
@@ -85,7 +85,7 @@ export const DetailsList = ({ List, IsSublist = false }) => {
         : <ul className="inner-ul">
           {List.data.map((item) => {
             return (
-              <Link exact key={item.text} to={item.href ? item.href : '/maintenaince'}> {/* Questo è da cambiare quando si aggiungerà il routing */}
+              <Link key={item.text} to={item.href ? item.href : '/maintenaince'}> {/* Questo è da cambiare quando si aggiungerà il routing */}
                 <li >{item.text}</li>
               </Link>
             )

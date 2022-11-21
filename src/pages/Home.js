@@ -39,17 +39,17 @@ export function Home() {
                 </Title>
             </MainContentWrap>
         </MainWrap>
-        <NavTab 
-            gestion='home' 
+        <NavTab
+            gestion='home'
             buttonType={'A'}
             />
         {/* Dichiarare una basepath da usare per accorciare */}
-        <HomePageUpperHero 
+        <HomePageUpperHero
         logoSvg="/assets/images/hero/home/hero2/ea-play-logo-coral-hero-logo-small.svg"
         mobile="/assets/images/hero/home/hero2/hero-767-medium-console-7x2-xl.jpg.adapt.crop3x5.767w.jpg"
         tablet768="/assets/images/hero/home/hero2/hero-1023-medium-console-7x2-xl.jpg.adapt.crop2x1.1023w.jpg"
         tablet1024="/assets/images/hero/home/hero2/hero-1455-medium-console-7x2-xl.jpg.adapt.crop5x2.1455w.jpg"
-        desktop="/assets/images/hero/home/hero2/hero-1455-medium-console-7x2-xl.jpg.adapt.crop5x2.1455w.jpg"
+        desktop="/assets/images/hero/home/hero2/hero-1920-medium-console-7x2-xl.jpg.adapt.crop7x2.1920w.jpg"
         spanText="Non limitarti al gioco. Gioca al massimo. Sblocca ricompense esclusive, contenuti per i soli
         membri e una libreria dei migliori titoli."
         buttonSpan='Iscriviti subito'
