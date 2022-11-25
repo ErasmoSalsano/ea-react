@@ -29,84 +29,90 @@ export const TabButtons = {
 //complete your page and add the route
 
 export const pages = [
-    {
-        id: 1,
-        image: `/assets/images/article/Inside EA/ea-inside-immagine 1.jpg`,
-        title: `HOME`,
-        link: `/`,
-    },
-    {
-        id: 2,
-        image: `/assets/images/EASPORTSpage/ufc4-feature-image-ea-play.jpg.adapt.crop16x9.431p.jpg`,
-        title: `EA SPORTS`,
-        link: `/`,
-    },
-    // {
-    //     id: 3,
-    //     image: `/assets/images/EASPORTSpage/optimized-pj-f122-por-006-mag-1.jpg.adapt.crop16x9.431p.jpg`,
-    //     title: `FREE GAMES`,
-    //     link: `/`,
-    // },
-    // {
-    //     id: 4,
-    //     image: `/assets/images/EASPORTSpage/ufc4-featured-image-primeicons-16x9.png.adapt.crop16x9.431p.png`,
-    //     title: `LAST GAMES`,
-    //     link: `/`,
-    // },
-    // {
-    //     id: 5,
-    //     image: `/assets/images/pages/about/ea-about-our-products-tile-2.jpg.adapt.crop16x9.652w.jpg`,
-    //     title: `PC`,
-    //     link: `/`,
-    // },
-    // {
-    //     id: 6,
-    //     image: `/assets/images/pages/about/ea-about-our-products-tile-1.jpg.adapt.crop16x9.652w.jpg`,
-    //     title: `PS 5`,
-    //     link: `/`,
-    // },
-    // {
-    //     id: 7,
-    //     image: `/assets/images/pages/about/ea-about-grid-tile-ts4-cottage-living.jpg.adapt.crop16x9.652w.jpg`,
-    //     title: `X-BOX`,
-    //     link: `/`,
-    // },
-    // {
-    //     id: 8,
-    //     image: `/assets/images/Diversita-e-inclusione/inclusion-feature-image.jpg`,
-    //     title: `POSITIVE PLAY`,
-    //     link: `/`,
-    // },
-    // {
-    //     id: 9,
-    //     image: `/assets/images/article/Notizie EA/ea-notizie-immagine 6.jpg`,
-    //     title: `EXECUTIVE TEAM`,
-    //     link: `/`,
-    // },
-    // {
-    //     id: 10,
-    //     image: `/assets/images/article/Notizie EA/ea-notizie-immagine 5.png`,
-    //     title: `REDEEM`,
-    //     link: `/`,
-    // },
-    {
-        id: 11,
-        image: `/assets/images/article/Apex Legends/ea-apexLegends-immagine 3.jpg`,
-        title: `NOTIZIE`,
-        link: `/informazioni/notizie`,
-    },
-    // {
-    //     id: 12,
-    //     image: `/assets/images/article/Inside EA/ea-inside-immagine 3.jpg`,
-    //     title: `ABOUT`,
-    //     link: `/`,
-    // },
-    {
-        id: 13,
-        image: `/assets/images/article/Inside EA/ea-inside-immagine 3.jpg`,
-        title: `INSIDE EA`,
-        link: `/informazioni/inside-ea`,
-    },
+    [
+        {
+            id: 1,
+            image: `/assets/images/article/Inside EA/ea-inside-immagine 1.jpg`,
+            title: `HOME`,
+            link: `/`,
+        },
+        {
+            id: 2,
+            image: `/assets/images/EASPORTSpage/ufc4-feature-image-ea-play.jpg.adapt.crop16x9.431p.jpg`,
+            title: `EA SPORTS`,
+            link: `/EaSports`,
+        },
+        {
+            id: 3,
+            image: `/assets/images/EASPORTSpage/optimized-pj-f122-por-006-mag-1.jpg.adapt.crop16x9.431p.jpg`,
+            title: `FREE GAMES`,
+            link: `/EaSports`,
+        },
+        {
+            id: 4,
+            image: `/assets/images/EASPORTSpage/ufc4-featured-image-primeicons-16x9.png.adapt.crop16x9.431p.png`,
+            title: `LAST GAMES`,
+            link: `/EaSports`,
+        }
+    ],
+    [
+        {
+            id: 5,
+            image: `/assets/images/pages/about/ea-about-our-products-tile-2.jpg.adapt.crop16x9.652w.jpg`,
+            title: `PC`,
+            link: `/`,
+        },
+        {
+            id: 6,
+            image: `/assets/images/pages/about/ea-about-our-products-tile-1.jpg.adapt.crop16x9.652w.jpg`,
+            title: `PS 5`,
+            link: `/`,
+        },
+        {
+            id: 7,
+            image: `/assets/images/pages/about/ea-about-grid-tile-ts4-cottage-living.jpg.adapt.crop16x9.652w.jpg`,
+            title: `X-BOX`,
+            link: `/`,
+        },
+        {
+            id: 8,
+            image: `/assets/images/Diversita-e-inclusione/inclusion-feature-image.jpg`,
+            title: `POSITIVE PLAY`,
+            link: `/`,
+        }
+    ],
+    [
+        {
+            id: 9,
+            image: `/assets/images/article/Notizie EA/ea-notizie-immagine 6.jpg`,
+            title: `EXECUTIVE TEAM`,
+            link: `/`,
+        },
+        {
+            id: 10,
+            image: `/assets/images/article/Notizie EA/ea-notizie-immagine 5.png`,
+            title: `REDEEM`,
+            link: `/`,
+        },
+        {
+            id: 11,
+            image: `/assets/images/article/Apex Legends/ea-apexLegends-immagine 3.jpg`,
+            title: `NOTIZIE`,
+            link: `/informazioni/notizie`,
+        },
+        // {
+        //     id: 12,
+        //     image: `/assets/images/article/Inside EA/ea-inside-immagine 3.jpg`,
+        //     title: `ABOUT`,
+        //     link: `/`,
+        // },
+        {
+            id: 13,
+            image: `/assets/images/article/Inside EA/ea-inside-immagine 3.jpg`,
+            title: `INSIDE EA`,
+            link: `/informazioni/inside-ea`,
+        },
+    ]
 ]
 
 //Picture component
