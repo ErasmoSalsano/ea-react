@@ -1,30 +1,11 @@
-import { ArticleCard } from "./ArticleCard";
-import { useEffect } from "react";
 import { MainWrap } from "./0_wraps/mainWrap";
 import { MainContentWrap } from "./0_wraps/mainContentWrap";
 import { ButtonLoadMore } from "./Buttons/ButtonLoadMore";
 import { Button } from "./Button";
+import { useContentSelection } from "../utils/useContentSelection";
 
 export function ArticlesGrid(props) {
-    let myNewData = data(props.request, props.amount, props.argument)
-
-    useEffect(() => {
-        data()
-    }, [myNewData, props])
-
-    function data(reqCategory, num, argument) {
-        return reqCategory &&
-            argument.filter(e =>
-                reqCategory === 'all'
-                    ? e.category !== reqCategory
-                    : e.category === reqCategory)
-                .slice(0, num)
-                .map((item, index) =>
-                    <ArticleCard
-                        key={item.id + index}
-                        article={item} />)
-    }
-
+    const {myNewData} = useContentSelection(props)
     return (
         <MainWrap>
             <MainContentWrap
