@@ -42,6 +42,7 @@ export function Home() {
         <NavTab
             gestion='home'
             buttonType={'A'}
+            type={'ArticleGrid'}
             />
         {/* Dichiarare una basepath da usare per accorciare */}
         <HomePageUpperHero
