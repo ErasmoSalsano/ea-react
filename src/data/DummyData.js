@@ -1,28 +1,28 @@
 export const TabButtons = {
     home:[
-        { id: 1, name:'Notizie Ea', reqCategory: 'Eletronics Arts' },
-        { id: 2, name:'EA Play', reqCategory: 'Eletronics Arts Inc.' },
-        { id: 3, name:'FIFA', reqCategory: 'FIFA' },
-        { id: 4, name:'F1', reqCategory: 'F1® 22' },
-        { id: 5, name:'Apex Legends', reqCategory: 'Apex Legends' },
-        { id: 6, name:'The Sims', reqCategory: 'The Sims 4' },
-        { id: 7, name:'Battlefield', reqCategory: 'Battlefield 2042' },
-        { id: 8, name:'Inside Ea', reqCategory: 'Inside EA' }],
+        { id: 1, buttonType: 'A', name:'Notizie Ea', reqCategory: 'Eletronics Arts' },
+        { id: 2, buttonType: 'A', name:'EA Play', reqCategory: 'Eletronics Arts Inc.' },
+        { id: 3, buttonType: 'A', name:'FIFA', reqCategory: 'FIFA' },
+        { id: 4, buttonType: 'A', name:'F1', reqCategory: 'F1® 22' },
+        { id: 5, buttonType: 'A', name:'Apex Legends', reqCategory: 'Apex Legends' },
+        { id: 6, buttonType: 'A', name:'The Sims', reqCategory: 'The Sims 4' },
+        { id: 7, buttonType: 'A', name:'Battlefield', reqCategory: 'Battlefield 2042' },
+        { id: 8, buttonType: 'A', name:'Inside Ea', reqCategory: 'Inside EA' }],
     insideEa:[
-        { id: 1, name:'Le storie', reqCategory: 'Storie' },
-        { id: 2, name:'Diversità e Inclusione', reqCategory: 'Diversità' },
-        { id: 3, name:'Persone e Cultura', reqCategory: 'Cultura' },
-        { id: 4, name:'Investire nella Comunità', reqCategory: 'Comunità' }],
+        { id: 1, buttonType: 'B', name:'Le storie', reqCategory: 'Storie' },
+        { id: 2, buttonType: 'B', name:'Diversità e Inclusione', reqCategory: 'Diversità' },
+        { id: 3, buttonType: 'B', name:'Persone e Cultura', reqCategory: 'Cultura' },
+        { id: 4, buttonType: 'B', name:'Investire nella Comunità', reqCategory: 'Comunità' }],
     eaSports:[
-        { id: 1, name:'FIFA', reqCategory: 'FIFA' },
-        { id: 2, name:'Madden NFL™', reqCategory: 'MADDEN NFL', void: true},
-        { id: 3, name:'F1', reqCategory: 'F1® 22' },
-        { id: 4, name:'NHL', reqCategory: 'NHL', void: true},
-        { id: 5, name:'UFC', reqCategory: 'UFC' },
-        { id: 6, name:'NBA LIVE', reqCategory: 'NBA LIVE' },
-        { id: 7, name:'FIFA Mobile', reqCategory: 'FIFA Mobile' },
-        { id: 8, name:'Madden NFL Mobile', reqCategory: 'Madden NFL Mobile', void: true},
-        { id: 9, name:'NBA LIVE Mobile', reqCategory: 'NBA LIVE Mobile' }
+        { id: 1, buttonType: 'A', name:'FIFA', reqCategory: 'FIFA' },
+        { id: 2, buttonType: null, name:'Madden NFL™', reqCategory: 'MADDEN NFL', void: true},
+        { id: 3, buttonType: 'A', name:'F1', reqCategory: 'F1® 22' },
+        { id: 4, buttonType: null, name:'NHL', reqCategory: 'NHL', void: true},
+        { id: 5, buttonType: 'A', name:'UFC', reqCategory: 'UFC' },
+        { id: 6, buttonType: 'A', name:'NBA LIVE', reqCategory: 'NBA LIVE' },
+        { id: 7, buttonType: 'A', name:'FIFA Mobile', reqCategory: 'FIFA Mobile' },
+        { id: 8, buttonType: null, name:'Madden NFL Mobile', reqCategory: 'Madden NFL Mobile', void: true},
+        { id: 9, buttonType: 'A', name:'NBA LIVE Mobile', reqCategory: 'NBA LIVE Mobile' }
     ]
 }
 

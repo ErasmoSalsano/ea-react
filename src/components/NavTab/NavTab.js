@@ -7,11 +7,12 @@ import { MainWrap } from "../0_wraps/mainWrap";
 import { MainContentWrap } from "../0_wraps/mainContentWrap";
 import { GamesGrid } from "../GamesGrid";
 
-export function NavTab({ gestion, buttonType, value, type }) {
+export function NavTab({ gestion, value, type }) {
     const [active, setActive] = useState({
         id: TabButtons[gestion][0].id,
         nome: TabButtons[gestion][0].name,
         reqCategory: TabButtons[gestion][0].reqCategory,
+        buttonType: TabButtons[gestion][0].buttonType
     })
 
     const showArgument = useCallback(function showArgument(item) {
@@ -56,10 +57,15 @@ export function NavTab({ gestion, buttonType, value, type }) {
                     amount={6}
                     request={active.reqCategory}
                     argument={articleCards}
-                    button={buttonType}
-                    classA={value}
-                />
-                : <GamesGrid />
+                    button={active.buttonType}
+                    classA={value}/>
+                : <GamesGrid
+                    // key={active.id + 1}
+                    // amount={9}
+                    // request={active.reqCategory}
+                    // argument={articleCards}
+                    // button={active.buttonType}
+                    />
             }
         </>
     )

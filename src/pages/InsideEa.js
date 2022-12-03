@@ -22,7 +22,6 @@ export function InsideEa() {
             </div>
             <NavTab
                 gestion='insideEa'
-                buttonType={'B'}
                 type={'ArticleGrid'}
                 value={true}
                 />

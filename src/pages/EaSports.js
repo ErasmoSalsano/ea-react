@@ -85,7 +85,6 @@ export function EaSports() {
 
                 <NavTab
                     gestion='eaSports'
-                    buttonType={'A'}
                     type={'ArticleGrid'}
                 />
 

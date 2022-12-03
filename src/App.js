@@ -10,21 +10,20 @@ import { Login } from "./pages/Login";
 import { Create } from "./pages/Create";
 
 export function App() {
-  return (
-    <div className="App">
-      <Routes>
-        <Route path="/" element={<MainFrame/>}>
-          <Route index element={<Home/>} />
-          <Route path="/informazioni/notizie" element={<News/>} />
-          <Route path="/informazioni/inside-ea" element={<InsideEa/>} />
-          {/* <Route path="path" element={element} /> */}
-        </Route>
-        <Route path="/login" element={<Login />} />
-        <Route path="/create" element={<Create />} />
-        {/* <Route path='/shop' element={<Shop/>}/> */}
-        <Route path="*" element={<Manteinance/>} />
-        <Route path='EaSports' element={<EaSports />} />
-      </Routes>
-</div>
-  );
+    return (
+        <div className="App">
+            <Routes>
+                <Route path="/" element={<MainFrame />}>
+                    <Route index element={<Home />} />
+                    <Route path="/informazioni/notizie" element={<News />} />
+                    <Route path="/informazioni/inside-ea" element={<InsideEa />} />
+                </Route>
+                <Route path="/login" element={<Login />} />
+                <Route path="/create" element={<Create />} />
+                {/* <Route path='/shop' element={<Shop/>}/> */}
+                <Route path="*" element={<Manteinance />} />
+                <Route path='EaSports' element={<EaSports />} />
+            </Routes>
+        </div>
+    );
 }
