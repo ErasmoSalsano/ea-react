@@ -60,6 +60,11 @@ export const useManageAccount = () => {
     { id: 6, name: "Austria" },
   ];
 
+  const [loginData, setLoginData] = useState({
+    mail: "",
+    password: "",
+    remember: false,
+  });
   // Database connection
   const db = getDatabase();
 
@@ -179,6 +184,13 @@ export const useManageAccount = () => {
     return result;
   };
 
+  const onLoginInputChange = (event) => {
+    const { name, value, checked } = event.currentTarget;
+    setLoginData((data) => {
+      return { ...data, [name]: name === "remember" ? checked : value };
+    });
+  };
+
   const onSubmit = async () => {
     if (userData.password !== userData.rePassword) {
       return setError("Password do not match");
@@ -187,8 +199,16 @@ export const useManageAccount = () => {
     try {
       setError("");
       setLoading(true);
-      await signup(userData.mail, userData.password);
-      navigate("/");
+
+      const authUser = (await signup(userData.mail, userData.password)).user;
+      const dbRef = ref(getDatabase());
+      const snapshot = await get(child(dbRef, `users/${authUser.uid}`));
+      if (snapshot.exists()) {
+        console.log("Already in the database");
+      } else {
+        writeUserData(authUser.uid, authUser.email, userData.bDate);
+        navigate("/");
+      }
     } catch (e) {
       console.error(e);
       setError("Failed to create an account");
@@ -211,17 +231,19 @@ export const useManageAccount = () => {
     setLoading(false);
   };
 
-  const [loginData, setLoginData] = useState({
-    mail: "",
-    password: "",
-    remember: false,
-  });
-
-  const onLoginInputChange = (event) => {
-    const { name, value, checked } = event.currentTarget;
-    setLoginData((data) => {
-      return { ...data, [name]: name === "remember" ? checked : value };
-    });
+  const onGetUser = async () => {
+    try {
+      const dbRef = ref(getDatabase());
+      const snapshot = await get(child(dbRef, `users/${currentUser.uid}`));
+      console.log(currentUser.uid);
+      if (snapshot.exists()) {
+        console.log(snapshot.val());
+      } else {
+        console.log("No data available");
+      }
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   const onLogout = () => {
