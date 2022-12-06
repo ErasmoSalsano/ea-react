@@ -265,7 +265,7 @@ export const useManageAccount = () => {
     loginData: loginData,
     onLoginInputChange: onLoginInputChange,
     onLogin: onLogin,
-    // onGetUser: onGetUser,
+    onGetUser: onGetUser,
     onLogout: onLogout,
   };
 };
