@@ -1,45 +1,62 @@
-import { useState } from 'react'
-import { Link } from 'react-router-dom'
-import { LoginIcon } from '../components/login-create/LoginIcon'
-import '../style/pages/signin/login.scss'
+import { useEffect } from "react";
+import { Link } from "react-router-dom";
+import { LoginIcon } from "../components/login-create/LoginIcon";
+import "../style/pages/signin/login.scss";
+import { useManageAccount } from "../utils/useManageAccount";
 
 export const Login = () => {
+  const baseIconUrl =
+    "https://eaassets-a.akamaihd.net/resource_signin_ea_com/551.0.220805.388.c847323/p/";
 
-  const baseIconUrl = 'https://eaassets-a.akamaihd.net/resource_signin_ea_com/551.0.220805.388.c847323/p/'
+  const { loginData, onLoginInputChange, onLogin } = useManageAccount();
 
-  // to be moved to useLogin custom hook
-  const [inputData, setInputData] = useState({
-    mail: '',
-    password: '',
-    remember: false
-  })
-
-  const onInputChange = (event) => {
-    const {name, value, checked} = event.currentTarget
-    setInputData((data)=>{ return {...data, [name]: name === 'remember' ? checked : value}})
-  }
-
-  const onLogin = () => {
-    console.log(inputData)
-  }
+  useEffect(() => {
+    document.body.style.overflow = "auto";
+  }, []);
 
   return (
     <div className="login-page">
       <div className="main-container">
         <div className="logo">
-          <img src={`${baseIconUrl}statics/juno/img/EALogo-New.svg`}
-            alt="Logo Electronic Arts" />
+          <img
+            src={`${baseIconUrl}statics/juno/img/EALogo-New.svg`}
+            alt="Logo Electronic Arts"
+          />
         </div>
 
         <h1>Accedi al tuo account EA</h1>
 
         <div className="icons">
-          <LoginIcon link='/maintenance' name='google' imgSrc={`${baseIconUrl}images/google.svg`} />
-          <LoginIcon link='/maintenance' name='facebook' imgSrc={`${baseIconUrl}images/facebook.svg`} />
-          <LoginIcon link='/maintenance' name='apple' imgSrc={`${baseIconUrl}images/apple.svg`} />
-          <LoginIcon link='/maintenance' name='steam' imgSrc={`${baseIconUrl}images/steam.svg`} />
-          <LoginIcon link='/maintenance' name='x-box' imgSrc={`${baseIconUrl}images/xbox.svg`} />
-          <LoginIcon link='/maintenance' name='playstation' imgSrc={`${baseIconUrl}images/psn.svg`} />
+          <LoginIcon
+            link="/maintenance"
+            name="google"
+            imgSrc={`${baseIconUrl}images/google.svg`}
+          />
+          <LoginIcon
+            link="/maintenance"
+            name="facebook"
+            imgSrc={`${baseIconUrl}images/facebook.svg`}
+          />
+          <LoginIcon
+            link="/maintenance"
+            name="apple"
+            imgSrc={`${baseIconUrl}images/apple.svg`}
+          />
+          <LoginIcon
+            link="/maintenance"
+            name="steam"
+            imgSrc={`${baseIconUrl}images/steam.svg`}
+          />
+          <LoginIcon
+            link="/maintenance"
+            name="x-box"
+            imgSrc={`${baseIconUrl}images/xbox.svg`}
+          />
+          <LoginIcon
+            link="/maintenance"
+            name="playstation"
+            imgSrc={`${baseIconUrl}images/psn.svg`}
+          />
         </div>
 
         <div className="separator">
@@ -51,25 +68,55 @@ export const Login = () => {
 
         <form action="Link#" method="post">
           <label htmlFor="mail">E-MAIL</label>
-          <input type="text" name="mail" id="mail" placeholder="Inserisci e-mail"
-          value={inputData.mail} onChange={onInputChange} />
+          <input
+            type="text"
+            name="mail"
+            id="mail"
+            placeholder="Inserisci e-mail"
+            value={loginData.mail}
+            onChange={onLoginInputChange}
+          />
 
           <label htmlFor="password">PASSWORD</label>
-          <input type="password" name="password" id="password" placeholder="Inserisci la password"
-          value={inputData.password} onChange={onInputChange} />
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Inserisci la password"
+            value={loginData.password}
+            onChange={onLoginInputChange}
+          />
 
           <label className="wrapping-label" htmlFor="remember">
-            <input className="nested-input" type="checkbox" name="remember" id="remember"
-            checked={inputData.remember} onChange={onInputChange} />
+            <input
+              className="nested-input"
+              type="checkbox"
+              name="remember"
+              id="remember"
+              checked={loginData.remember}
+              onChange={onLoginInputChange}
+            />
             Ricordami
           </label>
 
-          <button type="button" onClick={onLogin}>ACCEDI</button>
+          <button
+            type="button"
+            onClick={() => {
+              console.log(loginData.mail, loginData.password);
+              onLogin(loginData.mail, loginData.password);
+            }}
+          >
+            ACCEDI
+          </button>
         </form>
 
-        <Link className="anchor-psw-recovery" to="Link#">Hai dimenticato la password?</Link>
-        <Link className="anchor-button" to="/create">CREA ACCOUNT</Link>
+        <Link className="anchor-psw-recovery" to="Link#">
+          Hai dimenticato la password?
+        </Link>
+        <Link className="anchor-button" to="/create">
+          CREA ACCOUNT
+        </Link>
       </div>
     </div>
-  )
-}
+  );
+};
