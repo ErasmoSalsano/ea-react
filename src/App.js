@@ -8,6 +8,7 @@ import './style/_layouts.scss'
 import { EaSports } from "./pages/EaSports";
 import { Login } from "./pages/Login";
 import { Create } from "./pages/Create";
+import { PcGames } from "./pages/PcGames";
 
 export function App() {
   return (
@@ -24,6 +25,7 @@ export function App() {
         {/* <Route path='/shop' element={<Shop/>}/> */}
         <Route path="*" element={<Manteinance/>} />
         <Route path='EaSports' element={<EaSports />} />
+        <Route path='PcGames' element={<PcGames />} />
       </Routes>
 </div>
   );

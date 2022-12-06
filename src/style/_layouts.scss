@@ -41,7 +41,7 @@
     letter-spacing: 0.5px;
 
     .game-box {
-        // card 
+        // card
         width: 100%;
         position: relative;
         cursor: pointer;
@@ -83,7 +83,7 @@
 
     .logo {
         position: absolute;
-        max-height: 20%;
+        max-height: 60px;
         z-index: 1;
 
     }
@@ -95,7 +95,7 @@
 
     .very-big-logo{
         max-height: 10%;
-    
+
     }
 
     &:hover {
@@ -225,7 +225,7 @@
         color: #161616;
     }
 }
-//card 
+//card
 @mixin card ($width){
     display: flex;
     flex-direction: column;
