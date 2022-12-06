@@ -5,9 +5,18 @@ import { Footer } from "../components/Footer";
 import { Header } from "../components/header/Header";
 import { Title } from "../components/Title";
 import { pages } from "../data/DummyData";
+import { useState } from "react";
 import './../style/pages/manteinance/manteinance.scss'
 
 export function Manteinance() {
+    const [data, setData] = useState(pages)
+
+    function left() {
+        setData([...data], pages.push(pages.shift()));
+    }
+    function right() {
+        setData([...data], pages.unshift(pages.pop()))
+    }
 
     return (
         <div className="manteinance">
@@ -27,17 +36,17 @@ export function Manteinance() {
                         <h1>Redirect to</h1>
                     </MainContentWrap>
                 </MainWrap>
-                <div className="page" id="griglia1">
+                <div className="page" id="griglia1" style={{display:'flex'}}>
                     <MainWrap>
                         <MainContentWrap pt extendClass='articles-standard'>
-                            {pages.map((item, index) =>
+                            {pages[0].map((item, index) =>
                                 <ArticleCard key={index + 1} article={item} />)
                             }
                         </MainContentWrap>
                     </MainWrap>
                 </div>
                 <div className="navbar">
-                    <button id="back">
+                    <button id="back" onClick={left}>
                         <svg viewBox="0 0 40 40" preserveAspectRatio="xMidYMid meet" focusable="false" style={{ pointerEvents: 'none', display: 'block', width: '100%', height: '100%' }}>
                             <g>
                                 <g>
@@ -49,17 +58,17 @@ export function Manteinance() {
                         </svg>
                     </button>
                     <div className="page-collector">
-                        <button id="1" className="selectPage">
+                        <button id="1" className={pages[0][0].id === 1?'selectPage active':'selectPage'}>
                             <div className="page-button"></div>
                         </button>
-                        <button id="2" className="selectPage" >
+                        <button id="2" className={pages[1][0].id === 1?'selectPage active':'selectPage'} >
                             <div className="page-button"></div>
                         </button>
-                        <button id="3" className="selectPage">
+                        <button id="3" className={pages[2][0].id ===1?'selectPage active':'selectPage'}>
                             <div className="page-button"></div>
                         </button>
                     </div>
-                    <button id="next">
+                    <button id="next" onClick={right}>
                         <svg viewBox="0 0 40 40" preserveAspectRatio="xMidYMid meet" focusable="false" style={{ pointerEvents: 'none', display: 'block', width: '100%', height: '100%' }}>
                             <g>
                                 <g>
