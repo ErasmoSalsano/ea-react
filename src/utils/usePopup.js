@@ -1,10 +1,6 @@
-import { useState } from "react";
-
-
+import { useEffect, useState } from "react";
 
 export const usePopup = () => {
-  
-
   // const [userBoardOpen, setUserBoardOpen] = useState(false);
   const [popMenuOpen, setPopMenuOpen] = useState(false);
   const [popNavOpen, setPopNavOpen] = useState(false);
@@ -12,46 +8,53 @@ export const usePopup = () => {
   const [navHidden, setNavHidden] = useState(false);
   const [gamesHidden, setGamesHidden] = useState(false);
 
+  // const body = document.querySelector("body");
+  // useEffect(() => {
+  //   popNavOpen
+  //     ? (body.style.overflow = "hidden")
+  //     : (body.style.overflow = "auto");
+  // }, [popNavOpen]);
+
   // Will be moved in custom hook
   const openElement = (element) => {
     switch (element) {
-      case 'popMenu': 
-        setPopMenuOpen(true)
-        if(window.innerWidth < 1032){
-          openElement('popNav');
+      case "popMenu":
+        setPopMenuOpen(true);
+        if (window.innerWidth < 1032) {
+          openElement("popNav");
+        } else {
+          openElement("popGames");
         }
-        else{
-          openElement('popGames');
-        }
         break;
-      case 'popNav': 
-        setGamesHidden(true)
-        setPopNavOpen(true)
+      case "popNav":
+        setGamesHidden(true);
+        setPopNavOpen(true);
         break;
-      case 'popGames': 
-        setNavHidden(true)
-        setPopGamesOpen(true)
+      case "popGames":
+        setNavHidden(true);
+        setPopGamesOpen(true);
         break;
-      default: console.warn('Wrong parameter passed to openElement function')
+      default:
+        console.warn("Wrong parameter passed to openElement function");
     }
-  }
+  };
 
   const onMenuClick = () => {
-    openElement('popMenu')
-  }
+    openElement("popMenu");
+  };
 
   const onPopNavClick = () => {
     setPopNavOpen(false);
     setPopGamesOpen(false);
     setTimeout(() => {
-      setNavHidden(false)
-      setGamesHidden(false)
+      setNavHidden(false);
+      setGamesHidden(false);
       setPopMenuOpen(false);
       // popNav.style.display ='block';
-  }, 500);
-  }
+    }, 500);
+  };
 
-  return({
+  return {
     // userBoardOpen: userBoardOpen,
     navHidden: navHidden,
     gamesHidden: gamesHidden,
@@ -59,6 +62,6 @@ export const usePopup = () => {
     popNavOpen: popNavOpen,
     popGamesOpen: popGamesOpen,
     onMenuClick: onMenuClick,
-    onPopNavClick: onPopNavClick
-  })
-}
+    onPopNavClick: onPopNavClick,
+  };
+};

@@ -2,6 +2,8 @@
 **/*.css
 **/*.css.map
 
+config.js
+
 # dependencies
 /node_modules
 /.pnp
