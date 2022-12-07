@@ -32,6 +32,7 @@ export const useManageAccount = () => {
 
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+  const [loggedUser, setLoggedUser] = useState(null);
 
   const months = [
     "Gennaio",
@@ -93,7 +94,7 @@ export const useManageAccount = () => {
         31,
         30,
         31,
-      ]);
+      ])
     }
 
     if (
@@ -231,13 +232,17 @@ export const useManageAccount = () => {
     setLoading(false);
   };
 
+  useEffect(() => {
+    setLoggedUser(onGetUser());
+  }, [currentUser]);
+
   const onGetUser = async () => {
     try {
       const dbRef = ref(getDatabase());
       const snapshot = await get(child(dbRef, `users/${currentUser.uid}`));
-      console.log(currentUser.uid);
       if (snapshot.exists()) {
-        console.log(snapshot.val());
+        const result = snapshot.val();
+        setLoggedUser(result)
       } else {
         console.log("No data available");
       }
@@ -267,5 +272,6 @@ export const useManageAccount = () => {
     onLogin: onLogin,
     onGetUser: onGetUser,
     onLogout: onLogout,
+    loggedUser: loggedUser
   };
 };

@@ -267,12 +267,6 @@
           padding: 0;
           width: fit-content;
           align-items: flex-end;
-          .socialLinks {
-            a {
-              svg {
-              }
-            }
-          }
 
           .joinConvFoot {
             padding-top: 0.406;
@@ -289,10 +283,6 @@
         flex-direction: row;
         .eaLogo {
           width: 3.063rem;
-          a {
-            img {
-            }
-          }
         }
 
         .lowerFooterBlock {
@@ -459,7 +449,7 @@
     width: 600px;
     flex-direction: column;
 
-    justify-content: start;
+    justify-content: flex-start;
     margin-left: 20px;
 
     margin-top: 10px;
@@ -475,7 +465,7 @@
     margin-bottom: 10px;
     margin-top: 10px;
 
-    justify-content: start;
+    justify-content: flex-start;
   }
 
   #dropup2 svg {
