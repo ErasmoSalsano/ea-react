@@ -6,15 +6,10 @@ import { MainWrap } from "../components/0_wraps/mainWrap";
 import { MainContentWrap } from "../components/0_wraps/mainContentWrap";
 import { Title } from "../components/Title";
 import "./../style/index.scss";
-import { useContext, useEffect } from "react";
 import { useAuth } from "../contexts/AuthContext";
 
 export function Home() {
   const value = useAuth();
-
-  // useEffect(() => {
-  //   value && console.log(value.currentUser);
-  // }, [value]);
 
   return (
     <div className="homepage">

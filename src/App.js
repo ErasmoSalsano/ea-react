@@ -9,6 +9,7 @@ import { EaSports } from "./pages/EaSports";
 import { Login } from "./pages/Login";
 import { Create } from "./pages/Create";
 import { AuthProvider } from "./contexts/AuthContext";
+import { Profile } from "./pages/Profile";
 
 export function App() {
   return (
@@ -20,7 +21,7 @@ export function App() {
             <Route path="/informazioni/notizie" element={<News />} />
             <Route path="/informazioni/inside-ea" element={<InsideEa />} />
             <Route path="/EaSports" element={<EaSports />} />
-            {/* <Route path="path" element={element} /> */}
+            <Route path="/profile" element={<Profile />} />
           </Route>
           <Route path="/login" element={<Login />} />
           <Route path="/create" element={<Create />} />

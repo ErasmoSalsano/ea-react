@@ -1,41 +1,26 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 export function LowerFooter({ props }) {
-  const svgStyle = {
-    pointerEvents: "none",
-    display: "block",
-    width: "100%",
-    height: "100%",
-  };
-  const imgStyle = {
-    border: "none",
-    height: 57,
-    width: 191,
-  };
 
   const [select1, setSelect1] = useState(false);
   const [select2, setSelect2] = useState(false);
 
   function handleFooterBtn(e, btn) {
-    console.log(btn);
     btn
       ? btn === 1
         ? select1
           ? setSelect1(false)
           : (() => {
-              console.log("Primo");
               setSelect2(false);
               setSelect1(true);
             })()
         : select2
         ? setSelect2(false)
         : (() => {
-            console.log("Secondo");
             setSelect1(false);
             setSelect2(true);
           })()
       : (() => {
-          console.log("Home");
           setSelect1(false);
           setSelect2(false);
         })();
@@ -125,19 +110,19 @@ export function LowerFooter({ props }) {
                   className="dropbtn "
                 >
                   <div
-                    style={{ "pointer-events": "none" }}
+                    style={{ pointerEvents: "none" }}
                     className="button-title"
                   >
                     Prezzi Regionali
                   </div>
                   <span
-                    style={{ "pointer-events": "none" }}
+                    style={{ pointerEvents: "none" }}
                     className="dropup-value"
                   >
                     Italia
                   </span>
                   <div
-                    style={{ "pointer-events": "none" }}
+                    style={{ pointerEvents: "none" }}
                     className="button-icon"
                   >
                     <svg
@@ -145,7 +130,7 @@ export function LowerFooter({ props }) {
                       preserveAspectRatio="xMidYMid meet"
                       focusable="false"
                       style={{
-                        "pointer-events": "none",
+                        pointerEvents: "none",
                         display: "block",
                         width: "100%",
                         height: "100%",
@@ -267,19 +252,19 @@ export function LowerFooter({ props }) {
                   className="dropbtn "
                 >
                   <div
-                    style={{ "pointer-events": "none" }}
+                    style={{ pointerEvents: "none" }}
                     className="button-title"
                   >
                     Lingua
                   </div>
                   <span
-                    style={{ "pointer-events": "none" }}
+                    style={{ pointerEvents: "none" }}
                     className="dropup-value lang"
                   >
                     Italia
                   </span>
                   <div
-                    style={{ "pointer-events": "none" }}
+                    style={{ pointerEvents: "none" }}
                     className="button-icon"
                   >
                     <svg
@@ -287,7 +272,7 @@ export function LowerFooter({ props }) {
                       preserveAspectRatio="xMidYMid meet"
                       focusable="false"
                       style={{
-                        "pointer-events": "none",
+                        pointerEvents: "none",
                         display: "block",
                         width: "100%",
                         height: "100%",
