@@ -42,7 +42,7 @@ export function Home() {
           </Title>
         </MainContentWrap>
       </MainWrap>
-      <NavTab gestion="home" buttonType={"A"} type="articles" />
+      <NavTab gestion="home" buttonType={"A"} type="ArticleGrid" />
       {/* Dichiarare una basepath da usare per accorciare */}
       <HomePageUpperHero
         logoSvg="/assets/images/hero/home/hero2/ea-play-logo-coral-hero-logo-small.svg"
