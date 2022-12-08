@@ -94,7 +94,7 @@ export const useManageAccount = () => {
         31,
         30,
         31,
-      ])
+      ]);
     }
 
     if (
@@ -233,16 +233,16 @@ export const useManageAccount = () => {
   };
 
   useEffect(() => {
-    setLoggedUser(onGetUser());
+    currentUser && setLoggedUser(onGetUser());
   }, [currentUser]);
 
   const onGetUser = async () => {
     try {
       const dbRef = ref(getDatabase());
-      const snapshot = await get(child(dbRef, `users/${currentUser.uid}`));
+      const snapshot = await get(child(dbRef, `users/${currentUser?.uid}`));
       if (snapshot.exists()) {
         const result = snapshot.val();
-        setLoggedUser(result)
+        setLoggedUser(result);
       } else {
         console.log("No data available");
       }
@@ -272,6 +272,6 @@ export const useManageAccount = () => {
     onLogin: onLogin,
     onGetUser: onGetUser,
     onLogout: onLogout,
-    loggedUser: loggedUser
+    loggedUser: loggedUser,
   };
 };

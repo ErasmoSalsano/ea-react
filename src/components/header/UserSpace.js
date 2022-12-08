@@ -111,11 +111,11 @@ export const UserSpace = () => {
               {value.currentUser ? (
                 <Link
                   className="board-link"
-                  // to="/profile"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    onGetUser();
-                  }}
+                  to="/profile"
+                  // onClick={(e) => {
+                  //   e.preventDefault();
+                  //   onGetUser();
+                  // }}
                 >
                   <img
                     className="board-icon"
