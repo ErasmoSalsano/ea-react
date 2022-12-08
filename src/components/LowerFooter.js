@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 export function LowerFooter({ props }) {
-
   const [select1, setSelect1] = useState(false);
   const [select2, setSelect2] = useState(false);
 

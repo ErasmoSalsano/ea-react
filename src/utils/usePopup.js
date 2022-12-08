@@ -8,12 +8,12 @@ export const usePopup = () => {
   const [navHidden, setNavHidden] = useState(false);
   const [gamesHidden, setGamesHidden] = useState(false);
 
-  // const body = document.querySelector("body");
-  // useEffect(() => {
-  //   popNavOpen
-  //     ? (body.style.overflow = "hidden")
-  //     : (body.style.overflow = "auto");
-  // }, [popNavOpen]);
+  const body = document.querySelector("body");
+  useEffect(() => {
+    popMenuOpen
+      ? (body.style.overflow = "hidden")
+      : (body.style.overflow = "auto");
+  }, [popMenuOpen]);
 
   // Will be moved in custom hook
   const openElement = (element) => {
