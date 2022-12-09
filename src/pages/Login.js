@@ -8,7 +8,8 @@ export const Login = () => {
   const baseIconUrl =
     "https://eaassets-a.akamaihd.net/resource_signin_ea_com/551.0.220805.388.c847323/p/";
 
-  const { loginData, onLoginInputChange, onLogin } = useManageAccount();
+  const { loginData, onLoginInputChange, onLogin, error, isValidForm } =
+    useManageAccount();
 
   useEffect(() => {
     document.body.style.overflow = "auto";
@@ -69,12 +70,14 @@ export const Login = () => {
         <form action="Link#" method="post">
           <label htmlFor="mail">E-MAIL</label>
           <input
-            type="text"
+            type="mail"
             name="mail"
             id="mail"
             placeholder="Inserisci e-mail"
+            pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
             value={loginData.mail}
             onChange={onLoginInputChange}
+            required
           />
 
           <label htmlFor="password">PASSWORD</label>
@@ -83,8 +86,11 @@ export const Login = () => {
             name="password"
             id="password"
             placeholder="Inserisci la password"
+            minLength={1}
+            maxLength={20}
             value={loginData.password}
             onChange={onLoginInputChange}
+            required
           />
 
           <label className="wrapping-label" htmlFor="remember">
@@ -99,12 +105,15 @@ export const Login = () => {
             Ricordami
           </label>
 
+          {error && <p className="login-error">{error}</p>}
+
           <button
             type="button"
             onClick={() => {
-              console.log(loginData.mail, loginData.password);
+              // console.log(loginData.mail, loginData.password);
               onLogin(loginData.mail, loginData.password);
             }}
+            disabled={!isValidForm}
           >
             ACCEDI
           </button>

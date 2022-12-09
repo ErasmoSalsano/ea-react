@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 
-export const usePopup = () => {
+export const usePopup = (scrollup) => {
+  //scrollup is taken to set the scroll on which relies the opening of the user space bar
   // const [userBoardOpen, setUserBoardOpen] = useState(false);
   const [popMenuOpen, setPopMenuOpen] = useState(false);
   const [popNavOpen, setPopNavOpen] = useState(false);
@@ -10,10 +11,17 @@ export const usePopup = () => {
 
   const body = document.querySelector("body");
   useEffect(() => {
-    popMenuOpen
-      ? (body.style.overflow = "hidden")
-      : (body.style.overflow = "auto");
-  }, [popMenuOpen]);
+    if (popMenuOpen) {
+      // console.log("scrollup set");
+      body.style.overflow = "hidden";
+      //Then sets scrollUp to true to make the user bar show itself.
+      setTimeout(() => {
+        scrollup(true);
+      }, 100);
+    } else {
+      body.style.overflow = "auto";
+    }
+  }, [body.style, popMenuOpen, scrollup]);
 
   // Will be moved in custom hook
   const openElement = (element) => {

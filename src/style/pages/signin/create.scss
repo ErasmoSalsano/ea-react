@@ -206,6 +206,14 @@
       }
     }
 
+    .create-error {
+      background-color: var(--color-gradient-orange);
+      color: var(--color-white);
+      border-radius: 0.4rem;
+      padding: 0.2rem 0.5rem;
+      border: 2px solid var(--color-white);
+    }
+
     button {
       font-family: var(--font-family-text-bold);
       color: var(--color-gray-border-hover);

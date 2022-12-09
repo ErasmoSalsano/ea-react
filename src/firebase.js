@@ -21,8 +21,6 @@ const app = initializeApp({
   databaseURL: config.databaseURL,
 });
 
-console.log("ea-react-10d51.appspot.com");
-
 export const db = getDatabase(app);
 
 export const auth = initializeAuth(app, {
