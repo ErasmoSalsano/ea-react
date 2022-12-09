@@ -82,29 +82,19 @@ export const PopupNavbar = ({ Data }) => {
                         <div className="content">
                           <ul className="end-ul">
                             <li>
-                              <a href="/pages/games/lastgames.html">
-                                Ultimi giochi
-                              </a>
+                              <a href="/mainteinance">Ultimi giochi</a>
                             </li>
                             <li>
-                              <a href="/pages/manteinance/mantenaince.html">
-                                Prossimamente
-                              </a>
+                              <a href="/mainteinance">Prossimamente</a>
                             </li>
                             <li>
-                              <a href="/pages/games/EA-SPORTS.html">
-                                EA SPORTS
-                              </a>
+                              <a href="/EaSports">EA SPORTS</a>
                             </li>
                             <li>
-                              <a href="/pages/games/freegames.html">
-                                Giochi gratuiti
-                              </a>
+                              <a href="/mainteinance">Giochi gratuiti</a>
                             </li>
                             <li>
-                              <a href="/pages/manteinance/mantenaince.html">
-                                Libreria dei giochi
-                              </a>
+                              <a href="/mainteinance">Libreria dei giochi</a>
                             </li>
                           </ul>
                         </div>
@@ -126,23 +116,19 @@ export const PopupNavbar = ({ Data }) => {
                         <div className="content">
                           <ul className="end-ul">
                             <li>
-                              <a href="/pages/games/pc.html">PC</a>
+                              <a href="/pc">PC</a>
                             </li>
                             <li>
-                              <a href="/pages/games/ps5.html">PlayStation®5</a>
+                              <a href="/mainteinance">PlayStation®5</a>
                             </li>
                             <li>
-                              <a href="/pages/games/xbox.html">Xbox Series X</a>
+                              <a href="/mainteinance">Xbox Series X</a>
                             </li>
                             <li>
-                              <a href="/pages/manteinance/mantenaince.html">
-                                Nintendo Switch™
-                              </a>
+                              <a href="/mainteinance">Nintendo Switch™</a>
                             </li>
                             <li>
-                              <a href="/pages/manteinance/mantenaince.html">
-                                Cellulari
-                              </a>
+                              <a href="/mainteinance">Cellulari</a>
                             </li>
                           </ul>
                         </div>
@@ -167,16 +153,16 @@ export const PopupNavbar = ({ Data }) => {
                 </summary>
                 <div className="content">
                   <ul className="inner-ul">
-                    <a href="/pages/manteinance/mantenaince.html">
+                    <a href="/mainteinance">
                       <li>EA Play</li>
                     </a>
-                    <a href="/pages/manteinance/mantenaince.html">
+                    <a href="/mainteinance">
                       <li>Origin</li>
                     </a>
-                    <a href="/pages/manteinance/mantenaince.html">
+                    <a href="/mainteinance">
                       <li>Competizioni videoludiche</li>
                     </a>
-                    <a href="/pages/manteinance/mantenaince.html">
+                    <a href="/mainteinance">
                       <li>Diretta di EA Play</li>
                     </a>
                   </ul>
@@ -198,25 +184,25 @@ export const PopupNavbar = ({ Data }) => {
                 </summary>
                 <div className="content">
                   <ul className="inner-ul">
-                    <a href="/pages/informazioni/about.html">
+                    <a href="/mainteinance">
                       <li>Società</li>
                     </a>
-                    <a href="/pages/manteinance/mantenaince.html">
+                    <a href="/mainteinance">
                       <li>EA Studi</li>
                     </a>
-                    <a href="/pages/manteinance/mantenaince.html">
+                    <a href="/mainteinance">
                       <li>Lavora con noi</li>
                     </a>
-                    <a href="/pages/manteinance/mantenaince.html">
+                    <a href="/mainteinance">
                       <li>La nostra tecnologia</li>
                     </a>
-                    <a href="/pages/manteinance/mantenaince.html">
+                    <a href="/mainteinance">
                       <li>EA partners</li>
                     </a>
-                    <a href="/pages/informazioni/news.html">
+                    <a href="/informazioni/notizie">
                       <li>Notizie</li>
                     </a>
-                    <a href="/pages/informazioni/insideEA.html">
+                    <a href="/informazioni/inside-ea">
                       <li>Inside EA</li>
                     </a>
                   </ul>
@@ -238,19 +224,19 @@ export const PopupNavbar = ({ Data }) => {
                 </summary>
                 <div className="content">
                   <ul className="inner-ul">
-                    <a href="/pages/commitments/positive-play.html">
+                    <a href="/mainteinance">
                       <li>Gioco positivo</li>
                     </a>
-                    <a href="/pages/manteinance/mantenaince.html">
+                    <a href="/mainteinance">
                       <li>Diversità e inclusione</li>
                     </a>
-                    <a href="/pages/manteinance/mantenaince.html">
+                    <a href="/mainteinance">
                       <li>Investire nella comunità</li>
                     </a>
-                    <a href="/pages/manteinance/mantenaince.html">
+                    <a href="/mainteinance">
                       <li>Persone e cultura</li>
                     </a>
-                    <a href="/pages/manteinance/mantenaince.html">
+                    <a href="/mainteinance">
                       <li>Ambiente</li>
                     </a>
                   </ul>
@@ -272,25 +258,25 @@ export const PopupNavbar = ({ Data }) => {
                 </summary>
                 <div className="content">
                   <ul className="inner-ul">
-                    <a href="/pages/manteinance/mantenaince.html">
+                    <a href="/mainteinance">
                       <li>Aiuto</li>
                     </a>
-                    <a href="/pages/manteinance/mantenaince.html">
+                    <a href="/mainteinance">
                       <li>Forum</li>
                     </a>
-                    <a href="/pages/manteinance/mantenaince.html">
+                    <a href="/mainteinance">
                       <li>Filtro famiglia</li>
                     </a>
-                    <a href="/pages/manteinance/mantenaince.html">
+                    <a href="/mainteinance">
                       <li>Accessibilità</li>
                     </a>
-                    <a href="/pages/manteinance/mantenaince.html">
+                    <a href="/mainteinance">
                       <li>Stampa</li>
                     </a>
-                    <a href="/pages/manteinance/mantenaince.html">
+                    <a href="/mainteinance">
                       <li>Investitori</li>
                     </a>
-                    <a href="/pages/manteinance/mantenaince.html">
+                    <a href="/mainteinance">
                       <li>Test di gioco</li>
                     </a>
                   </ul>

@@ -19,6 +19,7 @@ export const useManageAccount = () => {
   */
   const [userData, setUserData] = useState({
     mail: "",
+    userName: "",
     bDate: { day: null, month: null, year: null },
     password: "",
     rePassword: "",
@@ -33,6 +34,8 @@ export const useManageAccount = () => {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const [loggedUser, setLoggedUser] = useState(null);
+
+  const [isValidForm, setIsValidForm] = useState(false);
 
   const months = [
     "Gennaio",
@@ -69,10 +72,15 @@ export const useManageAccount = () => {
   // Database connection
   const db = getDatabase();
 
-  function writeUserData(userId, email, date) {
+  useEffect(() => {
+    currentUser && setLoggedUser(onGetUser());
+  }, [currentUser]);
+
+  function writeUserData(userId, email, date, userName) {
     set(ref(db, "users/" + userId), {
       email: email,
       date: { ...date },
+      userName: userName,
     });
   }
 
@@ -80,7 +88,6 @@ export const useManageAccount = () => {
   useEffect(() => {
     if (checkLeapYear(userData.bDate.year) !== isLeap) {
       setIsLeap(checkLeapYear(userData.bDate.year));
-      console.log(checkLeapYear(userData.bDate.year), "dentro", isLeap);
       setMonthsLength([
         31,
         isLeap ? 28 : 29,
@@ -137,6 +144,9 @@ export const useManageAccount = () => {
       case "mail":
         setUserData({ ...userData, mail: value.toLowerCase() });
         break;
+      case "userName":
+        setUserData({ ...userData, userName: value });
+        break;
       case "password":
         setUserData({ ...userData, password: value });
         break;
@@ -190,11 +200,19 @@ export const useManageAccount = () => {
     setLoginData((data) => {
       return { ...data, [name]: name === "remember" ? checked : value };
     });
+    const check =
+      "[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?";
+    const isValidMail =
+      name === "mail" ? value.match(check) : loginData.mail.match(check);
+    const isValidPassword =
+      name === "password" ? value.length > 0 : loginData.password.length > 0;
+    setIsValidForm(isValidMail && isValidPassword);
+    setError("");
   };
 
   const onSubmit = async () => {
     if (userData.password !== userData.rePassword) {
-      return setError("Password do not match");
+      return setError("Le password non corrispondono");
     }
 
     try {
@@ -204,15 +222,19 @@ export const useManageAccount = () => {
       const authUser = (await signup(userData.mail, userData.password)).user;
       const dbRef = ref(getDatabase());
       const snapshot = await get(child(dbRef, `users/${authUser.uid}`));
-      if (snapshot.exists()) {
-        console.log("Already in the database");
-      } else {
-        writeUserData(authUser.uid, authUser.email, userData.bDate);
+      if (!snapshot.exists()) {
+        writeUserData(
+          authUser.uid,
+          authUser.email,
+          userData.bDate,
+          userData.userName
+        );
         navigate("/");
       }
     } catch (e) {
-      console.error(e);
-      setError("Failed to create an account");
+      e.message === "Firebase: Error (auth/email-already-in-use)."
+        ? setError(`E-mail già utilizzata`)
+        : setError(`Creazione account fallita`);
     }
     setLoading(false);
   };
@@ -224,17 +246,14 @@ export const useManageAccount = () => {
 
       await login(mail, password);
 
-      navigate("/");
+      currentUser && navigate("/");
+      setError("E-mail o password errata");
     } catch (e) {
-      console.log(e);
-      setError("Failed to create an account");
+      // console.log(e);
+      setError("E-mail o password errata");
     }
     setLoading(false);
   };
-
-  useEffect(() => {
-    currentUser && setLoggedUser(onGetUser());
-  }, [currentUser]);
 
   const onGetUser = async () => {
     try {
@@ -242,9 +261,10 @@ export const useManageAccount = () => {
       const snapshot = await get(child(dbRef, `users/${currentUser?.uid}`));
       if (snapshot.exists()) {
         const result = snapshot.val();
+        // console.log(result);
         setLoggedUser(result);
       } else {
-        console.log("No data available");
+        throw new Error("Specified id is not in the database");
       }
     } catch (error) {
       console.error(error);
@@ -273,5 +293,6 @@ export const useManageAccount = () => {
     onGetUser: onGetUser,
     onLogout: onLogout,
     loggedUser: loggedUser,
+    isValidForm: isValidForm,
   };
 };

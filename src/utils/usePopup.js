@@ -12,6 +12,7 @@ export const usePopup = (scrollup) => {
   const body = document.querySelector("body");
   useEffect(() => {
     if (popMenuOpen) {
+      // console.log("scrollup set");
       body.style.overflow = "hidden";
       //Then sets scrollUp to true to make the user bar show itself.
       setTimeout(() => {
@@ -20,7 +21,7 @@ export const usePopup = (scrollup) => {
     } else {
       body.style.overflow = "auto";
     }
-  }, [popMenuOpen]);
+  }, [body.style, popMenuOpen, scrollup]);
 
   // Will be moved in custom hook
   const openElement = (element) => {

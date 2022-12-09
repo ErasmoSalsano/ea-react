@@ -14,7 +14,7 @@ export function Profile() {
 
   useEffect(() => {
     !currentUser && navigate("/");
-  }, [currentUser]);
+  }, [currentUser, navigate]);
 
   return (
     user && (
@@ -40,7 +40,7 @@ export function Profile() {
                 <div className="data-container">
                   <div className={"labels"}>
                     <label>Name</label>
-                    <p>{"User Name"}</p>
+                    <p>{user.userName}</p>
                   </div>
                   <div className={"labels"}>
                     <label>Birthday</label>

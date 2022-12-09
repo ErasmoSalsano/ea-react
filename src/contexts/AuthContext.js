@@ -30,8 +30,8 @@ export function AuthProvider({ children }) {
         password
       );
       // Signed in
-      const user = userCredential.user;
-      console.log(user);
+      // const user = userCredential.user;
+      console.log("Logged in");
     } catch (error) {
       const errorCode = error.code;
       const errorMessage = error.message;

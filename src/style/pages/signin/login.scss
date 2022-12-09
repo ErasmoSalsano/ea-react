@@ -198,16 +198,58 @@
         border-color: var(--color-white);
         box-shadow: 0 0 0.3rem 0.3rem rgba(var(--color-rgb-white), 0.08);
       }
-
-      &:active {
-      }
     }
 
-    button {
+    /* button {
       margin: 2rem 0;
       background-color: var(--color-account-button-blue);
       border: 0;
+    } */
+
+    button {
+      font-family: var(--font-family-text-bold);
+      color: var(--color-gray-border-hover);
+      background-color: var(--color-create-button-gray);
+      margin: 1rem 0;
+      border: 0;
+      font-size: 1rem;
+      letter-spacing: 0.15rem;
+      transition-duration: 0.15s;
+
+      &:hover {
+        scale: 0.96;
+        box-shadow: 0 0 1.875rem rgba(39, 106, 252, 0.2);
+      }
     }
+
+    &:not(:valid) button {
+      color: var(--color-gray-border-hover);
+
+      &:hover {
+        cursor: not-allowed;
+        scale: 1;
+        box-shadow: none;
+      }
+    }
+
+    &:valid button {
+      background-color: var(--color-account-button-blue);
+      color: var(--color-white);
+
+      &:hover {
+        scale: 0.96;
+        box-shadow: 0 0 1.875rem rgba(39, 106, 252, 0.2);
+      }
+    }
+  }
+
+  .login-error {
+    margin-top: 1.5rem;
+    background-color: var(--color-gradient-orange);
+    color: var(--color-white);
+    border-radius: 0.4rem;
+    padding: 0.2rem 0.5rem;
+    border: 2px solid var(--color-white);
   }
 
   button,

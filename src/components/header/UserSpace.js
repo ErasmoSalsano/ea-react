@@ -9,7 +9,7 @@ export const UserSpace = () => {
 
   const value = useAuth();
 
-  const { onLogout, onGetUser } = useManageAccount();
+  const { onLogout } = useManageAccount();
 
   return (
     <div className="user-space" onClick={(e) => e.stopPropagation()}>
