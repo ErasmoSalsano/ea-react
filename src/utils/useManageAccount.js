@@ -69,6 +69,7 @@ export const useManageAccount = () => {
     password: "",
     remember: false,
   });
+
   // Database connection
   const db = getDatabase();
 
@@ -178,9 +179,9 @@ export const useManageAccount = () => {
         break;
       case "years":
         for (
-          let i = new Date().getFullYear() - length;
-          i <= new Date().getFullYear() - 10;
-          i++
+          let i = new Date().getFullYear() - 10;
+          i >= new Date().getFullYear() - length;
+          i--
         ) {
           result.push(
             <option key={i} value={i}>
@@ -244,13 +245,13 @@ export const useManageAccount = () => {
       setError("");
       setLoading(true);
 
-      await login(mail, password);
+      const res = await login(mail, password);
 
-      currentUser && navigate("/");
-      setError("E-mail o password errata");
+      if (res) navigate("/");
+      else throw new Error("E-mail o password errata");
     } catch (e) {
       // console.log(e);
-      setError("E-mail o password errata");
+      setError(e.message);
     }
     setLoading(false);
   };

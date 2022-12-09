@@ -32,10 +32,12 @@ export function AuthProvider({ children }) {
       // Signed in
       // const user = userCredential.user;
       console.log("Logged in");
+      return true;
     } catch (error) {
       const errorCode = error.code;
       const errorMessage = error.message;
       console.error(errorCode, errorMessage);
+      return false;
     }
   }
 
