@@ -1,8 +1,9 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { LoginIcon } from "../components/login-create/LoginIcon";
 import "../style/pages/signin/create.scss";
 import { useManageAccount } from "../utils/useManageAccount";
+import { avatars } from "../data/avatars";
 
 export const Create = () => {
   const {
@@ -21,6 +22,18 @@ export const Create = () => {
   useEffect(() => {
     document.body.style.overflow = "auto";
   }, []);
+
+  const [selectedAvatar, setSelectedAvatar] = useState(
+    avatars.find((a) => a.id === "DE")
+  );
+  const onAvatarClick = (avatar) => {
+    // console.log("Avatar clicked");
+    setSelectedAvatar(avatar);
+  };
+
+  useEffect(() => {
+    onInputChange(null, selectedAvatar);
+  }, [selectedAvatar]);
 
   return (
     <div className="create">
@@ -159,6 +172,31 @@ export const Create = () => {
             onChange={onInputChange}
             required
           />
+
+          <label htmlFor="avatar">AVATAR</label>
+          <div className="avatar-selection">
+            <img
+              name="avatar"
+              id="avatar"
+              value={selectedAvatar}
+              key={0}
+              src={selectedAvatar.value}
+              alt="avatar"
+            />
+            <p>Seleziona il tuo preferito</p>
+            <div className="avatar-list">
+              {avatars.map((avatar) => (
+                <img
+                  className="avatar-item"
+                  key={avatar.id}
+                  value={avatar}
+                  src={avatar.value}
+                  alt="avatar"
+                  onClick={() => onAvatarClick(avatar)}
+                />
+              ))}
+            </div>
+          </div>
 
           <label htmlFor="password">PASSWORD</label>
           <input
