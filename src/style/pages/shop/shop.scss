@@ -1,0 +1,260 @@
+@use '../../layouts';
+@use '../../basic-layout';
+@use '../../colors';
+@use '../../tipography';
+@use '../../header';
+@use '../../footer';
+@use '../../hero';
+
+.Shop{
+    background: black;
+    color: white;
+    font-family: var(--font-family-display-regular);
+    .game-name{
+        justify-content: flex-start;
+        margin: 50px 0 10px 0;
+        width: 90%;
+    }
+    .select-section{
+        justify-content: flex-start;
+        position: relative;
+        width: 90%;
+        gap: 15px;
+        .sections{
+            width: 100%;
+            border: 1px solid rgb(80, 80, 80, 80%);
+            background-color: rgb(80, 80, 80, 50%);
+            padding: 10px;
+            margin: 10px 0;
+            white-space: nowrap;
+            text-align: center;
+            cursor: pointer;
+            &:hover{
+                border: 1px solid white;
+                background-color: rgb(80, 80, 80, 70%);
+            }
+        }
+    }
+    .principal-section{
+        width: 90%;
+        display: flex;
+        flex-direction: column-reverse;
+        .purchase{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 100%;
+            padding: 15px;
+            .header{
+                padding: 15px 0;
+                border-bottom: 2px solid rgb(80, 80, 80, 70%);
+            }
+            .purchase_cta{
+                display: flex;
+                justify-content: space-between;
+                padding: 20px;
+                border: 1px solid rgb(80, 80, 80, 80%);
+                background-color: rgb(80, 80, 80, 50%);
+                .purchase_cta-types{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    gap: 45px;
+                    white-space: nowrap;
+                }
+                .purchase_cta-types2{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+                    gap: 10px;
+                    white-space: nowrap;
+                }
+                
+                &:hover{
+                    cursor: pointer;
+                    border: 1px solid white;
+                    background-color: rgb(80, 80, 80, 70%);
+                }
+            }
+            .container{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                gap: 20px;
+                .container_message{
+                    display: flex;
+                    flex-direction: column;
+                    padding: 15px 0;
+                    border-bottom: 2px solid rgb(80, 80, 80, 70%);
+                    .container_message-one{
+                        position: relative;
+                        top: -6px;
+                    }
+                    .container_message-two{
+                        position: relative;
+                        margin: auto;
+                        top: -10px;
+                    }
+                    .container_message-three{
+                        text-align: center;
+                        position: relative;
+                        margin: auto;
+                        top: -10px;
+                    }
+                    p{
+                        margin-bottom: 8px;
+                    }
+                }
+            }
+        }
+        .gameInfo{
+            .header,
+            .container_message{
+                display: none;
+            }
+            .gameInfo_principal{
+                margin: 25px 0;
+                width: 100%;
+                // height: 250px;
+                img{
+                    border: 1px solid white;
+                    width: -webkit-fill-available;
+                    height: -webkit-fill-available;
+                }
+            }
+            .gameInfo_carousel{
+                display: flex;
+                justify-content: space-between;
+            }
+            .thumbs{
+                display: flex;
+                justify-content: flex-start;
+                width: 100%;
+                overflow-y: hidden;
+                overflow-x: auto;
+                gap: 20px;
+                cursor: pointer;
+                padding: 15px 0;
+                .thumb{
+                    @extend %shadow-start;
+                    position: relative;
+                    height: 140px;
+                    min-width: 240px;
+                    border: 1px solid white;
+                    &:hover{
+                        @extend %shadow-hover;
+                        z-index: 1;
+                    }
+                }
+            }
+        }
+    }
+    .second-section{
+        display: none;
+        .thumbs{
+            .thumb{
+                @extend %shadow-start;
+                &:hover{
+                    @extend %shadow-hover;
+                }
+            }
+        }
+    }
+    @media screen and (min-width:769px){
+        .principal-section{
+            flex-direction: row;
+            .gameInfo{
+                width: 100%;
+
+                .header,
+                .container_message{
+                    padding: 15px 0;
+                    border-bottom: 2px solid rgb(80, 80, 80, 70%);    
+                    display: flex;
+                    flex-direction: column;
+                }
+                .gameInfo_principal{
+                    width: calc(400px + 20%);
+                    img{
+                        height: 280px;
+                    }
+                }
+                .gameInfo_carousel,
+                .thumbs{
+                    display: none;
+                }
+            }
+            .purchase{
+                justify-content: space-around;
+                .header{
+                    visibility: hidden;
+                }
+                .container{
+                    .container_message{
+                        display: none;
+                    }
+                }
+            }
+        }
+        .second-section{
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            .gameInfo_carousel{
+                padding: 10px 0;
+                display: flex;
+                justify-content: space-between;
+            }
+            .thumbs{
+                display: flex;
+                justify-content: flex-start;
+                width: 100%;
+                overflow-y: hidden;
+                overflow-x: hidden;
+                scroll-behavior: smooth;
+                gap: 20px;
+                cursor: pointer;
+                padding: 15px 0;
+                .thumb{
+                    position: relative;
+                    height: 140px;
+                    min-width: 240px;
+                    border: 1px solid white;
+                    &:hover{
+                        z-index: 1;
+                    }
+                }
+            }
+            .container{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                gap: 20px;
+                .container_message{
+                    display: flex;
+                    flex-direction: column;
+                    padding: 15px 0;
+                    border-bottom: 2px solid rgb(80, 80, 80, 70%);
+                    .container_message-one{
+                        position: relative;
+                        top: -6px;
+                    }
+                    .container_message-two{
+                        position: relative;
+                        margin: auto;
+                        top: -10px;
+                    }
+                    .container_message-three{
+                        text-align: center;
+                        position: relative;
+                        margin: auto;
+                        top: -10px;
+                    }
+                    p{
+                        margin-bottom: 8px;
+                    }
+                }
+            }
+        }
+    }
+}
