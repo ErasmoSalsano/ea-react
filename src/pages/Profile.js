@@ -24,17 +24,23 @@ export function Profile() {
           <MainWrap>
             <MainContentWrap p extendClass="fc">
               <Title className="title">
-                <h1>Welcome {user.email}</h1>
+                <h1>Welcome {user.userName}</h1>
               </Title>
             </MainContentWrap>
           </MainWrap>
           <MainWrap>
             <MainContentWrap p>
               <div className="user-profile">
-                <div className={"img"}>
+                {/* <div className={"img"}>
                   <img
                     src={user.image ? user.image : "./assets/images/avatar.png"}
                     alt="user-profile-img"
+                  />
+                </div> */}
+                <div className="user-image">
+                  <img
+                    src={loggedUser?.avatar?.value}
+                    alt={"user-profile-img"}
                   />
                 </div>
                 <div className="data-container">

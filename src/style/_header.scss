@@ -4,7 +4,7 @@
   z-index: 10;
   position: sticky;
   top: 0;
-  transition-duration: .4s;
+  transition-duration: 0.4s;
 }
 
 .user-close {
@@ -14,7 +14,6 @@
 /* ==== UTILS ==== */
 
 @keyframes open-user {
-
   /* animazione apertura user board */
   /* 0%{height: 0;
     padding: 0;}
@@ -29,7 +28,6 @@
 }
 
 @keyframes close-user {
-
   /* animazione apertura user board */
   /* 0%{height: 0;
     padding: 0;}
@@ -44,7 +42,6 @@
 }
 
 @keyframes open-user-content {
-
   /* animazione apertura account/help */
   /* 0%{height: 0;
     padding: 0;}
@@ -55,7 +52,7 @@
   }
 
   50% {
-    opacity: .1;
+    opacity: 0.1;
   }
 
   100% {
@@ -65,7 +62,6 @@
 }
 
 @keyframes close-user-content {
-
   /* animazione chiusura account/help */
   /* 0%{height: 0;
     padding: 0;}
@@ -76,7 +72,7 @@
   }
 
   50% {
-    opacity: .9;
+    opacity: 0.9;
   }
 
   100% {
@@ -86,7 +82,6 @@
 }
 
 @keyframes slide-in-left {
-
   /* animazione apertura nav e giochi */
   0% {
     transform: translateX(-100%);
@@ -98,7 +93,6 @@
 }
 
 @keyframes slide-out-left {
-
   /* animazione apertura nav e giochi */
   0% {
     transform: translateX(0);
@@ -125,7 +119,7 @@
     position: relative;
     z-index: 2;
 
-    &> :nth-child(-n+3) {
+    & > :nth-child(-n + 3) {
       /* Dimensiona e distanzia i bottoni */
       height: 2.5rem;
       width: 2.5rem;
@@ -153,23 +147,23 @@
             justify-content: center;
             margin-left: 1.25rem;
     } */
-
-
-
-
 }
 
 .user-account-icon,
 .user-help-icon {
-
   pointer-events: all;
+
+  .user-space-avatar {
+    pointer-events: none;
+    height: 2rem;
+    border-radius: 0.3rem;
+  }
 
   svg {
     height: 1.125rem;
     width: 1.125rem;
     fill: #b1b1b1;
     pointer-events: none;
-
   }
 
   &:hover {
@@ -177,7 +171,6 @@
       fill: #f3f3f3;
     }
   }
-
 }
 
 .ea-logo {
@@ -196,7 +189,6 @@
 }
 
 /* Condizioni apertura user board (temporanee) */
-
 
 .user-board {
   font-family: var(--font-family-user-board);
@@ -223,14 +215,13 @@
   transform: translateY(-100%);
 
   &[closed] {
-    animation: close-user .3s ease-in-out;
+    animation: close-user 0.3s ease-in-out;
   }
 
   &[open] {
-    animation: open-user .3s ease-in-out;
+    animation: open-user 0.3s ease-in-out;
     animation-fill-mode: forwards;
   }
-
 
   .boardAnchor {
     color: #ff1e3c;
@@ -249,12 +240,12 @@
 
     display: flex;
     align-items: center;
-    gap: .5rem;
+    gap: 0.5rem;
 
-    transition-duration: .2s;
+    transition-duration: 0.2s;
 
     &:hover {
-      transform: translatey(-.25rem);
+      transform: translatey(-0.25rem);
     }
   }
 
@@ -276,16 +267,20 @@
     flex: 1;
 
     transform: translateY(-100%);
-    animation: close-user-content .3s ease-in-out;
+    animation: close-user-content 0.3s ease-in-out;
 
     &[open] {
-      animation: open-user-content .3s ease-in-out;
+      animation: open-user-content 0.3s ease-in-out;
       animation-fill-mode: forwards;
     }
   }
 
   .board-icon {
     height: 2.25rem;
+    &.avatar {
+      border-radius: 0.3rem;
+      scale: 1.05;
+    }
   }
 
   .board-content-wrap {
@@ -310,7 +305,7 @@
   }
 
   .board-footer {
-    font-size: .875rem;
+    font-size: 0.875rem;
     text-align: center;
   }
 }
@@ -321,8 +316,8 @@
   position: absolute;
   top: 2.5rem;
   right: 2rem;
-  height: .813rem;
-  width: .813rem;
+  height: 0.813rem;
+  width: 0.813rem;
   z-index: 1;
 
   svg {
@@ -367,7 +362,7 @@ header {
   justify-content: center;
   pointer-events: all;
   cursor: pointer;
-  margin-left: .2rem;
+  margin-left: 0.2rem;
 
   svg {
     pointer-events: none;
@@ -393,7 +388,7 @@ header {
   display: none;
   transform: rotate(90deg);
   width: 1.25rem;
-  transition-duration: .4s;
+  transition-duration: 0.4s;
 }
 
 .header-logo-esteso img {
@@ -403,14 +398,13 @@ header {
 /* navbar */
 
 .header-navbar-wrap {
-
   display: none;
 
   .header-nav {
     width: 36.219rem;
     position: relative;
 
-    &>ul {
+    & > ul {
       display: flex;
       flex-direction: row;
 
@@ -418,7 +412,6 @@ header {
     }
 
     .details-1 {
-
       margin-left: 1.5rem;
       white-space: nowrap;
 
@@ -431,12 +424,12 @@ header {
         font-size: var(--font-size-summary-navbar);
 
         .chevron {
-          height: .75rem;
-          margin-left: .313rem;
+          height: 0.75rem;
+          margin-left: 0.313rem;
           fill: currentColor;
 
           transform: scaleY(1);
-          transition: .5s;
+          transition: 0.5s;
         }
       }
 
@@ -461,20 +454,19 @@ header {
         font-family: var(--font-family-text-bold);
         text-transform: uppercase;
         border-bottom: 1px solid #ccc;
-        padding-bottom: .313rem;
+        padding-bottom: 0.313rem;
       }
 
       &[open] {
-
         padding-bottom: 1rem;
 
-        &>summary {
+        & > summary {
           color: var(--color-ea-orange);
         }
 
         .chevron {
           transform: scaleY(-1);
-          transition: .5s;
+          transition: 0.5s;
         }
       }
 
@@ -484,15 +476,14 @@ header {
       }
     }
 
-    &>ul>li:not(:first-of-type) {
-
+    & > ul > li:not(:first-of-type) {
       .content {
         padding-top: 0;
-        padding-bottom: .625rem;
+        padding-bottom: 0.625rem;
       }
 
       .inner-ul {
-        padding-top: .375rem;
+        padding-top: 0.375rem;
         margin-right: 3.438rem;
 
         li {
@@ -515,7 +506,7 @@ header {
   height: calc(100vh - 2.5rem);
   max-height: calc(100vh - 2.5rem);
   width: max(320px, 100%);
-  background-color: rgba(#202020, .8);
+  background-color: rgba(#202020, 0.8);
   /* Deve diventare un'animazione */
   position: absolute;
   top: 0;
@@ -532,6 +523,7 @@ header {
   position: absolute;
   top: 0;
   left: 0;
+  overflow: auto;
 
   // display: block;
   width: 320px;
@@ -540,18 +532,17 @@ header {
 
   z-index: 1;
 
-  
   // transform: translateX(-100%);
-  animation: slide-out-left .5s ease-in-out;
+  animation: slide-out-left 0.5s ease-in-out;
   animation-fill-mode: forwards;
-  
-  &.hidden{
+
+  &.hidden {
     display: none;
   }
-  
+
   &[open] {
     display: block;
-    animation: slide-in-left .5s ease-in-out;
+    animation: slide-in-left 0.5s ease-in-out;
     animation-fill-mode: forwards;
   }
 
@@ -572,7 +563,7 @@ header {
   }
 
   .chevron {
-    height: .96rem;
+    height: 0.96rem;
     width: 3.25rem;
     fill: currentColor;
   }
@@ -607,11 +598,11 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: .813rem 0 .75rem 0;
+    padding: 0.813rem 0 0.75rem 0;
     line-height: 1.649rem;
   }
 
-  &>ul>li:first-of-type .inner-ul>li {
+  & > ul > li:first-of-type .inner-ul > li {
     padding: 0;
 
     &:nth-child(1) .details-2 {
@@ -623,7 +614,7 @@ header {
     summary {
       .chevron {
         transform: scaleY(1);
-        transition: .5s;
+        transition: 0.5s;
       }
     }
 
@@ -632,20 +623,19 @@ header {
     &[open] {
       border-color: var(--color-ea-orange);
 
-      &>summary {
+      & > summary {
         color: var(--color-ea-orange);
         border-bottom: 1px solid currentColor;
       }
 
       .chevron {
         transform: scaleY(-1);
-        transition: .5s;
+        transition: 0.5s;
       }
     }
   }
 
   .details-2 {
-
     ul {
       font-family: var(--font-family-text-regular);
     }
@@ -655,13 +645,13 @@ header {
     }
 
     summary {
-      padding: .875rem 0 .813rem .875rem;
+      padding: 0.875rem 0 0.813rem 0.875rem;
     }
 
     .cross {
-      height: .77rem;
+      height: 0.77rem;
       transform: rotate(0deg);
-      transition: .5s;
+      transition: 0.5s;
     }
 
     &[open] {
@@ -670,7 +660,7 @@ header {
 
       summary svg.cross {
         transform: rotate(45deg);
-        transition: .5s;
+        transition: 0.5s;
       }
     }
 
@@ -679,7 +669,7 @@ header {
 
       a {
         display: inline-block;
-        padding: .438rem 0;
+        padding: 0.438rem 0;
       }
 
       &:last-of-type a {
@@ -694,13 +684,13 @@ header {
     }
   }
 
-  .inner-ul>li,
-  .inner-ul>a>li {
+  .inner-ul > li,
+  .inner-ul > a > li {
     color: var(--color-ea-logo-gray);
-    padding: .875rem 0 .813rem .875rem;
+    padding: 0.875rem 0 0.813rem 0.875rem;
   }
 
-  & li:nth-child(n + 2) .inner-ul>a:nth-last-of-type(n + 2)>li {
+  & li:nth-child(n + 2) .inner-ul > a:nth-last-of-type(n + 2) > li {
     border-bottom: 1px solid currentColor;
   }
 }
@@ -729,17 +719,16 @@ header {
   scrollbar-width: none;
   /* Firefox */
 
-
-  animation: slide-out-left .5s ease-in-out;
+  animation: slide-out-left 0.5s ease-in-out;
   animation-fill-mode: forwards;
 
-  &.hidden{
+  &.hidden {
     display: none;
   }
 
   &[open] {
     // display: block;
-    animation: slide-in-left .5s ease-in-out;
+    animation: slide-in-left 0.5s ease-in-out;
     animation-fill-mode: forwards;
   }
 
@@ -790,7 +779,7 @@ header {
 
     .logo {
       height: 20%;
-      transition-duration: .4s;
+      transition-duration: 0.4s;
     }
 
     &:hover {
@@ -804,7 +793,6 @@ header {
 /* ==== MEDIA QUERIES ==== */
 
 @media screen and (min-width: 321px) {
-
   .header-logo-esteso img {
     width: 6.25rem;
   }
@@ -849,7 +837,6 @@ header {
 }
 
 @media screen and (min-width: 1032px) {
-
   .header-navbar-wrap {
     display: block;
   }
@@ -874,13 +861,12 @@ header {
 }
 
 @media screen and (min-width: 1456px) {
-
   .header-navbar-wrap .header-nav {
     .details-1 {
       margin-left: 2.33rem;
     }
 
-    &>ul>li:first-of-type>.details-1 {
+    & > ul > li:first-of-type > .details-1 {
       margin-left: 1.97rem;
     }
   }

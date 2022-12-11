@@ -3,6 +3,7 @@ import { useAuth } from "../contexts/AuthContext";
 import { useNavigate } from "react-router-dom";
 // firebase database imports
 import { getDatabase, ref, set, child, get } from "firebase/database";
+import { avatars } from "../data/avatars";
 
 export const useManageAccount = () => {
   const baseIconUrl =
@@ -19,8 +20,9 @@ export const useManageAccount = () => {
   */
   const [userData, setUserData] = useState({
     mail: "",
-    userName: "",
     bDate: { day: null, month: null, year: null },
+    userName: "",
+    avatar: {},
     password: "",
     rePassword: "",
   });
@@ -74,14 +76,15 @@ export const useManageAccount = () => {
   const db = getDatabase();
 
   useEffect(() => {
-    currentUser && setLoggedUser(onGetUser());
+    currentUser ? setLoggedUser(onGetUser()) : setLoggedUser(null);
   }, [currentUser]);
 
-  function writeUserData(userId, email, date, userName) {
+  function writeUserData(userId, email, date, userName, avatar) {
     set(ref(db, "users/" + userId), {
       email: email,
       date: { ...date },
       userName: userName,
+      avatar: avatar,
     });
   }
 
@@ -126,35 +129,45 @@ export const useManageAccount = () => {
     );
   };
 
-  const onInputChange = (event) => {
-    const changed = event.currentTarget;
-    const value = event.currentTarget.value;
-    switch (changed.name) {
-      case "bDay":
-        setUserData({ ...userData, bDate: { ...userData.bDate, day: value } });
-        break;
-      case "bMonth":
-        setUserData({
-          ...userData,
-          bDate: { ...userData.bDate, month: value },
-        });
-        break;
-      case "bYear":
-        setUserData({ ...userData, bDate: { ...userData.bDate, year: value } });
-        break;
-      case "mail":
-        setUserData({ ...userData, mail: value.toLowerCase() });
-        break;
-      case "userName":
-        setUserData({ ...userData, userName: value });
-        break;
-      case "password":
-        setUserData({ ...userData, password: value });
-        break;
-      case "rePassword":
-        setUserData({ ...userData, rePassword: value });
-        break;
-      default:
+  const onInputChange = (event, avatar) => {
+    if (event) {
+      const changed = event.currentTarget;
+      const value = event.currentTarget.value;
+      switch (changed.name) {
+        case "bDay":
+          setUserData({
+            ...userData,
+            bDate: { ...userData.bDate, day: value },
+          });
+          break;
+        case "bMonth":
+          setUserData({
+            ...userData,
+            bDate: { ...userData.bDate, month: value },
+          });
+          break;
+        case "bYear":
+          setUserData({
+            ...userData,
+            bDate: { ...userData.bDate, year: value },
+          });
+          break;
+        case "mail":
+          setUserData({ ...userData, mail: value.toLowerCase() });
+          break;
+        case "userName":
+          setUserData({ ...userData, userName: value });
+          break;
+        case "password":
+          setUserData({ ...userData, password: value });
+          break;
+        case "rePassword":
+          setUserData({ ...userData, rePassword: value });
+          break;
+        default:
+      }
+    } else if (avatar) {
+      setUserData({ ...userData, avatar: avatar });
     }
   };
 
@@ -228,7 +241,8 @@ export const useManageAccount = () => {
           authUser.uid,
           authUser.email,
           userData.bDate,
-          userData.userName
+          userData.userName,
+          userData.avatar
         );
         navigate("/");
       }
