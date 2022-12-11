@@ -10,6 +10,7 @@ import { Login } from "./pages/Login";
 import { Create } from "./pages/Create";
 import { AuthProvider } from "./contexts/AuthContext";
 import { Profile } from "./pages/Profile";
+import { Shop } from "./pages/Shop";
 
 export function App() {
   return (
@@ -22,10 +23,10 @@ export function App() {
             <Route path="/informazioni/inside-ea" element={<InsideEa />} />
             <Route path="/EaSports" element={<EaSports />} />
             <Route path="/profile" element={<Profile />} />
+            <Route path='/shop/:id' element={<Shop/>}/>
           </Route>
           <Route path="/login" element={<Login />} />
           <Route path="/create" element={<Create />} />
-          {/* <Route path='/shop' element={<Shop/>}/> */}
           <Route path="*" element={<Manteinance />} />
         </Routes>
       </AuthProvider>
