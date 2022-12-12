@@ -5,15 +5,17 @@ import { articleCards } from "../../data/DataArticle";
 import { ButtonNavTab } from "../Buttons/ButtonNavTab";
 import { MainWrap } from "../0_wraps/mainWrap";
 import { MainContentWrap } from "../0_wraps/mainContentWrap";
+import { GamesGrid } from "../GamesGrid";
 
-export function NavTab({gestion, buttonType, value}) {
+export function NavTab({ gestion, value, type }) {
     const [active, setActive] = useState({
         id: TabButtons[gestion][0].id,
         nome: TabButtons[gestion][0].name,
         reqCategory: TabButtons[gestion][0].reqCategory,
+        buttonType: TabButtons[gestion][0].buttonType
     })
-    
-    const showArgument = useCallback(function showArgument(item){
+
+    const showArgument = useCallback(function showArgument(item) {
         return () => active === item.id ? setActive(null) : setActive(item)
     }, [active])
 
@@ -30,34 +32,40 @@ export function NavTab({gestion, buttonType, value}) {
                     {/* <button className="left-btn buttons" id="left-Btn" ><i className="material-icons">arrow_back_ios</i></button> */}
                     <div className="navTabArticles">
 
-                        
+
                         {TabButtons[gestion].map((item, index) =>
                             <div key={index} style={display}>
-                                <ButtonNavTab 
-                                onClick={showArgument(item)}
-                                className={active.id === index +1 
-                                    ? 'linkTab active' 
-                                    : 'linkTab'}
-                                divClassName={'content'}
-                                buttonName={item.name}
-                                effectClass={'animation'}
+                                <ButtonNavTab
+                                    onClick={showArgument(item)}
+                                    className={active.id === index + 1
+                                        ? 'linkTab active'
+                                        : 'linkTab'}
+                                    divClassName={'content'}
+                                    buttonName={item.name}
+                                    effectClass={'animation'}
                                 />
                             </div>
                         )}
-                        
+
                     </div>
                     {/* <button className="right-btn buttons" id="right-Btn"><i className="material-icons">arrow_forward_ios</i></button> */}
                 </MainContentWrap>
             </MainWrap>
-            {active && 
-            <ArticlesGrid 
-                key={active.id +1} 
-                amount={6} 
-                request={active.reqCategory} 
-                argument={articleCards} 
-                button={buttonType} 
-                classA={value}
-                />
+            {active && type === 'ArticleGrid'
+                ? <ArticlesGrid
+                    key={active.id + 1}
+                    amount={6}
+                    request={active.reqCategory}
+                    argument={articleCards}
+                    button={active.buttonType}
+                    classA={value}/>
+                : <GamesGrid
+                    // key={active.id + 1}
+                    // amount={9}
+                    // request={active.reqCategory}
+                    // argument={articleCards}
+                    // button={active.buttonType}
+                    />
             }
         </>
     )

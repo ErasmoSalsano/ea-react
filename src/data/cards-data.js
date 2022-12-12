@@ -187,7 +187,7 @@ export const game = [
     id: 9,
     title: 'Unravel',
     franchise: 'Unravel',
-    categories: ['Azione', ''],
+    categories: ['Avventura', ''],
     platforms: {
         pc: true,
         ps5: true,
@@ -484,9 +484,9 @@ export const game = [
   },
   {
     id: 22,
-    title: '',
-    franchise: '',
-    categories: ['', ''],
+    title: 'Star Wars Battlefront Bespin',
+    franchise: 'Star Wars',
+    categories: ['Azione', ''],
     platforms: {
         pc: true,
         ps5: true,
@@ -507,9 +507,9 @@ export const game = [
   },
   {
     id: 23,
-    title: '',
-    franchise: '',
-    categories: ['', ''],
+    title: 'Star Wars Battlefront Death Star',
+    franchise: 'Star Wars',
+    categories: ['Azione', ''],
     platforms: {
         pc: true,
         ps5: true,
@@ -530,9 +530,9 @@ export const game = [
   },
   {
     id: 24,
-    title: '',
-    franchise: '',
-    categories: ['', ''],
+    title: 'Star Wars Galaxy of Heroes',
+    franchise: 'Star Wars',
+    categories: ['Azione', ''],
     platforms: {
         pc: true,
         ps5: true,
@@ -553,9 +553,9 @@ export const game = [
   },
   {
     id: 25,
-    title: '',
-    franchise: '',
-    categories: ['', ''],
+    title: 'The Simpsons Tapped Out',
+    franchise: 'The Simpsons',
+    categories: ['Avventura', ''],
     platforms: {
         pc: true,
         ps5: true,
@@ -576,9 +576,9 @@ export const game = [
   },
   {
     id: 26,
-    title: '',
-    franchise: '',
-    categories: ['', ''],
+    title: 'Unravel',
+    franchise: 'Unravel',
+    categories: ['Avventura', ''],
     platforms: {
         pc: true,
         ps5: true,

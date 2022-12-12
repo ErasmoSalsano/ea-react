@@ -5,6 +5,7 @@ import { PcGamesGrid } from "../components/PcGamesPage/PcGamesGrid";
 import { PcGamesPogo } from "../components/PcGamesPage/PcGamesPogo";
 import { PcGamesEaPlay } from "../components/PcGamesPage/PcGamesEaPlay";
 import { PcGamesFilter } from "../components/PcGamesPage/PcGamesFilter";
+import { FilterGames } from "../components/PcGamesPage/FilterGames";
 
 export function PcGames() {
   return (
@@ -137,9 +138,7 @@ export function PcGames() {
             <h3>Ultimi Giochi</h3>
           </div>
 
-          <PcGamesFilter />
-
-          <PcGamesGrid />
+          <FilterGames />
         </div>
       </div>
 
