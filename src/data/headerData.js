@@ -68,7 +68,7 @@ export const NavList = [
             data: [
               {
                 text: "PC",
-                href: "/pc",
+                href: "/pcGames",
               },
               {
                 text: "PlayStation®5",
