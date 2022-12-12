@@ -2,7 +2,6 @@ import React, { useState, useMemo } from "react";
 import { game } from "../../data/cards-data.js";
 import { Pagination } from "./Pagination";
 import { useMediaPredicate } from "react-media-hook";
-import "./pagination.scss";
 
 let PageSize = 9;
 

@@ -1,33 +1,34 @@
-import { useState, useEffect} from 'react'
+import { useState, useEffect } from "react";
 
 // Custom hook for Header component
 
 export const useHeader = () => {
-  
-  const [lastScroll, setLastScroll] = useState(0)
-  const [scrollUp, setScrollUp] = useState(true)
+  const [lastScroll, setLastScroll] = useState(0);
+  const [scrollUp, setScrollUp] = useState(true);
 
   // Needed to fix the scroll on page mount
   useEffect(() => {
     setTimeout(() => {
-      setScrollUp(true)
+      setScrollUp(true);
     }, 100);
-  }, [])
+  }, []);
 
   //Scroll check for user board
-  useEffect(
-    () => {
-      const handleScroll = () => {
-        const prev = lastScroll;
-        const newVal = window.scrollY;
-        setScrollUp(prev > newVal);
-        setLastScroll(newVal)
-      }
-      window.addEventListener('scroll', handleScroll);
-      return ()=>{window.removeEventListener('scroll', handleScroll)}
-  }, [lastScroll])
+  useEffect(() => {
+    const handleScroll = () => {
+      const prev = lastScroll;
+      const newVal = window.scrollY;
+      setScrollUp(prev > newVal);
+      setLastScroll(newVal);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [lastScroll]);
 
-  return({
-    scrollUp: scrollUp
-  })
-}
+  return {
+    scrollUp: scrollUp,
+    setScrollUp: setScrollUp, //needed to set the scroll when popup menu opens up
+  };
+};
