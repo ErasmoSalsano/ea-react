@@ -11,6 +11,7 @@ import { Create } from "./pages/Create";
 import { AuthProvider } from "./contexts/AuthContext";
 import { Profile } from "./pages/Profile";
 import { Shop } from "./pages/Shop";
+import { PcGames } from "./pages/PcGames";
 
 export function App() {
   return (
@@ -22,6 +23,7 @@ export function App() {
             <Route path="/informazioni/notizie" element={<News />} />
             <Route path="/informazioni/inside-ea" element={<InsideEa />} />
             <Route path="/EaSports" element={<EaSports />} />
+            <Route path="/PcGames" element={<PcGames />} />
             <Route path="/profile" element={<Profile />} />
             <Route path='/shop/:id' element={<Shop/>}/>
           </Route>
