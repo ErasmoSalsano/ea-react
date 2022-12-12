@@ -48,10 +48,10 @@ export const Pagination = (props) => {
           <div className="backButton">Precedente </div>
         </li>
       </div>
-      {paginationRange.map((pageNumber) => {
+      {paginationRange.map((pageNumber, index) => {
         // Render our Page Pills
         return (
-          <div className="pagination-item-container">
+          <div key={index +1} className="pagination-item-container">
             <li
               className={classnames("pagination-item", {
                 selected: pageNumber === currentPage,

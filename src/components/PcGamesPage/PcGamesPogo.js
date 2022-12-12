@@ -2,9 +2,9 @@ import { Button } from "../Button";
 
 export function PcGamesPogo() {
   return (
-    <div class="main-wrap">
-      <div class="content-wrap">
-        <div class="box-card pogo-box">
+    <div className="main-wrap">
+      <div className="content-wrap">
+        <div className="box-card pogo-box">
         <picture >
                     <source media="(max-width: 766px)"
                         srcSet={'/assets/images/banners/pogo-767.jpg 767w'} />
@@ -19,18 +19,18 @@ export function PcGamesPogo() {
                         alt="hero_image" />
                 </picture>
 
-  <div class="text-card-pogo">
+  <div className="text-card-pogo">
             <img
-              class="logo-play"
+              className="logo-play"
               src="/assets/images/banners/pogo-logo.svg"
               alt=""
             />
             <p className="">Pogo è dove nascono i migliori giochi casual gratutiti online</p>
-            <div class="main-wrap">
-              <div class="main-content-wrap">
+            <div className="main-wrap">
+              <div className="main-content-wrap">
               <Button buttonText={'Scopri di più'}/>
               </div>
-              <div class="main-content-wrap">
+              <div className="main-content-wrap">
              <Button buttonText={'Gioca ora'}/>
               </div>
             </div>

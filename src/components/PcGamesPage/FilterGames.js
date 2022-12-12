@@ -76,8 +76,8 @@ export function FilterGames() {
             aria-label="Filter Countries By Region"
           >
             <option value="">Filtra per Franchise</option>
-            {filter_Franchise.map((item) => (
-              <option value={item}>{item}</option>
+            {filter_Franchise.map((item, index) => (
+              <option key={index + 1} value={item}>{item}</option>
             ))}
           </select>
           <span className="focus"></span>
@@ -91,19 +91,18 @@ export function FilterGames() {
             aria-label="Filter Countries By Region"
           >
             <option value="">Filtra per Genere</option>
-            {filter_Categories.map((item) => (
-              <option value={item}>{item}</option>
+            {filter_Categories.map((item, index) => (
+              <option key={index + 1} value={item}>{item}</option>
             ))}{" "}
-            )
           </select>
           <span className="focus"></span>
         </div>
       </div>
       <div>
         <div className="grid-games">
-          {currentGridData.map((game) => {
+          {currentGridData.map((game, index) => {
             return (
-              <a className="game-box " href="sitooriginale.it">
+              <div key={index + 1} className="game-box " href="sitooriginale.it">
                 <img
                   className="game-image "
                   src={process.env.PUBLIC_URL + game.card.imageBg}
@@ -115,19 +114,19 @@ export function FilterGames() {
                     src={process.env.PUBLIC_URL + game.card.svgPath}
                     alt="Game cover"
                   />
-                  <div class="block">
-                    <a href="#" class="span_games">
+                  <div className="block">
+                    <a href="#" className="span_games">
                       Sito Ufficiale
                     </a>
-                    <a href="#" class="span_games  second">
+                    <a href="#" className="span_games  second">
                       Aiuto
                     </a>
-                    <a href="#" class="span_games third">
+                    <a href="#" className="span_games third">
                       Forum
                     </a>
                   </div>
                 </div>
-              </a>
+              </div>
             );
           })}
         </div>

@@ -38,71 +38,71 @@ export function PcGames() {
         </div>
       </div>
 
-      <div class="main-wrap">
-        <div class="content-wrap">
-          <div class="title-game">
+      <div className="main-wrap">
+        <div className="content-wrap">
+          <div className="title-game">
             <h2>Giochi PC in evidenza</h2>
           </div>
-          <div class="grid-games">
-            <div class="game-box">
+          <div className="grid-games">
+            <div className="game-box">
               <img
-                class="game-image-default"
+                className="game-image-default"
                 src="/assets/images/game/battlefield-2042-key-art.jpg.adapt.crop1x1.767p.jpg"
                 alt="Battlefield 2042"
               />
-              <div class="image_overlay">
+              <div className="image_overlay">
                 <img
-                  class="logo big-logo"
+                  className="logo big-logo"
                   alt="Battlefield 2042 logo"
                   src="https://media.contentapi.ea.com/content/dam/battlefield/battlefield-2042/common/season-01/bf-2042-white-nav-logo.svg"
                 />
-                <span class="span_games">Battlefield 2042</span>
+                <span className="span_games">Battlefield 2042</span>
               </div>
             </div>
-            <div class="game-box">
+            <div className="game-box">
               <img
-                class="game-image-default"
+                className="game-image-default"
                 src="/assets/images/game/1-1-gamebox-f122-keyart-1.png.adapt.crop1x1.767p.png"
                 alt="F1® 22"
               />
-              <div class="image_overlay">
+              <div className="image_overlay">
                 <img
-                  class="logo"
+                  className="logo"
                   alt="F1® 22 logo"
                   src="https://media.contentapi.ea.com/content/dam/gin/common/logos/f122-gamebox-logo.png"
                 />
-                <span class="span_games">F1® 22</span>
+                <span className="span_games">F1® 22</span>
               </div>
             </div>
-            <div class="game-box">
+            <div className="game-box">
               <img
-                class="game-image-default"
+                className="game-image-default"
                 src="/assets/images/game/fifa-22.jpg"
                 alt="FIFA 22"
               />
-              <div class="image_overlay">
+              <div className="image_overlay">
                 <img
-                  class="logo"
+                  className="logo"
                   src="/assets/images/game/fifa-22-logo.svg"
                   alt="FIFA 22 logo"
                 />
-                <span class="span_games">FIFA 22</span>
+                <span className="span_games">FIFA 22</span>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="main-wrap">
-        <div class="main-content-wrap">
-          <div class="">
+      <div className="main-wrap">
+        <div className="main-content-wrap">
+          <div className="">
             <h2>Scopri altri fantastici giochi per PC</h2>
           </div>
         </div>
       </div>
-      <div class="main-wrap">
-        <div class="main-content-wrap">
-          <div class="text-p">
+      <div className="main-wrap">
+        <div className="main-content-wrap">
+          <div className="text-p">
             <p>
               Qualsiasi tipo di gioco per PC tu stia cercando, EA ha ciò che fa
               per te! Immergiti in un'epica <a href="#">battle royale</a> dove
@@ -132,7 +132,7 @@ export function PcGames() {
 
       <div className="main-wrap">
         <div className="content-wrap">
-          <div class="title-game">
+          <div className="title-game">
             <h3>Ultimi Giochi</h3>
           </div>
 

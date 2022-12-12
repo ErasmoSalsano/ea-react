@@ -14,18 +14,18 @@ export function EaSports() {
 
 
     return (
-        <div class="EASPORTS-big-wrap">
+        <div className="EASPORTS-big-wrap">
 
-            <div class="EASPORTS-firstwrap">
+            <div className="EASPORTS-firstwrap">
 
-                <img class="EASPORTS-blackground"
+                <img className="EASPORTS-blackground"
                     src="/assets/images/EASPORTSpage/fr-fr-others-pegi-16xl.png.adapt.1920w.png" alt="" />
-                <video class="EASPORTS-video" src="assets/images/EASPORTSpage/easports-video-pagebackground.webm" autoPlay
+                <video className="EASPORTS-video" src="assets/images/EASPORTSpage/easports-video-pagebackground.webm" autoPlay
                     loop muted> </video>
 
-                <div class="content-wrap">
-                    <div class="title-game">
-                        <img class="EA-title-logo" src="/assets/images/game/ea-sports-logo-light.png" alt="EA sports logo" />
+                <div className="content-wrap">
+                    <div className="title-game">
+                        <img className="EA-title-logo" src="/assets/images/game/ea-sports-logo-light.png" alt="EA sports logo" />
                         <h3>Ultimi giochi sportivi</h3>
                         <h4>Gioca ai migliori giochi di calcio, football americano, hockey su ghiaccio, golf,
                             basket,<span>Formula 1®</span>
@@ -41,7 +41,7 @@ export function EaSports() {
                     <EaSportsGamesGrid firstGrid />
 
 
-                    <div class="main-content-wrap">
+                    <div className="main-content-wrap">
                         <Button buttonText={'Tutti i giochi SPORTIVI'} />
 
                     </div>
@@ -50,27 +50,27 @@ export function EaSports() {
             </div>
 
 
-            <div class="EASPORTS-insertion" style={{ backgroundImage: `url(/assets/images/EASPORTSpage/ea-play-product-conversion-gradient-jpg-mobile.768w.jpg)` }}>
+            <div className="EASPORTS-insertion" style={{ backgroundImage: `url(/assets/images/EASPORTSpage/ea-play-product-conversion-gradient-jpg-mobile.768w.jpg)` }}>
 
 
-                <div class="insertion-text">
+                <div className="insertion-text">
                     <h4>IL MODO MIGLIORE DI GIOCARE: UNISCITI A EA PLAY!</h4>
                 </div>
 
-                <div class="insertion-logo">
-                    <img class="insertion-svg" src="/assets/images/EASPORTSpage/ea-play-logo-coral-cta-type-image.svg"
+                <div className="insertion-logo">
+                    <img className="insertion-svg" src="/assets/images/EASPORTSpage/ea-play-logo-coral-cta-type-image.svg"
                         alt="EA PLAY" />
-                    <div class="main-content-wrap">
+                    <div className="main-content-wrap">
                         <Button buttonText={'Iscriviti subito'} />
                     </div>
                 </div>
             </div>
 
-            <div class="EASPORTS-secondwrap">
+            <div className="EASPORTS-secondwrap">
 
 
-                <div class="content-wrap">
-                    <div class="title-game">
+                <div className="content-wrap">
+                    <div className="title-game">
 
                         <h3>GIOCHI SPORTIVI PER DISPOSITIVI MOBILI </h3>
                     </div>
@@ -78,8 +78,8 @@ export function EaSports() {
                 </div>
             </div>
 
-            <div class="EASPORTS-thirdwrap">
-                <div class="EASPORTS-thirdwrap-title">
+            <div className="EASPORTS-thirdwrap">
+                <div className="EASPORTS-thirdwrap-title">
                     <h3>Ultime notizie</h3>
                 </div>
 
@@ -89,11 +89,11 @@ export function EaSports() {
                 />
 
             </div>
-            <div class="EASPORTS-insertion2" style={biggerThan768 ? { backgroundImage: `url('/assets/images/EASPORTSpage/ea-sports-pc-join-us-xl.png.tablet.1024w.png')` } : {}} >
+            <div className="EASPORTS-insertion2" style={biggerThan768 ? { backgroundImage: `url('/assets/images/EASPORTSpage/ea-sports-pc-join-us-xl.png.tablet.1024w.png')` } : {}} >
 
                 <h3>insieme cambieremo i giochi</h3>
 
-                <div class="main-content-wrap">
+                <div className="main-content-wrap">
                     <Button buttonText={'Entra nella nostra squadra'} />
                 </div>
 

@@ -2,9 +2,9 @@ import { Button } from "../Button";
 
 export function PcGamesEaPlay() {
   return (
-    <div class="main-wrap">
-      <div class="content-wrap">
-        <div class="box-card ea-play-box">
+    <div className="main-wrap">
+      <div className="content-wrap">
+        <div className="box-card ea-play-box">
         <picture >
                     <source media="(max-width: 766px)"
                         srcSet={'/assets/images/banners/ea-play-767.jpg 767w'} />
@@ -22,9 +22,9 @@ export function PcGamesEaPlay() {
 
 
 
-          <div class="text-card">
+          <div className="text-card">
             <img
-              class="logo-play"
+              className="logo-play"
               src="/assets/images/banners/ea-playpro-logo.svg"
               alt=""
             />
@@ -33,8 +33,8 @@ export function PcGamesEaPlay() {
               esclusive,contenuti per i soli membri e una libreria dei migliori
               titoli.
             </p>
-            <div class="main-wrap">
-              <div class="main-content-wrap">
+            <div className="main-wrap">
+              <div className="main-content-wrap">
               <Button buttonText={'Unisciti ora'}/>
               </div>
             </div>

@@ -23,7 +23,7 @@ export function App() {
             <Route path="/informazioni/notizie" element={<News />} />
             <Route path="/informazioni/inside-ea" element={<InsideEa />} />
             <Route path="/EaSports" element={<EaSports />} />
-            <Route path="/PcGames" element={<PcGames />} />
+            <Route path="/pcGames" element={<PcGames />} />
             <Route path="/profile" element={<Profile />} />
             <Route path='/shop/:id' element={<Shop/>}/>
           </Route>
