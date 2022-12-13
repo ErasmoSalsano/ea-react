@@ -2,6 +2,8 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { MainContentWrap } from "../components/0_wraps/mainContentWrap";
 import { MainWrap } from "../components/0_wraps/mainWrap";
+import { Footer } from "../components/Footer";
+import { Header } from "../components/header/Header";
 import { Title } from "../components/Title";
 import { useManageAccount } from "../utils/useManageAccount";
 import "./../style/pages/profile/profile.scss";
@@ -18,50 +20,52 @@ export function Profile() {
 
   return (
     user && (
-      <div className="profile">
-        <div className={"bg-profile"}>
-          <div className={"void"}></div>
-          <MainWrap>
-            <MainContentWrap p extendClass="fc">
-              <Title className="title">
-                <h1>Welcome {user.userName}</h1>
-              </Title>
-            </MainContentWrap>
-          </MainWrap>
-          <MainWrap>
-            <MainContentWrap p>
-              <div className="user-profile">
-                {/* <div className={"img"}>
+      <>
+        <Header />
+        <div className="profile">
+          <div className={"bg-profile"}>
+            <div className={"void"}></div>
+            <MainWrap>
+              <MainContentWrap p extendClass="fc">
+                <Title className="title">
+                  <h1>Welcome {user.userName}</h1>
+                </Title>
+              </MainContentWrap>
+            </MainWrap>
+            <MainWrap>
+              <MainContentWrap p>
+                <div className="user-profile">
+                  {/* <div className={"img"}>
                   <img
                     src={user.image ? user.image : "./assets/images/avatar.png"}
                     alt="user-profile-img"
                   />
                 </div> */}
-                <div className="user-image">
-                  <img
-                    src={loggedUser?.avatar?.value}
-                    alt={"user-profile-img"}
-                  />
+                  <div className="user-image">
+                    <img
+                      src={loggedUser?.avatar?.value}
+                      alt={"user-profile-img"}
+                    />
+                  </div>
+                  <div className="data-container">
+                    <div className={"labels"}>
+                      <label>Name</label>
+                      <p>{user.userName}</p>
+                    </div>
+                    <div className={"labels"}>
+                      <label>Birthday</label>
+                      <p>{userBday}</p>
+                    </div>
+                    <div className={"labels"}>
+                      <label>E-mail</label>
+                      <p>{user.email}</p>
+                    </div>
+                  </div>
                 </div>
-                <div className="data-container">
-                  <div className={"labels"}>
-                    <label>Name</label>
-                    <p>{user.userName}</p>
-                  </div>
-                  <div className={"labels"}>
-                    <label>Birthday</label>
-                    <p>{userBday}</p>
-                  </div>
-                  <div className={"labels"}>
-                    <label>E-mail</label>
-                    <p>{user.email}</p>
-                  </div>
-                </div>
-              </div>
-            </MainContentWrap>
-          </MainWrap>
-          <div className={"void"}></div>
-          {/* {userGames && <>
+              </MainContentWrap>
+            </MainWrap>
+            <div className={"void"}></div>
+            {/* {userGames && <>
                     <MainWrap>
                         <MainContentWrap p extendClass='fc'>
                             <Title className="title">
@@ -80,9 +84,11 @@ export function Profile() {
                         })}
                     </div>
                 </>} */}
-          <div className={"void"}></div>
+            <div className={"void"}></div>
+          </div>
         </div>
-      </div>
+        <Footer />
+      </>
     )
   );
 }
