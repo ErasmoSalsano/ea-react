@@ -1,6 +1,4 @@
-import { MainWrap } from "../components/0_wraps/mainWrap";
 import { ArticlesGrid } from "../components/ArticlesGrid";
-import { ButtonLoadMore } from "../components/Buttons/ButtonLoadMore";
 import { Footer } from "../components/Footer";
 import { Header } from "../components/header/Header";
 import { Picture } from "../components/Picture";
@@ -28,11 +26,8 @@ export function News() {
           amount={18}
           argument={articleCards}
           classA
+          button={'B'}
         />
-        <div className="void"></div>
-        <MainWrap>
-          <ButtonLoadMore />
-        </MainWrap>
         <div className="void"></div>
       </div>
       <Footer />
