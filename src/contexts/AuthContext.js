@@ -1,7 +1,9 @@
 import React, { useContext, useEffect, useState } from "react";
 import {
+  setPersistence,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  browserSessionPersistence,
   signOut,
 } from "firebase/auth";
 import { auth } from "../firebase";
@@ -22,17 +24,15 @@ export function AuthProvider({ children }) {
   }
 
   // Accedi (firebase authentication)
-  async function login(email, password) {
+  async function login({ mail, password, remember }) {
     try {
-      const userCredential = await signInWithEmailAndPassword(
-        auth,
-        email,
-        password
-      );
+      if (!remember) {
+        await setPersistence(auth, browserSessionPersistence);
+      }
+      const res = await signInWithEmailAndPassword(auth, mail, password);
       // Signed in
-      // const user = userCredential.user;
       console.log("Logged in");
-      return true;
+      return res;
     } catch (error) {
       const errorCode = error.code;
       const errorMessage = error.message;
@@ -55,9 +55,9 @@ export function AuthProvider({ children }) {
   }
 
   // Imposta utente corrente (firebase authentication)
-  auth.onAuthStateChanged((user) => {
-    setCurrentUser(user);
-  });
+  // auth.onAuthStateChanged((user) => {
+  //   setCurrentUser(user);
+  // });
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {

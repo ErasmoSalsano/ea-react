@@ -111,7 +111,7 @@ export const Login = () => {
             type="button"
             onClick={() => {
               // console.log(loginData.mail, loginData.password);
-              onLogin(loginData.mail, loginData.password);
+              onLogin(loginData);
             }}
             disabled={!isValidForm}
           >

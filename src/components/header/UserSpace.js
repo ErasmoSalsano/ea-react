@@ -90,11 +90,9 @@ export const UserSpace = () => {
           <div className="board-content-wrap">
             <div className="board-grid">
               {value.currentUser ? (
-                <Link
+                <div
                   className="board-link"
-                  to="/login"
-                  onClick={(e) => {
-                    e.preventDefault();
+                  onClick={() => {
                     onLogout();
                   }}
                 >
@@ -104,7 +102,7 @@ export const UserSpace = () => {
                     alt="accedi"
                   />
                   <span>Logout</span>
-                </Link>
+                </div>
               ) : (
                 <Link className="board-link" to="/login">
                   <img
