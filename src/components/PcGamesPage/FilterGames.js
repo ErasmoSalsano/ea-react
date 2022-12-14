@@ -1,12 +1,10 @@
-import React, { useState, useMemo } from "react";
+import React, { useState } from "react";
 import { game } from "../../data/cards-data.js";
 import { Pagination } from "./Pagination";
 import { useMediaPredicate } from "react-media-hook";
 
 let PageSize = 9;
 
-// Note: the empty deps array [] means
-// this useEffect will run once
 export function FilterGames() {
     const lowerThan768 = useMediaPredicate("(max-width: 768px)");
   const [currentPage, setCurrentPage] = useState(1);
@@ -14,9 +12,7 @@ export function FilterGames() {
   const [filter, setFilter] = useState("");
   const search_parameters = Object.keys(Object.assign({}, ...game));
   const filter_Franchise = [...new Set(game.map((item) => item.franchise))];
-  const filter_Categories = [
-    ...new Set(game.map((item) => item.categories[0])),
-  ];
+  const filter_Categories = [...new Set(game.map((item) => item.categories[0]))];
 
   function search(items) {
     return items.filter((item) => {
@@ -33,12 +29,15 @@ export function FilterGames() {
     });
   }
 
-  const currentGridData = useMemo(() => {
+
+  const handlePagination = () => {
     const firstPageIndex = (currentPage - 1) * PageSize;
     const lastPageIndex = firstPageIndex + PageSize;
-    // return data.slice(firstPageIndex, lastPageIndex);
     return search(game).slice(firstPageIndex, lastPageIndex);
-  });
+  };
+
+  const currentGridData = handlePagination()
+
 
   function genreSelected(event) {
     if (event.target.value !== "") {
@@ -103,26 +102,26 @@ export function FilterGames() {
         <div className="grid-games">
           {currentGridData.map((game) => {
             return (
-              <a className="game-box " href="sitooriginale.it">
+              <a className="game-box" href="sitooriginale.it">
                 <img
                   className="game-image "
                   src={process.env.PUBLIC_URL + game.card.imageBg}
                   alt={game.imgDescription}
                 />
-                <div className="image_overlay ">
+                <div className="image_overlay">
                   <img
                     className="logo"
                     src={process.env.PUBLIC_URL + game.card.svgPath}
                     alt="Game cover"
                   />
                   <div class="block">
-                    <a href="#" class="span_games">
+                    <a href="manteinance" class="span_games">
                       Sito Ufficiale
                     </a>
-                    <a href="#" class="span_games  second">
+                    <a href="manteinance" class="span_games  second">
                       Aiuto
                     </a>
-                    <a href="#" class="span_games third">
+                    <a href="manteinancd" class="span_games third">
                       Forum
                     </a>
                   </div>
@@ -135,7 +134,7 @@ export function FilterGames() {
       <Pagination
         className="pagination-bar"
         currentPage={currentPage}
-        totalCount={game.length}
+        totalCount={search(game).length}
         pageSize={PageSize}
         onPageChange={(page) => setCurrentPage(page)}
       />
