@@ -2,11 +2,13 @@ import React, { useState } from "react";
 import { game } from "../../data/cards-data.js";
 import { Pagination } from "./Pagination";
 import { useMediaPredicate } from "react-media-hook";
+import { useNavigate } from "react-router-dom";
 
 let PageSize = 9;
 
 export function FilterGames() {
-    const lowerThan768 = useMediaPredicate("(max-width: 768px)");
+  const navigate = useNavigate();
+  const lowerThan768 = useMediaPredicate("(max-width: 768px)");
   const [currentPage, setCurrentPage] = useState(1);
   const [query, setQuery] = useState("");
   const [filter, setFilter] = useState("");
@@ -26,6 +28,7 @@ export function FilterGames() {
           item[parameter].toString().toLowerCase().includes(query)
         );
       }
+      // Ci vuole un return qui.
     });
   }
 
@@ -54,7 +57,8 @@ export function FilterGames() {
     <div className="wrapper">
       <div className="search-wrapper">
         <label id="search-bar" htmlFor="search-form">
-          <input style={lowerThan768 ? {display: 'none'} : {}}
+          <input
+            style={lowerThan768 ? { display: "none" } : {}}
             type="search"
             name="search-form"
             id="search-form"
@@ -63,7 +67,6 @@ export function FilterGames() {
             onChange={(e) => setQuery(e.target.value)}
             value={query}
           />
-
         </label>
 
         <div className="select">
@@ -75,8 +78,10 @@ export function FilterGames() {
             aria-label="Filter Countries By Region"
           >
             <option value="">Filtra per Franchise</option>
-            {filter_Franchise.map((item) => (
-              <option value={item}>{item}</option>
+            {filter_Franchise.map((item, index) => (
+              <option key={index + 1} value={item}>
+                {item}
+              </option>
             ))}
           </select>
           <span className="focus"></span>
@@ -90,19 +95,25 @@ export function FilterGames() {
             aria-label="Filter Countries By Region"
           >
             <option value="">Filtra per Genere</option>
-            {filter_Categories.map((item) => (
-              <option value={item}>{item}</option>
+            {filter_Categories.map((item, index) => (
+              <option key={index + 1} value={item}>
+                {item}
+              </option>
             ))}{" "}
-            )
           </select>
           <span className="focus"></span>
         </div>
       </div>
       <div>
         <div className="grid-games">
-          {currentGridData.map((game) => {
+          {currentGridData.map((game, index) => {
             return (
-              <a className="game-box" href="sitooriginale.it">
+              <div
+                key={index + 1}
+                className="game-box "
+                href="sitooriginale.it"
+                onClick={() => navigate(`/shop/${game.id}`)}
+              >
                 <img
                   className="game-image "
                   src={process.env.PUBLIC_URL + game.card.imageBg}
@@ -114,19 +125,19 @@ export function FilterGames() {
                     src={process.env.PUBLIC_URL + game.card.svgPath}
                     alt="Game cover"
                   />
-                  <div class="block">
-                    <a href="manteinance" class="span_games">
+                  <div className="block">
+                    <a href="#" className="span_games">
                       Sito Ufficiale
                     </a>
-                    <a href="manteinance" class="span_games  second">
+                    <a href="#" className="span_games  second">
                       Aiuto
                     </a>
-                    <a href="manteinancd" class="span_games third">
+                    <a href="#" className="span_games third">
                       Forum
                     </a>
                   </div>
                 </div>
-              </a>
+              </div>
             );
           })}
         </div>

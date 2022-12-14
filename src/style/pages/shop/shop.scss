@@ -105,6 +105,17 @@
                         margin-bottom: 8px;
                     }
                 }
+                .available{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    font-size: 1.2rem;
+                }
+                .response-message{
+                    display: flex;
+                    justify-content: center;
+                    padding: 5px;
+                }
             }
         }
         .gameInfo{
@@ -117,7 +128,6 @@
                 width: 100%;
                 // height: 250px;
                 img{
-                    border: 1px solid white;
                     width: -webkit-fill-available;
                     height: -webkit-fill-available;
                 }
@@ -160,6 +170,28 @@
             }
         }
     }
+    .otherGames{
+        display: flex;
+        justify-content: center;
+        width: 90%;
+        margin: auto;
+        overflow-y: hidden;
+        overflow-x: auto;
+        gap: 20px;
+        cursor: pointer;
+        padding: 15px 0;
+        .thumb{
+            @extend %shadow-start;
+            position: relative;
+            height: 140px;
+            min-width: 240px;
+            border: 1px solid red;
+            &:hover{
+                @extend %shadow-hover;
+                z-index: 1;
+            }
+        }
+    }
     @media screen and (min-width:769px){
         .principal-section{
             flex-direction: row;
@@ -174,7 +206,7 @@
                     flex-direction: column;
                 }
                 .gameInfo_principal{
-                    width: calc(400px + 20%);
+                    // width: calc(400px + 20%);
                     img{
                         height: 280px;
                     }
@@ -207,18 +239,16 @@
             }
             .thumbs{
                 display: flex;
-                justify-content: flex-start;
+                flex-wrap: wrap;
+                justify-content: center;
                 width: 100%;
-                overflow-y: hidden;
-                overflow-x: hidden;
                 scroll-behavior: smooth;
                 gap: 20px;
                 cursor: pointer;
                 padding: 15px 0;
                 .thumb{
                     position: relative;
-                    height: 140px;
-                    min-width: 240px;
+                    height: 130px;
                     border: 1px solid white;
                     &:hover{
                         z-index: 1;
@@ -257,4 +287,12 @@
             }
         }
     }
+}
+.shopErrorManage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    color: red;
+    font-size: 2rem;
 }

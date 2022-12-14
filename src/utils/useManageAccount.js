@@ -85,6 +85,7 @@ export const useManageAccount = () => {
       date: { ...date },
       userName: userName,
       avatar: avatar,
+      games: [0],
     });
   }
 

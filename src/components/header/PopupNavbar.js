@@ -116,7 +116,7 @@ export const PopupNavbar = ({ Data }) => {
                         <div className="content">
                           <ul className="end-ul">
                             <li>
-                              <a href="/pc">PC</a>
+                              <a href="/pcGames">PC</a>
                             </li>
                             <li>
                               <a href="/mainteinance">PlayStation®5</a>

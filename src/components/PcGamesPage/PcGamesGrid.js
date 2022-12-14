@@ -36,14 +36,14 @@ export function PcGamesGrid() {
                   src={process.env.PUBLIC_URL + game.card.svgPath}
                   alt="Game cover"
                 />
-                <div class="block">
-                  <a href="#" class="span_games">
+                <div className="block">
+                  <a href="#" className="span_games">
                     Sito Ufficiale
                   </a>
-                  <a href="#" class="span_games  second">
+                  <a href="#" className="span_games  second">
                     Aiuto
                   </a>
-                  <a href="#" class="span_games third">
+                  <a href="#" className="span_games third">
                     Forum
                   </a>
                 </div>
