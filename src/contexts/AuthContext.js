@@ -3,8 +3,8 @@ import {
   setPersistence,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
-  signOut,
   browserSessionPersistence,
+  signOut,
 } from "firebase/auth";
 import { auth } from "../firebase";
 
@@ -26,12 +26,13 @@ export function AuthProvider({ children }) {
   // Accedi (firebase authentication)
   async function login({ mail, password, remember }) {
     try {
-      if (remember) {
-        return await signInWithEmailAndPassword(auth, mail, password);
-      } else {
+      if (!remember) {
         await setPersistence(auth, browserSessionPersistence);
-        return await signInWithEmailAndPassword(auth, mail, password);
       }
+      const res = await signInWithEmailAndPassword(auth, mail, password);
+      // Signed in
+      console.log("Logged in");
+      return res;
     } catch (error) {
       const errorCode = error.code;
       const errorMessage = error.message;
@@ -41,30 +42,22 @@ export function AuthProvider({ children }) {
   }
 
   // Esci (firebase authentication)
-  async function logout() {
-    try {
-      await signOut(auth);
-      console.log("Logged out");
-      return true;
-    } catch (error) {
-      console.error(error.message);
-    }
-    // signOut(auth)
-    //   .then(() => {
-    //     // Sign-out successful.
-    //     console.log("Logged out");
-    //     return true;
-    //   })
-    //   .catch((error) => {
-    //     // An error happened.
-    //     console.error(error.message);
-    //   });
+  function logout() {
+    signOut(auth)
+      .then(() => {
+        // Sign-out successful.
+        console.log("Logged out");
+      })
+      .catch((error) => {
+        // An error happened.
+        console.error("Carcere");
+      });
   }
 
   // Imposta utente corrente (firebase authentication)
-  auth.onAuthStateChanged((user) => {
-    setCurrentUser(user);
-  });
+  // auth.onAuthStateChanged((user) => {
+  //   setCurrentUser(user);
+  // });
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
