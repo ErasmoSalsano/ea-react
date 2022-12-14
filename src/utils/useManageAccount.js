@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useAuth } from "../contexts/AuthContext";
 import { useNavigate } from "react-router-dom";
 // firebase database imports
-import { getDatabase, ref, set, child, get } from "firebase/database";
+import { getDatabase, ref, set, child, get, update } from "firebase/database";
 
 export const useManageAccount = () => {
   const baseIconUrl =
@@ -74,6 +74,30 @@ export const useManageAccount = () => {
   // Database connection
   const db = getDatabase();
 
+  function addGame(gioco) {
+    const updates = {};
+    const tutti = [];
+    if (loggedUser?.games?.length && loggedUser?.games?.length > 0)
+      tutti.push(...loggedUser.games);
+    tutti.push(gioco);
+
+    return tutti;
+  }
+
+//   function addGame() {
+//     const updates = {};
+//     updates[`/users/${currentUser.uid}/games`] = ['ciao'];
+
+//     return update(ref(db), updates);
+//   }
+
+//   useEffect(() => {
+//     if(!loggedUser?.games){
+//         if(loggedUser?.games[0]!== ['ciao'])return
+//         else{addGame()}
+//     }
+//   }, [loggedUser?.uid]);
+
   useEffect(() => {
     currentUser ? setLoggedUser(onGetUser()) : setLoggedUser(null);
   }, [currentUser]);
@@ -84,8 +108,29 @@ export const useManageAccount = () => {
       date: { ...date },
       userName: userName,
       avatar: avatar,
-      games: [0],
+      games: [],
+      subscription: false
     });
+  }
+
+  function userPurchases(uid, buy, item) {
+    const updates = {};
+    if(buy === 'games'){
+        // if(loggedUser.games[0] === 'ciao'){
+        //     const games = [item]
+        //     updates['/users/' + uid + '/games'] = games;
+        // }else{
+            
+        const games = addGame(item)
+        updates['/users/' + uid + '/games'] = games;
+        // }
+    }
+    if(buy === 'subscription'){
+        const subscription = true
+        updates['/users/' + uid + '/subscription'] = subscription;
+    }
+  
+    return update(ref(db), updates);
   }
 
   // Updates date for leap years
@@ -115,13 +160,6 @@ export const useManageAccount = () => {
       setUserData({ ...userData, bDate: { ...userData.bDate, day: null } });
     }
   }, [monthsLength, userData]);
-
-  // useEffect(() => {
-  //   console.log(monthsLength);
-  // }, [monthsLength]);
-
-  // client     lista completa        id gioco
-  // database   lista acquistati      add id gioco
 
   const checkLeapYear = (year) => {
     return (
@@ -264,7 +302,6 @@ export const useManageAccount = () => {
       if (res) navigate("/");
       else throw new Error("E-mail o password errata");
     } catch (e) {
-      // console.log(e);
       setError(e.message);
     }
     setLoading(false);
@@ -276,7 +313,6 @@ export const useManageAccount = () => {
       const snapshot = await get(child(dbRef, `users/${currentUser?.uid}`));
       if (snapshot.exists()) {
         const result = snapshot.val();
-        // console.log(result);
         setLoggedUser(result);
       } else {
         throw new Error("Specified id is not in the database");
@@ -310,5 +346,7 @@ export const useManageAccount = () => {
     onLogout: onLogout,
     loggedUser: loggedUser,
     isValidForm: isValidForm,
+    userPurchases: userPurchases,
+    addGame: addGame
   };
 };
