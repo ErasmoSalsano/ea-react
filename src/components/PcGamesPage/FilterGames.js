@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react";
+import React, { useState } from "react";
 import { game } from "../../data/cards-data.js";
 import { Pagination } from "./Pagination";
 import { useMediaPredicate } from "react-media-hook";
@@ -6,8 +6,6 @@ import { useNavigate } from "react-router-dom";
 
 let PageSize = 9;
 
-// Note: the empty deps array [] means
-// this useEffect will run once
 export function FilterGames() {
   const navigate = useNavigate();
   const lowerThan768 = useMediaPredicate("(max-width: 768px)");
@@ -16,9 +14,7 @@ export function FilterGames() {
   const [filter, setFilter] = useState("");
   const search_parameters = Object.keys(Object.assign({}, ...game));
   const filter_Franchise = [...new Set(game.map((item) => item.franchise))];
-  const filter_Categories = [
-    ...new Set(game.map((item) => item.categories[0])),
-  ];
+  const filter_Categories = [...new Set(game.map((item) => item.categories[0]))];
 
   function search(items) {
     return items.filter((item) => {
@@ -36,12 +32,15 @@ export function FilterGames() {
     });
   }
 
-  const currentGridData = useMemo(() => {
+
+  const handlePagination = () => {
     const firstPageIndex = (currentPage - 1) * PageSize;
     const lastPageIndex = firstPageIndex + PageSize;
-    // return data.slice(firstPageIndex, lastPageIndex);
     return search(game).slice(firstPageIndex, lastPageIndex);
-  });
+  };
+
+  const currentGridData = handlePagination()
+
 
   function genreSelected(event) {
     if (event.target.value !== "") {
@@ -120,7 +119,7 @@ export function FilterGames() {
                   src={process.env.PUBLIC_URL + game.card.imageBg}
                   alt={game.imgDescription}
                 />
-                <div className="image_overlay ">
+                <div className="image_overlay">
                   <img
                     className="logo"
                     src={process.env.PUBLIC_URL + game.card.svgPath}
@@ -146,7 +145,7 @@ export function FilterGames() {
       <Pagination
         className="pagination-bar"
         currentPage={currentPage}
-        totalCount={game.length}
+        totalCount={search(game).length}
         pageSize={PageSize}
         onPageChange={(page) => setCurrentPage(page)}
       />

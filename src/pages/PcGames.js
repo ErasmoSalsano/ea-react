@@ -1,13 +1,15 @@
-import "../style/pages/games/pc.scss";
-import "./../style/index.scss";
-import { NavTab } from "../components/NavTab/NavTab";
 import { PcGamesPogo } from "../components/PcGamesPage/PcGamesPogo";
 import { PcGamesEaPlay } from "../components/PcGamesPage/PcGamesEaPlay";
 import { FilterGames } from "../components/PcGamesPage/FilterGames";
+import { useMediaPredicate } from "react-media-hook";
+// import "./../style/index.scss";
+import "../style/pages/games/pc.scss";
+
 import { Header } from "../components/header/Header";
 import { Footer } from "../components/Footer";
 
 export function PcGames() {
+  const lowerThan1465 = useMediaPredicate("(min-width: 1456px)");
   return (
     <>
       <Header />
@@ -35,7 +37,7 @@ export function PcGames() {
               alt="3 geometric shapes"
             />
           </picture>
-          <div className="hero-wrapper">
+          <div className="hero-wrapper" style={lowerThan1465 ? {} : { display: "none" }}>
             <div className="hero-text">
               <h3>Giochi PC </h3>
             </div>

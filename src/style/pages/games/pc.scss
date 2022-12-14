@@ -10,6 +10,8 @@ body {
   background-color: #f5f3f3;
 }
 
+//stile dei filtri e della paginazione
+
 :root {
   // --bg: hsl(0, 0%, 98%);
   --bg-offset: hsl(0, 0%, 100%);
@@ -68,16 +70,16 @@ main {
   .search-input:hover {
     box-shadow: 0px 0px 0px var(--border);
   }
-  /* select from moderncss.dev */
+
   select {
-    appearance: none !important;
+    appearance: none;
     outline: none;
     background-color: var(--bg-offset);
     border-radius: 0.25em;
     border-width: 1px;
     border-style: solid;
     border-color: var(--border);
-    padding: 1.4em 2em 1.4em 1em;
+    padding: 1.4em 2em 1.6em 1em;
     margin: 0;
     margin-right: 1em;
     width: 100%;
@@ -96,7 +98,7 @@ main {
     font-family: var(--font-family-display-regular);
     font-size: var(--font-size-span);
     min-width: 15ch;
-    max-width: 30ch;
+    // // max-width: 30ch;
     cursor: pointer;
     line-height: 1.1;
     background-color: transparent;
@@ -106,6 +108,10 @@ main {
     position: relative;
     box-shadow: 0px 4px 6px var(--border);
     transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+
+    #franchiseBtn {
+      width: 100%;
+    }
   }
   .select:hover {
     box-shadow: 0px 0px 0px var(--border);
@@ -168,8 +174,7 @@ main {
     .pagination-item {
       font-family: var(--font-family-display-regular);
       font-size: var(--font-size-linksonfooter);
-
-      padding: 0 11px;
+      padding: 0 10px;
       height: 32px;
       text-align: center;
       margin: auto 4px;
@@ -177,10 +182,10 @@ main {
       display: flex;
       box-sizing: border-box;
       align-items: center;
-      letter-spacing: 0.01071em;
+      // letter-spacing: 0.01071em;
       border-radius: 16px;
       line-height: 1.43;
-      min-width: 32px;
+      min-width: 30px;
 
       &.dots:hover {
         background-color: transparent;
@@ -226,6 +231,9 @@ main {
       // width: 100%;
       gap: 20px;
     }
+    .select {
+      max-width: 30ch;
+    }
   }
 
   .hero-container-pc {
@@ -255,7 +263,6 @@ main {
       position: absolute;
 
       .hero-text {
-        // display: none;
         text-align: center;
         font-family: var(--font-family-display-bold);
         font-size: var(--font-size-cards-title);
@@ -302,9 +309,7 @@ main {
   }
 
   .game-box {
-    .enormous-logo {
-      max-height: 5%;
-    }
+
     .game-image-default {
       height: 100%;
       width: 100%;
@@ -797,12 +802,8 @@ main {
     height: 330px;
 
     .hero-wrapper {
-      top: 10%;
+      top: 25%;
       left: 44%;
-
-      .hero-text {
-        display: unset;
-      }
     }
   }
   .content-wrap {
