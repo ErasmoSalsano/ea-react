@@ -342,7 +342,7 @@ export const game = [
   {
     id: 13,
     title: "Star Wars Battlefront",
-    franchise: "Star Wars ",
+    franchise: "Star Wars",
     categories: ["Azione", ""],
     platforms: {
       pc: true,
