@@ -2,13 +2,15 @@ import React, { useState, useMemo } from "react";
 import { game } from "../../data/cards-data.js";
 import { Pagination } from "./Pagination";
 import { useMediaPredicate } from "react-media-hook";
+import { useNavigate } from "react-router-dom";
 
 let PageSize = 9;
 
 // Note: the empty deps array [] means
 // this useEffect will run once
 export function FilterGames() {
-    const lowerThan768 = useMediaPredicate("(max-width: 768px)");
+  const navigate = useNavigate();
+  const lowerThan768 = useMediaPredicate("(max-width: 768px)");
   const [currentPage, setCurrentPage] = useState(1);
   const [query, setQuery] = useState("");
   const [filter, setFilter] = useState("");
@@ -30,6 +32,7 @@ export function FilterGames() {
           item[parameter].toString().toLowerCase().includes(query)
         );
       }
+      // Ci vuole un return qui.
     });
   }
 
@@ -55,7 +58,8 @@ export function FilterGames() {
     <div className="wrapper">
       <div className="search-wrapper">
         <label id="search-bar" htmlFor="search-form">
-          <input style={lowerThan768 ? {display: 'none'} : {}}
+          <input
+            style={lowerThan768 ? { display: "none" } : {}}
             type="search"
             name="search-form"
             id="search-form"
@@ -64,7 +68,6 @@ export function FilterGames() {
             onChange={(e) => setQuery(e.target.value)}
             value={query}
           />
-
         </label>
 
         <div className="select">
@@ -77,7 +80,9 @@ export function FilterGames() {
           >
             <option value="">Filtra per Franchise</option>
             {filter_Franchise.map((item, index) => (
-              <option key={index + 1} value={item}>{item}</option>
+              <option key={index + 1} value={item}>
+                {item}
+              </option>
             ))}
           </select>
           <span className="focus"></span>
@@ -92,7 +97,9 @@ export function FilterGames() {
           >
             <option value="">Filtra per Genere</option>
             {filter_Categories.map((item, index) => (
-              <option key={index + 1} value={item}>{item}</option>
+              <option key={index + 1} value={item}>
+                {item}
+              </option>
             ))}{" "}
           </select>
           <span className="focus"></span>
@@ -102,7 +109,12 @@ export function FilterGames() {
         <div className="grid-games">
           {currentGridData.map((game, index) => {
             return (
-              <div key={index + 1} className="game-box " href="sitooriginale.it">
+              <div
+                key={index + 1}
+                className="game-box "
+                href="sitooriginale.it"
+                onClick={() => navigate(`/shop/${game.id}`)}
+              >
                 <img
                   className="game-image "
                   src={process.env.PUBLIC_URL + game.card.imageBg}

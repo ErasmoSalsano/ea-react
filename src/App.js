@@ -18,15 +18,13 @@ export function App() {
     <div className="App">
       <AuthProvider>
         <Routes>
-          <Route path="/" element={<MainFrame />}>
-            <Route index element={<Home />} />
-            <Route path="/informazioni/notizie" element={<News />} />
-            <Route path="/informazioni/inside-ea" element={<InsideEa />} />
-            <Route path="/EaSports" element={<EaSports />} />
-            <Route path="/pcGames" element={<PcGames />} />
-            <Route path="/profile" element={<Profile />} />
-            <Route path='/shop/:id' element={<Shop/>}/>
-          </Route>
+          <Route path="/" element={<Home />} />
+          <Route path="/informazioni/notizie" element={<News />} />
+          <Route path="/informazioni/inside-ea" element={<InsideEa />} />
+          <Route path="/EaSports" element={<EaSports />} />
+          <Route path="/pcGames" element={<PcGames />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/shop/:id" element={<Shop />} />
           <Route path="/login" element={<Login />} />
           <Route path="/create" element={<Create />} />
           <Route path="*" element={<Manteinance />} />
