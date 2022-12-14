@@ -1,5 +1,4 @@
 import { Routes, Route } from "react-router-dom";
-import MainFrame from "./components/MainFrame";
 import { Home } from "./pages/Home";
 import { News } from "./pages/News";
 import { Manteinance } from "./pages/Manteinance";

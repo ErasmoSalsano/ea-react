@@ -1,8 +1,10 @@
 import React, { useContext, useEffect, useState } from "react";
 import {
+  setPersistence,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   signOut,
+  browserSessionPersistence,
 } from "firebase/auth";
 import { auth } from "../firebase";
 
@@ -22,17 +24,14 @@ export function AuthProvider({ children }) {
   }
 
   // Accedi (firebase authentication)
-  async function login(email, password) {
+  async function login({ mail, password, remember }) {
     try {
-      const userCredential = await signInWithEmailAndPassword(
-        auth,
-        email,
-        password
-      );
-      // Signed in
-      // const user = userCredential.user;
-      console.log("Logged in");
-      return true;
+      if (remember) {
+        return await signInWithEmailAndPassword(auth, mail, password);
+      } else {
+        await setPersistence(auth, browserSessionPersistence);
+        return await signInWithEmailAndPassword(auth, mail, password);
+      }
     } catch (error) {
       const errorCode = error.code;
       const errorMessage = error.message;
@@ -42,16 +41,24 @@ export function AuthProvider({ children }) {
   }
 
   // Esci (firebase authentication)
-  function logout() {
-    signOut(auth)
-      .then(() => {
-        // Sign-out successful.
-        console.log("Logged out");
-      })
-      .catch((error) => {
-        // An error happened.
-        console.error("Carcere");
-      });
+  async function logout() {
+    try {
+      await signOut(auth);
+      console.log("Logged out");
+      return true;
+    } catch (error) {
+      console.error(error.message);
+    }
+    // signOut(auth)
+    //   .then(() => {
+    //     // Sign-out successful.
+    //     console.log("Logged out");
+    //     return true;
+    //   })
+    //   .catch((error) => {
+    //     // An error happened.
+    //     console.error(error.message);
+    //   });
   }
 
   // Imposta utente corrente (firebase authentication)

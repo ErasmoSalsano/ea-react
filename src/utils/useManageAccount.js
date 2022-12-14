@@ -3,7 +3,6 @@ import { useAuth } from "../contexts/AuthContext";
 import { useNavigate } from "react-router-dom";
 // firebase database imports
 import { getDatabase, ref, set, child, get } from "firebase/database";
-import { avatars } from "../data/avatars";
 
 export const useManageAccount = () => {
   const baseIconUrl =
@@ -255,12 +254,12 @@ export const useManageAccount = () => {
     setLoading(false);
   };
 
-  const onLogin = async (mail, password) => {
+  const onLogin = async (data) => {
     try {
       setError("");
       setLoading(true);
 
-      const res = await login(mail, password);
+      const res = await login(data);
 
       if (res) navigate("/");
       else throw new Error("E-mail o password errata");
@@ -287,8 +286,9 @@ export const useManageAccount = () => {
     }
   };
 
-  const onLogout = () => {
-    logout();
+  const onLogout = async () => {
+    const message = await logout();
+    console.log(message);
   };
 
   return {
