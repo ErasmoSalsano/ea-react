@@ -4,9 +4,9 @@ export function EaSportsGamesGrid({firstGrid}) {
   const firstSection = [
     {
       nameUrl: 'Sito Ufficiale',
-      imageBg: './assets/images/game/the-sims-mobile.jpg',
+      imageBg: './assets/images/game/nba-live-mobile.jpg',
       imgDescription: 'descrizione',
-      svgPath: "./assets/images/game/the-sims-mobile-logo.png"
+      svgPath: "./assets/images/game/nba-live-mobile-logo.png"
     },
     {
       nameUrl: 'Sito Ufficiale',
@@ -28,9 +28,9 @@ export function EaSportsGamesGrid({firstGrid}) {
     },
     {
       nameUrl: 'Sito Ufficiale',
-      imageBg: './assets/images/game/apex-mobile-keyart-1x1.jpg.adapt.crop1x1.767p.jpg',
+      imageBg: './assets/images/game/easports-pgatour-keyart.jpg.adapt.crop1x1.767w.jpg',
       imgDescription: 'Apex Legends Mobile logo',
-      svgPath: "https://media.contentapi.ea.com/content/dam/gin/common/logos/apex-mobile-logo.svg"
+      svgPath: "./assets/images/game/easports-pga-tour-mono-logo-white.svg"
     },
     {
       nameUrl: 'Sito Ufficiale',
