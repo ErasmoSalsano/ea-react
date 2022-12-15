@@ -9,10 +9,8 @@ import { Footer } from "../components/Footer";
 import { Header } from "../components/header/Header";
 
 export function Shop() {
-    const { loggedUser, currentUser } = useManageAccount();
+    const { loggedUser, currentUser, userPurchases } = useManageAccount();
     const { id } = useParams()
-    const [purchase, setPurchase] = useState(false)
-    const [subscription, setSubscription] = useState(false)
     const [content, setContent] = useState()
     const [response, setResponse] = useState()
     const myData = game.find((it) => ([27, 28, 29].find((i) => i === +id)) ? it.id === 3 : it.id === +(id))
@@ -23,18 +21,18 @@ export function Shop() {
         setContent(myData.shop.secondary[0])
     }, [myData])
 
-    function buy(x) {
+    function buy(x, y) {
         if (currentUser && loggedUser) {
             if (x === 'ea') {
-                if (subscription === false) {
-                    setSubscription(true)
+                if (loggedUser.subscription === false) {
+                    userPurchases(currentUser.uid, y)
                     setResponse({ message: 'Congratulation!You are subscribbed to EA', failed: false })
                 } else {
                     setResponse({ message: 'We are sorry, you are already subscribed', failed: true })
                 }
             } if (x === 'game') {
-                if (purchase === false) {
-                    setPurchase(true)
+                if (!loggedUser?.games || loggedUser?.games && !loggedUser?.games.includes(myData.id)) {
+                    userPurchases(currentUser.uid, y, myData.id)
                     setResponse({ message: 'Congratulation, your purchase successfull the game', failed: false })
                 } else {
                     setResponse({ message: 'you own this game', failed: true })
@@ -98,7 +96,7 @@ export function Shop() {
                                     <div className="response-message" style={response && response.failed ? { color: 'red' } : { color: 'green' }}>
                                         {response && response.message}
                                     </div>
-                                    <div onClick={() => buy('ea')} className="purchase_cta">
+                                    <div onClick={() => buy('ea', 'subscription')} className="purchase_cta">
                                         <div className="purchase_cta-types">
                                             <p>Unisciti a EA Play</p>
                                             <p>EA Play EA PlayPro</p>
@@ -108,7 +106,7 @@ export function Shop() {
                                             <p>€ 3.99</p>
                                         </div>
                                     </div>
-                                    <div onClick={() => buy('game')} className="purchase_cta">
+                                    <div onClick={() => buy('game', 'games')} className="purchase_cta">
                                         <div className="purchase_cta-types">
                                             <p>Compra <span style={{ color: 'red' }}>{myData.title}</span></p>
                                         </div>

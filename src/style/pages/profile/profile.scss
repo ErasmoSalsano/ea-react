@@ -29,7 +29,7 @@
       background-color: var(--color-account-button-blue);
       width: 300px;
       gap: 15px;
-      padding: 45px;
+      padding: 15px;
       border-radius: 25px;
       box-shadow: rgb(100, 100, 100) 0px 10px 25px 5px;
 
@@ -44,6 +44,7 @@
 
       .labels {
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
         align-items: center;
         width: 100%;
@@ -59,6 +60,7 @@
         }
 
         p {
+          text-align: center;
           vertical-align: baseline;
           font-size: 1.3rem;
           width: 150px;
@@ -110,15 +112,16 @@
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 15px;
-    width: 300px;
+    gap: 25px;
+    width: 250px;
 
     .game {
-      width: 300px;
+      width: 250px;
       background-color: var(--color-account-button-blue);
       border-radius: 5px;
       padding: 5px;
       margin-bottom: 5px;
+      display: flex;
 
       img {
         width: 125px;
@@ -126,6 +129,16 @@
         border-radius: 5px;
         border: 1px solid blue;
       }
+      .game_info{
+        display: flex;
+        flex-direction: column;
+        color: aliceblue;
+        font-size: 1.1rem;
+        padding-left: 10px;
+      }
+    }
+    div .games-title{
+        text-align: center;
     }
   }
   .games-list {
@@ -137,11 +150,15 @@
       .user-profile {
         flex-direction: row;
         width: 600px;
+        padding: 45px;
 
         .img {
           width: 151px;
           height: 151px;
           z-index: 1;
+        }
+        .labels{
+            flex-direction: row;
         }
 
         .main-wrap {
