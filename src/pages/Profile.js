@@ -60,6 +60,15 @@ export function Profile() {
                                             <label>Ea Play</label>
                                             <p>{user.subscription?'You are subscribed':'Not sub yet'}</p>
                                         </div>
+                                        <div className={"labels"}>
+                                            <label>Balance</label>
+                                            <p>{user.credit}€</p>
+                                        </div>
+                                        {user.bonus &&
+                                        <div className={"labels"}>
+                                            <label>promozione</label>
+                                            <p>{user?.bonus?.active && user?.bonus?.used ? 'used':'In one game 25%'}</p>
+                                        </div>}
                                     </div>
                                 </div>
                             </MainContentWrap>

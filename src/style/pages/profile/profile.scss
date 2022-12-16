@@ -24,6 +24,7 @@
     .user-profile {
       display: flex;
       flex-direction: column;
+      justify-content: space-around;
       align-items: center;
       border: 1px solid white;
       background-color: var(--color-account-button-blue);
@@ -63,7 +64,7 @@
           text-align: center;
           vertical-align: baseline;
           font-size: 1.3rem;
-          width: 150px;
+          width: 200px;
           color: rgb(214, 214, 214);
         }
       }

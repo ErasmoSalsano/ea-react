@@ -84,19 +84,9 @@ export const useManageAccount = () => {
     return tutti;
   }
 
-//   function addGame() {
-//     const updates = {};
-//     updates[`/users/${currentUser.uid}/games`] = ['ciao'];
-
-//     return update(ref(db), updates);
-//   }
-
-//   useEffect(() => {
-//     if(!loggedUser?.games){
-//         if(loggedUser?.games[0]!== ['ciao'])return
-//         else{addGame()}
-//     }
-//   }, [loggedUser?.uid]);
+const currentTime = new Date()
+const currDay = currentTime.getDate()
+const currentM = currentTime.getMonth()
 
   useEffect(() => {
     currentUser ? setLoggedUser(onGetUser()) : setLoggedUser(null);
@@ -109,27 +99,30 @@ export const useManageAccount = () => {
       userName: userName,
       avatar: avatar,
       games: [],
-      subscription: false
-    });
+      subscription: false,
+      bonus: {active:false, used:false},
+      credit: 100
+    })
   }
 
-  function userPurchases(uid, buy, item) {
+  function userPurchases(uid, buy, item, price) {
     const updates = {};
+    let userCredit;
     if(buy === 'games'){
-        // if(loggedUser.games[0] === 'ciao'){
-        //     const games = [item]
-        //     updates['/users/' + uid + '/games'] = games;
-        // }else{
-            
         const games = addGame(item)
+        if(loggedUser.bonus.active && !loggedUser.bonus.used && +price > 14.99){
+            updates['/users/' + uid + '/bonus'] = {active:true, used:true};
+        }
+        userCredit = (loggedUser.credit - price).toFixed(2)
         updates['/users/' + uid + '/games'] = games;
-        // }
+        updates['/users/' + uid + '/credit'] = userCredit;
     }
     if(buy === 'subscription'){
         const subscription = true
+        userCredit = (loggedUser.credit - 3.99).toFixed(2)
         updates['/users/' + uid + '/subscription'] = subscription;
+        updates['/users/' + uid + '/credit'] = userCredit;
     }
-  
     return update(ref(db), updates);
   }
 
@@ -308,12 +301,25 @@ export const useManageAccount = () => {
   };
 
   const onGetUser = async () => {
+    const updates = {};
+    const festivity = currDay >= 15 && currDay <= 31 && currentM === 11;
     try {
       const dbRef = ref(getDatabase());
       const snapshot = await get(child(dbRef, `users/${currentUser?.uid}`));
       if (snapshot.exists()) {
         const result = snapshot.val();
         setLoggedUser(result);
+        if(loggedUser?.bonus && festivity){
+          updates['/users/' + currentUser.uid + '/bonus'] = {active:true, used:false};
+        }
+        if(festivity && (loggedUser?.bonus?.active === false || undefined) && loggedUser?.bonus?.used !== true ||undefined){
+            updates['/users/' + currentUser.uid + '/bonus'] = {active:true, used:false};
+        }
+        if(loggedUser?.bonus?.active && !festivity){
+            updates['/users/' + currentUser.uid + '/bonus'] = {active:false, used:false};
+        }
+      return update(ref(db), updates);
+      
       } else {
         throw new Error("Specified id is not in the database");
       }
