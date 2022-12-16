@@ -2,251 +2,229 @@
 
 //Estensione destinata alla navTAB dove presente
 %bottom-line {
-    box-shadow: inset 0 -2px 0 0 rgba(0, 0, 0, 0.08);
+  box-shadow: inset 0 -2px 0 0 rgba(0, 0, 0, 0.08);
 }
 
 /* scale padding button details */
 
 //inserirlo sull'oggetto per la transizione slow alla rimozione del mouse
 %start-scale-padding {
-    padding: 12px 24px;
-    transition: 0.1s;
+  padding: 12px 24px;
+  transition: 0.1s;
 }
 
 //inserirlo sull'hover
 %scale-padding {
-    padding: 16px 28px;
-    transition: 0.1s;
+  padding: 16px 28px;
+  transition: 0.1s;
 }
 
 %flexcenter {
-    //extend per l'accentramento degli oggetti
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  //extend per l'accentramento degli oggetti
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Griglia giochi */
 
-
-
 .grid-games {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  font-size: var(--font-size-span);
+  font-family: var(--font-family-display-regular);
+  letter-spacing: 0.5px;
+
+  .game-box {
+    // card
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .game-image {
     height: 100%;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
-    font-size: var(--font-size-span);
-    font-family: var(--font-family-display-regular);
-    letter-spacing: 0.5px;
-
-    .game-box {
-        // card
-        width: 100%;
-        position: relative;
-        cursor: pointer;
-
-    }
-
-    .game-image {
-        height: 100%;
-        width: 100%;
-        filter: brightness(65%);
-    }
+    filter: brightness(65%);
+  }
 }
 
 /* hover giochi */
 
-
 //animazione per le cards con animazione translateY
 
 .image_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  .span_games {
+    display: none;
+    color: white;
+  }
 
+  .logo {
+    max-height: 60px;
+    z-index: 1;
+  }
 
+  .big-logo {
+    // svg SIMS & Battlefield
+    max-height: 15%;
+  }
 
+  .very-big-logo {
+    max-height: 10%;
+  }
+
+  &:hover {
     .span_games {
-        display: none;
-        color: white;
-
-
+      z-index: 1;
+      display: unset;
     }
-
-    .logo {
-        position: absolute;
-        max-height: 60px;
-        z-index: 1;
-
-    }
-
-    .big-logo {
-        // svg SIMS & Battlefield
-        max-height: 15%;
-    }
-
-    .very-big-logo{
-        max-height: 10%;
-
-    }
-
-    &:hover {
-        .span_games {
-            z-index: 1;
-            display: unset;
-        }
-    }
+  }
 }
 
 .game-box:hover .image_overlay {
-
-
-    .logo {
-        transform: translateY(-75px);
-
-    }
-
-
+  .logo {
+    transform: translateY(-75px);
+    position: absolute;
+  }
+  .block {
+    display: flex;
+  }
 }
 
-.image_overlay>* {
-    transition: transform 0.50s;
+.image_overlay > * {
+  transition: transform 0.5s;
 }
-
 
 .image_overlay::before {
-    position: absolute;
-    content: "";
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 1;
-    opacity: 0;
-    transition: 0.5s;
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0;
+  transition: 0.5s;
 }
 
 .image_overlay:hover::before {
-    opacity: 0.9;
+  opacity: 0.9;
 }
-
 
 //animazione per le cards con animazione scale zoom
 
-
 .zoom-animation-box:hover {
-    // classe da affiancare a game-box
+  // classe da affiancare a game-box
 
-    .zoom-animation-image {
-        // classe da affiancare a game-image
-        filter: none;
+  .zoom-animation-image {
+    // classe da affiancare a game-image
+    filter: none;
+  }
+
+  .zoom-animation-overlay {
+    // classe da affiancare a image-overlay
+
+    .logo {
+      transform: scale(1.1);
     }
-
-    .zoom-animation-overlay {
-        // classe da affiancare a image-overlay
-
-
-        .logo {
-            transform: scale(1.1)
-        }
-
-
-    }
+  }
 }
-
-
 
 /* Griglia articoli */
 
 //Teoricamente tutti gli aricoli in card futuri dovrebbero essere settati.
 //dovete impostare voi se vi serve il "flex" sulla dove andrete a lavorare
 //flex:1 auto; non va bene per tutte le card (riferito ai casi in cui vi sia una riga con una sola)
-@mixin article-card ($width) {
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    width: $width;
-    background-color: white;
-    cursor: pointer;
+@mixin article-card($width) {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: $width;
+  background-color: white;
+  cursor: pointer;
 }
 
-@mixin article-text ($just-cont, $p-display) {
+@mixin article-text($just-cont, $p-display) {
+  display: flex;
+  flex-direction: column;
+  justify-content: $just-cont;
+  padding: 24px;
+
+  div {
     display: flex;
     flex-direction: column;
-    justify-content: $just-cont;
-    padding: 24px;
+    justify-content: center;
+    width: calc(100% + 1em);
 
-    div {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: calc(100% + 1em);
-
-        span {
-            color: red;
-            font-family: var(--font-family-text-bold);
-            font-size: var(--font-size-h6);
-            margin: 0 8px 0 0;
-            font-weight: 600;
-            line-height: 20px;
-            white-space: nowrap;
-        }
-
-        .normal {
-            color: #161616;
-            margin: 0 8px;
-        }
+    span {
+      color: red;
+      font-family: var(--font-family-text-bold);
+      font-size: var(--font-size-h6);
+      margin: 0 8px 0 0;
+      font-weight: 600;
+      line-height: 20px;
+      white-space: nowrap;
     }
 
-    h3 {
-        font-family: var(--font-family-text-bold);
-        font-size: var(--font-size-cards-title);
-        margin-top: 6px;
-        line-height: 25px;
-        letter-spacing: -0.6px;
-        font-weight: 600;
-        color: #161616;
+    .normal {
+      color: #161616;
+      margin: 0 8px;
     }
+  }
 
-    p {
-        display: $p-display;
-        font-size: var(--font-size-cards-text);
-        font-family: var(--font-family-text-regular);
-        line-height: 27px;
-        margin-top: 6px;
-        color: #161616;
-    }
+  h3 {
+    font-family: var(--font-family-text-bold);
+    font-size: var(--font-size-cards-title);
+    margin-top: 6px;
+    line-height: 25px;
+    letter-spacing: -0.6px;
+    font-weight: 600;
+    color: #161616;
+  }
+
+  p {
+    display: $p-display;
+    font-size: var(--font-size-cards-text);
+    font-family: var(--font-family-text-regular);
+    line-height: 27px;
+    margin-top: 6px;
+    color: #161616;
+  }
 }
 //card
-@mixin card ($width){
-    display: flex;
-    flex-direction: column;
-    width: $width;
-    box-shadow: 0 14px 20px 0 rgb(80, 80, 80, 2%);
+@mixin card($width) {
+  display: flex;
+  flex-direction: column;
+  width: $width;
+  box-shadow: 0 14px 20px 0 rgb(80, 80, 80, 2%);
 }
 
 /* Articoli e hover articoli */
 
-
 //inserirlo sull'oggetto per la transizione slow alla rimozione del mouse
 %shadow-start {
-    box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.3);
-    transform: translateY(0);
-    transition: 0.5s;
+  box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.3);
+  transform: translateY(0);
+  transition: 0.5s;
 }
 
 //inserirlo sull'hover
 %shadow-hover {
-    transform: translateY(-12px);
-    z-index: 1;
-    transition: 0.5s;
-    box-shadow: 0 20px 25px 0px rgba(0, 0, 0, 0.4);
+  transform: translateY(-12px);
+  z-index: 1;
+  transition: 0.5s;
+  box-shadow: 0 20px 25px 0px rgba(0, 0, 0, 0.4);
 }
