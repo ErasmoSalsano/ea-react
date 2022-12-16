@@ -451,9 +451,8 @@ main {
   // links(3)
 
   .block {
-    display: flex;
+    display: none;
     flex-direction: column;
-    position: absolute;
     top: 45%;
     text-align: center;
     .span_games {
