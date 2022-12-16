@@ -311,7 +311,6 @@ const currentM = currentTime.getMonth()
         setLoggedUser(result);
         if(loggedUser?.bonus && festivity){
           updates['/users/' + currentUser.uid + '/bonus'] = {active:true, used:false};
-          console.log('diocane', loggedUser?.bonus)
         }
         if(festivity && (loggedUser?.bonus?.active === false || undefined) && loggedUser?.bonus?.used !== true ||undefined){
             updates['/users/' + currentUser.uid + '/bonus'] = {active:true, used:false};
