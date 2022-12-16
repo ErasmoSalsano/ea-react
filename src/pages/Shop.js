@@ -17,30 +17,64 @@ export function Shop() {
     const navigate = useNavigate()
 
     useEffect(() => {
-        if (!myData) return
         setContent(myData.shop.secondary[0])
-    }, [myData])
+    }, [])
 
     function buy(x, y) {
         if (currentUser && loggedUser) {
             if (x === 'ea') {
                 if (loggedUser.subscription === false) {
-                    userPurchases(currentUser.uid, y)
-                    setResponse({ message: 'Congratulation!You are subscribbed to EA', failed: false })
+                    if (loggedUser?.credit <= 3.99) {
+                        setResponse({
+                            message: `Your credit is ${loggedUser.credit}€ are missing ${(3.99 - loggedUser.credit).toFixed(2)}`,
+                            failed: true
+                        })
+                        return
+                    } else {
+                        userPurchases(currentUser.uid, y)
+                        setResponse({
+                            message: 'Congratulation!You are subscribbed to EA',
+                            failed: false
+                        })
+                    }
                 } else {
-                    setResponse({ message: 'We are sorry, you are already subscribed', failed: true })
+                    setResponse({
+                        message: 'We are sorry, you are already subscribed',
+                        failed: true
+                    })
                 }
             } if (x === 'game') {
+                let cost = myData.shop.price
                 if (!loggedUser?.games || loggedUser?.games && !loggedUser?.games.includes(myData.id)) {
-                    userPurchases(currentUser.uid, y, myData.id)
-                    setResponse({ message: 'Congratulation, your purchase successfull the game', failed: false })
+                    if(loggedUser?.bonus?.active && loggedUser?.bonus?.used === false && + myData.shop.price > 14.99){
+                       cost = (+myData.shop.price - (+myData.shop.price / 100 * 25)).toFixed(2)
+                    }
+                    if (+loggedUser?.credit <= +cost) {
+                        setResponse({
+                            message: `Your credit is ${loggedUser.credit}€ are missing ${(+myData.shop.price - +loggedUser.credit).toFixed(2)}`,
+                            failed: true
+                        })
+                        return
+                    } else {
+                        userPurchases(currentUser.uid, y, myData.id, +cost)
+                        setResponse({
+                            message: 'Congratulation, your purchase successfull the game',
+                            failed: false
+                        })
+                    }
                 } else {
-                    setResponse({ message: 'you own this game', failed: true })
+                    setResponse({
+                        message: 'you own this game',
+                        failed: true
+                    })
                 }
             }
         }
         else {
-            setResponse({ message: 'You have to login', failed: true })
+            setResponse({
+                message: 'You have to login',
+                failed: true
+            })
         }
     }
 
