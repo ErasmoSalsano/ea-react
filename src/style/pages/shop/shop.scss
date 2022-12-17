@@ -49,6 +49,9 @@
                 padding: 15px 0;
                 border-bottom: 2px solid rgb(80, 80, 80, 70%);
             }
+            .header_sub{
+                text-align: center;
+            }
             .purchase_cta{
                 display: flex;
                 justify-content: space-between;
@@ -74,6 +77,27 @@
                     cursor: pointer;
                     border: 1px solid white;
                     background-color: rgb(80, 80, 80, 70%);
+                }
+            }
+            .gold{
+                border: 1px solid rgba(255, 226, 3, 0.8);
+                background-color: rgba(248, 220, 97, 0.777);
+                display: flex;
+                justify-content: space-between;
+                padding: 20px;
+                .purchase_cta-types{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    gap: 45px;
+                    white-space: nowrap;
+                }
+                .purchase_cta-types2{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+                    gap: 10px;
+                    white-space: nowrap;
                 }
             }
             .container{

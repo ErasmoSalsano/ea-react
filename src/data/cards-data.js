@@ -814,5 +814,5 @@ export const game = [
       imgDescription: "descrizione",
       svgPath: "./assets/images/game/fifa-14-mono-logo.png",
     },
-  },
+  }
 ];

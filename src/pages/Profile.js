@@ -25,7 +25,7 @@ export function Profile() {
             <>
                 <Header />
                 <div className="profile">
-                    <div className={"bg-profile"}>
+                    <div className={loggedUser?.subscription ? 'bg-profile gold':"bg-profile"}>
                         <div className={"void"}></div>
                         <MainWrap>
                             <MainContentWrap p extendClass="fc">
