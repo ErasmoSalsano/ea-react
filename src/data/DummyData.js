@@ -1,112 +1,118 @@
 export const TabButtons = {
     home:[
-        { id: 1, nome:'Notizie Ea', categoria: 'Eletronics Arts' },
-        { id: 2, nome:'EA Play', categoria: 'Eletronics Arts Inc.' },
-        { id: 3, nome:'FIFA', categoria: 'FIFA' },
-        { id: 4, nome:'F1', categoria: 'F1® 22' },
-        { id: 5, nome:'Apex Legends', categoria: 'Apex Legends' },
-        { id: 6, nome:'The Sims', categoria: 'The Sims 4' },
-        { id: 7, nome:'Battlefield', categoria: 'Battlefield 2042' },
-        { id: 8, nome:'Inside Ea', categoria: 'Inside EA' }],
+        { id: 1, buttonType: 'A', name:'Notizie Ea', reqCategory: 'Eletronics Arts' },
+        { id: 2, buttonType: 'A', name:'EA Play', reqCategory: 'Eletronics Arts Inc.' },
+        { id: 3, buttonType: 'A', name:'FIFA', reqCategory: 'FIFA' },
+        { id: 4, buttonType: 'A', name:'F1', reqCategory: 'F1® 22' },
+        { id: 5, buttonType: 'A', name:'Apex Legends', reqCategory: 'Apex Legends' },
+        { id: 6, buttonType: 'A', name:'The Sims', reqCategory: 'The Sims 4' },
+        { id: 7, buttonType: 'A', name:'Battlefield', reqCategory: 'Battlefield 2042' },
+        { id: 8, buttonType: 'A', name:'Inside Ea', reqCategory: 'Inside EA' }],
     insideEa:[
-        { id: 1, nome:'Le storie', categoria: 'Storie' },
-        { id: 2, nome:'Diversità e Inclusione', categoria: 'Diversità' },
-        { id: 3, nome:'Persone e Cultura', categoria: 'Cultura' },
-        { id: 4, nome:'Investire nella Comunità', categoria: 'Comunità' }],
+        { id: 1, buttonType: 'B', name:'Le storie', reqCategory: 'Storie' },
+        { id: 2, buttonType: 'B', name:'Diversità e Inclusione', reqCategory: 'Diversità' },
+        { id: 3, buttonType: 'B', name:'Persone e Cultura', reqCategory: 'Cultura' },
+        { id: 4, buttonType: 'B', name:'Investire nella Comunità', reqCategory: 'Comunità' }],
     eaSports:[
-        { id: 1, nome:'FIFA', categoria: 'FIFA' },
-        { id: 2, nome:'Madden NFL™', categoria: 'MADDEN NFL', void: true},
-        { id: 3, nome:'F1', categoria: 'F1® 22' },
-        { id: 4, nome:'NHL', categoria: 'NHL', void: true},
-        { id: 5, nome:'UFC', categoria: 'UFC' },
-        { id: 6, nome:'NBA LIVE', categoria: 'NBA LIVE' },
-        { id: 7, nome:'FIFA Mobile', categoria: 'FIFA Mobile' },
-        { id: 8, nome:'Madden NFL Mobile', categoria: 'Madden NFL Mobile', void: true},
-        { id: 9, nome:'NBA LIVE Mobile', categoria: 'NBA LIVE Mobile' }
+        { id: 1, buttonType: 'A', name:'FIFA', reqCategory: 'FIFA' },
+        { id: 2, buttonType: null, name:'Madden NFL™', reqCategory: 'MADDEN NFL', void: true},
+        { id: 3, buttonType: 'A', name:'F1', reqCategory: 'F1® 22' },
+        { id: 4, buttonType: null, name:'NHL', reqCategory: 'NHL', void: true},
+        { id: 5, buttonType: 'A', name:'UFC', reqCategory: 'UFC' },
+        { id: 6, buttonType: 'A', name:'NBA LIVE', reqCategory: 'NBA LIVE' },
+        { id: 7, buttonType: 'A', name:'FIFA Mobile', reqCategory: 'FIFA Mobile' },
+        { id: 8, buttonType: null, name:'Madden NFL Mobile', reqCategory: 'Madden NFL Mobile', void: true},
+        { id: 9, buttonType: 'A', name:'NBA LIVE Mobile', reqCategory: 'NBA LIVE Mobile' }
     ]
 }
 
 //complete your page and add the route
 
 export const pages = [
-    {
-        id: 1,
-        image: `/assets/images/article/Inside EA/ea-inside-immagine 1.jpg`,
-        title: `HOME`,
-        link: `/`,
-    },
-    {
-        id: 2,
-        image: `/assets/images/EASPORTSpage/ufc4-feature-image-ea-play.jpg.adapt.crop16x9.431p.jpg`,
-        title: `EA SPORTS`,
-        link: `/`,
-    },
-    // {
-    //     id: 3,
-    //     image: `/assets/images/EASPORTSpage/optimized-pj-f122-por-006-mag-1.jpg.adapt.crop16x9.431p.jpg`,
-    //     title: `FREE GAMES`,
-    //     link: `/`,
-    // },
-    // {
-    //     id: 4,
-    //     image: `/assets/images/EASPORTSpage/ufc4-featured-image-primeicons-16x9.png.adapt.crop16x9.431p.png`,
-    //     title: `LAST GAMES`,
-    //     link: `/`,
-    // },
-    // {
-    //     id: 5,
-    //     image: `/assets/images/pages/about/ea-about-our-products-tile-2.jpg.adapt.crop16x9.652w.jpg`,
-    //     title: `PC`,
-    //     link: `/`,
-    // },
-    // {
-    //     id: 6,
-    //     image: `/assets/images/pages/about/ea-about-our-products-tile-1.jpg.adapt.crop16x9.652w.jpg`,
-    //     title: `PS 5`,
-    //     link: `/`,
-    // },
-    // {
-    //     id: 7,
-    //     image: `/assets/images/pages/about/ea-about-grid-tile-ts4-cottage-living.jpg.adapt.crop16x9.652w.jpg`,
-    //     title: `X-BOX`,
-    //     link: `/`,
-    // },
-    // {
-    //     id: 8,
-    //     image: `/assets/images/Diversita-e-inclusione/inclusion-feature-image.jpg`,
-    //     title: `POSITIVE PLAY`,
-    //     link: `/`,
-    // },
-    // {
-    //     id: 9,
-    //     image: `/assets/images/article/Notizie EA/ea-notizie-immagine 6.jpg`,
-    //     title: `EXECUTIVE TEAM`,
-    //     link: `/`,
-    // },
-    // {
-    //     id: 10,
-    //     image: `/assets/images/article/Notizie EA/ea-notizie-immagine 5.png`,
-    //     title: `REDEEM`,
-    //     link: `/`,
-    // },
-    {
-        id: 11,
-        image: `/assets/images/article/Apex Legends/ea-apexLegends-immagine 3.jpg`,
-        title: `NOTIZIE`,
-        link: `/informazioni/notizie`,
-    },
-    // {
-    //     id: 12,
-    //     image: `/assets/images/article/Inside EA/ea-inside-immagine 3.jpg`,
-    //     title: `ABOUT`,
-    //     link: `/`,
-    // },
-    {
-        id: 13,
-        image: `/assets/images/article/Inside EA/ea-inside-immagine 3.jpg`,
-        title: `INSIDE EA`,
-        link: `/informazioni/inside-ea`,
-    },
+    [
+        {
+            id: 1,
+            image: `/assets/images/article/Inside EA/ea-inside-immagine 1.jpg`,
+            title: `HOME`,
+            link: `/`,
+        },
+        {
+            id: 2,
+            image: `/assets/images/EASPORTSpage/ufc4-feature-image-ea-play.jpg.adapt.crop16x9.431p.jpg`,
+            title: `EA SPORTS`,
+            link: `/EaSports`,
+        },
+        {
+            id: 3,
+            image: `/assets/images/EASPORTSpage/optimized-pj-f122-por-006-mag-1.jpg.adapt.crop16x9.431p.jpg`,
+            title: `FREE GAMES`,
+            link: `/EaSports`,
+        },
+        {
+            id: 4,
+            image: `/assets/images/EASPORTSpage/ufc4-featured-image-primeicons-16x9.png.adapt.crop16x9.431p.png`,
+            title: `LAST GAMES`,
+            link: `/EaSports`,
+        }
+    ],
+    [
+        {
+            id: 5,
+            image: `/assets/images/pages/about/ea-about-our-products-tile-2.jpg.adapt.crop16x9.652w.jpg`,
+            title: `PC`,
+            link: `/`,
+        },
+        {
+            id: 6,
+            image: `/assets/images/pages/about/ea-about-our-products-tile-1.jpg.adapt.crop16x9.652w.jpg`,
+            title: `PS 5`,
+            link: `/`,
+        },
+        {
+            id: 7,
+            image: `/assets/images/pages/about/ea-about-grid-tile-ts4-cottage-living.jpg.adapt.crop16x9.652w.jpg`,
+            title: `X-BOX`,
+            link: `/`,
+        },
+        {
+            id: 8,
+            image: `/assets/images/Diversita-e-inclusione/inclusion-feature-image.jpg`,
+            title: `POSITIVE PLAY`,
+            link: `/`,
+        }
+    ],
+    [
+        {
+            id: 9,
+            image: `/assets/images/article/Notizie EA/ea-notizie-immagine 6.jpg`,
+            title: `EXECUTIVE TEAM`,
+            link: `/`,
+        },
+        {
+            id: 10,
+            image: `/assets/images/article/Notizie EA/ea-notizie-immagine 5.png`,
+            title: `REDEEM`,
+            link: `/`,
+        },
+        {
+            id: 11,
+            image: `/assets/images/article/Apex Legends/ea-apexLegends-immagine 3.jpg`,
+            title: `NOTIZIE`,
+            link: `/informazioni/notizie`,
+        },
+        // {
+        //     id: 12,
+        //     image: `/assets/images/article/Inside EA/ea-inside-immagine 3.jpg`,
+        //     title: `ABOUT`,
+        //     link: `/`,
+        // },
+        {
+            id: 13,
+            image: `/assets/images/article/Inside EA/ea-inside-immagine 3.jpg`,
+            title: `INSIDE EA`,
+            link: `/informazioni/inside-ea`,
+        },
+    ]
 ]
 
 //Picture component

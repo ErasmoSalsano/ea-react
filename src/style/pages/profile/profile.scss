@@ -1,0 +1,206 @@
+@use "../../layouts";
+@use "../../basic-layout";
+@use "../../colors";
+@use "../../tipography";
+@use "../../header";
+@use "../../footer";
+@use "../../hero";
+
+.profile {
+  padding: 15px;
+
+  .bg-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    position: relative;
+    background: #99999976;
+    margin: 25px;
+
+    .user-profile {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      border: 1px solid white;
+      background-color: var(--color-account-button-blue);
+      width: 300px;
+      gap: 15px;
+      padding: 15px;
+      border-radius: 25px;
+      box-shadow: rgb(100, 100, 100) 0px 10px 25px 5px;
+
+      .img {
+        width: 151px;
+        height: 151px;
+        border-radius: 50%;
+        border: 1px solid #24217e;
+        box-shadow: #24217e 0px 0px 5px 5px;
+        z-index: 1;
+      }
+
+      .labels {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 3px;
+        padding-bottom: 5px;
+
+        label {
+          font-size: 1.3rem;
+          text-shadow: #24217e 0 5px 10px;
+          color: white;
+          text-align: center;
+          margin: 0 25px;
+        }
+
+        p {
+          text-align: center;
+          vertical-align: baseline;
+          font-size: 1.3rem;
+          width: 200px;
+          color: rgb(214, 214, 214);
+        }
+      }
+
+      .user-image {
+        img {
+          height: 2.7rem;
+          border-radius: 0.3rem;
+          object-fit: cover;
+        }
+      }
+    }
+
+    .void {
+      height: 60px;
+    }
+
+    .main-wrap {
+      padding: 0px calc((100vw - 1600px) / 2);
+
+      .fc {
+        display: flex;
+        flex-direction: column;
+
+        .title {
+            width: 100%;
+
+          h1,
+          h3 {
+            text-shadow: #24217e 0 10px 10px;
+            color: white;
+            text-align: center;
+          }
+
+          h1 {
+            position: relative;
+            padding: 0 18px;
+            font-size: 2.8rem;
+          }
+        }
+      }
+    }
+  }
+
+  .games-user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 25px;
+    width: 250px;
+
+    .game {
+      width: 250px;
+      background-color: var(--color-account-button-blue);
+      border-radius: 5px;
+      padding: 5px;
+      margin-bottom: 5px;
+      display: flex;
+
+      img {
+        width: 125px;
+        height: 125px;
+        border-radius: 5px;
+        border: 1px solid blue;
+      }
+      .game_info{
+        display: flex;
+        flex-direction: column;
+        color: aliceblue;
+        font-size: 1.1rem;
+        padding-left: 10px;
+      }
+    }
+    div .games-title{
+        text-align: center;
+    }
+  }
+  .games-list {
+    font-size: 1.4rem;
+  }
+
+  @media screen and (min-width: 769px) {
+    .bg-profile {
+      .user-profile {
+        flex-direction: row;
+        width: 600px;
+        padding: 45px;
+
+        .img {
+          width: 151px;
+          height: 151px;
+          z-index: 1;
+        }
+        .labels{
+            flex-direction: row;
+        }
+
+        .main-wrap {
+          .fc {
+            transform: scale(1.4);
+            margin: 21px 0;
+
+            .title {
+              transform: scale(150%);
+            }
+          }
+        }
+      }
+
+      .void {
+        height: 110px;
+      }
+    }
+    .games-user {
+      width: 85%;
+    }
+  }
+
+  @media screen and (min-width: 1025px) {
+    .bg-profile {
+      .user-profile {
+        width: 700px;
+      }
+    }
+
+    .void {
+      height: 130px;
+    }
+    .games-user {
+      width: 65%;
+    }
+  }
+
+  @media screen and (min-width: 1457px) {
+    .void {
+      height: 150px;
+    }
+  }
+}

@@ -14,7 +14,7 @@ export function Picture({ className, imgClass, request }) {
                     key={index} />)
             }
 
-            <img className={imgClass} src={picturesData[request].img_ + request} />
+            <img className={imgClass} src={picturesData[request].img_ + request} alt={'imgDefault'}/>
         </picture>
     )
 }

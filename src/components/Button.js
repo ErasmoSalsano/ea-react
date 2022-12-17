@@ -1,4 +1,6 @@
-export function Button({buttonText,color,justifyContent}) {
+import { Link } from "react-router-dom"
+
+export function Button({buttonText, color, justifyContent, buttonLink}) {
 
     const buttonStyle ={
     color: color,
@@ -13,8 +15,9 @@ export function Button({buttonText,color,justifyContent}) {
     return (
         <div style={buttonPosition} className="content-details">
             <div style={buttonStyle} className="details " >
-                <p>{buttonText}
-                </p>
+                <Link to={buttonLink}>
+                    <p>{buttonText}</p>
+                </Link>
             </div>
         </div>
     )
