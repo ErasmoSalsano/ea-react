@@ -6,12 +6,10 @@ import { MainWrap } from "../components/0_wraps/mainWrap";
 import { MainContentWrap } from "../components/0_wraps/mainContentWrap";
 import { Title } from "../components/Title";
 import "./../style/index.scss";
-import { useAuth } from "../contexts/AuthContext";
 import { Header } from "../components/header/Header";
 import { Footer } from "../components/Footer";
 
 export function Home() {
-  const value = useAuth();
 
   return (
     <>

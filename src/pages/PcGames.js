@@ -7,13 +7,27 @@ import "../style/pages/games/pc.scss";
 
 import { Header } from "../components/header/Header";
 import { Footer } from "../components/Footer";
+import { useManageAccount } from "../utils/useManageAccount";
+import { useAuth } from "../contexts/AuthContext";
 
 export function PcGames() {
   const lowerThan1465 = useMediaPredicate("(min-width: 1456px)");
+  const{firstAcess, setFirstAcess} = useAuth();
+  const {loggedUser} = useManageAccount()
+
   return (
     <>
       <Header />
       <main>
+        {loggedUser && firstAcess 
+        && loggedUser?.bonus?.active 
+        && !loggedUser?.bonus?.used &&
+        <div className="promotion_container">
+            <div className="promotion_card">
+                <button onClick={()=> setFirstAcess(false)} className="promotion_close">x</button>
+                <img className="promotion_image" src="assets/images/proj-xmas.png"/>
+            </div>
+        </div>}
         <div className="hero-container-pc">
           <picture>
             <source
