@@ -10,7 +10,7 @@ export const useManageAccount = () => {
 
   const navigate = useNavigate();
   // firebase authentication imports
-  const { signup, login, logout, currentUser } = useAuth();
+  const { signup, login, logout, currentUser, festivity } = useAuth();
 
   /*
   Can be changed in a more convenient structure but needs the other functions to be modified
@@ -73,9 +73,9 @@ export const useManageAccount = () => {
 
   // Database connection
   const db = getDatabase();
+  const updates = {};
 
   function addGame(gioco) {
-    const updates = {};
     const tutti = [];
     if (loggedUser?.games?.length && loggedUser?.games?.length > 0)
       tutti.push(...loggedUser.games);
@@ -83,10 +83,6 @@ export const useManageAccount = () => {
 
     return tutti;
   }
-
-const currentTime = new Date()
-const currDay = currentTime.getDate()
-const currentM = currentTime.getMonth()
 
   useEffect(() => {
     currentUser ? setLoggedUser(onGetUser()) : setLoggedUser(null);
@@ -106,7 +102,6 @@ const currentM = currentTime.getMonth()
   }
 
   function userPurchases(uid, buy, item, price) {
-    const updates = {};
     let userCredit;
     if(buy === 'games'){
         const games = addGame(item)
@@ -301,8 +296,6 @@ const currentM = currentTime.getMonth()
   };
 
   const onGetUser = async () => {
-    const updates = {};
-    const festivity = currDay >= 15 && currDay <= 31 && currentM === 11;
     try {
       const dbRef = ref(getDatabase());
       const snapshot = await get(child(dbRef, `users/${currentUser?.uid}`));
@@ -312,7 +305,7 @@ const currentM = currentTime.getMonth()
         if(loggedUser?.bonus && festivity){
           updates['/users/' + currentUser.uid + '/bonus'] = {active:true, used:false};
         }
-        if(festivity && (loggedUser?.bonus?.active === false || undefined) && loggedUser?.bonus?.used !== true ||undefined){
+        if(festivity && (loggedUser?.bonus?.active === false || undefined) && (loggedUser?.bonus?.used !== true ||undefined)){
             updates['/users/' + currentUser.uid + '/bonus'] = {active:true, used:false};
         }
         if(loggedUser?.bonus?.active && !festivity){

@@ -17,6 +17,13 @@ export function useAuth() {
 export function AuthProvider({ children }) {
   const [currentUser, setCurrentUser] = useState();
   const [loading, setLoading] = useState(true);
+  const [firstAcess, setFirstAcess] = useState(null)
+
+  //festivity
+    const currentTime = new Date()
+    const currDay = currentTime.getDate()
+    const currentM = currentTime.getMonth()
+    const festivity = currDay >= 15 && currDay <= 31 && currentM === 11;
 
   // Crea utente (firebase authentication)
   function signup(email, password) {
@@ -30,6 +37,9 @@ export function AuthProvider({ children }) {
         await setPersistence(auth, browserSessionPersistence);
       }
       const res = await signInWithEmailAndPassword(auth, mail, password);
+      
+      festivity && setFirstAcess(true)
+
       // Signed in
       console.log("Logged in");
       return res;
@@ -72,6 +82,9 @@ export function AuthProvider({ children }) {
     signup,
     login,
     logout,
+    festivity,
+    firstAcess,
+    setFirstAcess
   };
 
   return (

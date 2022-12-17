@@ -22,8 +22,6 @@
                 height: 50rem;
                 overflow-y: hidden;
             }
-
-
         }
 
         .content2 {
@@ -536,6 +534,56 @@
             .main-content-wrap {
                 .buttons i {
                     display: none;
+                }
+            }
+        }
+    }
+    .promotion_container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        z-index: 10;
+        background-color: rgba(0, 0, 0, 0.8);
+        .promotion_card{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            width: clamp(320px, 50vw, 800px);
+            .promotion_close{ 
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 10px;
+                border-radius: 50%;
+                color: red;
+                background: white;
+                position: absolute;
+                width: 30px;
+                height: 30px;
+                border: none;
+                top: -15px;
+                right: -5px;
+                font-size: 1.8rem;
+            }
+            .promotion_image{
+                width: 95%;
+            }
+        }
+    }
+    @media  screen and (min-width:776px) {
+        .promotion_container{
+            .promotion_card{
+                .promotion_close{
+                    width: 50px;
+                    height: 50px;
+                    font-size: 2.4rem;
+                    top: -25px;
+                    right: -5px;
                 }
             }
         }
