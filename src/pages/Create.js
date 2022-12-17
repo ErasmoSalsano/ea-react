@@ -38,12 +38,12 @@ export const Create = () => {
   return (
     <div className="create">
       <div className="main-container">
-        <div className="logo">
+        <Link to="/" className="logo">
           <img
             src="https://eaassets-a.akamaihd.net/resource_signin_ea_com/551.0.220805.388.c847323/p/statics/juno/img/EALogo-New.svg"
             alt="Logo Electronic Arts"
           />
-        </div>
+        </Link>
 
         <h1>Crea un account EA</h1>
 

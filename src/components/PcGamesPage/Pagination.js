@@ -45,13 +45,13 @@ export const Pagination = (props) => {
           })}
           onClick={onPrevious}
         >
-          <div className="backButton">Precedente </div>
+          <div className="backButton">{"<"}</div>
         </li>
       </div>
       {paginationRange.map((pageNumber, index) => {
         // Render our Page Pills
         return (
-          <div key={index +1} className="pagination-item-container">
+          <div key={index + 1} className="pagination-item-container">
             <li
               className={classnames("pagination-item", {
                 selected: pageNumber === currentPage,
@@ -71,7 +71,7 @@ export const Pagination = (props) => {
           })}
           onClick={onNext}
         >
-          <div className="nextButton">Successivo </div>
+          <div className="nextButton">{">"}</div>
         </li>
       </div>
     </ul>

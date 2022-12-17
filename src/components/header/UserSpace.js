@@ -14,13 +14,31 @@ export const UserSpace = () => {
   return (
     <div className="user-space" onClick={(e) => e.stopPropagation()}>
       <div className="user-bar-wrap">
+        {loggedUser?.subscription && (
+          <div className="user-account-icon crown">
+            <img
+              className="user-space-avatar"
+              src="/assets/images/header/yellow-crown.png"
+              alt="avatar profilo"
+            />
+          </div>
+        )}
+        {loggedUser?.userName && (
+          <div
+            className={`user-space-user-name ${
+              loggedUser?.subscription ? " subscribed" : ""
+            }`}
+          >
+            {loggedUser?.userName}
+          </div>
+        )}
         <div
           trigger="accountBoard"
           onClick={(e) => checkBoard(e)}
           className="user-account-icon"
           title="user account"
         >
-          {loggedUser ? (
+          {loggedUser?.avatar ? (
             <img
               className="user-space-avatar"
               src={loggedUser?.avatar?.value}

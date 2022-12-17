@@ -10,7 +10,6 @@ import { Header } from "../components/header/Header";
 import { Footer } from "../components/Footer";
 
 export function Home() {
-
   return (
     <>
       <Header />
@@ -35,6 +34,7 @@ export function Home() {
           className="lower-hero"
           textColor="white"
           spanText="Per i nuovi membri è disponibile un'offerta imperdibile sul primo mese†"
+          buttonLink="/shop/100"
         />
         <GamesGrid />
         <MainWrap>
@@ -57,6 +57,7 @@ export function Home() {
           buttonSpan="Iscriviti subito"
           content="content2"
           buttonPosition="center"
+          buttonLink="/shop/100"
         />
         <HomePageLowerHero
           buttonSpan="Scopri di più"

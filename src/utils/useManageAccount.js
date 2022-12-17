@@ -10,7 +10,8 @@ export const useManageAccount = () => {
 
   const navigate = useNavigate();
   // firebase authentication imports
-  const { signup, login, logout, currentUser, festivity, setFirstAcess } = useAuth();
+  const { signup, login, logout, currentUser, festivity, setFirstAcess } =
+    useAuth();
 
   /*
   Can be changed in a more convenient structure but needs the other functions to be modified
@@ -88,18 +89,31 @@ export const useManageAccount = () => {
     currentUser ? setLoggedUser(onGetUser()) : setLoggedUser(null);
   }, [currentUser]);
 
-  useEffect(()=>{
-    if(loggedUser?.bonus && festivity && loggedUser?.bonus?.active === false){
-      updates['/users/' + currentUser.uid + '/bonus'] = {active:true, used:false};
+  useEffect(() => {
+    if (loggedUser?.bonus && festivity && loggedUser?.bonus?.active === false) {
+      updates["/users/" + currentUser.uid + "/bonus"] = {
+        active: true,
+        used: false,
+      };
     }
-    if(festivity && (loggedUser?.bonus?.active === false || undefined) && (loggedUser?.bonus?.used !== true ||undefined)){
-        updates['/users/' + currentUser.uid + '/bonus'] = {active:true, used:false};
+    if (
+      festivity &&
+      (loggedUser?.bonus?.active === false || undefined) &&
+      (loggedUser?.bonus?.used !== true || undefined)
+    ) {
+      updates["/users/" + currentUser.uid + "/bonus"] = {
+        active: true,
+        used: false,
+      };
     }
-    if(loggedUser?.bonus?.active && !festivity){
-        updates['/users/' + currentUser.uid + '/bonus'] = {active:false, used:false};
+    if (loggedUser?.bonus?.active && !festivity) {
+      updates["/users/" + currentUser.uid + "/bonus"] = {
+        active: false,
+        used: false,
+      };
     }
-  update(ref(db), updates);
-  },[loggedUser])
+    update(ref(db), updates);
+  }, [loggedUser]);
 
   function writeUserData(userId, email, date, userName, avatar) {
     set(ref(db, "users/" + userId), {
@@ -109,27 +123,27 @@ export const useManageAccount = () => {
       avatar: avatar,
       games: [],
       subscription: false,
-      bonus: {active:false, used:false},
-      credit: 100
-    })
+      bonus: { active: false, used: false },
+      credit: 100,
+    });
   }
 
   function userPurchases(uid, buy, item, price) {
     let userCredit;
-    if(buy === 'games'){
-        const games = addGame(item)
-        if(loggedUser.bonus.active && !loggedUser.bonus.used && +price > 14.99){
-            updates['/users/' + uid + '/bonus'] = {active:true, used:true};
-        }
-        userCredit = (loggedUser.credit - price).toFixed(2)
-        updates['/users/' + uid + '/games'] = games;
-        updates['/users/' + uid + '/credit'] = userCredit;
+    if (buy === "games") {
+      const games = addGame(item);
+      if (loggedUser.bonus.active && !loggedUser.bonus.used && +price > 14.99) {
+        updates["/users/" + uid + "/bonus"] = { active: true, used: true };
+      }
+      userCredit = (loggedUser.credit - price).toFixed(2);
+      updates["/users/" + uid + "/games"] = games;
+      updates["/users/" + uid + "/credit"] = userCredit;
     }
-    if(buy === 'subscription'){
-        const subscription = true
-        userCredit = (loggedUser.credit - 3.99).toFixed(2)
-        updates['/users/' + uid + '/subscription'] = subscription;
-        updates['/users/' + uid + '/credit'] = userCredit;
+    if (buy === "subscription") {
+      const subscription = true;
+      userCredit = (loggedUser.credit - 3.99).toFixed(2);
+      updates["/users/" + uid + "/subscription"] = subscription;
+      updates["/users/" + uid + "/credit"] = userCredit;
     }
     return update(ref(db), updates);
   }
@@ -231,7 +245,7 @@ export const useManageAccount = () => {
         break;
       case "years":
         for (
-          let i = new Date().getFullYear() - 10;
+          let i = new Date().getFullYear() - 16;
           i >= new Date().getFullYear() - length;
           i--
         ) {
@@ -276,7 +290,7 @@ export const useManageAccount = () => {
       const dbRef = ref(getDatabase());
       const snapshot = await get(child(dbRef, `users/${authUser.uid}`));
       if (!snapshot.exists()) {
-        festivity && setFirstAcess(true)
+        festivity && setFirstAcess(true);
         writeUserData(
           authUser.uid,
           authUser.email,
@@ -349,6 +363,6 @@ export const useManageAccount = () => {
     loggedUser: loggedUser,
     isValidForm: isValidForm,
     userPurchases: userPurchases,
-    addGame: addGame
+    addGame: addGame,
   };
 };
