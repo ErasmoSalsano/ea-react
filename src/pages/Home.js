@@ -6,28 +6,15 @@ import { MainWrap } from "../components/0_wraps/mainWrap";
 import { MainContentWrap } from "../components/0_wraps/mainContentWrap";
 import { Title } from "../components/Title";
 import "./../style/index.scss";
-import { useAuth } from "../contexts/AuthContext";
 import { Header } from "../components/header/Header";
 import { Footer } from "../components/Footer";
-import {useManageAccount} from "../utils/useManageAccount"
 
 export function Home() {
-  const{firstAcess, setFirstAcess} = useAuth();
-  const {loggedUser} = useManageAccount()
 
   return (
     <>
       <Header />
       <div className="homepage">
-        {firstAcess 
-        && loggedUser?.bonus?.active 
-        && !loggedUser?.bonus?.used &&
-        <div className="promotion_container">
-            <div className="promotion_card">
-                <button onClick={()=> setFirstAcess(false)} className="promotion_close">x</button>
-                <img className="promotion_image" src="assets/images/proj-xmas.png"/>
-            </div>
-        </div>}
         <HomePageUpperHero
           logoSvg="assets\images\hero\home\hero1\eacom-apex-eclipse-adaptive-logo-xl.png.adapt.crop2x1.1023w.png"
           mobile="assets\images\hero\home\hero1\apex-hero-medium-eclipse-eacom-7x2-xl.jpg.adapt.crop16x9.767w.jpg"

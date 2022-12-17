@@ -10,7 +10,7 @@ export const useManageAccount = () => {
 
   const navigate = useNavigate();
   // firebase authentication imports
-  const { signup, login, logout, currentUser, festivity } = useAuth();
+  const { signup, login, logout, currentUser, festivity, setFirstAcess } = useAuth();
 
   /*
   Can be changed in a more convenient structure but needs the other functions to be modified
@@ -87,6 +87,19 @@ export const useManageAccount = () => {
   useEffect(() => {
     currentUser ? setLoggedUser(onGetUser()) : setLoggedUser(null);
   }, [currentUser]);
+
+  useEffect(()=>{
+    if(loggedUser?.bonus && festivity && loggedUser?.bonus?.active === false){
+      updates['/users/' + currentUser.uid + '/bonus'] = {active:true, used:false};
+    }
+    if(festivity && (loggedUser?.bonus?.active === false || undefined) && (loggedUser?.bonus?.used !== true ||undefined)){
+        updates['/users/' + currentUser.uid + '/bonus'] = {active:true, used:false};
+    }
+    if(loggedUser?.bonus?.active && !festivity){
+        updates['/users/' + currentUser.uid + '/bonus'] = {active:false, used:false};
+    }
+  update(ref(db), updates);
+  },[loggedUser])
 
   function writeUserData(userId, email, date, userName, avatar) {
     set(ref(db, "users/" + userId), {
@@ -263,6 +276,7 @@ export const useManageAccount = () => {
       const dbRef = ref(getDatabase());
       const snapshot = await get(child(dbRef, `users/${authUser.uid}`));
       if (!snapshot.exists()) {
+        festivity && setFirstAcess(true)
         writeUserData(
           authUser.uid,
           authUser.email,
@@ -302,17 +316,6 @@ export const useManageAccount = () => {
       if (snapshot.exists()) {
         const result = snapshot.val();
         setLoggedUser(result);
-        if(loggedUser?.bonus && festivity){
-          updates['/users/' + currentUser.uid + '/bonus'] = {active:true, used:false};
-        }
-        if(festivity && (loggedUser?.bonus?.active === false || undefined) && (loggedUser?.bonus?.used !== true ||undefined)){
-            updates['/users/' + currentUser.uid + '/bonus'] = {active:true, used:false};
-        }
-        if(loggedUser?.bonus?.active && !festivity){
-            updates['/users/' + currentUser.uid + '/bonus'] = {active:false, used:false};
-        }
-      return update(ref(db), updates);
-      
       } else {
         throw new Error("Specified id is not in the database");
       }
