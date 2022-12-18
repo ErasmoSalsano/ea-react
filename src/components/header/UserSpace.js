@@ -14,13 +14,31 @@ export const UserSpace = () => {
   return (
     <div className="user-space" onClick={(e) => e.stopPropagation()}>
       <div className="user-bar-wrap">
+        {loggedUser?.subscription && (
+          <div className="user-account-icon crown">
+            <img
+              className="user-space-avatar"
+              src="/assets/images/header/yellow-crown.png"
+              alt="avatar profilo"
+            />
+          </div>
+        )}
+        {loggedUser?.userName && (
+          <div
+            className={`user-space-user-name ${
+              loggedUser?.subscription ? " subscribed" : ""
+            }`}
+          >
+            {loggedUser?.userName}
+          </div>
+        )}
         <div
           trigger="accountBoard"
           onClick={(e) => checkBoard(e)}
           className="user-account-icon"
           title="user account"
         >
-          {loggedUser ? (
+          {loggedUser?.avatar ? (
             <img
               className="user-space-avatar"
               src={loggedUser?.avatar?.value}
@@ -63,10 +81,7 @@ export const UserSpace = () => {
         </Link>
       </div>
 
-      {/* Why doesn't it show the closed attribute if put as closed={!userBoard} ? how to make it show it?  */}
       <div className="user-board" open={userBoard}>
-        {" "}
-        {/* this works but not as I intended: closed={start && String(!userBoard)} . these alternatives don't work: closed={start ? !userBoard : false} (and the animation looking for closed attribute)  closed={start ? !userBoard : 'off'} (and the animation looking for false value of closed attribute) */}
         <div className="user-board-close" onClick={closeBoard}>
           <svg
             viewBox="0 0 16 16"

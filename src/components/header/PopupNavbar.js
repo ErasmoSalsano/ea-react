@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export const PopupNavbar = ({ Data }) => {
   const {
     navHidden,
@@ -309,7 +311,7 @@ export const PopupNavbar = ({ Data }) => {
         </div>
 
         <div className="popup-games">
-          <div className="game-in-nav">
+          <Link to="/shop/100" className="game-in-nav">
             <img
               className="game-in-nav-image"
               src="https://media.contentapi.ea.com/content/dam/gin/images/2021/04/ea-play-16x9-png.adapt.crop1x1.767w."
@@ -322,9 +324,9 @@ export const PopupNavbar = ({ Data }) => {
                 alt="EA play live logo"
               />
             </div>
-          </div>
+          </Link>
 
-          <div className="game-in-nav">
+          <Link to="/shop/3" className="game-in-nav">
             <img
               className="game-in-nav-image"
               src="/assets/images/game/eas-fifa22-gen5-ue-keyart-horz-f23logo-1x1.jpg.adapt.crop1x1.767p.jpg"
@@ -337,9 +339,9 @@ export const PopupNavbar = ({ Data }) => {
                 alt="FIFA 23 logo"
               />
             </div>
-          </div>
+          </Link>
 
-          <div className="game-in-nav">
+          <Link to="/shop/6" className="game-in-nav">
             <img
               className="game-in-nav-image"
               src="/assets/images/game/1-1-gamebox-f122-keyart-1.png.adapt.crop1x1.767p.png"
@@ -352,9 +354,9 @@ export const PopupNavbar = ({ Data }) => {
                 src="https://media.contentapi.ea.com/content/dam/gin/common/logos/f122-gamebox-logo.png"
               />
             </div>
-          </div>
+          </Link>
 
-          <div className="game-in-nav">
+          <Link to="/shop/17" className="game-in-nav">
             <img
               className="game-in-nav-image"
               src="/assets/images/game/madden-23.jpg"
@@ -367,24 +369,24 @@ export const PopupNavbar = ({ Data }) => {
                 src="/assets/images/game/madden-23-logo.svg"
               />
             </div>
-          </div>
+          </Link>
 
-          <div className="game-in-nav">
+          <Link to="/shop/2" className="game-in-nav">
             <img
               className="game-in-nav-image"
-              src="/assets/images/game/apex-legends-keyart.jpg.adapt.crop1x1.767p.jpg"
-              alt="Apex Legends"
+              src="/assets/images/game/crysis-remastered.jpg"
+              alt="Crysis Remastered"
             />
             <div className="game-in-nav-overlay">
               <img
                 className="logo"
-                alt="Apex Legends logo"
-                src="https://media.contentapi.ea.com/content/dam/gin/common/logos/apex-legends-mono-logo.svg"
+                alt="Crysis Remastered"
+                src="/assets/images/game/crysis-remastered-logo.png"
               />
             </div>
-          </div>
+          </Link>
 
-          <div className="game-in-nav">
+          <Link to="/shop/8" className="game-in-nav">
             <img
               className="game-in-nav-image"
               src="/assets/images/game/battlefield-2042-key-art.jpg.adapt.crop1x1.767p.jpg"
@@ -397,9 +399,9 @@ export const PopupNavbar = ({ Data }) => {
                 src="https://media.contentapi.ea.com/content/dam/gin/common/logos/battlefield-2042-mono-logo-svg.svg"
               />
             </div>
-          </div>
+          </Link>
 
-          <div className="game-in-nav">
+          <Link to="/shop/1" className="game-in-nav">
             <img
               className="game-in-nav-image"
               src="/assets/images/game/the-sims-4-keyart.jpg.adapt.crop1x1.767p.jpg"
@@ -412,7 +414,7 @@ export const PopupNavbar = ({ Data }) => {
                 src="https://media.contentapi.ea.com/content/dam/gin/common/logos/the-sims-4-mono-logo.png"
               />
             </div>
-          </div>
+          </Link>
         </div>
       </section>
     </div>

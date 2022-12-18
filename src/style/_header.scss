@@ -119,10 +119,10 @@
     position: relative;
     z-index: 2;
 
-    & > :nth-child(-n + 3) {
+    & > :nth-child(-n + 5) {
       /* Dimensiona e distanzia i bottoni */
-      height: 2.5rem;
-      width: 2.5rem;
+      height: 2rem;
+      // width: 2rem;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -153,6 +153,10 @@
 .user-help-icon {
   pointer-events: all;
 
+  &.crown img {
+    height: 1.4rem;
+  }
+
   .user-space-avatar {
     pointer-events: none;
     height: 2rem;
@@ -170,6 +174,14 @@
     svg {
       fill: #f3f3f3;
     }
+  }
+}
+
+.user-space-user-name {
+  font-family: var(--font-family-display-bold);
+  color: white;
+  &.subscribed {
+    color: rgba(248, 220, 97, 0.777);
   }
 }
 
