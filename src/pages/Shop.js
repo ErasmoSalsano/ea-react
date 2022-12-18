@@ -9,11 +9,12 @@ import { Footer } from "../components/Footer";
 import { Header } from "../components/header/Header";
 
 export function Shop() {
-    const { loggedUser, currentUser, userPurchases } = useManageAccount();
+    const { loggedUser, currentUser, userPurchases, addFounds, onGetUser, setLoggedUser } = useManageAccount();
     const { id } = useParams()
     const [content, setContent] = useState()
     const [response, setResponse] = useState()
-    const myData = id == 100?{id:100}: game.find((it) => ([27, 28, 29].find((i) => i === +id)) ? it.id === 3 : it.id === +(id))
+    const [amount, setAmount] = useState(10)
+    const myData = id == 100?{id:100}:game.find((it) => ([27, 28, 29].find((i) => i === +id)) ? it.id === 3:it.id === +(id))
     const navigate = useNavigate()
 
     useEffect(() => {
@@ -93,7 +94,15 @@ export function Shop() {
                         <MainWrap>
                             <MainContentWrap extendClass={'select-section'} p>
                                 <div className="sections">Informazioni sul gioco</div>
-                                <div className="sections">Descrizione</div>
+                                {loggedUser && <div className="sections">
+                                    <select className="sections_price" type={'number'} onChange={(e) => setAmount(e.target.value)} placeholder={'Add Founds'} value={amount}>
+                                        <option value={10}>10 €</option>
+                                        <option value={25}>25 €</option>
+                                        <option value={50}>50 €</option>
+                                        <option value={100}>100 €</option>
+                                    </select>
+                                    <button className="sections_button" onClick={(e) => { e.preventDefault(); addFounds(amount, currentUser.uid); setAmount(10); setLoggedUser(onGetUser()) }}>Add Founds</button>
+                                </div>}
                             </MainContentWrap>
                         </MainWrap>
                         <MainWrap>

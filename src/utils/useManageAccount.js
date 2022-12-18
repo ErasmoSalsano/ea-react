@@ -85,6 +85,13 @@ export const useManageAccount = () => {
     return tutti;
   }
 
+  function addFounds(value, uid){
+    let userCredit;
+    userCredit = (Number(loggedUser?.credit) + Number(value)).toFixed(2);
+    updates["/users/" + uid + "/credit"] = userCredit;
+    return update(ref(db), updates);
+  }
+
   useEffect(() => {
     currentUser ? setLoggedUser(onGetUser()) : setLoggedUser(null);
   }, [currentUser]);
@@ -364,5 +371,7 @@ export const useManageAccount = () => {
     isValidForm: isValidForm,
     userPurchases: userPurchases,
     addGame: addGame,
+    addFounds: addFounds,
+    setLoggedUser: setLoggedUser
   };
 };
