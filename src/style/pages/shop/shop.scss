@@ -19,7 +19,7 @@
         justify-content: flex-start;
         position: relative;
         width: 90%;
-        gap: 15px;
+        flex-direction: column;
         .sections{
             width: 100%;
             border: 1px solid rgb(80, 80, 80, 80%);
@@ -32,6 +32,18 @@
             &:hover{
                 border: 1px solid white;
                 background-color: rgb(80, 80, 80, 70%);
+            }
+            .sections_price,
+            .sections_button{
+                width: 120px;
+                height: 25px;
+                border: none;
+                border-radius: 15px;
+                margin: 0 5px;
+                text-align: center;
+            }
+            .sections_button{
+                cursor: pointer;
             }
         }
     }
@@ -309,6 +321,10 @@
                     }
                 }
             }
+        }
+        .select-section{
+            flex-direction: row;
+            gap: 15px;
         }
     }
 }
