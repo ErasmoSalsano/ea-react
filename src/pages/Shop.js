@@ -9,12 +9,13 @@ import { Footer } from "../components/Footer";
 import { Header } from "../components/header/Header";
 
 export function Shop() {
-    const { loggedUser, currentUser, userPurchases, addFounds, onGetUser, setLoggedUser } = useManageAccount();
+    const { loggedUser, currentUser, userPurchases, addFunds, onGetUser, setLoggedUser } = useManageAccount();
     const { id } = useParams()
     const [content, setContent] = useState()
     const [response, setResponse] = useState()
+    const [responseFunds, setResponseFunds] = useState()
     const [amount, setAmount] = useState(10)
-    const myData = id == 100?{id:100}:game.find((it) => ([27, 28, 29].find((i) => i === +id)) ? it.id === 3:it.id === +(id))
+    const myData = id == 100 ? { id: 100 } : game.find((it) => ([27, 28, 29].find((i) => i === +id)) ? it.id === 3 : it.id === +(id))
     const navigate = useNavigate()
 
     useEffect(() => {
@@ -94,15 +95,28 @@ export function Shop() {
                         <MainWrap>
                             <MainContentWrap extendClass={'select-section'} p>
                                 <div className="sections">Informazioni sul gioco</div>
-                                {loggedUser && <div className="sections">
-                                    <select className="sections_price" type={'number'} onChange={(e) => setAmount(e.target.value)} placeholder={'Add Founds'} value={amount}>
-                                        <option value={10}>10 €</option>
-                                        <option value={25}>25 €</option>
-                                        <option value={50}>50 €</option>
-                                        <option value={100}>100 €</option>
-                                    </select>
-                                    <button className="sections_button" onClick={(e) => { e.preventDefault(); addFounds(amount, currentUser.uid); setAmount(10); setLoggedUser(onGetUser()) }}>Add Founds</button>
-                                </div>}
+                                {loggedUser &&
+                                    <div className="sections">
+                                        <select className="sections_price" type={'number'} onChange={(e) =>
+                                            setAmount(e.target.value)}
+                                            placeholder={'Add Funds'}
+                                            value={amount}>
+                                            <option value={10}>10 €</option>
+                                            <option value={25}>25 €</option>
+                                            <option value={50}>50 €</option>
+                                            <option value={100}>100 €</option>
+                                        </select>
+                                        <button className="sections_button" onClick={(e) => {
+                                            e.preventDefault();
+                                            addFunds(amount, currentUser.uid);
+                                            setAmount(10);
+                                            setLoggedUser(onGetUser());
+                                            setResponseFunds(`Successfull purchase, you have added ${amount}€ to your Balance`)
+                                        }
+                                        }>
+                                            Add Funds
+                                        </button>
+                                    </div>}
                             </MainContentWrap>
                         </MainWrap>
                         <MainWrap>
@@ -124,7 +138,8 @@ export function Shop() {
                                     </div>
                                     <div className="thumbs">
                                         {myData && myData.shop.secondary.map((item, index) =>
-                                            <img className="thumb" key={index} src={item} onClick={() => setContent(item)} alt="content of the game" />
+                                            <img className="thumb" key={index} src={item} onClick={() =>
+                                                setContent(item)} alt="content of the game" />
                                         )}
                                     </div>
                                 </div>
@@ -138,10 +153,19 @@ export function Shop() {
                                             <p>Passaggio 1</p>
                                             <h3>Vuoi acquistare o abbonarti?</h3>
                                         </div>
-                                        <div className="response-message" style={response && response.failed ? { color: 'red' } : { color: 'green' }}>
-                                            {response && response.message}
+                                        <div className="response-message" style={response && response.failed
+                                            ? { color: 'red' }
+                                            : { color: 'green' }
+                                                || responseFunds && responseFunds
+                                                ? { color: 'gold', fontSize: '1.1rem', textAlign: 'center' }
+                                                : null}>
+                                            {response && response.message || responseFunds && responseFunds}
                                         </div>
-                                        <div onClick={() => buy('ea', 'subscription')} className={loggedUser?.subscription?'gold':"purchase_cta"}>
+                                        <div onClick={() =>
+                                            buy('ea', 'subscription')}
+                                            className={loggedUser?.subscription
+                                                ? 'gold'
+                                                : "purchase_cta"}>
                                             <div className="purchase_cta-types">
                                                 <p>Unisciti a EA Play</p>
                                                 <p>EA Play EA PlayPro</p>
@@ -151,7 +175,9 @@ export function Shop() {
                                                 <p>€ 3.99</p>
                                             </div>
                                         </div>
-                                        <div onClick={() => buy('game', 'games')} className="purchase_cta">
+                                        <div onClick={() =>
+                                            buy('game', 'games')}
+                                            className="purchase_cta">
                                             <div className="purchase_cta-types">
                                                 <p>Compra <span style={{ color: 'red' }}>{myData.title}</span></p>
                                             </div>
@@ -222,7 +248,7 @@ export function Shop() {
                     <div className="Shop">
                         <MainWrap>
                             <MainContentWrap extendClass={'game-name'} p>
-                                <h1 style={{margin: 'auto'}}>EA Play subscription</h1>
+                                <h1 style={{ margin: 'auto' }}>EA Play subscription</h1>
                             </MainContentWrap>
                         </MainWrap>
                         <MainWrap>
@@ -236,7 +262,7 @@ export function Shop() {
                                         <div className="response-message" style={response && response.failed ? { color: 'red' } : { color: 'green' }}>
                                             {response && response.message}
                                         </div>
-                                        <div onClick={() => buy('ea', 'subscription')} className={loggedUser?.subscription ?'gold':"purchase_cta"}>
+                                        <div onClick={() => buy('ea', 'subscription')} className={loggedUser?.subscription ? 'gold' : "purchase_cta"}>
                                             <div className="purchase_cta-types">
                                                 <p>Unisciti a EA Play</p>
                                                 <p>EA Play EA PlayPro</p>

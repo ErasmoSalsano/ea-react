@@ -85,7 +85,7 @@ export const useManageAccount = () => {
     return tutti;
   }
 
-  function addFounds(value, uid){
+  function addFunds(value, uid){
     let userCredit;
     userCredit = (Number(loggedUser?.credit) + Number(value)).toFixed(2);
     updates["/users/" + uid + "/credit"] = userCredit;
@@ -371,7 +371,7 @@ export const useManageAccount = () => {
     isValidForm: isValidForm,
     userPurchases: userPurchases,
     addGame: addGame,
-    addFounds: addFounds,
+    addFunds: addFunds,
     setLoggedUser: setLoggedUser
   };
 };
